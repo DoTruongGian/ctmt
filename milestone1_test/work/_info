@@ -1,0 +1,49 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1
+vmilestone1_test
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 IS51libRfC1?aI5?U6>HH_1
+Z3 VU0hRj5zkTO6jWgf5Ndhaf2
+Z4 !s105 milestone1_test_sv_unit
+S1
+Z5 dC:\Users\duchangjiang\Desktop\milestone1_test
+Z6 w1725290016
+Z7 8C:/Users/duchangjiang/Desktop/milestone1_test/milestone1_test.sv
+Z8 FC:/Users/duchangjiang/Desktop/milestone1_test/milestone1_test.sv
+L0 2
+Z9 OV;L;10.1d;51
+r1
+31
+Z10 !s90 -reportprogress|300|-work|work|-sv|C:/Users/duchangjiang/Desktop/milestone1_test/milestone1_test.sv|
+Z11 o-work work -sv -O0
+!i10b 1
+Z12 !s100 Vc0H2>fil9I2RR_Jea2`>3
+!s85 0
+Z13 !s108 1725290247.694000
+Z14 !s107 C:/Users/duchangjiang/Desktop/milestone1_test/milestone1_test.sv|
+!s101 -O0
+vmilestone1_test_tb
+R1
+!i10b 1
+Z15 !s100 meezV;AE84Pc`A9JITG<<3
+Z16 I<0m]FzM<U9ZRnLG25:X>L0
+Z17 Vmi2i9iR6L]?1Yao<:nEfK2
+Z18 !s105 milestone1_test_tb_sv_unit
+S1
+R5
+Z19 w1725189029
+Z20 8C:/Users/duchangjiang/Desktop/milestone1_test/milestone1_test_tb.sv
+Z21 FC:/Users/duchangjiang/Desktop/milestone1_test/milestone1_test_tb.sv
+L0 1
+R9
+r1
+!s85 0
+31
+!s108 1725290247.778000
+!s107 C:/Users/duchangjiang/Desktop/milestone1_test/milestone1_test_tb.sv|
+Z22 !s90 -reportprogress|300|-work|work|-sv|C:/Users/duchangjiang/Desktop/milestone1_test/milestone1_test_tb.sv|
+!s101 -O0
+R11

@@ -1,0 +1,132 @@
+module milestone1_test(
+  input logic clk,
+  input logic rst,
+  input logic [1:0]coins, // 00 = no coins insert, 01 = 5$, 10 = 10$, 11 = 25$
+  output logic soda,
+  output logic [2:0]change // 000 = 0$, 001 = 5$, 010 = 10$, 011 = 15$, 100 = 20$
+);
+
+parameter s0 = 2'b00;
+parameter s1 = 2'b01;
+parameter s2 = 2'b10;
+parameter s3 = 2'b11;
+
+  reg[1:0] c_state, n_state;
+  
+  always@ (posedge clk or negedge rst)
+    begin
+	   if (!rst)
+		  begin
+		    c_state = 2'b00;
+			 n_state = 2'b00;
+			 change = 3'b000;
+		  end
+		else
+		  begin
+		    c_state = n_state;
+		  end
+		  
+		case (c_state)
+		  s0:
+		  if (coins == 2'b00)
+		    begin
+			   n_state = s0;
+				change = 3'b000;
+				soda = 1'b0;
+			 end
+		  else if (coins == 2'b01)
+		    begin
+			   n_state = s1;
+				change = 3'b000;
+				soda = 1'b0;
+			 end
+		  else if (coins == 2'b10)
+		    begin
+			   n_state = s2;
+				change = 3'b000;
+				soda = 1'b0;
+			 end
+		  else if (coins == 2'b11)
+		    begin
+			   n_state = s0;
+				change = 3'b001; // change = 5$
+				soda = 1'b1;
+			 end
+		  s1:
+		  if (coins == 2'b00)
+		    begin
+			   n_state = s1;
+				change = 3'b000;
+				soda = 1'b0;
+			 end
+		  else if (coins == 2'b01)
+		    begin
+			   n_state = s2;
+				change = 3'b000;
+				soda = 1'b0;
+			 end
+		  else if (coins == 2'b10)
+		    begin
+			   n_state = s3;
+				change = 3'b000;
+				soda = 1'b0;
+			 end
+		  else if (coins == 2'b11)
+		    begin
+			   n_state = s0;
+				change = 3'b010;
+				soda = 1'b1;
+			 end
+		  s2:
+		  if (coins == 2'b00)
+		    begin
+			   n_state = s2;
+				change = 3'b000;
+				soda = 1'b0;
+			 end
+		  else if (coins == 2'b01)
+		    begin
+			   n_state = s3;
+				change = 3'b000;
+				soda = 1'b0;
+			 end
+		  else if (coins == 2'b10)
+		    begin
+			   n_state = s0;
+				change = 3'b000;
+				soda = 1'b1;
+			 end
+		  else if (coins == 2'b11)
+		    begin
+			   n_state = s0;
+				change = 3'b011;
+				soda = 1'b1;
+			 end
+		  s3:
+		  if (coins == 2'b00)
+		    begin
+			   n_state = s3;
+				change = 3'b000;
+				soda = 1'b0;
+			 end
+		  else if (coins == 2'b01)
+		    begin
+			   n_state = s0;
+				change = 3'b000;
+				soda = 1'b1;
+			 end
+		  else if (coins == 2'b10)
+		    begin
+			   n_state = s0;
+				change = 3'b001;
+				soda = 1'b1;
+			 end
+		  else if (coins == 2'b11)
+		    begin
+			   n_state = s0;
+				change = 3'b100;
+				soda = 1'b1;
+			 end
+      endcase	
+	 end
+endmodule

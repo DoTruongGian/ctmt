@@ -1,0 +1,34 @@
+|milestone1_test
+clk_i => change_o[0]~reg0.CLK
+clk_i => change_o[1]~reg0.CLK
+clk_i => change_o[2]~reg0.CLK
+clk_i => soda_o~reg0.CLK
+clk_i => c_state~1.DATAIN
+rst_i => c_state~3.DATAIN
+rst_i => change_o[0]~reg0.ENA
+rst_i => soda_o~reg0.ENA
+rst_i => change_o[2]~reg0.ENA
+rst_i => change_o[1]~reg0.ENA
+dime_i => c_soda_o.OUTPUTSELECT
+dime_i => n_state.OUTPUTSELECT
+dime_i => c_soda_o.OUTPUTSELECT
+dime_i => c_change_o.DATAA
+dime_i => n_state.DATAA
+nickle_i => n_state.OUTPUTSELECT
+nickle_i => c_soda_o.OUTPUTSELECT
+nickle_i => n_state.OUTPUTSELECT
+nickle_i => c_soda_o.OUTPUTSELECT
+nickle_i => c_change_o.OUTPUTSELECT
+nickle_i => c_soda_o.OUTPUTSELECT
+nickle_i => Selector1.IN3
+nickle_i => Selector2.IN3
+nickle_i => Selector3.IN3
+quarter_i => c_soda_o.DATAA
+quarter_i => c_soda_o.DATAA
+quarter_i => n_state.DATAA
+soda_o <= soda_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
+change_o[0] <= change_o[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+change_o[1] <= change_o[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+change_o[2] <= change_o[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

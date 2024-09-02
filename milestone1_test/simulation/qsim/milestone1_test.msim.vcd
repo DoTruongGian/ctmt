@@ -1,0 +1,343 @@
+$comment
+	File created using the following command:
+		vcd file milestone1_test.msim.vcd -direction
+$end
+$date
+	Sun Sep 01 17:46:36 2024
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module milestone1_test_vlg_vec_tst $end
+$var reg 1 ! clk_i $end
+$var reg 1 " dime_i $end
+$var reg 1 # nickle_i $end
+$var reg 1 $ quarter_i $end
+$var reg 1 % rst_i $end
+$var wire 1 & change_o [2] $end
+$var wire 1 ' change_o [1] $end
+$var wire 1 ( change_o [0] $end
+$var wire 1 ) soda_o $end
+$var wire 1 * sampler $end
+$scope module i1 $end
+$var wire 1 + gnd $end
+$var wire 1 , vcc $end
+$var wire 1 - unknown $end
+$var tri1 1 . devclrn $end
+$var tri1 1 / devpor $end
+$var tri1 1 0 devoe $end
+$var wire 1 1 clk_i~input_o $end
+$var wire 1 2 ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 3 clk_i~inputCLKENA0_outclk $end
+$var wire 1 4 quarter_i~input_o $end
+$var wire 1 5 dime_i~input_o $end
+$var wire 1 6 nickle_i~input_o $end
+$var wire 1 7 Selector3~0_combout $end
+$var wire 1 8 Selector3~1_combout $end
+$var wire 1 9 rst_i~input_o $end
+$var wire 1 : c_state.s0~q $end
+$var wire 1 ; Selector4~0_combout $end
+$var wire 1 < c_state.s1~q $end
+$var wire 1 = Selector5~0_combout $end
+$var wire 1 > c_state.s2~q $end
+$var wire 1 ? Selector2~0_combout $end
+$var wire 1 @ Selector2~1_combout $end
+$var wire 1 A soda_o~reg0_q $end
+$var wire 1 B Selector1~0_combout $end
+$var wire 1 C change_o[0]~reg0_q $end
+$var wire 1 D Selector6~0_combout $end
+$var wire 1 E c_state.s3~q $end
+$var wire 1 F Selector0~0_combout $end
+$var wire 1 G change_o[1]~reg0_q $end
+$var wire 1 H change_o~2_combout $end
+$var wire 1 I change_o[2]~reg0_q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+0(
+0'
+0&
+0)
+x*
+0+
+1,
+x-
+1.
+1/
+10
+01
+02
+03
+04
+05
+06
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+$end
+#30000
+1!
+11
+13
+0*
+#60000
+0!
+01
+03
+1*
+#90000
+1!
+11
+13
+0*
+#100000
+1%
+19
+1*
+#120000
+0!
+01
+03
+0*
+#140000
+1#
+16
+1*
+18
+1;
+#150000
+1!
+11
+13
+0*
+1<
+1:
+17
+0;
+1=
+#180000
+0!
+01
+03
+1*
+#190000
+0#
+06
+0*
+1;
+0=
+#210000
+1!
+11
+13
+1*
+#240000
+0!
+01
+03
+0*
+#270000
+1!
+11
+13
+1*
+#300000
+0!
+01
+03
+0*
+#310000
+1"
+15
+1*
+0;
+1D
+#330000
+1!
+11
+13
+0*
+1E
+0<
+08
+1@
+1B
+0D
+1?
+#360000
+0!
+01
+03
+1*
+#370000
+0"
+05
+0*
+18
+0@
+0B
+1D
+#390000
+1!
+11
+13
+1*
+#420000
+0!
+01
+03
+0*
+#440000
+1$
+14
+1*
+08
+1@
+0D
+1H
+#450000
+1!
+11
+13
+0*
+0E
+0:
+1I
+1A
+18
+0@
+1B
+0H
+07
+0?
+1&
+1)
+08
+1@
+#480000
+0!
+01
+03
+1*
+#490000
+0$
+04
+0*
+0@
+0B
+#510000
+1!
+11
+13
+1*
+0I
+0A
+0&
+0)
+#540000
+0!
+01
+03
+0*
+#570000
+1!
+11
+13
+1*
+#600000
+0!
+01
+03
+0*
+#630000
+1!
+11
+13
+1*
+#660000
+0!
+01
+03
+0*
+#690000
+1!
+11
+13
+1*
+#720000
+0!
+01
+03
+0*
+#750000
+1!
+11
+13
+1*
+#780000
+0!
+01
+03
+0*
+#810000
+1!
+11
+13
+1*
+#840000
+0!
+01
+03
+0*
+#870000
+1!
+11
+13
+1*
+#900000
+0!
+01
+03
+0*
+#930000
+1!
+11
+13
+1*
+#960000
+0!
+01
+03
+0*
+#990000
+1!
+11
+13
+1*
+#1000000

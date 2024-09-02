@@ -1,0 +1,15 @@
+C:/Users/duchangjiang/Desktop/milestone1_test/milestone1_test.sv {1 {vlog -work work -sv C:/Users/duchangjiang/Desktop/milestone1_test/milestone1_test.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module milestone1_test
+
+Top level modules:
+	milestone1_test
+
+} {} {}} C:/Users/duchangjiang/Desktop/milestone1_test/milestone1_test_tb.sv {1 {vlog -work work -sv C:/Users/duchangjiang/Desktop/milestone1_test/milestone1_test_tb.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module milestone1_test_tb
+
+Top level modules:
+	milestone1_test_tb
+
+} {} {}}
