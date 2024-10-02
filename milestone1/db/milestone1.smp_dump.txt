@@ -1,0 +1,7 @@
+
+State Machine - |milestone1|c_state
+Name c_state.s3 c_state.s2 c_state.s1 c_state.s0 
+c_state.s0 0 0 0 0 
+c_state.s1 0 0 1 1 
+c_state.s2 0 1 0 1 
+c_state.s3 1 0 0 1 

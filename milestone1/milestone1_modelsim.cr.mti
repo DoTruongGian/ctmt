@@ -1,0 +1,8 @@
+D:/HCMUT/Project/ctmt/milestone1_tb.sv {1 {vlog -work work -sv D:/HCMUT/Project/ctmt/milestone1_tb.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module milestone1_tb
+
+Top level modules:
+	milestone1_tb
+
+} {} {}}

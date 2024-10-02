@@ -1,0 +1,49 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\HCMUT\Tools\Quatrus13.1
+vmilestone1
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 !s100 3O0>NeF^_`>D?2a=37hAl2
+Z3 IlN?WEQXJN7[j4gHU5JLbd0
+Z4 V5HceY0MP<;?JhDUS[P[k:3
+Z5 !s105 milestone1_sv_unit
+S1
+Z6 dD:\HCMUT\Project\ctmt
+Z7 w1727869497
+Z8 8D:/HCMUT/Project/ctmt/milestone1.sv
+Z9 FD:/HCMUT/Project/ctmt/milestone1.sv
+L0 2
+Z10 OV;L;10.1d;51
+r1
+31
+Z11 !s90 -reportprogress|300|-work|work|-sv|D:/HCMUT/Project/ctmt/milestone1.sv|
+Z12 o-work work -sv -O0
+!i10b 1
+!s85 0
+Z13 !s108 1727869505.399000
+Z14 !s107 D:/HCMUT/Project/ctmt/milestone1.sv|
+!s101 -O0
+vmilestone1_tb
+R1
+!i10b 1
+Z15 !s100 S:d<:<4W03^0z0I5l@2zH1
+Z16 IWJ3lY3@Oc;0SfkeKHi5o92
+Z17 VYL>Hh=I<DT_`85J4N24TD2
+Z18 !s105 milestone1_tb_sv_unit
+S1
+R6
+Z19 w1727869404
+Z20 8D:/HCMUT/Project/ctmt/milestone1_tb.sv
+Z21 FD:/HCMUT/Project/ctmt/milestone1_tb.sv
+L0 1
+R10
+r1
+!s85 0
+31
+!s108 1727869505.429000
+!s107 D:/HCMUT/Project/ctmt/milestone1_tb.sv|
+Z22 !s90 -reportprogress|300|-work|work|-sv|D:/HCMUT/Project/ctmt/milestone1_tb.sv|
+!s101 -O0
+R12
