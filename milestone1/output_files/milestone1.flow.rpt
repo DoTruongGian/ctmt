@@ -1,5 +1,5 @@
 Flow report for milestone1
-Wed Oct 02 18:47:41 2024
+Wed Oct 02 19:30:53 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +---------------------------------+--------------------------------------------+
-; Flow Status                     ; Successful - Wed Oct 02 18:47:41 2024      ;
+; Flow Status                     ; Successful - Wed Oct 02 19:30:53 2024      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; milestone1                                 ;
 ; Top-level Entity Name           ; milestone1                                 ;
@@ -67,7 +67,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/02/2024 18:44:07 ;
+; Start date & time ; 10/02/2024 19:30:17 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; milestone1          ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 18691166747277.172786944713224         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 18691166747277.172787221715536         ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                     ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; D:/HCMUT/Project/ctmt/simulation/qsim/ ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
@@ -97,14 +97,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4673 MB             ; 00:00:00                           ;
-; Fitter                    ; 00:00:26     ; 1.0                     ; 5677 MB             ; 00:00:09                           ;
-; Assembler                 ; 00:00:07     ; 1.0                     ; 4743 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4900 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4608 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4618 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4618 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:40     ; --                      ; --                  ; 00:00:12                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4672 MB             ; 00:00:00                           ;
+; Fitter                    ; 00:00:22     ; 1.0                     ; 5676 MB             ; 00:00:06                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 4747 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4914 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4607 MB             ; 00:00:00                           ;
+; Total                     ; 00:00:31     ; --                      ; --                  ; 00:00:09                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,8 +116,6 @@ applicable agreement for further details.
 ; Assembler                 ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
 ; TimeQuest Timing Analyzer ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -131,8 +127,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off milestone1 -c m
 quartus_asm --read_settings_files=off --write_settings_files=off milestone1 -c milestone1
 quartus_sta milestone1 -c milestone1
 quartus_eda --read_settings_files=off --write_settings_files=off milestone1 -c milestone1
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog milestone1 -c milestone1 --vector_source=D:/HCMUT/Project/ctmt/Waveform.vwf --testbench_file=D:/HCMUT/Project/ctmt/simulation/qsim/Waveform.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=D:/HCMUT/Project/ctmt/simulation/qsim/ milestone1 -c milestone1
 
 
 

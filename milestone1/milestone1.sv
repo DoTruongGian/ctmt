@@ -1,10 +1,10 @@
 // Module definition for the vending machine
 module milestone1(
-  input logic i_clk,         // Clock input signal
-  input logic i_dime,        // Input signal for a dime coin (10 cents)
-  input logic i_nickel,      // Input signal for a nickel coin (5 cents)
-  input logic i_quarter,     // Input signal for a quarter coin (25 cents)
-  output logic o_soda,       // Output signal indicating if soda is dispensed
+  input logic i_clk,          // Clock input signal
+  input logic i_dime,         // Input signal for a dime coin (10 cents)
+  input logic i_nickel,       // Input signal for a nickel coin (5 cents)
+  input logic i_quarter,      // Input signal for a quarter coin (25 cents)
+  output logic o_soda,        // Output signal indicating if soda is dispensed
   output logic [2:0] o_change // Output signal representing change to be given
 );
 
@@ -14,97 +14,82 @@ parameter s1 = 2'b01; // State 1: 5 cents
 parameter s2 = 2'b10; // State 2: 10 cents
 parameter s3 = 2'b11; // State 3: 15 cents
 
-logic [1:0] c_state = 2'b00, n_state; // Current state and next state registers
-logic c_o_soda;
-logic [2:0] c_o_change;
+logic [1:0] c_state, n_state; // Current state and next state registers
+logic c_o_soda;                // Local output for soda signal
+logic [2:0] c_o_change;        // Local output for change signal
+
+// Initialize state
+initial begin
+  c_state = s0; // Start in state 0
+end
+
 // Sequential block for state transition
 always_ff @(posedge i_clk) begin
-    // Update the current state to the next state
-   c_state <= n_state;
-	 o_soda <= c_o_soda;
-	 o_change <= c_o_change;
+  // Update the current state to the next state
+  c_state <= n_state;
+  o_soda <= c_o_soda;
+  o_change <= c_o_change;
 end
 
 // Combinational block for state transition logic
 always_comb begin
+  // Default values
+  n_state = c_state; // Default to stay in current state
+  c_o_change = 3'b000; // Default to no change
+  c_o_soda = 1'b0; // Default to no soda
+
   case (c_state)
     s0: begin
       if (i_nickel) begin
-      n_state = s1; // Transition to state 1 if nickel is inserted
-		  c_o_change = 3'b000; // No change
-		  c_o_soda = 1'b0;    // No soda
+        n_state = s1; // Transition to state 1 if nickel is inserted
       end else if (i_dime) begin
-      n_state = s2; // Transition to state 2 if dime is inserted
-		  c_o_change = 3'b000; // No change
-		  c_o_soda = 1'b0;    // No soda
+        n_state = s2; // Transition to state 2 if dime is inserted
       end else if (i_quarter) begin
-      n_state = s0; // Remain in state 0 if quarter is inserted (unexpected case)
-		  c_o_change = 3'b001; // Change = 5 cents
-		  c_o_soda = 1'b1;    // Soda dispensed
-      end else begin
-      n_state = s0; // Remain in state 0 if no coin is inserted
-		  c_o_change = 3'b000; // No change
-		  c_o_soda = 1'b0;    // No soda
+        n_state = s0; // Remain in state 0 if quarter is inserted (unexpected case)
+        c_o_change = 3'b001; // Change = 5 cents
+        c_o_soda = 1'b1; // Soda dispensed
       end
     end
     s1: begin
       if (i_nickel) begin
-      n_state = s2; // Transition to state 2 if nickel is inserted
-		  c_o_change = 3'b000; // No change
-		  c_o_soda = 1'b0;    // No soda
+        n_state = s2; // Transition to state 2 if nickel is inserted
       end else if (i_dime) begin
-      n_state = s3; // Transition to state 3 if dime is inserted
-		  c_o_change = 3'b000; // No change
-		  c_o_soda = 1'b0;    // No soda
+        n_state = s3; // Transition to state 3 if dime is inserted
       end else if (i_quarter) begin
-      n_state = s0; // Return to state 0 if quarter is inserted (unexpected case)
-		  c_o_change = 3'b010; // Change = 10 cents
-		  c_o_soda = 1'b1;    // Soda dispensed
-      end else begin
-      n_state = s1; // Remain in state 1 if no coin is inserted
-		  c_o_change = 3'b000; // No change
-		  c_o_soda = 1'b0;    // No soda
+        n_state = s0; // Return to state 0 if quarter is inserted (unexpected case)
+        c_o_change = 3'b010; // Change = 10 cents
+        c_o_soda = 1'b1; // Soda dispensed
       end
     end
     s2: begin
       if (i_nickel) begin
-      n_state = s3; // Transition to state 3 if nickel is inserted
-		  c_o_change = 3'b000; // No change
-		  c_o_soda = 1'b0;    // Soda dispensed
+        n_state = s3; // Transition to state 3 if nickel is inserted
       end else if (i_dime) begin
-      n_state = s0; // Return to state 0 if dime is inserted (unexpected case)
-		  c_o_change = 3'b000; // No change
-		  c_o_soda = 1'b1;    // Soda dispensed
+        n_state = s0; // Return to state 0 if dime is inserted (unexpected case)
+        c_o_change = 3'b000; // No change
+        c_o_soda = 1'b1; // Soda dispensed
       end else if (i_quarter) begin
-      n_state = s0; // Return to state 0 if quarter is inserted (unexpected case)
-		  c_o_change = 3'b011; // Change = 15 cents
-		  c_o_soda = 1'b1;    // Soda dispensed
-      end else begin
-      n_state = s2; // Remain in state 2 if no coin is inserted
-		  c_o_change = 3'b000; // No change
-		  c_o_soda = 1'b0;    // No soda
+        n_state = s0; // Return to state 0 if quarter is inserted (unexpected case)
+        c_o_change = 3'b011; // Change = 15 cents
+        c_o_soda = 1'b1; // Soda dispensed
       end
     end
     s3: begin
       if (i_nickel) begin
-      n_state = s0; // Return to state 0 if nickel is inserted
-		  c_o_change = 3'b000; // No change
-		  c_o_soda = 1'b1;    // Soda dispensed
+        n_state = s0; // Return to state 0 if nickel is inserted
+        c_o_change = 3'b000; // No change
+        c_o_soda = 1'b1; // Soda dispensed
       end else if (i_dime) begin
-      n_state = s0; // Return to state 0 if dime is inserted
-		  c_o_change = 3'b001; // Change = 5 cents
-		  c_o_soda = 1'b1;    // Soda dispensed
+        n_state = s0; // Return to state 0 if dime is inserted
+        c_o_change = 3'b001; // Change = 5 cents
+        c_o_soda = 1'b1; // Soda dispensed
       end else if (i_quarter) begin
-      n_state = s0; // Return to state 0 if quarter is inserted
-		  c_o_change = 3'b100; // Change = 20 cents
-		  c_o_soda = 1'b1;    // Soda dispensed
-      end else begin
-      n_state = s3; // Remain in state 3 if no coin is inserted
-		  c_o_change = 3'b000; // No change
-		  c_o_soda = 1'b0;    // No soda
+        n_state = s0; // Return to state 0 if quarter is inserted
+        c_o_change = 3'b100; // Change = 20 cents
+        c_o_soda = 1'b1; // Soda dispensed
       end
     end
   endcase
 end
 
-endmodule: milestone1
+endmodule // milestone1

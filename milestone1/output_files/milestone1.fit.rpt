@@ -1,5 +1,5 @@
 Fitter report for milestone1
-Wed Oct 02 18:44:35 2024
+Wed Oct 02 19:30:41 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Fitter Summary                                                               ;
 +---------------------------------+--------------------------------------------+
-; Fitter Status                   ; Successful - Wed Oct 02 18:44:35 2024      ;
+; Fitter Status                   ; Successful - Wed Oct 02 19:30:41 2024      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; milestone1                                 ;
 ; Top-level Entity Name           ; milestone1                                 ;
@@ -216,7 +216,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in D:/HCMUT/Project/ctmt/output_files/milestone1.pin.
+The pin-out file can be found in D:/HCMUT/Project_ctmt/milestone1/output_files/milestone1.pin.
 
 
 +-------------------------------------------------------------------------------------+
@@ -1452,7 +1452,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; i_quarter~input  ; 9            ;
 ; i_nickel~input   ; 8            ;
 ; i_dime~input     ; 8            ;
-; c_state.s0       ; 6            ;
+; c_state.00       ; 6            ;
 ; c_state.s3       ; 6            ;
 ; c_state.s1       ; 5            ;
 ; c_state.s2       ; 5            ;
@@ -1677,9 +1677,9 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------+----------------------+-------------------+
 ; Source Register ; Destination Register ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; c_state.s3      ; c_state.s0           ; 0.204             ;
-; c_state.s0      ; c_state.s1           ; 0.140             ;
-; c_state.s2      ; c_state.s0           ; 0.136             ;
+; c_state.s3      ; c_state.00           ; 0.204             ;
+; c_state.00      ; c_state.s1           ; 0.140             ;
+; c_state.s2      ; c_state.00           ; 0.136             ;
 ; c_state.s1      ; c_state.s3           ; 0.036             ;
 +-----------------+----------------------+-------------------+
 Note: This table only shows the top 4 path(s) that have the largest delay added for hold.
@@ -1731,7 +1731,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.11 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 5CSXFC6D6F31C6 are preliminary
 Info (334004): Delay annotation completed successfully
@@ -1739,17 +1739,17 @@ Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 5CSXFC6D6F31C6 are preliminary
 Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
-Info (144001): Generated suppressed messages file D:/HCMUT/Project/ctmt/output_files/milestone1.fit.smsg
+Info (144001): Generated suppressed messages file D:/HCMUT/Project_ctmt/milestone1/output_files/milestone1.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 5677 megabytes
-    Info: Processing ended: Wed Oct 02 18:44:35 2024
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Peak virtual memory: 5676 megabytes
+    Info: Processing ended: Wed Oct 02 19:30:42 2024
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in D:/HCMUT/Project/ctmt/output_files/milestone1.fit.smsg.
+The suppressed messages can be found in D:/HCMUT/Project_ctmt/milestone1/output_files/milestone1.fit.smsg.
 
 
