@@ -5,13 +5,13 @@ module pc (
   output logic [31:0] PC_o
 );
 
-always_ff @(posedge clk_i or negedge rst_i) begin
-  if (!rst_i) begin
-    PC_o <= 0;
+  always_ff @(posedge clk_i or negedge rst_i) begin
+    if (!rst_i) begin
+      PC_o <= 0;
+    end
+    else begin
+      PC_o <= PC_i;
+    end
   end
-  else begin
-    PC_o <= PC_i;
-  end
-end
 
-endmodule: pc
+endmodule

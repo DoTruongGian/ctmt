@@ -1,8 +1,8 @@
 module pc_adder (
-  input logic pc,
-  output logic pcp
-)
+  input logic [31:0] pc,
+  output logic [31:0] pcp
+);
 
-assign pcp = pc + 4;
+  assign pcp = pc + 4;
 
-endmodule: pc_adder
+endmodule
