@@ -25,7 +25,29 @@ module brc (
   // Check for equality: all eq_bits must be true
   assign br_equal = &eq_bits;  // AND all equality bits together
 
-  // Compute less-than comparison for unsigned mode by OR-ing les_bits
-  assign br_less = br_unsigned ? (|les_bits) : (rs1_data[31] ^ rs2_data[31]) ? rs1_data[31] : (|les_bits);
-
+  // Compute less-than comparison based on unsigned/signed mode
+  always_comb begin
+    br_less = 1'b0;
+    if (br_unsigned) begin
+      for (int i = 31; i < 0; i--) begin
+        if (les_bits[i]) begin
+          br_less = 1'b1;
+          break;
+        end
+      end
+    end
+    else begin
+      if (rs1_data[31] ^ rs2_data[31]) begin
+        br_less = rs1_data[31];
+      end
+      else begin
+        for (int i = 30; i < 0; i--) begin
+          if (les_bits[i]) begin
+            br_less = 1'b1;
+            break;
+          end
+        end
+      end
+    end
+  end
 endmodule: brc
