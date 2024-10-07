@@ -6,7 +6,12 @@ module pc (
 );
 
 always_ff @(posedge clk_i or negedge rst_i) begin
-  PC_o <= PC_i;
+  if (!rst_i) begin
+    PC_o <= 0;
+  end
+  else begin
+    PC_o <= PC_i;
+  end
 end
 
 endmodule: pc
