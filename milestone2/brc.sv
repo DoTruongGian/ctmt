@@ -12,8 +12,8 @@ module brc (
   // Instantiate 32 1-bit comparators
   genvar i;
   generate
-    for (i = 0; i < 32; i++) begin
-      br_1bit br_cmp(
+    for (i = 0; i < 32; i++) begin : br_cmp
+      br_1bit br_cmp_inst(
         .a(rs1_data[i]),
         .b(rs2_data[i]),
         .eq(eq_bits[i]),
@@ -29,19 +29,17 @@ module brc (
   always_comb begin
     br_less = 1'b0;
     if (br_unsigned) begin
-      for (int i = 31; i < 0; i--) begin
+      for (int i = 31; i >= 0; i--) begin  // Corrected loop condition
         if (les_bits[i]) begin
           br_less = 1'b1;
           break;
         end
       end
-    end
-    else begin
+    end else begin
       if (rs1_data[31] ^ rs2_data[31]) begin
-        br_less = rs1_data[31];
-      end
-      else begin
-        for (int i = 30; i < 0; i--) begin
+        br_less = rs1_data[31];  // Set to 1 if rs1_data is negative
+      end else begin
+        for (int i = 30; i >= 0; i--) begin  // Corrected loop condition
           if (les_bits[i]) begin
             br_less = 1'b1;
             break;
@@ -50,4 +48,4 @@ module brc (
       end
     end
   end
-endmodule: brc
+endmodule
