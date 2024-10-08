@@ -48,7 +48,7 @@ module ctrl_unit (
       endcase
     end
   
-    7'b0010011, 7'b0000011: begin  // I-type 
+    7'b0010011: begin  // I-type 
       rd_wren = 1;
       insn_vld = 1;
       wb_sel = 2'b01;
@@ -62,12 +62,73 @@ module ctrl_unit (
       endcase
     end
 
+    7'b0000011: begin // Load
+      rd_wren = 1;
+      insn_vld = 1;
+      wb_sel = 2'b00;
+      alu_op = 4'b0000;
+    end
+
     7'b0100011: begin  // Store
       insn_vld = 1;
-      opa_sel = 1;
-      opb_sel = 1;
       alu_op = 4'b0000; // ADD for address calculation
       mem_wren = 1;
+    end
+
+    7'b1100011: begin // Branch
+      insn_vld = 1;
+      case (funct3)
+        3'b000: begin
+          if (br_equal) begin
+            opa_sel = 1'b1;
+            wb_sel = 2'b01;
+          end else begin
+            wb_sel = 2'b10;
+          end
+        end
+        3'b001: begin
+          if (br_equal) begin
+            wb_sel = 2'b10;
+          end else begin
+            opa_sel = 1'b1;
+            wb_sel = 2'b01;
+          end
+        end
+        3'b100: begin
+          if (br_less) begin
+            opa_sel = 1'b1;
+            wb_sel = 2'b01;
+          end else begin
+            wb_sel = 2'b10;
+          end
+        end
+        3'b101: begin
+          if (br_equal || (!br_equal && !br_less)) begin
+            opa_sel = 1'b1;
+            wb_sel = 2'b01;
+          end else begin
+            wb_sel = 2'b10;
+          end
+        end
+        3'b110: begin
+          br_un = 1'b1;
+          if (br_less) begin
+            opa_sel = 1'b1;
+            wb_sel = 2'b01;
+          end else begin
+            wb_sel = 2'b10;
+          end
+        end
+        3'b111: begin
+          br_un = 1'b1;
+          if (br_equal || (!br_equal && !br_less)) begin
+            opa_sel = 1'b1;
+            wb_sel = 2'b01;
+          end else begin
+            wb_sel = 2'b10;
+          end
+        end
+      endcase
     end
   endcase
   end
