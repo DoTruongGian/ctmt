@@ -1,12 +1,12 @@
 module pc (
-  input logic clk_i,
-  input logic rst_ni,
+  input logic i_clk,
+  input logic i_rst_n,
   input logic [31:0] PC_i,
   output logic [31:0] PC_o
 );
 
-  always_ff @(posedge clk_i or negedge rst_i) begin
-    if (!rst_ni) begin
+  always_ff @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n) begin
       PC_o <= 0;
     end
     else begin

@@ -2,7 +2,7 @@ module I$ (
   input logic [31:0] PC,
   output logic [31:0] instr
 );
-  logc [31:0] instructions_value [255:0];
+  logic [31:0] instructions_value [8192:0];
 
   initial begin
     $readmemh("instruction.txt", instructions_value);

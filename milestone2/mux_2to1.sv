@@ -5,6 +5,6 @@ module mux_2to1 (
   output logic [31:0] y
 );
 
-  assign y = select ? b : a;
+  assign y = sel ? b : a;
 
 endmodule

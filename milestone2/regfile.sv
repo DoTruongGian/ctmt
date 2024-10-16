@@ -1,32 +1,34 @@
 module regfile (
-  input logic clk_i,             // Positive clock
-  input logic rst_ni,            // Active-low reset
-  input logic [4:0] rs1_addr,    // Read address for rs1
-  input logic [4:0] rs2_addr,    // Read address for rs2
-  input logic [4:0] rd_addr,     // Write address for rd
-  input logic [31:0] rd_data,    // Write data for rd
-  input logic rd_wren,           // Write enable for rd
-  output logic [31:0] rs1_data,  // Output data for rs1
-  output logic [31:0] rs2_data    // Output data for rs2
+  input logic i_clk,              // Global clock
+  input logic i_rst_n,              // Global active reset
+  input logic [4:0] i_rs1_addr,   // Address of the first source register
+  input logic [4:0] i_rs2_addr,   // Address of the second source register
+  input logic [4:0] i_rd_addr,    // Address of the destination register
+  input logic [31:0] i_rd_data,   // Data to write to the destination register
+  input logic i_rd_wren,          // Write enable for the destination register
+  output logic [31:0] o_rs1_data, // Data from the first source register
+  output logic [31:0] o_rs2_data, // Data from the second source register
+  output logic [31:0] checker1    // Checker to verify register content
 );
 
   // 32 32-bit registers, with register 0 hard-wired to 0
-  logic [31:0] regfile [0:31];
+  logic [31:0] regfile [31:0];
 
   // Asynchronous read logic
-  assign rs1_data = (rs1_addr == 5'b0) ? 32'b0 : regfile[rs1_addr];
-  assign rs2_data = (rs2_addr == 5'b0) ? 32'b0 : regfile[rs2_addr];
+  assign o_rs1_data = (i_rs1_addr == 5'b0) ? 32'b0 : regfile[i_rs1_addr];
+  assign o_rs2_data = (i_rs2_addr == 5'b0) ? 32'b0 : regfile[i_rs2_addr];
+  assign checker1 = regfile[1]; // Checker to monitor register 1
 
   // Synchronous write logic
-  always_ff @(posedge clk_i or negedge rst_ni) begin
-    if (!rst_ni) begin
+  always_ff @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n) begin
       // Reset all registers to 0, register 0 stays 0 by design
       for (int i = 0; i < 32; i++) begin
         regfile[i] <= 32'b0;
       end
-    end else if (rd_wren && (rd_addr != 5'b0)) begin
+    end else if (i_rd_wren && (i_rd_addr != 5'b0)) begin
       // Write to the register if write enable is set and rd_addr is not 0
-      regfile[rd_addr] <= rd_data;
+      regfile[i_rd_addr] <= i_rd_data;
     end
   end
 

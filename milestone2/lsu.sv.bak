@@ -1,0 +1,103 @@
+module lsu (
+  input logic i_clk,              // Global clock
+  input logic i_rst,              // Global active reset
+  input logic [31:0] i_lsu_addr,  // Address for data read/write
+  input logic [31:0] i_st_data,   // Data to be stored (write data)
+  input logic i_lsu_wren,         // Write enable signal (1 if writing)
+  output logic [31:0] o_ld_data,  // Data read from memory (load data)
+  output logic [31:0] o_io_ledr,  // Output for red LEDs
+  output logic [31:0] o_io_ledg,  // Output for green LEDs
+  output logic [6:0] o_io_hex0,   // Output for 7-segment display HEX0
+  output logic [6:0] o_io_hex1,   // Output for 7-segment display HEX1
+  output logic [6:0] o_io_hex2,   // Output for 7-segment display HEX2
+  output logic [6:0] o_io_hex3,   // Output for 7-segment display HEX3
+  output logic [6:0] o_io_hex4,   // Output for 7-segment display HEX4
+  output logic [6:0] o_io_hex5,   // Output for 7-segment display HEX5
+  output logic [6:0] o_io_hex6,   // Output for 7-segment display HEX6
+  output logic [6:0] o_io_hex7,   // Output for 7-segment display HEX7
+  output logic [31:0] o_io_lcd,   // Output for the LCD register
+  input logic [31:0] i_io_sw,     // Input for switches
+  input logic [3:0] i_io_btn      // Input for button
+);
+
+  // Internal memory for storing the state of LEDs and LCD registers
+  logic [31:0] red_led_reg;       // Red LEDs register
+  logic [31:0] green_led_reg;     // Green LEDs register
+  logic [31:0] hex0_reg;          // Seven-segment display register HEX0
+  logic [31:0] hex1_reg;          // Seven-segment display register HEX1
+  logic [31:0] hex2_reg;          // Seven-segment display register HEX2
+  logic [31:0] hex3_reg;          // Seven-segment display register HEX3
+  logic [31:0] hex4_reg;          // Seven-segment display register HEX4
+  logic [31:0] hex5_reg;          // Seven-segment display register HEX5
+  logic [31:0] hex6_reg;          // Seven-segment display register HEX6
+  logic [31:0] hex7_reg;          // Seven-segment display register HEX7
+  logic [31:0] lcd_reg;           // LCD register
+
+  // Assign outputs to internal registers
+  assign o_io_ledr = red_led_reg;
+  assign o_io_ledg = green_led_reg;
+  assign o_io_hex0 = hex0_reg[6:0];
+  assign o_io_hex1 = hex1_reg[6:0];
+  assign o_io_hex2 = hex2_reg[6:0];
+  assign o_io_hex3 = hex3_reg[6:0];
+  assign o_io_hex4 = hex4_reg[6:0];
+  assign o_io_hex5 = hex5_reg[6:0];
+  assign o_io_hex6 = hex6_reg[6:0];
+  assign o_io_hex7 = hex7_reg[6:0];
+  assign o_io_lcd = lcd_reg;
+
+  // Read logic
+  always_comb begin
+    o_ld_data = 32'b0;  // Default read data is 0
+    case (i_lsu_addr)
+      32'h7000: o_ld_data = red_led_reg;  // Red LEDs
+      32'h7010: o_ld_data = green_led_reg;  // Green LEDs
+      32'h7800: o_ld_data = i_io_sw;  // Switches input
+      32'h7810: o_ld_data = {28'b0, i_io_btn};  // Buttons input
+      32'h7020: o_ld_data = hex0_reg;  // HEX0 (7-segment)
+      32'h7024: o_ld_data = hex1_reg;  // HEX1 (7-segment)
+      32'h7028: o_ld_data = hex2_reg;  // HEX2 (7-segment)
+      32'h702C: o_ld_data = hex3_reg;  // HEX3 (7-segment)
+      32'h7030: o_ld_data = hex4_reg;  // HEX4 (7-segment)
+      32'h7034: o_ld_data = hex5_reg;  // HEX5 (7-segment)
+      32'h7038: o_ld_data = hex6_reg;  // HEX6 (7-segment)
+      32'h703C: o_ld_data = hex7_reg;  // HEX7 (7-segment)
+      32'h7030: o_ld_data = lcd_reg;   // LCD register
+      default: o_ld_data = 32'b0;      // Reserved space or unknown address
+    endcase
+  end
+
+  // Write logic
+  always_ff @(posedge i_clk or posedge i_rst) begin
+    if (i_rst) begin
+      // Reset all output registers
+      red_led_reg <= 32'b0;
+      green_led_reg <= 32'b0;
+      hex0_reg <= 32'b0;
+      hex1_reg <= 32'b0;
+      hex2_reg <= 32'b0;
+      hex3_reg <= 32'b0;
+      hex4_reg <= 32'b0;
+      hex5_reg <= 32'b0;
+      hex6_reg <= 32'b0;
+      hex7_reg <= 32'b0;
+      lcd_reg <= 32'b0;
+    end else if (i_lsu_wren) begin
+      // Write data to specific memory-mapped peripherals
+      case (i_lsu_addr)
+        32'h7000: red_led_reg <= i_st_data;  // Write to Red LEDs
+        32'h7010: green_led_reg <= i_st_data;  // Write to Green LEDs
+        32'h7020: hex0_reg <= i_st_data;  // Write to HEX0
+        32'h7024: hex1_reg <= i_st_data;  // Write to HEX1
+        32'h7028: hex2_reg <= i_st_data;  // Write to HEX2
+        32'h702C: hex3_reg <= i_st_data;  // Write to HEX3
+        32'h7030: hex4_reg <= i_st_data;  // Write to HEX4
+        32'h7034: hex5_reg <= i_st_data;  // Write to HEX5
+        32'h7038: hex6_reg <= i_st_data;  // Write to HEX6
+        32'h703C: hex7_reg <= i_st_data;  // Write to HEX7
+        32'h7030: lcd_reg <= i_st_data;   // Write to LCD register
+        default: ; // Ignore writes to reserved or unknown addresses
+      endcase
+    end
+  end
+endmodule
