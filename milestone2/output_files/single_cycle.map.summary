@@ -1,17 +1,14 @@
-Analysis & Synthesis Status : Successful - Thu Oct 17 01:07:02 2024
+Analysis & Synthesis Status : Successful - Thu Oct 17 13:07:25 2024
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : single_cycle
 Top-level Entity Name : single_cycle
-Family : Cyclone V
-Logic utilization (in ALMs) : N/A
-Total registers : 124
-Total pins : 255
+Family : Cyclone III
+Total logic elements : 1,229
+    Total combinational functions : 847
+    Dedicated logic registers : 477
+Total registers : 477
+Total pins : 415
 Total virtual pins : 0
-Total block memory bits : 0
-Total DSP Blocks : 0
-Total HSSI RX PCSs : 0
-Total HSSI PMA RX Deserializers : 0
-Total HSSI TX PCSs : 0
-Total HSSI TX Channels : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
-Total DLLs : 0

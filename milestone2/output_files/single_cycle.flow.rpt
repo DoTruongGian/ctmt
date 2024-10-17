@@ -1,5 +1,5 @@
 Flow report for single_cycle
-Thu Oct 17 01:08:13 2024
+Thu Oct 17 13:11:16 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -37,29 +37,26 @@ applicable agreement for further details.
 
 
 
-+------------------------------------------------------------------------------+
-; Flow Summary                                                                 ;
-+---------------------------------+--------------------------------------------+
-; Flow Status                     ; Successful - Thu Oct 17 01:08:13 2024      ;
-; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
-; Revision Name                   ; single_cycle                               ;
-; Top-level Entity Name           ; single_cycle                               ;
-; Family                          ; Cyclone V                                  ;
-; Device                          ; 5CSXFC6D6F31C6                             ;
-; Timing Models                   ; Preliminary                                ;
-; Logic utilization (in ALMs)     ; 159 / 41,910 ( < 1 % )                     ;
-; Total registers                 ; 126                                        ;
-; Total pins                      ; 255 / 499 ( 51 % )                         ;
-; Total virtual pins              ; 0                                          ;
-; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                      ;
-; Total DSP Blocks                ; 0 / 112 ( 0 % )                            ;
-; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                              ;
-; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                              ;
-; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                              ;
-; Total HSSI TX Channels          ; 0 / 9 ( 0 % )                              ;
-; Total PLLs                      ; 0 / 15 ( 0 % )                             ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                              ;
-+---------------------------------+--------------------------------------------+
++---------------------------------------------------------------------------------+
+; Flow Summary                                                                    ;
++------------------------------------+--------------------------------------------+
+; Flow Status                        ; Successful - Thu Oct 17 13:11:16 2024      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; single_cycle                               ;
+; Top-level Entity Name              ; single_cycle                               ;
+; Family                             ; Cyclone III                                ;
+; Device                             ; EP3C120F780C7                              ;
+; Timing Models                      ; Final                                      ;
+; Total logic elements               ; 1,229                                      ;
+;     Total combinational functions  ; 847                                        ;
+;     Dedicated logic registers      ; 477                                        ;
+; Total registers                    ; 477                                        ;
+; Total pins                         ; 415                                        ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,72 +64,66 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/17/2024 01:06:56 ;
+; Start date & time ; 10/17/2024 13:07:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; single_cycle        ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                  ;
-+-------------------------------------+----------------------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                                        ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+----------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 18691166747277.172910201614764               ; --            ; --          ; --             ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                           ; --            ; --          ; eda_simulation ;
-; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/Admin/Desktop/test/simulation/qsim/ ; --            ; --          ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                  ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                    ; <None>        ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                           ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                            ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                                     ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                        ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                       ; --            ; --          ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                 ; --            ; --          ; --             ;
-+-------------------------------------+----------------------------------------------+---------------+-------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                          ;
++-------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                                                                                                ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 18691166747277.172914524209680                                                                                       ; --            ; --          ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                                                                   ; --            ; --          ; eda_simulation ;
+; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/simulation/qsim/ ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                                                          ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                                                                            ; <None>        ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                                                   ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                                                    ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                                                                                                             ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                                                                ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                                                               ; --            ; --          ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                                                         ; --            ; --          ; --             ;
++-------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:06     ; 1.0                     ; 4701 MB             ; 00:00:06                           ;
-; Fitter                    ; 00:00:41     ; 1.0                     ; 5720 MB             ; 00:00:40                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 4766 MB             ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:08     ; 1.0                     ; 4944 MB             ; 00:00:08                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4633 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4633 MB             ; 00:00:01                           ;
-; Total                     ; 00:01:02     ; --                      ; --                  ; 00:01:03                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:04     ; 1.0                     ; 4651 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4548 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4564 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4548 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4564 MB             ; 00:00:00                           ;
+; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:04                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
-+---------------------------+------------------+-----------+------------+----------------+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off single_cycle -c single_cycle
-quartus_fit --read_settings_files=off --write_settings_files=off single_cycle -c single_cycle
-quartus_asm --read_settings_files=off --write_settings_files=off single_cycle -c single_cycle
-quartus_sta single_cycle -c single_cycle
-quartus_eda --read_settings_files=off --write_settings_files=off single_cycle -c single_cycle
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog single_cycle -c single_cycle --vector_source=C:/Users/Admin/Desktop/test/Waveform.vwf --testbench_file=C:/Users/Admin/Desktop/test/simulation/qsim/Waveform.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Admin/Desktop/test/simulation/qsim/ single_cycle -c single_cycle
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog single_cycle -c single_cycle --vector_source=C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/Waveform.vwf --testbench_file=C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/simulation/qsim/Waveform.vwf.vt
+quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/simulation/qsim/ single_cycle -c single_cycle
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog single_cycle -c single_cycle --vector_source=C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/Waveform.vwf --testbench_file=C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/simulation/qsim/Waveform.vwf.vt
+quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/simulation/qsim/ single_cycle -c single_cycle
 
 
 
