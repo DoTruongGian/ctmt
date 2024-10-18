@@ -1,103 +1,231 @@
 module lsu (
-  input logic i_clk,              // Global clock
-  input logic i_rst_n,              // Global active reset
-  input logic [31:0] i_lsu_addr,  // Address for data read/write
-  input logic [31:0] i_st_data,   // Data to be stored (write data)
-  input logic i_lsu_wren,         // Write enable signal (1 if writing)
-  output logic [31:0] o_ld_data,  // Data read from memory (load data)
-  output logic [31:0] o_io_ledr,  // Output for red LEDs
-  output logic [31:0] o_io_ledg,  // Output for green LEDs
-  output logic [6:0] o_io_hex0,   // Output for 7-segment display HEX0
-  output logic [6:0] o_io_hex1,   // Output for 7-segment display HEX1
-  output logic [6:0] o_io_hex2,   // Output for 7-segment display HEX2
-  output logic [6:0] o_io_hex3,   // Output for 7-segment display HEX3
-  output logic [6:0] o_io_hex4,   // Output for 7-segment display HEX4
-  output logic [6:0] o_io_hex5,   // Output for 7-segment display HEX5
-  output logic [6:0] o_io_hex6,   // Output for 7-segment display HEX6
-  output logic [6:0] o_io_hex7,   // Output for 7-segment display HEX7
-  output logic [31:0] o_io_lcd,   // Output for the LCD register
-  input logic [31:0] i_io_sw,     // Input for switches
-  input logic [3:0] i_io_btn      // Input for button
+  input  logic        i_clk,
+  input  logic        i_rst_n,
+  input  logic [31:0] i_lsu_addr,
+  input  logic [31:0] i_st_data,
+  input  logic        i_lsu_wren,
+  input  logic [31:0] i_io_sw,
+  input  logic [3:0]  i_io_btn,
+  input  logic [1:0]  i_data_type,
+  input  logic        i_unsigned,
+  output logic [31:0] o_ld_data,
+  output logic [31:0] o_io_ledr,
+  output logic [31:0] o_io_ledg,
+  output logic [6:0]  o_io_hex0,
+  output logic [6:0]  o_io_hex1,
+  output logic [6:0]  o_io_hex2,
+  output logic [6:0]  o_io_hex3,
+  output logic [6:0]  o_io_hex4,
+  output logic [6:0]  o_io_hex5,
+  output logic [6:0]  o_io_hex6,
+  output logic [6:0]  o_io_hex7,
+  output logic [31:0] o_io_lcd
 );
 
-  // Internal memory for storing the state of LEDs and LCD registers
-  logic [31:0] red_led_reg;       // Red LEDs register
-  logic [31:0] green_led_reg;     // Green LEDs register
-  logic [31:0] hex0_reg;          // Seven-segment display register HEX0
-  logic [31:0] hex1_reg;          // Seven-segment display register HEX1
-  logic [31:0] hex2_reg;          // Seven-segment display register HEX2
-  logic [31:0] hex3_reg;          // Seven-segment display register HEX3
-  logic [31:0] hex4_reg;          // Seven-segment display register HEX4
-  logic [31:0] hex5_reg;          // Seven-segment display register HEX5
-  logic [31:0] hex6_reg;          // Seven-segment display register HEX6
-  logic [31:0] hex7_reg;          // Seven-segment display register HEX7
-  logic [31:0] lcd_reg;           // LCD register
+  parameter w = 2'b00, hw = 2'b01, b = 2'b10;
 
-  // Assign outputs to internal registers
-  assign o_io_ledr = red_led_reg;
-  assign o_io_ledg = green_led_reg;
-  assign o_io_hex0 = hex0_reg[6:0];
-  assign o_io_hex1 = hex1_reg[6:0];
-  assign o_io_hex2 = hex2_reg[6:0];
-  assign o_io_hex3 = hex3_reg[6:0];
-  assign o_io_hex4 = hex4_reg[6:0];
-  assign o_io_hex5 = hex5_reg[6:0];
-  assign o_io_hex6 = hex6_reg[6:0];
-  assign o_io_hex7 = hex7_reg[6:0];
-  assign o_io_lcd = lcd_reg;
+  /*--------Data Memory------------*/
+  logic [7:0] data_memory [255:0];        // 8KiB data memory
 
-  // Read logic
+  /*--------Output Peripheral------------*/
+  // LCD Control Registers
+  logic [7:0] lcd_control [15:0];
+  // Seven-segment LEDs
+  logic [7:0] seven_segment [7:0];
+  // Green LEDs
+  logic [7:0] green_leds [15:0];
+  // Red LEDs
+  logic [7:0] red_leds [15:0];
+
+  /*--------Input Peripheral------------*/
+  logic [7:0] switches [15:0];
+
+  // Address decoding
+  logic is_input_peripheral;
+  logic is_output_peripheral;
+  logic is_data_memory;
+
+  // index
+  logic [3:0] data_be;
+  assign i = i_lsu_addr[1:0];
+
+  logic [31:0] rdata;
+
+  assign is_input_peripheral = (i_lsu_addr >= 32'h07800 && i_lsu_addr <= 32'h0780F);
+  assign is_output_peripheral = (i_lsu_addr >= 32'h07000 && i_lsu_addr <= 32'h0703F);
+  assign is_data_memory = (i_lsu_addr >= 32'h02000 && i_lsu_addr <= 32'h03FFF);
+
+  assign o_io_ledr = {red_leds[3], red_leds[2], red_leds[1], red_leds[0]};
+  assign o_io_ledg = {green_leds[3], green_leds[2], green_leds[1], green_leds[0]};
+  assign o_io_lcd = {lcd_control[3], lcd_control[2], lcd_control[1], lcd_control[0]};
+  assign o_io_hex0 = seven_segment[0];
+  assign o_io_hex1 = seven_segment[1];
+  assign o_io_hex2 = seven_segment[2];
+  assign o_io_hex3 = seven_segment[3];
+  assign o_io_hex4 = seven_segment[4];
+  assign o_io_hex5 = seven_segment[5];
+  assign o_io_hex6 = seven_segment[6];
+  assign o_io_hex7 = seven_segment[7];
+
   always_comb begin
-    o_ld_data = 32'b0;  // Default read data is 0
-    case (i_lsu_addr)
-      32'h7000: o_ld_data = red_led_reg;  // Red LEDs
-      32'h7010: o_ld_data = green_led_reg;  // Green LEDs
-      32'h7800: o_ld_data = i_io_sw;  // Switches input
-      32'h7810: o_ld_data = {28'b0, i_io_btn};  // Buttons input
-      32'h7020: o_ld_data = hex0_reg;  // HEX0 (7-segment)
-      32'h7024: o_ld_data = hex1_reg;  // HEX1 (7-segment)
-      32'h7028: o_ld_data = hex2_reg;  // HEX2 (7-segment)
-      32'h702C: o_ld_data = hex3_reg;  // HEX3 (7-segment)
-      32'h7030: o_ld_data = hex4_reg;  // HEX4 (7-segment)
-      32'h7034: o_ld_data = hex5_reg;  // HEX5 (7-segment)
-      32'h7038: o_ld_data = hex6_reg;  // HEX6 (7-segment)
-      32'h703C: o_ld_data = hex7_reg;  // HEX7 (7-segment)
-      32'h7030: o_ld_data = lcd_reg;   // LCD register
-      default: o_ld_data = 32'b0;      // Reserved space or unknown address
+    data_be = 4'b0000;
+    case (i_data_type)
+      w:
+        data_be = 4'b1111;
+      hw: begin
+        data_be = 4'b0011;
+      end
+      b: begin
+        data_be = 4'b0001;
+      end
+      default: data_be = 4'b0000;
     endcase
   end
 
-  // Write logic
-  always_ff @(posedge i_clk or negedge i_rst_n) begin
-    if (!i_rst_n) begin
-      // Reset all output registers
-      red_led_reg <= 32'b0;
-      green_led_reg <= 32'b0;
-      hex0_reg <= 32'b0;
-      hex1_reg <= 32'b0;
-      hex2_reg <= 32'b0;
-      hex3_reg <= 32'b0;
-      hex4_reg <= 32'b0;
-      hex5_reg <= 32'b0;
-      hex6_reg <= 32'b0;
-      hex7_reg <= 32'b0;
-      lcd_reg <= 32'b0;
-    end else if (i_lsu_wren) begin
-      // Write data to specific memory-mapped peripherals
-      case (i_lsu_addr)
-        32'h7000: red_led_reg <= i_st_data;  // Write to Red LEDs
-        32'h7010: green_led_reg <= i_st_data;  // Write to Green LEDs
-        32'h7020: hex0_reg <= i_st_data;  // Write to HEX0
-        32'h7024: hex1_reg <= i_st_data;  // Write to HEX1
-        32'h7028: hex2_reg <= i_st_data;  // Write to HEX2
-        32'h702C: hex3_reg <= i_st_data;  // Write to HEX3
-        32'h7030: hex4_reg <= i_st_data;  // Write to HEX4
-        32'h7034: hex5_reg <= i_st_data;  // Write to HEX5
-        32'h7038: hex6_reg <= i_st_data;  // Write to HEX6
-        32'h703C: hex7_reg <= i_st_data;  // Write to HEX7
-        32'h7030: lcd_reg <= i_st_data;   // Write to LCD register
-        default: ; // Ignore writes to reserved or unknown addresses
+  logic [12:0] mem_addr[3:0];
+  assign mem_addr[0] = i_lsu_addr[12:0];
+  assign mem_addr[1] = i_lsu_addr[12:0] + 13'd1;
+  assign mem_addr[2] = i_lsu_addr[12:0] + 13'd2;
+  assign mem_addr[3] = i_lsu_addr[12:0] + 13'd3;
+
+  always_comb begin
+    rdata = {{data_memory[mem_addr[3]]},
+             {data_memory[mem_addr[2]]},
+             {data_memory[mem_addr[1]]},
+             {data_memory[mem_addr[0]]}} & {{8{data_be[3]}}, {8{data_be[2]}}, {8{data_be[1]}}, {8{data_be[0]}}};
+
+    o_ld_data = 32'b0;
+    // Read operation
+    if (is_data_memory && !i_lsu_wren) begin
+      if (i_unsigned || i_data_type == w) 
+        o_ld_data = rdata;
+      else begin
+        if (i_data_type == hw) 
+          o_ld_data = {{16{rdata[15]}}, rdata[15:0]};
+        else if (i_data_type == b) 
+          o_ld_data = {{24{rdata[7]}}, rdata[7:0]};
+      end
+    end else if (is_input_peripheral) begin
+      o_ld_data = {switches[3], switches[2], switches[1], switches[0]};
+    end else if (is_output_peripheral) begin
+      case (i_lsu_addr[31:4]) 
+        28'h0700: o_ld_data = {{red_leds[3]}, {red_leds[2]}, {red_leds[1]}, {red_leds[0]}};
+        28'h0701: o_ld_data = {{green_leds[3]}, {green_leds[2]}, {green_leds[1]}, {green_leds[0]}};
+        28'h0703: o_ld_data = {lcd_control[3], lcd_control[2], lcd_control[1], lcd_control[0]};
+        28'h0702: begin
+          case (i_lsu_addr[3:0])
+            4'h0: o_ld_data = {24'b0, {seven_segment[0]}};
+            4'h1: o_ld_data = {24'b0, {seven_segment[1]}};
+            4'h2: o_ld_data = {24'b0, {seven_segment[2]}};
+            4'h3: o_ld_data = {24'b0, {seven_segment[3]}};
+            4'h4: o_ld_data = {24'b0, {seven_segment[4]}};
+            4'h5: o_ld_data = {24'b0, {seven_segment[5]}};
+            4'h6: o_ld_data = {24'b0, {seven_segment[6]}};
+            4'h7: o_ld_data = {24'b0, {seven_segment[7]}};
+          endcase 
+        end
       endcase
     end
   end
+
+  // write
+  logic clk;
+  assign clk = ~i_clk && i_lsu_wren;
+
+  always_ff @(posedge clk or negedge i_rst_n) begin
+    if (!i_rst_n) begin
+      // Reset all outputs
+      red_leds[0] <= 0;
+      red_leds[1] <= 0;
+      red_leds[2] <= 0;
+      red_leds[3] <= 0;
+      green_leds[0] <= 0;
+      green_leds[1] <= 0;
+      green_leds[2] <= 0;
+      green_leds[3] <= 0;
+      lcd_control[0] <= 0;
+      lcd_control[1] <= 0;
+      lcd_control[2] <= 0;
+      lcd_control[3] <= 0;
+      seven_segment[0] <= 0;
+      seven_segment[1] <= 0;
+      seven_segment[2] <= 0;
+      seven_segment[3] <= 0;
+      seven_segment[4] <= 0;
+      seven_segment[5] <= 0;
+      seven_segment[6] <= 0;
+      seven_segment[7] <= 0;
+    end else if (is_output_peripheral) begin
+      case (i_lsu_addr)
+        32'h07000: begin
+          if (data_be[0]) 
+            red_leds[0] <= i_st_data[7:0];
+          if (data_be[1]) 
+            red_leds[1] <= i_st_data[15:8];
+          if (data_be[2]) 
+            red_leds[2] <= i_st_data[23:16];
+          if (data_be[3]) 
+            red_leds[3] <= i_st_data[31:24];
+        end
+        32'h07010: begin
+          if (data_be[0]) 
+            green_leds[0] <= i_st_data[7:0];
+          if (data_be[1]) 
+            green_leds[1] <= i_st_data[15:8];
+          if (data_be[2]) 
+            green_leds[2] <= i_st_data[23:16];
+          if (data_be[3]) 
+            green_leds[3] <= i_st_data[31:24];
+        end
+        32'h07030: begin
+          if (data_be[0]) 
+            lcd_control[0] <= i_st_data[7:0];
+          if (data_be[1]) 
+            lcd_control[1] <= i_st_data[15:8];
+          if (data_be[2]) 
+            lcd_control[2] <= i_st_data[23:16];
+          if (data_be[3]) 
+            lcd_control[3] <= i_st_data[31:24];
+        end
+        32'h07020: begin
+          case (i_lsu_addr[3:0])
+            4'h0: seven_segment[0] <= i_st_data[7:0];
+            4'h1: seven_segment[1] <= i_st_data[7:0];
+            4'h2: seven_segment[2] <= i_st_data[7:0];
+            4'h3: seven_segment[3] <= i_st_data[7:0];
+            4'h4: seven_segment[4] <= i_st_data[7:0];
+            4'h5: seven_segment[5] <= i_st_data[7:0];
+            4'h6: seven_segment[6] <= i_st_data[7:0];
+            4'h7: seven_segment[7] <= i_st_data[7:0];
+          endcase
+        end
+      endcase
+    end else if (is_data_memory) begin
+      if (data_be[0]) 
+        data_memory[mem_addr[0]] <= i_st_data[7:0];
+      if (data_be[1]) 
+        data_memory[mem_addr[1]] <= i_st_data[15:8];
+      if (data_be[2]) 
+        data_memory[mem_addr[2]] <= i_st_data[23:16];
+      if (data_be[3]) 
+        data_memory[mem_addr[3]] <= i_st_data[31:24];
+    end
+  end
+
+always_ff @(posedge i_clk or negedge i_rst_n) begin
+  if (!i_rst_n) begin
+    // Reset logic for input peripherals, e.g., switches
+    switches[0] <= 8'd0;
+    switches[1] <= 8'd0;
+    switches[2] <= 8'd0;
+    switches[3] <= 8'd0;
+  end else if (is_input_peripheral) begin
+    // Input peripheral logic
+    switches[0] <= i_io_sw[7:0];
+    switches[1] <= i_io_sw[15:8];
+    switches[2] <= i_io_sw[23:16];
+    switches[3] <= i_io_sw[31:24];
+  end
+end
+
 endmodule

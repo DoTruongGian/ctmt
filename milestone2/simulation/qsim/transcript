@@ -27,5 +27,5 @@
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
 # Simulation passed !
-# ** Note: $finish    : Waveform.vwf.vt(7066)
+# ** Note: $finish    : Waveform.vwf.vt(6482)
 #    Time: 1 us  Iteration: 0  Instance: /single_cycle_vlg_vec_tst/tb_out

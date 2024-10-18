@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at single_cycle.sv(26): object "pc" differs only in case from object "Pc" in the same scope
+Info (10281): Verilog HDL Declaration information at single_cycle.sv(25): object "pc" differs only in case from object "Pc" in the same scope

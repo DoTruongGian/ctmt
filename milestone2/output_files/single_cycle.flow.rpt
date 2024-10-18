@@ -1,5 +1,5 @@
 Flow report for single_cycle
-Thu Oct 17 13:11:16 2024
+Fri Oct 18 13:30:49 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Thu Oct 17 13:11:16 2024      ;
+; Flow Status                        ; Successful - Fri Oct 18 13:30:49 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; single_cycle                               ;
 ; Top-level Entity Name              ; single_cycle                               ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C120F780C7                              ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 1,229                                      ;
-;     Total combinational functions  ; 847                                        ;
-;     Dedicated logic registers      ; 477                                        ;
-; Total registers                    ; 477                                        ;
-; Total pins                         ; 415                                        ;
+; Total logic elements               ; 16,173                                     ;
+;     Total combinational functions  ; 15,591                                     ;
+;     Dedicated logic registers      ; 2,725                                      ;
+; Total registers                    ; 2725                                       ;
+; Total pins                         ; 383                                        ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/17/2024 13:07:22 ;
+; Start date & time ; 10/18/2024 13:28:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; single_cycle        ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                                                                                ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 18691166747277.172914524209680                                                                                       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 18691166747277.172923292205972                                                                                       ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                                                                   ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/simulation/qsim/ ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                                                          ; --            ; --          ; eda_simulation ;
@@ -94,12 +94,10 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:04     ; 1.0                     ; 4651 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4548 MB             ; 00:00:00                           ;
+; Analysis & Synthesis ; 00:01:58     ; 1.0                     ; 4698 MB             ; 00:01:58                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4564 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4548 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4564 MB             ; 00:00:00                           ;
-; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4590 MB             ; 00:00:02                           ;
+; Total                ; 00:01:59     ; --                      ; --                  ; 00:02:00                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,8 +109,6 @@ applicable agreement for further details.
 ; Analysis & Synthesis ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-D7AAP94  ; Windows 7 ; 6.2        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 
@@ -120,8 +116,6 @@ applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off single_cycle -c single_cycle
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog single_cycle -c single_cycle --vector_source=C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/Waveform.vwf --testbench_file=C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/simulation/qsim/Waveform.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/simulation/qsim/ single_cycle -c single_cycle
 quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog single_cycle -c single_cycle --vector_source=C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/Waveform.vwf --testbench_file=C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/simulation/qsim/Waveform.vwf.vt
 quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/simulation/qsim/ single_cycle -c single_cycle
 

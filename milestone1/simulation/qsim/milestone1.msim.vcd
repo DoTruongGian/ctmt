@@ -3,7 +3,7 @@ $comment
 		vcd file milestone1.msim.vcd -direction
 $end
 $date
-	Wed Oct 02 18:47:41 2024
+	Fri Oct 18 00:00:53 2024
 $end
 $version
 	ModelSim Version 10.1d
@@ -38,7 +38,7 @@ $var wire 1 6 Selector3~0_combout $end
 $var wire 1 7 c_state.s3~q $end
 $var wire 1 8 Selector0~0_combout $end
 $var wire 1 9 Selector0~1_combout $end
-$var wire 1 : c_state.s0~q $end
+$var wire 1 : c_state.00~q $end
 $var wire 1 ; Selector1~0_combout $end
 $var wire 1 < c_state.s1~q $end
 $var wire 1 = Selector2~0_combout $end

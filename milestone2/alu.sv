@@ -90,6 +90,9 @@ module alu (
         o_alu_data = shifted_data;
       end
 
+      4'b1111: begin
+        o_alu_data = i_operand_b;
+      end
       default: begin // Default case
         o_alu_data = 32'b0;
       end

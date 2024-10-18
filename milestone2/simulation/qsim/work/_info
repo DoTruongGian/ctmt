@@ -4,78 +4,78 @@ K3
 cModel Technology
 Z0 dC:\Users\Admin\Desktop\test\simulation\qsim
 vsingle_cycle
-Z1 !s100 >6S?HLhN^ajV?]<1LS11<3
-Z2 ILlEY@WR:_bEzM^bg9g@Gf2
-Z3 V55Ak1BXe4V=cG<LdQ6Gbm3
-Z4 dC:\Users\Admin\Documents\SEM241\Computer_Organization_and_Design_(EE4423)\milestone\ctmt\milestone2\simulation\qsim
-Z5 w1729145476
-Z6 8single_cycle.vo
-Z7 Fsingle_cycle.vo
+Z1 IZkjSnCIOU<DbTmC]B>[@H3
+Z2 VTMi7ldld5[93NFj8lIb`;2
+Z3 dC:\Users\Admin\Documents\SEM241\Computer_Organization_and_Design_(EE4423)\milestone\ctmt\milestone2\simulation\qsim
+Z4 w1729233049
+Z5 8single_cycle.vo
+Z6 Fsingle_cycle.vo
 L0 31
-Z8 OV;L;10.1d;51
+Z7 OV;L;10.1d;51
 r1
 31
-Z9 !s90 -work|work|single_cycle.vo|
-Z10 o-work work -O0
+Z8 !s90 -work|work|single_cycle.vo|
+Z9 o-work work -O0
 !i10b 1
+Z10 !s100 n66A6[Aln^1`Q<YFa>YK_3
 !s85 0
-Z11 !s108 1729145476.408000
+Z11 !s108 1729233050.195000
 Z12 !s107 single_cycle.vo|
 !s101 -O0
 vsingle_cycle_vlg_check_tst
 !i10b 1
-Z13 !s100 <^4US>3jka<Rj=Ygd3b5j1
-Z14 IBaf0CW0inTYEz=Yi[Y[C91
-Z15 V90zUHabQmV:[]04bag[B[0
-R4
-Z16 w1729145475
-Z17 8Waveform.vwf.vt
-Z18 FWaveform.vwf.vt
+!s100 2L4`AEDOW3d4<iVeQ^4PV2
+Ikh1I4mLOaQ0fUTFSQ3i;L3
+VTT[lAF1MVi=?dcWJYm=lI3
+R3
+Z13 w1729233047
+Z14 8Waveform.vwf.vt
+Z15 FWaveform.vwf.vt
 L0 63
-R8
+R7
 r1
 !s85 0
 31
-Z19 !s108 1729145476.523000
-Z20 !s107 Waveform.vwf.vt|
-Z21 !s90 -work|work|Waveform.vwf.vt|
+Z16 !s108 1729233051.118000
+Z17 !s107 Waveform.vwf.vt|
+Z18 !s90 -work|work|Waveform.vwf.vt|
 !s101 -O0
-R10
+R9
 vsingle_cycle_vlg_sample_tst
 !i10b 1
-Z22 !s100 I^O?jj@aaGPz2aOCI29lk2
-Z23 IY=ekiJ>djc6^UF`8I_SA?1
-Z24 VZS;eJckaV>53G@8b]DO]01
-R4
-R16
-R17
-R18
+Z19 !s100 I^O?jj@aaGPz2aOCI29lk2
+Z20 IY=ekiJ>djc6^UF`8I_SA?1
+Z21 VZS;eJckaV>53G@8b]DO]01
+R3
+R13
+R14
+R15
 L0 29
-R8
+R7
 r1
 !s85 0
 31
-R19
-R20
-R21
+R16
+R17
+R18
 !s101 -O0
-R10
+R9
 vsingle_cycle_vlg_vec_tst
 !i10b 1
-Z25 !s100 m;IaDnkg[ga]N]Nje?eE02
-Z26 InJIiNgWGem?:LOkQj5MlJ0
-Z27 V@M>fE`G=92@22fNoD^k1j3
-R4
-R16
-R17
-R18
-Z28 L0 7070
-R8
+!s100 i2aLA75cfi`64Ck9mCmQN2
+I8nM==;?a3^PG5E4Bg?VgS1
+Z22 V@M>fE`G=92@22fNoD^k1j3
+R3
+R13
+R14
+R15
+L0 6486
+R7
 r1
 !s85 0
 31
-R19
-R20
-R21
+R16
+R17
+R18
 !s101 -O0
-R10
+R9

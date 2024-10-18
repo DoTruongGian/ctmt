@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
-// DATE "10/02/2024 18:47:41"
+// DATE "10/18/2024 00:00:51"
 
 // 
 // Device: Altera 5CSXFC6D6F31C6 Package FBGA896
@@ -74,7 +74,7 @@ wire \Selector3~0_combout ;
 wire \c_state.s3~q ;
 wire \Selector0~0_combout ;
 wire \Selector0~1_combout ;
-wire \c_state.s0~q ;
+wire \c_state.00~q ;
 wire \Selector1~0_combout ;
 wire \c_state.s1~q ;
 wire \Selector2~0_combout ;
@@ -260,14 +260,14 @@ defparam \c_state.s3 .power_up = "low";
 // Location: LABCELL_X55_Y1_N48
 cyclonev_lcell_comb \Selector0~0 (
 // Equation(s):
-// \Selector0~0_combout  = ( \c_state.s0~q  & ( (!\i_quarter~input_o ) # (!\c_state.s1~q ) ) )
+// \Selector0~0_combout  = ( \c_state.00~q  & ( (!\i_quarter~input_o ) # (!\c_state.s1~q ) ) )
 
 	.dataa(gnd),
 	.datab(gnd),
 	.datac(!\i_quarter~input_o ),
 	.datad(!\c_state.s1~q ),
 	.datae(gnd),
-	.dataf(!\c_state.s0~q ),
+	.dataf(!\c_state.00~q ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -308,7 +308,7 @@ defparam \Selector0~1 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X55_Y1_N14
-dffeas \c_state.s0 (
+dffeas \c_state.00 (
 	.clk(\i_clk~inputCLKENA0_outclk ),
 	.d(\Selector0~1_combout ),
 	.asdata(vcc),
@@ -319,24 +319,24 @@ dffeas \c_state.s0 (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\c_state.s0~q ),
+	.q(\c_state.00~q ),
 	.prn(vcc));
 // synopsys translate_off
-defparam \c_state.s0 .is_wysiwyg = "true";
-defparam \c_state.s0 .power_up = "low";
+defparam \c_state.00 .is_wysiwyg = "true";
+defparam \c_state.00 .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X55_Y1_N21
 cyclonev_lcell_comb \Selector1~0 (
 // Equation(s):
-// \Selector1~0_combout  = ( \c_state.s0~q  & ( (!\i_dime~input_o  & (!\i_nickel~input_o  & (!\i_quarter~input_o  & \c_state.s1~q ))) ) ) # ( !\c_state.s0~q  & ( ((!\i_dime~input_o  & (!\i_quarter~input_o  & \c_state.s1~q ))) # (\i_nickel~input_o ) ) )
+// \Selector1~0_combout  = ( \c_state.00~q  & ( (!\i_dime~input_o  & (!\i_nickel~input_o  & (!\i_quarter~input_o  & \c_state.s1~q ))) ) ) # ( !\c_state.00~q  & ( ((!\i_dime~input_o  & (!\i_quarter~input_o  & \c_state.s1~q ))) # (\i_nickel~input_o ) ) )
 
 	.dataa(!\i_dime~input_o ),
 	.datab(!\i_nickel~input_o ),
 	.datac(!\i_quarter~input_o ),
 	.datad(!\c_state.s1~q ),
 	.datae(gnd),
-	.dataf(!\c_state.s0~q ),
+	.dataf(!\c_state.00~q ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -372,8 +372,8 @@ defparam \c_state.s1 .power_up = "low";
 // Location: LABCELL_X55_Y1_N54
 cyclonev_lcell_comb \Selector2~0 (
 // Equation(s):
-// \Selector2~0_combout  = ( \c_state.s2~q  & ( \c_state.s0~q  & ( (!\i_nickel~input_o  & (!\i_dime~input_o  & ((!\i_quarter~input_o )))) # (\i_nickel~input_o  & (((\c_state.s1~q )))) ) ) ) # ( !\c_state.s2~q  & ( \c_state.s0~q  & ( (\i_nickel~input_o  & 
-// \c_state.s1~q ) ) ) ) # ( \c_state.s2~q  & ( !\c_state.s0~q  & ( (!\i_nickel~input_o  & (((!\i_quarter~input_o )) # (\i_dime~input_o ))) # (\i_nickel~input_o  & (((\c_state.s1~q )))) ) ) ) # ( !\c_state.s2~q  & ( !\c_state.s0~q  & ( (!\i_nickel~input_o  & 
+// \Selector2~0_combout  = ( \c_state.s2~q  & ( \c_state.00~q  & ( (!\i_nickel~input_o  & (!\i_dime~input_o  & ((!\i_quarter~input_o )))) # (\i_nickel~input_o  & (((\c_state.s1~q )))) ) ) ) # ( !\c_state.s2~q  & ( \c_state.00~q  & ( (\i_nickel~input_o  & 
+// \c_state.s1~q ) ) ) ) # ( \c_state.s2~q  & ( !\c_state.00~q  & ( (!\i_nickel~input_o  & (((!\i_quarter~input_o )) # (\i_dime~input_o ))) # (\i_nickel~input_o  & (((\c_state.s1~q )))) ) ) ) # ( !\c_state.s2~q  & ( !\c_state.00~q  & ( (!\i_nickel~input_o  & 
 // (\i_dime~input_o )) # (\i_nickel~input_o  & ((\c_state.s1~q ))) ) ) )
 
 	.dataa(!\i_dime~input_o ),
@@ -381,7 +381,7 @@ cyclonev_lcell_comb \Selector2~0 (
 	.datac(!\c_state.s1~q ),
 	.datad(!\i_quarter~input_o ),
 	.datae(!\c_state.s2~q ),
-	.dataf(!\c_state.s0~q ),
+	.dataf(!\c_state.00~q ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -417,14 +417,14 @@ defparam \c_state.s2 .power_up = "low";
 // Location: LABCELL_X55_Y1_N24
 cyclonev_lcell_comb \Selector6~0 (
 // Equation(s):
-// \Selector6~0_combout  = ( !\c_state.s1~q  & ( \c_state.s0~q  ) )
+// \Selector6~0_combout  = ( !\c_state.s1~q  & ( \c_state.00~q  ) )
 
 	.dataa(gnd),
 	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(!\c_state.s1~q ),
-	.dataf(!\c_state.s0~q ),
+	.dataf(!\c_state.00~q ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -486,13 +486,13 @@ defparam \o_soda~reg0 .power_up = "low";
 // Location: LABCELL_X55_Y1_N30
 cyclonev_lcell_comb \Selector5~0 (
 // Equation(s):
-// \Selector5~0_combout  = ( \i_quarter~input_o  & ( \c_state.s3~q  & ( (!\i_nickel~input_o  & (((!\c_state.s0~q ) # (\c_state.s2~q )) # (\i_dime~input_o ))) ) ) ) # ( !\i_quarter~input_o  & ( \c_state.s3~q  & ( (\i_dime~input_o  & !\i_nickel~input_o ) ) ) ) 
-// # ( \i_quarter~input_o  & ( !\c_state.s3~q  & ( (!\i_dime~input_o  & (!\i_nickel~input_o  & ((!\c_state.s0~q ) # (\c_state.s2~q )))) ) ) )
+// \Selector5~0_combout  = ( \i_quarter~input_o  & ( \c_state.s3~q  & ( (!\i_nickel~input_o  & (((!\c_state.00~q ) # (\c_state.s2~q )) # (\i_dime~input_o ))) ) ) ) # ( !\i_quarter~input_o  & ( \c_state.s3~q  & ( (\i_dime~input_o  & !\i_nickel~input_o ) ) ) ) 
+// # ( \i_quarter~input_o  & ( !\c_state.s3~q  & ( (!\i_dime~input_o  & (!\i_nickel~input_o  & ((!\c_state.00~q ) # (\c_state.s2~q )))) ) ) )
 
 	.dataa(!\i_dime~input_o ),
 	.datab(!\i_nickel~input_o ),
 	.datac(!\c_state.s2~q ),
-	.datad(!\c_state.s0~q ),
+	.datad(!\c_state.00~q ),
 	.datae(!\i_quarter~input_o ),
 	.dataf(!\c_state.s3~q ),
 	.datag(gnd),
@@ -530,10 +530,10 @@ defparam \o_change[0]~reg0 .power_up = "low";
 // Location: LABCELL_X55_Y1_N51
 cyclonev_lcell_comb \Selector4~0 (
 // Equation(s):
-// \Selector4~0_combout  = ( !\c_state.s3~q  & ( (!\i_dime~input_o  & (\c_state.s0~q  & (!\i_nickel~input_o  & \i_quarter~input_o ))) ) )
+// \Selector4~0_combout  = ( !\c_state.s3~q  & ( (!\i_dime~input_o  & (\c_state.00~q  & (!\i_nickel~input_o  & \i_quarter~input_o ))) ) )
 
 	.dataa(!\i_dime~input_o ),
-	.datab(!\c_state.s0~q ),
+	.datab(!\c_state.00~q ),
 	.datac(!\i_nickel~input_o ),
 	.datad(!\i_quarter~input_o ),
 	.datae(gnd),

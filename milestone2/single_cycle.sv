@@ -14,18 +14,17 @@ module single_cycle (
   output logic [6:0] o_io_hex6,   // Output for driving 7-segment LED display 6
   output logic [6:0] o_io_hex7,   // Output for driving 7-segment LED display 7
   output logic [31:0] o_io_lcd,   // Output for driving the LCD register
-  output logic [31:0] checker1,
-  output logic [31:0] checker2,
-  output logic [31:0] checker3,
+  input logic [31:0] i_io_sw,     // Input for switches
+  input logic [3:0] i_io_btn,      // Input for buttons
   output logic [31:0] checker4,
   output logic [31:0] checker5,
   output logic [31:0] checker6,
-  input logic [31:0] i_io_sw,     // Input for switches
-  input logic [3:0] i_io_btn      // Input for buttons
+  output logic [31:0] checker7,
+  output logic [31:0] checker8
 );
 wire [31:0] pc_next, pc_four, alu_data, pc, instr, wb_data, o_rs1_data, o_rs2_data, imm, operand_a, operand_b, ld_data;
-wire pc_sel, rd_wren, br_un, br_equal, br_less, opa_sel, opb_sel, mem_wren, insn_vld;
-wire [1:0] wb_sel;
+wire pc_sel, rd_wren, br_un, br_equal, br_less, opa_sel, opb_sel, mem_wren, insn_vld, i_unsigned;
+wire [1:0] wb_sel, i_data_type;
 wire [3:0] alu_op;
 
 mux_2to1 mux211 (
@@ -62,12 +61,11 @@ regfile regf(
   .i_rd_wren(rd_wren),
   .o_rs1_data(o_rs1_data),
   .o_rs2_data(o_rs2_data),
-  .checker1(checker1),
-  .checker2(checker2),
-  .checker3(checker3),
   .checker4(checker4),
   .checker5(checker5),
-  .checker6(checker6)
+  .checker6(checker6),
+  .checker7(checker7),
+  .checker8(checker8)
 );
 
 ImmGen immgen (
@@ -75,7 +73,7 @@ ImmGen immgen (
   .imm(imm)
 );
 
-brc brc (
+brc Brc (
   .i_rs1_data(o_rs1_data),
   .i_rs2_data(o_rs2_data),
   .i_br_un(br_un),
@@ -97,14 +95,14 @@ mux_2to1 mux213 (
   .y(operand_b)  
 );
 
-alu alu (
+alu Alu (
  .i_operand_a(operand_a),
  .i_operand_b(operand_b),
  .i_alu_op(alu_op),
  .o_alu_data(alu_data)
 );
 
-lsu lsu (
+lsu Lsu (
   .i_clk(i_clk),
   .i_rst_n(i_rst_n),
   .i_lsu_addr(alu_data),
@@ -123,6 +121,8 @@ lsu lsu (
   .o_io_hex7(o_io_hex7),
   .o_io_lcd(o_io_lcd),
   .i_io_sw(i_io_sw),
+  .i_data_type(i_data_type),
+  .i_unsigned(i_unsigned),
   .i_io_btn(i_io_btn)
 );
 
@@ -134,7 +134,7 @@ mux_3to1 mux31 (
   .y(wb_data)
 );
 
-pc_debug (
+pc_debug pc_de(
   .i_clk(i_clk),
   .i_rst_n(i_rst_n),
   .pc(pc),
@@ -161,6 +161,8 @@ ctrl_unit ctrl (
   .alu_op(alu_op),
   .mem_wren(mem_wren),
   .wb_sel(wb_sel),
+  .i_unsigned(i_unsigned),
+  .i_data_type(i_data_type)
 );
 
 endmodule
