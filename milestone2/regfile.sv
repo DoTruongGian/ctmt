@@ -31,7 +31,7 @@ module regfile (
   always_ff @(posedge i_clk or negedge i_rst_n) begin
     if (!i_rst_n) begin
       // Reset all registers to 0, register 0 stays 0 by design     
-        regfile[0] <= 32'b0;
+      regfile[0] <= 32'b0;
 		  regfile[1] <= 32'b0;
 		  regfile[2] <= 32'b0;
 		  regfile[3] <= 32'b0;
