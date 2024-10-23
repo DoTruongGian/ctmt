@@ -4,10 +4,10 @@ K3
 cModel Technology
 Z0 dC:\Users\Admin\Desktop\test\simulation\qsim
 vsingle_cycle
-Z1 IZkjSnCIOU<DbTmC]B>[@H3
+Z1 I`TG>da1KWzl<W2XeQ[^XC1
 Z2 VTMi7ldld5[93NFj8lIb`;2
 Z3 dC:\Users\Admin\Documents\SEM241\Computer_Organization_and_Design_(EE4423)\milestone\ctmt\milestone2\simulation\qsim
-Z4 w1729233049
+Z4 w1729608708
 Z5 8single_cycle.vo
 Z6 Fsingle_cycle.vo
 L0 31
@@ -17,65 +17,65 @@ r1
 Z8 !s90 -work|work|single_cycle.vo|
 Z9 o-work work -O0
 !i10b 1
-Z10 !s100 n66A6[Aln^1`Q<YFa>YK_3
+Z10 !s100 GLk31`D2VW>[JX54Ea5j70
 !s85 0
-Z11 !s108 1729233050.195000
+Z11 !s108 1729608709.495000
 Z12 !s107 single_cycle.vo|
 !s101 -O0
 vsingle_cycle_vlg_check_tst
 !i10b 1
-!s100 2L4`AEDOW3d4<iVeQ^4PV2
-Ikh1I4mLOaQ0fUTFSQ3i;L3
-VTT[lAF1MVi=?dcWJYm=lI3
+!s100 4G]IZSHJI3C?]RgWekb`R0
+Ioc5PRPKVPE9S`fcfhEN>03
+Z13 VTT[lAF1MVi=?dcWJYm=lI3
 R3
-Z13 w1729233047
-Z14 8Waveform.vwf.vt
-Z15 FWaveform.vwf.vt
+Z14 w1729608707
+Z15 8single_cycle.vt
+Z16 Fsingle_cycle.vt
 L0 63
 R7
 r1
 !s85 0
 31
-Z16 !s108 1729233051.118000
-Z17 !s107 Waveform.vwf.vt|
-Z18 !s90 -work|work|Waveform.vwf.vt|
+Z17 !s108 1729608710.431000
+Z18 !s107 single_cycle.vt|
+Z19 !s90 -work|work|single_cycle.vt|
 !s101 -O0
 R9
 vsingle_cycle_vlg_sample_tst
 !i10b 1
-Z19 !s100 I^O?jj@aaGPz2aOCI29lk2
-Z20 IY=ekiJ>djc6^UF`8I_SA?1
-Z21 VZS;eJckaV>53G@8b]DO]01
+!s100 6eMn?RnXgL8ZH;@<9XFQK2
+I;2QbEdk=9YYo7>5A?=Wf11
+Z20 VZS;eJckaV>53G@8b]DO]01
 R3
-R13
 R14
 R15
+R16
 L0 29
 R7
 r1
 !s85 0
 31
-R16
 R17
 R18
+R19
 !s101 -O0
 R9
 vsingle_cycle_vlg_vec_tst
 !i10b 1
-!s100 i2aLA75cfi`64Ck9mCmQN2
-I8nM==;?a3^PG5E4Bg?VgS1
-Z22 V@M>fE`G=92@22fNoD^k1j3
+!s100 <>2=l;gML<fh[YaIkL[JN1
+I^;[lGF^i6IzKdPB>D`1zk0
+Z21 V@M>fE`G=92@22fNoD^k1j3
 R3
-R13
 R14
 R15
-L0 6486
+R16
+Z22 L0 6486
 R7
 r1
 !s85 0
 31
-R16
 R17
 R18
+R19
 !s101 -O0
 R9

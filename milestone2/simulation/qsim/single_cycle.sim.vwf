@@ -28,9 +28,12 @@ HEADER
 	DATA_DURATION = 1000.0;
 	SIMULATION_TIME = 0.0;
 	GRID_PHASE = 0.0;
-	GRID_PERIOD = 10.0;
+	GRID_PERIOD = 0.0;
 	GRID_DUTY_CYCLE = 50;
 }
+
+
+
 
 SIGNAL("i_io_btn")
 {
@@ -4387,5465 +4390,3264 @@ TRANSITION_LIST("i_io_btn[3]")
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_btn[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_btn[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_btn[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[31]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[30]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[29]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[28]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[27]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[26]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[25]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[24]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[23]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[22]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[21]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[20]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[19]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[18]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[17]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[16]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[15]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[14]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[13]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[12]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[11]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[10]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[9]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[8]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[7]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("i_io_sw[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex0[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex0[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex0[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex0[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex0[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex0[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex0[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex1[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex1[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex1[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex1[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex1[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex1[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex1[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex2[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex2[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex2[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex2[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex2[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex2[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex2[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex3[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex3[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex3[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex3[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex3[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex3[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex3[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex4[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex4[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex4[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex4[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex4[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex4[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex4[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex5[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex5[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex5[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex5[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex5[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex5[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex5[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex6[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex6[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex6[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex6[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex6[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex6[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex6[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex7[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex7[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex7[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex7[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex7[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex7[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_hex7[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[31]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[30]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[29]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[28]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[27]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[26]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[25]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[24]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[23]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[22]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[21]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[20]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[19]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[18]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[17]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[16]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[15]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[14]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[13]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[12]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[11]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[10]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[9]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[8]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[7]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_lcd[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[31]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[30]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[29]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[28]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[27]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[26]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[25]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[24]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[23]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[22]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[21]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[20]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[19]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[18]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[17]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[16]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[15]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[14]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[13]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[12]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[11]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[10]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[9]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[8]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[7]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledg[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[31]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[30]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[29]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[28]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[27]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[26]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[25]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[24]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[23]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[22]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[21]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[20]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[19]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[18]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[17]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[16]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[15]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[14]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[13]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[12]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[11]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[10]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[9]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[8]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[7]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_io_ledr[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[31]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[30]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[29]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[28]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[27]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[26]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[25]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[24]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[23]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[22]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[21]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[20]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[19]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[18]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[17]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[16]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[15]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[14]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[13]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[12]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[11]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[10]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[9]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[8]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[7]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 660.0;
-			LEVEL 1 FOR 340.0;
-		}
+		LEVEL 0 FOR 660.0;
+		LEVEL 1 FOR 340.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 340.0;
-			LEVEL 1 FOR 320.0;
-			LEVEL 0 FOR 320.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 340.0;
+		LEVEL 1 FOR 320.0;
+		LEVEL 0 FOR 320.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 180.0;
-			LEVEL 1 FOR 160.0;
-			LEVEL 0 FOR 160.0;
-			LEVEL 1 FOR 160.0;
-			LEVEL 0 FOR 160.0;
-			LEVEL 1 FOR 160.0;
-			LEVEL 0 FOR 20.0;
-		}
+		LEVEL 0 FOR 180.0;
+		LEVEL 1 FOR 160.0;
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 160.0;
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 160.0;
+		LEVEL 0 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 100.0;
-			LEVEL 1 FOR 80.0;
-			LEVEL 0 FOR 80.0;
-			LEVEL 1 FOR 80.0;
-			LEVEL 0 FOR 80.0;
-			LEVEL 1 FOR 80.0;
-			LEVEL 0 FOR 80.0;
-			LEVEL 1 FOR 80.0;
-			LEVEL 0 FOR 80.0;
-			LEVEL 1 FOR 80.0;
-			LEVEL 0 FOR 80.0;
-			LEVEL 1 FOR 80.0;
-			LEVEL 0 FOR 20.0;
-		}
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 60.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 20.0;
-		}
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_pc_debug[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
-TRANSITION_LIST("checker3[31]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[30]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[29]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[28]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[27]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[26]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[25]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[24]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[23]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[22]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[21]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[20]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[19]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[18]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[17]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[16]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[15]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[14]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[13]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[12]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[11]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[10]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[9]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[8]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[7]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[6]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[5]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[4]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("checker3[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
 TRANSITION_LIST("checker4[31]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 240.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("checker4[30]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 240.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("checker4[29]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 240.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("checker4[28]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 240.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("checker4[27]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 240.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("checker4[26]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 240.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("checker4[25]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 240.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("checker4[24]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 240.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("checker4[23]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 240.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("checker4[22]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 240.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("checker4[21]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 240.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("checker4[20]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 260.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 260.0;
 	}
 }
-
 TRANSITION_LIST("checker4[19]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 240.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("checker4[18]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 240.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("checker4[17]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 240.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("checker4[16]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 260.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 260.0;
 	}
 }
-
 TRANSITION_LIST("checker4[15]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 120.0;
-			LEVEL 1 FOR 140.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 140.0;
 	}
 }
-
 TRANSITION_LIST("checker4[14]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 120.0;
-			LEVEL 1 FOR 140.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 140.0;
 	}
 }
-
 TRANSITION_LIST("checker4[13]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 260.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 260.0;
 	}
 }
-
 TRANSITION_LIST("checker4[12]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 120.0;
-			LEVEL 1 FOR 140.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 140.0;
 	}
 }
-
 TRANSITION_LIST("checker4[11]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 120.0;
-			LEVEL 1 FOR 140.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 140.0;
 	}
 }
-
 TRANSITION_LIST("checker4[10]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 120.0;
-			LEVEL 1 FOR 140.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 140.0;
 	}
 }
-
 TRANSITION_LIST("checker4[9]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 260.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 260.0;
 	}
 }
-
 TRANSITION_LIST("checker4[8]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 120.0;
-			LEVEL 1 FOR 140.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 140.0;
 	}
 }
-
 TRANSITION_LIST("checker4[7]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 300.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 300.0;
 	}
 }
-
 TRANSITION_LIST("checker4[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 300.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 300.0;
 	}
 }
-
 TRANSITION_LIST("checker4[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 80.0;
-			LEVEL 0 FOR 220.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 220.0;
 	}
 }
-
 TRANSITION_LIST("checker4[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 180.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 180.0;
 	}
 }
-
 TRANSITION_LIST("checker4[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 300.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 300.0;
 	}
 }
-
 TRANSITION_LIST("checker4[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 300.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 300.0;
 	}
 }
-
 TRANSITION_LIST("checker4[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 80.0;
-			LEVEL 0 FOR 220.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 220.0;
 	}
 }
-
 TRANSITION_LIST("checker4[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 700.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 180.0;
-		}
+		LEVEL 0 FOR 700.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 180.0;
 	}
 }
-
 TRANSITION_LIST("checker5[31]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[30]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[29]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[28]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[27]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[26]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[25]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[24]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[23]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[22]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[21]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[20]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[19]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[18]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[17]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[16]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[15]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[14]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[13]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 980.0;
-		}
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 980.0;
 	}
 }
-
 TRANSITION_LIST("checker5[12]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[11]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[10]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[9]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[8]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[7]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker5[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[31]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[30]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[29]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[28]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[27]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[26]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[25]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 60.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 900.0;
-		}
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 900.0;
 	}
 }
-
 TRANSITION_LIST("checker6[24]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[23]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[22]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[21]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[20]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[19]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[18]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[17]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[16]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[15]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[14]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[13]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 100.0;
-			LEVEL 1 FOR 900.0;
-		}
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 900.0;
 	}
 }
-
 TRANSITION_LIST("checker6[12]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 60.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 900.0;
-		}
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 900.0;
 	}
 }
-
 TRANSITION_LIST("checker6[11]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[10]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[9]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[8]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[7]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker6[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 100.0;
-			LEVEL 1 FOR 900.0;
-		}
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 900.0;
 	}
 }
-
 TRANSITION_LIST("checker7[31]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[30]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[29]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[28]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[27]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[26]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[25]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 140.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 820.0;
-		}
+		LEVEL 0 FOR 140.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 820.0;
 	}
 }
-
 TRANSITION_LIST("checker7[24]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[23]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[22]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[21]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[20]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[19]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[18]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[17]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[16]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[15]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[14]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[13]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 140.0;
-			LEVEL 1 FOR 860.0;
-		}
+		LEVEL 0 FOR 140.0;
+		LEVEL 1 FOR 860.0;
 	}
 }
-
 TRANSITION_LIST("checker7[12]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[11]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[10]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[9]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[8]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[7]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker7[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 180.0;
-			LEVEL 1 FOR 820.0;
-		}
+		LEVEL 0 FOR 180.0;
+		LEVEL 1 FOR 820.0;
 	}
 }
-
 TRANSITION_LIST("checker7[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[31]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[30]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[29]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[28]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[27]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[26]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[25]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 220.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 740.0;
-		}
+		LEVEL 0 FOR 220.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 740.0;
 	}
 }
-
 TRANSITION_LIST("checker8[24]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[23]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[22]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[21]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[20]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[19]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[18]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[17]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[16]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[15]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[14]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[13]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 220.0;
-			LEVEL 1 FOR 780.0;
-		}
+		LEVEL 0 FOR 220.0;
+		LEVEL 1 FOR 780.0;
 	}
 }
-
 TRANSITION_LIST("checker8[12]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 220.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 740.0;
-		}
+		LEVEL 0 FOR 220.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 740.0;
 	}
 }
-
 TRANSITION_LIST("checker8[11]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[10]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[9]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[8]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[7]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("checker8[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 260.0;
-			LEVEL 1 FOR 740.0;
-		}
+		LEVEL 0 FOR 260.0;
+		LEVEL 1 FOR 740.0;
 	}
 }
-
 TRANSITION_LIST("checker8[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 260.0;
-			LEVEL 1 FOR 740.0;
-		}
+		LEVEL 0 FOR 260.0;
+		LEVEL 1 FOR 740.0;
 	}
 }
-
 TRANSITION_LIST("i_clk")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
-
 TRANSITION_LIST("i_rst_n")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
-		}
+		LEVEL 1 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("o_insn_vld")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 980.0;
-		}
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 980.0;
 	}
 }
+
 
 DISPLAY_LINE
 {
@@ -14193,7 +11995,6 @@ DISPLAY_LINE
 	TREE_LEVEL = 1;
 	PARENT = 402;
 }
-
 TIME_BAR
 {
 	TIME = 0;

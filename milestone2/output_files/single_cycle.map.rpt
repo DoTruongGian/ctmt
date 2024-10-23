@@ -1,6 +1,6 @@
 Analysis & Synthesis report for single_cycle
-Fri Oct 18 13:30:41 2024
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Tue Oct 22 21:51:33 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -43,24 +43,24 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                    ;
-+------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 18 13:30:40 2024      ;
-; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
-; Revision Name                      ; single_cycle                               ;
-; Top-level Entity Name              ; single_cycle                               ;
-; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 16,173                                     ;
-;     Total combinational functions  ; 15,591                                     ;
-;     Dedicated logic registers      ; 2,725                                      ;
-; Total registers                    ; 2725                                       ;
-; Total pins                         ; 383                                        ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
-+------------------------------------+--------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Oct 22 21:51:33 2024           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; single_cycle                                    ;
+; Top-level Entity Name              ; single_cycle                                    ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 16,203                                          ;
+;     Total combinational functions  ; 15,621                                          ;
+;     Dedicated logic registers      ; 2,725                                           ;
+; Total registers                    ; 2725                                            ;
+; Total pins                         ; 383                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -68,9 +68,9 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP3C120F780C7      ;                    ;
+; Device                                                                     ; EP2C70F672C6       ;                    ;
 ; Top-level entity name                                                      ; single_cycle       ; single_cycle       ;
-; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -109,14 +109,12 @@ applicable agreement for further details.
 ; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
 ; Auto ROM Replacement                                                       ; On                 ; On                 ;
 ; Auto RAM Replacement                                                       ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
 ; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
 ; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
 ; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
 ; Strict RAM Replacement                                                     ; Off                ; Off                ;
 ; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
 ; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
-; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
 ; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
 ; Auto Resource Sharing                                                      ; Off                ; Off                ;
 ; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
@@ -124,7 +122,7 @@ applicable agreement for further details.
 ; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
 ; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
 ; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
 ; Report Parameter Settings                                                  ; On                 ; On                 ;
 ; Report Source Assignments                                                  ; On                 ; On                 ;
 ; Report Connectivity Checks                                                 ; On                 ; On                 ;
@@ -189,16 +187,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 16,173      ;
+; Estimated Total logic elements              ; 16,203      ;
 ;                                             ;             ;
-; Total combinational functions               ; 15591       ;
+; Total combinational functions               ; 15621       ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 10769       ;
-;     -- 3 input functions                    ; 4685        ;
-;     -- <=2 input functions                  ; 137         ;
+;     -- 4 input functions                    ; 11018       ;
+;     -- 3 input functions                    ; 4193        ;
+;     -- <=2 input functions                  ; 410         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 15433       ;
+;     -- normal mode                          ; 15463       ;
 ;     -- arithmetic mode                      ; 158         ;
 ;                                             ;             ;
 ; Total registers                             ; 2725        ;
@@ -209,8 +207,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ; Maximum fan-out node                        ; lsu:Lsu|clk ;
 ; Maximum fan-out                             ; 2152        ;
-; Total fan-out                               ; 64821       ;
-; Average fan-out                             ; 3.40        ;
+; Total fan-out                               ; 64504       ;
+; Average fan-out                             ; 3.44        ;
 +---------------------------------------------+-------------+
 
 
@@ -219,15 +217,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
-; |single_cycle              ; 15591 (0)         ; 2725 (0)     ; 0           ; 0            ; 0       ; 0         ; 383  ; 0            ; |single_cycle                  ; work         ;
+; |single_cycle              ; 15621 (0)         ; 2725 (0)     ; 0           ; 0            ; 0       ; 0         ; 383  ; 0            ; |single_cycle                  ; work         ;
 ;    |I$:i$|                 ; 62 (62)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|I$:i$            ; work         ;
 ;    |ImmGen:immgen|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|ImmGen:immgen    ; work         ;
-;    |alu:Alu|               ; 739 (739)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|alu:Alu          ; work         ;
-;    |ctrl_unit:ctrl|        ; 26 (26)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|ctrl_unit:ctrl   ; work         ;
+;    |alu:Alu|               ; 736 (736)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|alu:Alu          ; work         ;
+;    |ctrl_unit:ctrl|        ; 28 (28)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|ctrl_unit:ctrl   ; work         ;
 ;    |insn_vld:ins_vld|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|insn_vld:ins_vld ; work         ;
-;    |lsu:Lsu|               ; 13785 (13785)     ; 2184 (2184)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|lsu:Lsu          ; work         ;
-;    |mux_2to1:mux213|       ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|mux_2to1:mux213  ; work         ;
-;    |mux_3to1:mux31|        ; 154 (154)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|mux_3to1:mux31   ; work         ;
+;    |lsu:Lsu|               ; 13812 (13812)     ; 2184 (2184)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|lsu:Lsu          ; work         ;
+;    |mux_2to1:mux213|       ; 65 (65)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|mux_2to1:mux213  ; work         ;
+;    |mux_3to1:mux31|        ; 159 (159)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|mux_3to1:mux31   ; work         ;
 ;    |pc:Pc|                 ; 30 (30)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|pc:Pc            ; work         ;
 ;    |pc_debug:pc_de|        ; 0 (0)             ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|pc_debug:pc_de   ; work         ;
 ;    |regfile:regf|          ; 728 (728)         ; 480 (480)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|regfile:regf     ; work         ;
@@ -1384,7 +1382,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:57     ;
+; Top            ; 00:02:09     ;
 +----------------+--------------+
 
 
@@ -1393,8 +1391,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Oct 18 13:28:41 2024
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Oct 22 21:49:19 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off single_cycle -c single_cycle
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
@@ -1519,10 +1517,10 @@ Warning (10270): Verilog HDL Case Statement warning at ctrl_unit.sv(37): incompl
 Critical Warning (127005): Memory depth (16384) in the design file differs from memory depth (8193) in the Memory Initialization File "C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/db/single_cycle.ram0_I$_91f.hdl.mif" -- setting initial value for remaining addresses to 0
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/db/single_cycle.ram0_I$_91f.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer I$:i$|instructions_value~0
-    Warning (19017): Found clock multiplexer I$:i$|instructions_value~1
-    Warning (19017): Found clock multiplexer I$:i$|instructions_value~2
-    Warning (19017): Found clock multiplexer I$:i$|instructions_value~3
+    Warning (19017): Found clock multiplexer I$:i$|instructions_value~synth
+    Warning (19017): Found clock multiplexer I$:i$|instructions_value~synth
+    Warning (19017): Found clock multiplexer I$:i$|instructions_value~synth
+    Warning (19017): Found clock multiplexer I$:i$|instructions_value~synth
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "o_pc_debug[0]" is stuck at GND
     Warning (13410): Pin "o_pc_debug[1]" is stuck at GND
@@ -1575,7 +1573,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "o_io_hex7[4]" is stuck at GND
     Warning (13410): Pin "o_io_hex7[5]" is stuck at GND
     Warning (13410): Pin "o_io_hex7[6]" is stuck at GND
-Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/output_files/single_cycle.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1584,15 +1581,15 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "i_io_btn[1]"
     Warning (15610): No output dependent on input pin "i_io_btn[2]"
     Warning (15610): No output dependent on input pin "i_io_btn[3]"
-Info (21057): Implemented 16620 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 16650 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 38 input pins
     Info (21059): Implemented 345 output pins
-    Info (21061): Implemented 16237 logic cells
+    Info (21061): Implemented 16267 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 84 warnings
-    Info: Peak virtual memory: 4726 megabytes
-    Info: Processing ended: Fri Oct 18 13:30:41 2024
-    Info: Elapsed time: 00:02:00
-    Info: Total CPU time (on all processors): 00:01:59
+    Info: Peak virtual memory: 4717 megabytes
+    Info: Processing ended: Tue Oct 22 21:51:33 2024
+    Info: Elapsed time: 00:02:14
+    Info: Total CPU time (on all processors): 00:02:14
 
 
 +------------------------------------------+

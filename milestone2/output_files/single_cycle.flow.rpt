@@ -1,6 +1,6 @@
 Flow report for single_cycle
-Fri Oct 18 13:30:49 2024
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Tue Oct 22 21:51:48 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -37,26 +37,26 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Flow Summary                                                                    ;
-+------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Fri Oct 18 13:30:49 2024      ;
-; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
-; Revision Name                      ; single_cycle                               ;
-; Top-level Entity Name              ; single_cycle                               ;
-; Family                             ; Cyclone III                                ;
-; Device                             ; EP3C120F780C7                              ;
-; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 16,173                                     ;
-;     Total combinational functions  ; 15,591                                     ;
-;     Dedicated logic registers      ; 2,725                                      ;
-; Total registers                    ; 2725                                       ;
-; Total pins                         ; 383                                        ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
-+------------------------------------+--------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Flow Summary                                                                         ;
++------------------------------------+-------------------------------------------------+
+; Flow Status                        ; Successful - Tue Oct 22 21:51:48 2024           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; single_cycle                                    ;
+; Top-level Entity Name              ; single_cycle                                    ;
+; Family                             ; Cyclone II                                      ;
+; Device                             ; EP2C70F672C6                                    ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 16,203                                          ;
+;     Total combinational functions  ; 15,621                                          ;
+;     Dedicated logic registers      ; 2,725                                           ;
+; Total registers                    ; 2725                                            ;
+; Total pins                         ; 383                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/18/2024 13:28:42 ;
+; Start date & time ; 10/22/2024 21:49:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; single_cycle        ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                                                                                ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 18691166747277.172923292205972                                                                                       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 18691166747277.172960855916572                                                                                       ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                                                                   ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/simulation/qsim/ ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                                                          ; --            ; --          ; eda_simulation ;
@@ -94,10 +94,10 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:58     ; 1.0                     ; 4698 MB             ; 00:01:58                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4564 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4590 MB             ; 00:00:02                           ;
-; Total                ; 00:01:59     ; --                      ; --                  ; 00:02:00                           ;
+; Analysis & Synthesis ; 00:02:13     ; 1.0                     ; 4700 MB             ; 00:02:13                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4538 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4563 MB             ; 00:00:02                           ;
+; Total                ; 00:02:14     ; --                      ; --                  ; 00:02:15                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -116,8 +116,8 @@ applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off single_cycle -c single_cycle
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog single_cycle -c single_cycle --vector_source=C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/Waveform.vwf --testbench_file=C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/simulation/qsim/Waveform.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/simulation/qsim/ single_cycle -c single_cycle
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog single_cycle -c single_cycle --vector_source=C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/Waveform.vwf --testbench_file=./simulation/qsim/single_cycle.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog single_cycle -c single_cycle
 
 
 
