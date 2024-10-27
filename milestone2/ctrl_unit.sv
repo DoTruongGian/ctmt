@@ -128,55 +128,63 @@ module ctrl_unit (
         3'b000: begin
           if (br_equal) begin
             opa_sel = 1'b1;
-            wb_sel = 2'b01;
+            pc_sel = 1'b1;
           end else begin
-            wb_sel = 2'b10;
+            pc_sel = 1'b0;
           end
         end
         3'b001: begin
           if (br_equal) begin
-            wb_sel = 2'b10;
+            pc_sel = 1'b0;
           end else begin
             opa_sel = 1'b1;
-            wb_sel = 2'b01;
+            pc_sel = 1'b1;
           end
         end
         3'b100: begin
           if (br_less) begin
             opa_sel = 1'b1;
-            wb_sel = 2'b01;
+            pc_sel = 1'b1;
           end else begin
-            wb_sel = 2'b10;
+            pc_sel = 1'b0;
           end
         end
         3'b101: begin
           if (br_equal || (!br_equal && !br_less)) begin
             opa_sel = 1'b1;
-            wb_sel = 2'b01;
+            pc_sel = 1'b1;
           end else begin
-            wb_sel = 2'b10;
+            pc_sel = 1'b0;
           end
         end
         3'b110: begin
           br_un = 1'b1;
           if (br_less) begin
             opa_sel = 1'b1;
-            wb_sel = 2'b01;
+            pc_sel = 1'b1;
           end else begin
-            wb_sel = 2'b10;
+            pc_sel = 1'b0;
           end
         end
         3'b111: begin
           br_un = 1'b1;
           if (br_equal || (!br_equal && !br_less)) begin
             opa_sel = 1'b1;
-            wb_sel = 2'b01;
+            pc_sel = 1'b1;
           end else begin
-            wb_sel = 2'b10;
+            pc_sel = 1'b0;
           end
         end
         default: alu_op = 4'b0000;
       endcase
+    end
+
+    7'b1101111: begin
+      insn_vld = 1;
+      rd_wren = 1;
+      pc_sel = 1'b1;
+      opa_sel = 1'b1;
+      wb_sel = 2'b10;
     end
   endcase
   end

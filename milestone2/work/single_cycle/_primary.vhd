@@ -18,6 +18,11 @@ entity single_cycle is
         o_io_hex7       : out    vl_logic_vector(6 downto 0);
         o_io_lcd        : out    vl_logic_vector(31 downto 0);
         i_io_sw         : in     vl_logic_vector(31 downto 0);
-        i_io_btn        : in     vl_logic_vector(3 downto 0)
+        i_io_btn        : in     vl_logic_vector(3 downto 0);
+        checker4        : out    vl_logic_vector(31 downto 0);
+        checker5        : out    vl_logic_vector(31 downto 0);
+        checker6        : out    vl_logic_vector(31 downto 0);
+        checker7        : out    vl_logic_vector(31 downto 0);
+        checker8        : out    vl_logic_vector(31 downto 0)
     );
 end single_cycle;

@@ -8,10 +8,10 @@ module regfile (
   input logic i_rd_wren,          // Write enable for the destination register
   output logic [31:0] o_rs1_data, // Data from the first source register
   output logic [31:0] o_rs2_data, // Data from the second source register
-  output logic [31:0] checker4,
+  output logic [31:0] checker1,
+  output logic [31:0] checker2,
+  output logic [31:0] checker3,
   output logic [31:0] checker5,
-  output logic [31:0] checker6,
-  output logic [31:0] checker7,
   output logic [31:0] checker8
 );
 
@@ -21,10 +21,10 @@ module regfile (
   // Asynchronous read logic
   assign o_rs1_data = (i_rs1_addr == 5'b0) ? 32'b0 : regfile[i_rs1_addr];
   assign o_rs2_data = (i_rs2_addr == 5'b0) ? 32'b0 : regfile[i_rs2_addr];
-  assign checker4 = regfile[4];
+  assign checker1 = regfile[1];
+  assign checker2 = regfile[2];
+  assign checker3 = regfile[3];
   assign checker5 = regfile[5];
-  assign checker6 = regfile[6];
-  assign checker7 = regfile[7];
   assign checker8 = regfile[8];
 
   // Synchronous write logic

@@ -16,11 +16,12 @@ module single_cycle (
   output logic [31:0] o_io_lcd,   // Output for driving the LCD register
   input logic [31:0] i_io_sw,     // Input for switches
   input logic [3:0] i_io_btn,      // Input for buttons
-  output logic [31:0] checker4,
+  output logic [31:0] checker1,
+  output logic [31:0] checker2,
+  output logic [31:0] checker3,
   output logic [31:0] checker5,
-  output logic [31:0] checker6,
-  output logic [31:0] checker7,
-  output logic [31:0] checker8
+  output logic [31:0] checker8,
+  output logic br_lesss
 );
 wire [31:0] pc_next, pc_four, alu_data, pc, instr, wb_data, o_rs1_data, o_rs2_data, imm, operand_a, operand_b, ld_data;
 wire pc_sel, rd_wren, br_un, br_equal, br_less, opa_sel, opb_sel, mem_wren, insn_vld, i_unsigned;
@@ -61,10 +62,10 @@ regfile regf(
   .i_rd_wren(rd_wren),
   .o_rs1_data(o_rs1_data),
   .o_rs2_data(o_rs2_data),
-  .checker4(checker4),
+  .checker1(checker1),
+  .checker2(checker2),
+  .checker3(checker3),
   .checker5(checker5),
-  .checker6(checker6),
-  .checker7(checker7),
   .checker8(checker8)
 );
 
@@ -164,5 +165,5 @@ ctrl_unit ctrl (
   .i_unsigned(i_unsigned),
   .i_data_type(i_data_type)
 );
-
+assign br_lesss = br_less;
 endmodule

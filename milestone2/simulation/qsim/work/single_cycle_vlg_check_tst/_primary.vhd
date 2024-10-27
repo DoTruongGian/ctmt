@@ -2,10 +2,11 @@ library verilog;
 use verilog.vl_types.all;
 entity single_cycle_vlg_check_tst is
     port(
-        checker4        : in     vl_logic_vector(31 downto 0);
+        br_lesss        : in     vl_logic;
+        checker1        : in     vl_logic_vector(31 downto 0);
+        checker2        : in     vl_logic_vector(31 downto 0);
+        checker3        : in     vl_logic_vector(31 downto 0);
         checker5        : in     vl_logic_vector(31 downto 0);
-        checker6        : in     vl_logic_vector(31 downto 0);
-        checker7        : in     vl_logic_vector(31 downto 0);
         checker8        : in     vl_logic_vector(31 downto 0);
         o_insn_vld      : in     vl_logic;
         o_io_hex0       : in     vl_logic_vector(6 downto 0);

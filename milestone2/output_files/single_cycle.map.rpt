@@ -1,5 +1,5 @@
 Analysis & Synthesis report for single_cycle
-Tue Oct 22 21:51:33 2024
+Sun Oct 27 01:09:20 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -18,9 +18,11 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: lsu:Lsu
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
- 15. Analysis & Synthesis Suppressed Messages
+ 13. Parameter Settings for User Entity Instance: lsu:Lsu|sram:data_memory
+ 14. Port Connectivity Checks: "lsu:Lsu|sram:data_memory"
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -46,16 +48,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 22 21:51:33 2024           ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct 27 01:09:19 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; single_cycle                                    ;
 ; Top-level Entity Name              ; single_cycle                                    ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 16,203                                          ;
-;     Total combinational functions  ; 15,621                                          ;
-;     Dedicated logic registers      ; 2,725                                           ;
-; Total registers                    ; 2725                                            ;
-; Total pins                         ; 383                                             ;
+; Total logic elements               ; 5,348                                           ;
+;     Total combinational functions  ; 3,046                                           ;
+;     Dedicated logic registers      ; 2,485                                           ;
+; Total registers                    ; 2485                                            ;
+; Total pins                         ; 384                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -68,7 +70,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP2C70F672C6       ;                    ;
+; Device                                                                     ; EP2C35F672C6       ;                    ;
 ; Top-level entity name                                                      ; single_cycle       ; single_cycle       ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -182,54 +184,56 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 16,203      ;
-;                                             ;             ;
-; Total combinational functions               ; 15621       ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 11018       ;
-;     -- 3 input functions                    ; 4193        ;
-;     -- <=2 input functions                  ; 410         ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 15463       ;
-;     -- arithmetic mode                      ; 158         ;
-;                                             ;             ;
-; Total registers                             ; 2725        ;
-;     -- Dedicated logic registers            ; 2725        ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 383         ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-; Maximum fan-out node                        ; lsu:Lsu|clk ;
-; Maximum fan-out                             ; 2152        ;
-; Total fan-out                               ; 64504       ;
-; Average fan-out                             ; 3.44        ;
-+---------------------------------------------+-------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 5,348 ;
+;                                             ;       ;
+; Total combinational functions               ; 3046  ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 2436  ;
+;     -- 3 input functions                    ; 410   ;
+;     -- <=2 input functions                  ; 200   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 2839  ;
+;     -- arithmetic mode                      ; 207   ;
+;                                             ;       ;
+; Total registers                             ; 2485  ;
+;     -- Dedicated logic registers            ; 2485  ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 384   ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; i_clk ;
+; Maximum fan-out                             ; 2485  ;
+; Total fan-out                               ; 19617 ;
+; Average fan-out                             ; 3.32  ;
++---------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
-; |single_cycle              ; 15621 (0)         ; 2725 (0)     ; 0           ; 0            ; 0       ; 0         ; 383  ; 0            ; |single_cycle                  ; work         ;
-;    |I$:i$|                 ; 62 (62)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|I$:i$            ; work         ;
-;    |ImmGen:immgen|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|ImmGen:immgen    ; work         ;
-;    |alu:Alu|               ; 736 (736)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|alu:Alu          ; work         ;
-;    |ctrl_unit:ctrl|        ; 28 (28)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|ctrl_unit:ctrl   ; work         ;
-;    |insn_vld:ins_vld|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|insn_vld:ins_vld ; work         ;
-;    |lsu:Lsu|               ; 13812 (13812)     ; 2184 (2184)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|lsu:Lsu          ; work         ;
-;    |mux_2to1:mux213|       ; 65 (65)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|mux_2to1:mux213  ; work         ;
-;    |mux_3to1:mux31|        ; 159 (159)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|mux_3to1:mux31   ; work         ;
-;    |pc:Pc|                 ; 30 (30)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|pc:Pc            ; work         ;
-;    |pc_debug:pc_de|        ; 0 (0)             ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|pc_debug:pc_de   ; work         ;
-;    |regfile:regf|          ; 728 (728)         ; 480 (480)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|regfile:regf     ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                            ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
+; |single_cycle              ; 3046 (0)          ; 2485 (0)     ; 0           ; 0            ; 0       ; 0         ; 384  ; 0            ; |single_cycle                          ; work         ;
+;    |I$:i$|                 ; 27 (27)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|I$:i$                    ; work         ;
+;    |ImmGen:immgen|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|ImmGen:immgen            ; work         ;
+;    |alu:Alu|               ; 728 (728)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|alu:Alu                  ; work         ;
+;    |brc:Brc|               ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|brc:Brc                  ; work         ;
+;    |ctrl_unit:ctrl|        ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|ctrl_unit:ctrl           ; work         ;
+;    |insn_vld:ins_vld|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|insn_vld:ins_vld         ; work         ;
+;    |lsu:Lsu|               ; 1697 (273)        ; 2232 (184)   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|lsu:Lsu                  ; work         ;
+;       |sram:data_memory|   ; 1424 (1424)       ; 2048 (2048)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|lsu:Lsu|sram:data_memory ; work         ;
+;    |mux_2to1:mux213|       ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|mux_2to1:mux213          ; work         ;
+;    |mux_3to1:mux31|        ; 227 (227)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|mux_3to1:mux31           ; work         ;
+;    |pc:Pc|                 ; 30 (30)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|pc:Pc                    ; work         ;
+;    |pc_debug:pc_de|        ; 0 (0)             ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|pc_debug:pc_de           ; work         ;
+;    |regfile:regf|          ; 194 (194)         ; 192 (192)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|regfile:regf             ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -238,25 +242,70 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------------------------------------------+
 ; Register name                           ; Reason for Removal                          ;
 +-----------------------------------------+---------------------------------------------+
-; pc:Pc|PC_o[1]                           ; Merged with pc:Pc|PC_o[0]                   ;
-; pc:Pc|PC_o[0]                           ; Stuck at GND due to stuck port data_in      ;
-; pc_debug:pc_de|o_pc_debug[0,1]          ; Stuck at GND due to stuck port data_in      ;
-; regfile:regf|regfile[31][0]             ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[30][0]             ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[29][0]             ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[28][0]             ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[27][0]             ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[26][0]             ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[25][0]             ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[24][0]             ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[23][0]             ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[22][0]             ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[21][0]             ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[20][0]             ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[19][0]             ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[18][0]             ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[17][0]             ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[16][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][0]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][1]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][2]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][3]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][4]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][5]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][6]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][7]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][8]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][9]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][10]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][11]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][12]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][13]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][14]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][15]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][16]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][17]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][18]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][19]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][20]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][21]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][22]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][23]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][24]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][25]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][26]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][27]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][28]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][29]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][30]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[2][31]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][0]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][1]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][2]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][3]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][4]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][5]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][6]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][7]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][8]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][9]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][10]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][11]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][12]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][13]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][14]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][15]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][16]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][17]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][18]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][19]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][20]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][21]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][22]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][23]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][24]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][25]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][26]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][27]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][28]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][29]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][30]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[3][31]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][31]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][31]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][31]            ; Stuck at GND due to stuck port clock_enable ;
@@ -273,6 +322,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][31]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][31]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][31]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][31]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][31]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][31]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][31]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][31]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][31]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][30]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][30]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][30]            ; Stuck at GND due to stuck port clock_enable ;
@@ -289,6 +344,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][30]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][30]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][30]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][30]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][30]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][30]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][30]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][30]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][30]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][29]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][29]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][29]            ; Stuck at GND due to stuck port clock_enable ;
@@ -305,6 +366,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][29]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][29]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][29]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][29]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][29]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][29]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][29]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][29]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][29]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][28]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][28]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][28]            ; Stuck at GND due to stuck port clock_enable ;
@@ -321,6 +388,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][28]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][28]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][28]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][28]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][28]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][28]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][28]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][28]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][28]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][27]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][27]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][27]            ; Stuck at GND due to stuck port clock_enable ;
@@ -337,6 +410,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][27]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][27]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][27]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][27]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][27]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][27]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][27]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][27]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][27]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][26]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][26]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][26]            ; Stuck at GND due to stuck port clock_enable ;
@@ -353,6 +432,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][26]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][26]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][26]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][26]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][26]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][26]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][26]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][26]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][26]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][25]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][25]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][25]            ; Stuck at GND due to stuck port clock_enable ;
@@ -369,6 +454,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][25]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][25]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][25]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][25]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][25]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][25]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][25]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][25]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][25]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][24]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][24]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][24]            ; Stuck at GND due to stuck port clock_enable ;
@@ -385,6 +476,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][24]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][24]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][24]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][24]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][24]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][24]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][24]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][24]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][24]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][23]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][23]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][23]            ; Stuck at GND due to stuck port clock_enable ;
@@ -401,6 +498,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][23]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][23]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][23]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][23]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][23]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][23]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][23]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][23]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][23]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][22]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][22]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][22]            ; Stuck at GND due to stuck port clock_enable ;
@@ -417,6 +520,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][22]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][22]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][22]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][22]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][22]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][22]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][22]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][22]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][22]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][21]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][21]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][21]            ; Stuck at GND due to stuck port clock_enable ;
@@ -433,6 +542,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][21]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][21]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][21]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][21]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][21]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][21]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][21]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][21]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][21]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][20]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][20]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][20]            ; Stuck at GND due to stuck port clock_enable ;
@@ -449,6 +564,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][20]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][20]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][20]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][20]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][20]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][20]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][20]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][20]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][20]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][19]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][19]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][19]            ; Stuck at GND due to stuck port clock_enable ;
@@ -465,6 +586,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][19]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][19]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][19]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][19]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][19]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][19]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][19]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][19]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][19]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][18]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][18]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][18]            ; Stuck at GND due to stuck port clock_enable ;
@@ -481,6 +608,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][18]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][18]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][18]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][18]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][18]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][18]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][18]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][18]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][18]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][17]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][17]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][17]            ; Stuck at GND due to stuck port clock_enable ;
@@ -497,6 +630,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][17]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][17]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][17]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][17]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][17]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][17]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][17]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][17]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][17]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][16]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][16]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][16]            ; Stuck at GND due to stuck port clock_enable ;
@@ -513,6 +652,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][16]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][16]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][16]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][16]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][16]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][16]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][16]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][16]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][16]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][15]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][15]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][15]            ; Stuck at GND due to stuck port clock_enable ;
@@ -529,6 +674,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][15]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][15]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][15]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][15]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][15]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][15]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][15]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][15]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][15]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][14]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][14]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][14]            ; Stuck at GND due to stuck port clock_enable ;
@@ -545,6 +696,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][14]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][14]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][14]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][14]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][14]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][14]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][14]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][14]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][14]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][13]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][13]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][13]            ; Stuck at GND due to stuck port clock_enable ;
@@ -561,6 +718,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][13]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][13]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][13]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][13]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][13]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][13]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][13]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][13]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][13]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][12]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][12]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][12]            ; Stuck at GND due to stuck port clock_enable ;
@@ -577,6 +740,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][12]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][12]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][12]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][12]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][12]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][12]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][12]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][12]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][12]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][11]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][11]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][11]            ; Stuck at GND due to stuck port clock_enable ;
@@ -593,6 +762,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][11]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][11]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][11]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][11]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][11]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][11]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][11]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][11]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][11]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][10]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][10]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][10]            ; Stuck at GND due to stuck port clock_enable ;
@@ -609,6 +784,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][10]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][10]            ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][10]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][10]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][10]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][10]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][10]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][10]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][10]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][9]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][9]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][9]             ; Stuck at GND due to stuck port clock_enable ;
@@ -625,6 +806,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][9]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][9]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][9]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][9]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][9]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][9]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][9]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][9]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][9]              ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][8]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][8]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][8]             ; Stuck at GND due to stuck port clock_enable ;
@@ -641,6 +828,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][8]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][8]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][8]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][8]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][8]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][8]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][8]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][8]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][8]              ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][7]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][7]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][7]             ; Stuck at GND due to stuck port clock_enable ;
@@ -657,6 +850,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][7]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][7]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][7]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][7]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][7]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][7]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][7]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][7]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][7]              ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][6]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][6]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][6]             ; Stuck at GND due to stuck port clock_enable ;
@@ -673,6 +872,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][6]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][6]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][6]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][6]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][6]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][6]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][6]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][6]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][6]              ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][5]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][5]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][5]             ; Stuck at GND due to stuck port clock_enable ;
@@ -689,6 +894,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][5]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][5]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][5]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][5]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][5]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][5]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][5]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][5]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][5]              ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][4]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][4]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][4]             ; Stuck at GND due to stuck port clock_enable ;
@@ -705,6 +916,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][4]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][4]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][4]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][4]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][4]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][4]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][4]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][4]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][4]              ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][3]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][3]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][3]             ; Stuck at GND due to stuck port clock_enable ;
@@ -721,6 +938,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][3]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][3]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][3]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][3]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][3]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][3]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][3]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][3]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][3]              ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][2]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][2]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][2]             ; Stuck at GND due to stuck port clock_enable ;
@@ -737,6 +960,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][2]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][2]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][2]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][2]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][2]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][2]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][2]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][2]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][2]              ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[31][1]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[30][1]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[29][1]             ; Stuck at GND due to stuck port clock_enable ;
@@ -753,7 +982,68 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[18][1]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[17][1]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[16][1]             ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][0]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][1]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][1]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][1]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][1]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][1]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][1]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[31][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[30][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[29][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[28][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[27][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[26][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[25][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[24][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[23][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[22][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[21][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[20][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[19][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[18][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[17][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[16][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[15][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[14][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[11][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[10][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[7][0]              ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[6][0]              ; Stuck at GND due to stuck port clock_enable ;
+; pc:Pc|PC_o[0,1]                         ; Stuck at GND due to stuck port clock_enable ;
+; pc_debug:pc_de|o_pc_debug[0,1]          ; Stuck at GND due to stuck port data_in      ;
+; regfile:regf|regfile[13][31]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][30]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][29]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][28]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][27]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][26]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][25]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][24]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][23]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][22]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][21]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][20]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][19]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][18]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][17]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][16]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][15]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][14]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][13]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][12]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][11]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][10]            ; Lost fanout                                 ;
+; regfile:regf|regfile[13][9]             ; Lost fanout                                 ;
+; regfile:regf|regfile[13][8]             ; Lost fanout                                 ;
+; regfile:regf|regfile[13][7]             ; Lost fanout                                 ;
+; regfile:regf|regfile[13][6]             ; Lost fanout                                 ;
+; regfile:regf|regfile[13][5]             ; Lost fanout                                 ;
+; regfile:regf|regfile[13][4]             ; Lost fanout                                 ;
+; regfile:regf|regfile[13][3]             ; Lost fanout                                 ;
+; regfile:regf|regfile[13][2]             ; Lost fanout                                 ;
+; regfile:regf|regfile[13][1]             ; Lost fanout                                 ;
+; regfile:regf|regfile[13][0]             ; Lost fanout                                 ;
 ; regfile:regf|regfile[0][31]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[0][30]             ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[0][29]             ; Stuck at GND due to stuck port clock_enable ;
@@ -785,287 +1075,117 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:regf|regfile[0][3]              ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[0][2]              ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:regf|regfile[0][1]              ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 548 ;                                             ;
+; regfile:regf|regfile[0][0]              ; Stuck at GND due to stuck port clock_enable ;
+; lsu:Lsu|seven_segment[7][7]             ; Stuck at GND due to stuck port data_in      ;
+; lsu:Lsu|seven_segment[6][7]             ; Stuck at GND due to stuck port data_in      ;
+; lsu:Lsu|seven_segment[5][7]             ; Stuck at GND due to stuck port data_in      ;
+; lsu:Lsu|seven_segment[4][7]             ; Stuck at GND due to stuck port data_in      ;
+; lsu:Lsu|seven_segment[3][7]             ; Stuck at GND due to stuck port data_in      ;
+; lsu:Lsu|seven_segment[2][7]             ; Stuck at GND due to stuck port data_in      ;
+; lsu:Lsu|seven_segment[1][7]             ; Stuck at GND due to stuck port data_in      ;
+; lsu:Lsu|seven_segment[0][7]             ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 844 ;                                             ;
 +-----------------------------------------+---------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                       ;
-+---------------+---------------------------+---------------------------------------------------------------------------------------+
-; Register name ; Reason for Removal        ; Registers Removed due to This Register                                                ;
-+---------------+---------------------------+---------------------------------------------------------------------------------------+
-; pc:Pc|PC_o[0] ; Stuck at GND              ; pc_debug:pc_de|o_pc_debug[0], pc_debug:pc_de|o_pc_debug[1],                           ;
-;               ; due to stuck port data_in ; regfile:regf|regfile[31][0], regfile:regf|regfile[30][0],                             ;
-;               ;                           ; regfile:regf|regfile[29][0], regfile:regf|regfile[28][0],                             ;
-;               ;                           ; regfile:regf|regfile[27][0], regfile:regf|regfile[26][0],                             ;
-;               ;                           ; regfile:regf|regfile[25][0], regfile:regf|regfile[24][0],                             ;
-;               ;                           ; regfile:regf|regfile[23][0], regfile:regf|regfile[22][0],                             ;
-;               ;                           ; regfile:regf|regfile[21][0], regfile:regf|regfile[20][0],                             ;
-;               ;                           ; regfile:regf|regfile[19][0], regfile:regf|regfile[18][0],                             ;
-;               ;                           ; regfile:regf|regfile[17][0], regfile:regf|regfile[16][0],                             ;
-;               ;                           ; regfile:regf|regfile[31][31], regfile:regf|regfile[30][31],                           ;
-;               ;                           ; regfile:regf|regfile[29][31], regfile:regf|regfile[28][31],                           ;
-;               ;                           ; regfile:regf|regfile[27][31], regfile:regf|regfile[26][31],                           ;
-;               ;                           ; regfile:regf|regfile[25][31], regfile:regf|regfile[24][31],                           ;
-;               ;                           ; regfile:regf|regfile[23][31], regfile:regf|regfile[22][31],                           ;
-;               ;                           ; regfile:regf|regfile[21][31], regfile:regf|regfile[20][31],                           ;
-;               ;                           ; regfile:regf|regfile[19][31], regfile:regf|regfile[18][31],                           ;
-;               ;                           ; regfile:regf|regfile[17][31], regfile:regf|regfile[16][31],                           ;
-;               ;                           ; regfile:regf|regfile[31][30], regfile:regf|regfile[30][30],                           ;
-;               ;                           ; regfile:regf|regfile[29][30], regfile:regf|regfile[28][30],                           ;
-;               ;                           ; regfile:regf|regfile[27][30], regfile:regf|regfile[26][30],                           ;
-;               ;                           ; regfile:regf|regfile[25][30], regfile:regf|regfile[24][30],                           ;
-;               ;                           ; regfile:regf|regfile[23][30], regfile:regf|regfile[22][30],                           ;
-;               ;                           ; regfile:regf|regfile[21][30], regfile:regf|regfile[20][30],                           ;
-;               ;                           ; regfile:regf|regfile[19][30], regfile:regf|regfile[18][30],                           ;
-;               ;                           ; regfile:regf|regfile[17][30], regfile:regf|regfile[16][30],                           ;
-;               ;                           ; regfile:regf|regfile[31][29], regfile:regf|regfile[30][29],                           ;
-;               ;                           ; regfile:regf|regfile[29][29], regfile:regf|regfile[28][29],                           ;
-;               ;                           ; regfile:regf|regfile[27][29], regfile:regf|regfile[26][29],                           ;
-;               ;                           ; regfile:regf|regfile[25][29], regfile:regf|regfile[24][29],                           ;
-;               ;                           ; regfile:regf|regfile[23][29], regfile:regf|regfile[22][29],                           ;
-;               ;                           ; regfile:regf|regfile[21][29], regfile:regf|regfile[20][29],                           ;
-;               ;                           ; regfile:regf|regfile[19][29], regfile:regf|regfile[18][29],                           ;
-;               ;                           ; regfile:regf|regfile[17][29], regfile:regf|regfile[16][29],                           ;
-;               ;                           ; regfile:regf|regfile[31][28], regfile:regf|regfile[30][28],                           ;
-;               ;                           ; regfile:regf|regfile[29][28], regfile:regf|regfile[28][28],                           ;
-;               ;                           ; regfile:regf|regfile[27][28], regfile:regf|regfile[26][28],                           ;
-;               ;                           ; regfile:regf|regfile[25][28], regfile:regf|regfile[24][28],                           ;
-;               ;                           ; regfile:regf|regfile[23][28], regfile:regf|regfile[22][28],                           ;
-;               ;                           ; regfile:regf|regfile[21][28], regfile:regf|regfile[20][28],                           ;
-;               ;                           ; regfile:regf|regfile[19][28], regfile:regf|regfile[18][28],                           ;
-;               ;                           ; regfile:regf|regfile[17][28], regfile:regf|regfile[16][28],                           ;
-;               ;                           ; regfile:regf|regfile[31][27], regfile:regf|regfile[30][27],                           ;
-;               ;                           ; regfile:regf|regfile[29][27], regfile:regf|regfile[28][27],                           ;
-;               ;                           ; regfile:regf|regfile[27][27], regfile:regf|regfile[26][27],                           ;
-;               ;                           ; regfile:regf|regfile[25][27], regfile:regf|regfile[24][27],                           ;
-;               ;                           ; regfile:regf|regfile[23][27], regfile:regf|regfile[22][27],                           ;
-;               ;                           ; regfile:regf|regfile[21][27], regfile:regf|regfile[20][27],                           ;
-;               ;                           ; regfile:regf|regfile[19][27], regfile:regf|regfile[18][27],                           ;
-;               ;                           ; regfile:regf|regfile[17][27], regfile:regf|regfile[16][27],                           ;
-;               ;                           ; regfile:regf|regfile[31][26], regfile:regf|regfile[30][26],                           ;
-;               ;                           ; regfile:regf|regfile[29][26], regfile:regf|regfile[28][26],                           ;
-;               ;                           ; regfile:regf|regfile[27][26], regfile:regf|regfile[26][26],                           ;
-;               ;                           ; regfile:regf|regfile[25][26], regfile:regf|regfile[24][26],                           ;
-;               ;                           ; regfile:regf|regfile[23][26], regfile:regf|regfile[22][26],                           ;
-;               ;                           ; regfile:regf|regfile[21][26], regfile:regf|regfile[20][26],                           ;
-;               ;                           ; regfile:regf|regfile[19][26], regfile:regf|regfile[18][26],                           ;
-;               ;                           ; regfile:regf|regfile[17][26], regfile:regf|regfile[16][26],                           ;
-;               ;                           ; regfile:regf|regfile[31][25], regfile:regf|regfile[30][25],                           ;
-;               ;                           ; regfile:regf|regfile[29][25], regfile:regf|regfile[28][25],                           ;
-;               ;                           ; regfile:regf|regfile[27][25], regfile:regf|regfile[26][25],                           ;
-;               ;                           ; regfile:regf|regfile[25][25], regfile:regf|regfile[24][25],                           ;
-;               ;                           ; regfile:regf|regfile[23][25], regfile:regf|regfile[22][25],                           ;
-;               ;                           ; regfile:regf|regfile[21][25], regfile:regf|regfile[20][25],                           ;
-;               ;                           ; regfile:regf|regfile[19][25], regfile:regf|regfile[18][25],                           ;
-;               ;                           ; regfile:regf|regfile[17][25], regfile:regf|regfile[16][25],                           ;
-;               ;                           ; regfile:regf|regfile[31][24], regfile:regf|regfile[30][24],                           ;
-;               ;                           ; regfile:regf|regfile[29][24], regfile:regf|regfile[28][24],                           ;
-;               ;                           ; regfile:regf|regfile[27][24], regfile:regf|regfile[26][24],                           ;
-;               ;                           ; regfile:regf|regfile[25][24], regfile:regf|regfile[24][24],                           ;
-;               ;                           ; regfile:regf|regfile[23][24], regfile:regf|regfile[22][24],                           ;
-;               ;                           ; regfile:regf|regfile[21][24], regfile:regf|regfile[20][24],                           ;
-;               ;                           ; regfile:regf|regfile[19][24], regfile:regf|regfile[18][24],                           ;
-;               ;                           ; regfile:regf|regfile[17][24], regfile:regf|regfile[16][24],                           ;
-;               ;                           ; regfile:regf|regfile[31][23], regfile:regf|regfile[30][23],                           ;
-;               ;                           ; regfile:regf|regfile[29][23], regfile:regf|regfile[28][23],                           ;
-;               ;                           ; regfile:regf|regfile[27][23], regfile:regf|regfile[26][23],                           ;
-;               ;                           ; regfile:regf|regfile[25][23], regfile:regf|regfile[24][23],                           ;
-;               ;                           ; regfile:regf|regfile[23][23], regfile:regf|regfile[22][23],                           ;
-;               ;                           ; regfile:regf|regfile[21][23], regfile:regf|regfile[20][23],                           ;
-;               ;                           ; regfile:regf|regfile[19][23], regfile:regf|regfile[18][23],                           ;
-;               ;                           ; regfile:regf|regfile[17][23], regfile:regf|regfile[16][23],                           ;
-;               ;                           ; regfile:regf|regfile[31][22], regfile:regf|regfile[30][22],                           ;
-;               ;                           ; regfile:regf|regfile[29][22], regfile:regf|regfile[28][22],                           ;
-;               ;                           ; regfile:regf|regfile[27][22], regfile:regf|regfile[26][22],                           ;
-;               ;                           ; regfile:regf|regfile[25][22], regfile:regf|regfile[24][22],                           ;
-;               ;                           ; regfile:regf|regfile[23][22], regfile:regf|regfile[22][22],                           ;
-;               ;                           ; regfile:regf|regfile[21][22], regfile:regf|regfile[20][22],                           ;
-;               ;                           ; regfile:regf|regfile[19][22], regfile:regf|regfile[18][22],                           ;
-;               ;                           ; regfile:regf|regfile[17][22], regfile:regf|regfile[16][22],                           ;
-;               ;                           ; regfile:regf|regfile[31][21], regfile:regf|regfile[30][21],                           ;
-;               ;                           ; regfile:regf|regfile[29][21], regfile:regf|regfile[28][21],                           ;
-;               ;                           ; regfile:regf|regfile[27][21], regfile:regf|regfile[26][21],                           ;
-;               ;                           ; regfile:regf|regfile[25][21], regfile:regf|regfile[24][21],                           ;
-;               ;                           ; regfile:regf|regfile[23][21], regfile:regf|regfile[22][21],                           ;
-;               ;                           ; regfile:regf|regfile[21][21], regfile:regf|regfile[20][21],                           ;
-;               ;                           ; regfile:regf|regfile[19][21], regfile:regf|regfile[18][21],                           ;
-;               ;                           ; regfile:regf|regfile[17][21], regfile:regf|regfile[16][21],                           ;
-;               ;                           ; regfile:regf|regfile[31][20], regfile:regf|regfile[30][20],                           ;
-;               ;                           ; regfile:regf|regfile[29][20], regfile:regf|regfile[28][20],                           ;
-;               ;                           ; regfile:regf|regfile[27][20], regfile:regf|regfile[26][20],                           ;
-;               ;                           ; regfile:regf|regfile[25][20], regfile:regf|regfile[24][20],                           ;
-;               ;                           ; regfile:regf|regfile[23][20], regfile:regf|regfile[22][20],                           ;
-;               ;                           ; regfile:regf|regfile[21][20], regfile:regf|regfile[20][20],                           ;
-;               ;                           ; regfile:regf|regfile[19][20], regfile:regf|regfile[18][20],                           ;
-;               ;                           ; regfile:regf|regfile[17][20], regfile:regf|regfile[16][20],                           ;
-;               ;                           ; regfile:regf|regfile[31][19], regfile:regf|regfile[30][19],                           ;
-;               ;                           ; regfile:regf|regfile[29][19], regfile:regf|regfile[28][19],                           ;
-;               ;                           ; regfile:regf|regfile[27][19], regfile:regf|regfile[26][19],                           ;
-;               ;                           ; regfile:regf|regfile[25][19], regfile:regf|regfile[24][19],                           ;
-;               ;                           ; regfile:regf|regfile[23][19], regfile:regf|regfile[22][19],                           ;
-;               ;                           ; regfile:regf|regfile[21][19], regfile:regf|regfile[20][19],                           ;
-;               ;                           ; regfile:regf|regfile[19][19], regfile:regf|regfile[18][19],                           ;
-;               ;                           ; regfile:regf|regfile[17][19], regfile:regf|regfile[16][19],                           ;
-;               ;                           ; regfile:regf|regfile[31][18], regfile:regf|regfile[30][18],                           ;
-;               ;                           ; regfile:regf|regfile[29][18], regfile:regf|regfile[28][18],                           ;
-;               ;                           ; regfile:regf|regfile[27][18], regfile:regf|regfile[26][18],                           ;
-;               ;                           ; regfile:regf|regfile[25][18], regfile:regf|regfile[24][18],                           ;
-;               ;                           ; regfile:regf|regfile[23][18], regfile:regf|regfile[22][18],                           ;
-;               ;                           ; regfile:regf|regfile[21][18], regfile:regf|regfile[20][18],                           ;
-;               ;                           ; regfile:regf|regfile[19][18], regfile:regf|regfile[18][18],                           ;
-;               ;                           ; regfile:regf|regfile[17][18], regfile:regf|regfile[16][18],                           ;
-;               ;                           ; regfile:regf|regfile[31][17], regfile:regf|regfile[30][17],                           ;
-;               ;                           ; regfile:regf|regfile[29][17], regfile:regf|regfile[28][17],                           ;
-;               ;                           ; regfile:regf|regfile[27][17], regfile:regf|regfile[26][17],                           ;
-;               ;                           ; regfile:regf|regfile[25][17], regfile:regf|regfile[24][17],                           ;
-;               ;                           ; regfile:regf|regfile[23][17], regfile:regf|regfile[22][17],                           ;
-;               ;                           ; regfile:regf|regfile[21][17], regfile:regf|regfile[20][17],                           ;
-;               ;                           ; regfile:regf|regfile[19][17], regfile:regf|regfile[18][17],                           ;
-;               ;                           ; regfile:regf|regfile[17][17], regfile:regf|regfile[16][17],                           ;
-;               ;                           ; regfile:regf|regfile[31][16], regfile:regf|regfile[30][16],                           ;
-;               ;                           ; regfile:regf|regfile[29][16], regfile:regf|regfile[28][16],                           ;
-;               ;                           ; regfile:regf|regfile[27][16], regfile:regf|regfile[26][16],                           ;
-;               ;                           ; regfile:regf|regfile[25][16], regfile:regf|regfile[24][16],                           ;
-;               ;                           ; regfile:regf|regfile[23][16], regfile:regf|regfile[22][16],                           ;
-;               ;                           ; regfile:regf|regfile[21][16], regfile:regf|regfile[20][16],                           ;
-;               ;                           ; regfile:regf|regfile[19][16], regfile:regf|regfile[18][16],                           ;
-;               ;                           ; regfile:regf|regfile[17][16], regfile:regf|regfile[16][16],                           ;
-;               ;                           ; regfile:regf|regfile[31][15], regfile:regf|regfile[30][15],                           ;
-;               ;                           ; regfile:regf|regfile[29][15], regfile:regf|regfile[28][15],                           ;
-;               ;                           ; regfile:regf|regfile[27][15], regfile:regf|regfile[26][15],                           ;
-;               ;                           ; regfile:regf|regfile[25][15], regfile:regf|regfile[24][15],                           ;
-;               ;                           ; regfile:regf|regfile[23][15], regfile:regf|regfile[22][15],                           ;
-;               ;                           ; regfile:regf|regfile[21][15], regfile:regf|regfile[20][15],                           ;
-;               ;                           ; regfile:regf|regfile[19][15], regfile:regf|regfile[18][15],                           ;
-;               ;                           ; regfile:regf|regfile[17][15], regfile:regf|regfile[16][15],                           ;
-;               ;                           ; regfile:regf|regfile[31][14], regfile:regf|regfile[30][14],                           ;
-;               ;                           ; regfile:regf|regfile[29][14], regfile:regf|regfile[28][14],                           ;
-;               ;                           ; regfile:regf|regfile[27][14], regfile:regf|regfile[26][14],                           ;
-;               ;                           ; regfile:regf|regfile[25][14], regfile:regf|regfile[24][14],                           ;
-;               ;                           ; regfile:regf|regfile[23][14], regfile:regf|regfile[22][14],                           ;
-;               ;                           ; regfile:regf|regfile[21][14], regfile:regf|regfile[20][14],                           ;
-;               ;                           ; regfile:regf|regfile[19][14], regfile:regf|regfile[18][14],                           ;
-;               ;                           ; regfile:regf|regfile[17][14], regfile:regf|regfile[16][14],                           ;
-;               ;                           ; regfile:regf|regfile[31][13], regfile:regf|regfile[30][13],                           ;
-;               ;                           ; regfile:regf|regfile[29][13], regfile:regf|regfile[28][13],                           ;
-;               ;                           ; regfile:regf|regfile[27][13], regfile:regf|regfile[26][13],                           ;
-;               ;                           ; regfile:regf|regfile[25][13], regfile:regf|regfile[24][13],                           ;
-;               ;                           ; regfile:regf|regfile[23][13], regfile:regf|regfile[22][13],                           ;
-;               ;                           ; regfile:regf|regfile[21][13], regfile:regf|regfile[20][13],                           ;
-;               ;                           ; regfile:regf|regfile[19][13], regfile:regf|regfile[18][13],                           ;
-;               ;                           ; regfile:regf|regfile[17][13], regfile:regf|regfile[16][13],                           ;
-;               ;                           ; regfile:regf|regfile[31][12], regfile:regf|regfile[30][12],                           ;
-;               ;                           ; regfile:regf|regfile[29][12], regfile:regf|regfile[28][12],                           ;
-;               ;                           ; regfile:regf|regfile[27][12], regfile:regf|regfile[26][12],                           ;
-;               ;                           ; regfile:regf|regfile[25][12], regfile:regf|regfile[24][12],                           ;
-;               ;                           ; regfile:regf|regfile[23][12], regfile:regf|regfile[22][12],                           ;
-;               ;                           ; regfile:regf|regfile[21][12], regfile:regf|regfile[20][12],                           ;
-;               ;                           ; regfile:regf|regfile[19][12], regfile:regf|regfile[18][12],                           ;
-;               ;                           ; regfile:regf|regfile[17][12], regfile:regf|regfile[16][12],                           ;
-;               ;                           ; regfile:regf|regfile[31][11], regfile:regf|regfile[30][11],                           ;
-;               ;                           ; regfile:regf|regfile[29][11], regfile:regf|regfile[28][11],                           ;
-;               ;                           ; regfile:regf|regfile[27][11], regfile:regf|regfile[26][11],                           ;
-;               ;                           ; regfile:regf|regfile[25][11], regfile:regf|regfile[24][11],                           ;
-;               ;                           ; regfile:regf|regfile[23][11], regfile:regf|regfile[22][11],                           ;
-;               ;                           ; regfile:regf|regfile[21][11], regfile:regf|regfile[20][11],                           ;
-;               ;                           ; regfile:regf|regfile[19][11], regfile:regf|regfile[18][11],                           ;
-;               ;                           ; regfile:regf|regfile[17][11], regfile:regf|regfile[16][11],                           ;
-;               ;                           ; regfile:regf|regfile[31][10], regfile:regf|regfile[30][10],                           ;
-;               ;                           ; regfile:regf|regfile[29][10], regfile:regf|regfile[28][10],                           ;
-;               ;                           ; regfile:regf|regfile[27][10], regfile:regf|regfile[26][10],                           ;
-;               ;                           ; regfile:regf|regfile[25][10], regfile:regf|regfile[24][10],                           ;
-;               ;                           ; regfile:regf|regfile[23][10], regfile:regf|regfile[22][10],                           ;
-;               ;                           ; regfile:regf|regfile[21][10], regfile:regf|regfile[20][10],                           ;
-;               ;                           ; regfile:regf|regfile[19][10], regfile:regf|regfile[18][10],                           ;
-;               ;                           ; regfile:regf|regfile[17][10], regfile:regf|regfile[16][10],                           ;
-;               ;                           ; regfile:regf|regfile[31][9], regfile:regf|regfile[30][9],                             ;
-;               ;                           ; regfile:regf|regfile[29][9], regfile:regf|regfile[28][9],                             ;
-;               ;                           ; regfile:regf|regfile[27][9], regfile:regf|regfile[26][9],                             ;
-;               ;                           ; regfile:regf|regfile[25][9], regfile:regf|regfile[24][9],                             ;
-;               ;                           ; regfile:regf|regfile[23][9], regfile:regf|regfile[22][9],                             ;
-;               ;                           ; regfile:regf|regfile[21][9], regfile:regf|regfile[20][9],                             ;
-;               ;                           ; regfile:regf|regfile[19][9], regfile:regf|regfile[18][9],                             ;
-;               ;                           ; regfile:regf|regfile[17][9], regfile:regf|regfile[16][9],                             ;
-;               ;                           ; regfile:regf|regfile[31][8], regfile:regf|regfile[30][8],                             ;
-;               ;                           ; regfile:regf|regfile[29][8], regfile:regf|regfile[28][8],                             ;
-;               ;                           ; regfile:regf|regfile[27][8], regfile:regf|regfile[26][8],                             ;
-;               ;                           ; regfile:regf|regfile[25][8], regfile:regf|regfile[24][8],                             ;
-;               ;                           ; regfile:regf|regfile[23][8], regfile:regf|regfile[22][8],                             ;
-;               ;                           ; regfile:regf|regfile[21][8], regfile:regf|regfile[20][8],                             ;
-;               ;                           ; regfile:regf|regfile[19][8], regfile:regf|regfile[18][8],                             ;
-;               ;                           ; regfile:regf|regfile[17][8], regfile:regf|regfile[16][8],                             ;
-;               ;                           ; regfile:regf|regfile[31][7], regfile:regf|regfile[30][7],                             ;
-;               ;                           ; regfile:regf|regfile[29][7], regfile:regf|regfile[28][7],                             ;
-;               ;                           ; regfile:regf|regfile[27][7], regfile:regf|regfile[26][7],                             ;
-;               ;                           ; regfile:regf|regfile[25][7], regfile:regf|regfile[24][7],                             ;
-;               ;                           ; regfile:regf|regfile[23][7], regfile:regf|regfile[22][7],                             ;
-;               ;                           ; regfile:regf|regfile[21][7], regfile:regf|regfile[20][7],                             ;
-;               ;                           ; regfile:regf|regfile[19][7], regfile:regf|regfile[18][7],                             ;
-;               ;                           ; regfile:regf|regfile[17][7], regfile:regf|regfile[16][7],                             ;
-;               ;                           ; regfile:regf|regfile[31][6], regfile:regf|regfile[30][6],                             ;
-;               ;                           ; regfile:regf|regfile[29][6], regfile:regf|regfile[28][6],                             ;
-;               ;                           ; regfile:regf|regfile[27][6], regfile:regf|regfile[26][6],                             ;
-;               ;                           ; regfile:regf|regfile[25][6], regfile:regf|regfile[24][6],                             ;
-;               ;                           ; regfile:regf|regfile[23][6], regfile:regf|regfile[22][6],                             ;
-;               ;                           ; regfile:regf|regfile[21][6], regfile:regf|regfile[20][6],                             ;
-;               ;                           ; regfile:regf|regfile[19][6], regfile:regf|regfile[18][6],                             ;
-;               ;                           ; regfile:regf|regfile[17][6], regfile:regf|regfile[16][6],                             ;
-;               ;                           ; regfile:regf|regfile[31][5], regfile:regf|regfile[30][5],                             ;
-;               ;                           ; regfile:regf|regfile[29][5], regfile:regf|regfile[28][5],                             ;
-;               ;                           ; regfile:regf|regfile[27][5], regfile:regf|regfile[26][5],                             ;
-;               ;                           ; regfile:regf|regfile[25][5], regfile:regf|regfile[24][5],                             ;
-;               ;                           ; regfile:regf|regfile[23][5], regfile:regf|regfile[22][5],                             ;
-;               ;                           ; regfile:regf|regfile[21][5], regfile:regf|regfile[20][5],                             ;
-;               ;                           ; regfile:regf|regfile[19][5], regfile:regf|regfile[18][5],                             ;
-;               ;                           ; regfile:regf|regfile[17][5], regfile:regf|regfile[16][5],                             ;
-;               ;                           ; regfile:regf|regfile[31][4], regfile:regf|regfile[30][4],                             ;
-;               ;                           ; regfile:regf|regfile[29][4], regfile:regf|regfile[28][4],                             ;
-;               ;                           ; regfile:regf|regfile[27][4], regfile:regf|regfile[26][4],                             ;
-;               ;                           ; regfile:regf|regfile[25][4], regfile:regf|regfile[24][4],                             ;
-;               ;                           ; regfile:regf|regfile[23][4], regfile:regf|regfile[22][4],                             ;
-;               ;                           ; regfile:regf|regfile[21][4], regfile:regf|regfile[20][4],                             ;
-;               ;                           ; regfile:regf|regfile[19][4], regfile:regf|regfile[18][4],                             ;
-;               ;                           ; regfile:regf|regfile[17][4], regfile:regf|regfile[16][4],                             ;
-;               ;                           ; regfile:regf|regfile[31][3], regfile:regf|regfile[30][3],                             ;
-;               ;                           ; regfile:regf|regfile[29][3], regfile:regf|regfile[28][3],                             ;
-;               ;                           ; regfile:regf|regfile[27][3], regfile:regf|regfile[26][3],                             ;
-;               ;                           ; regfile:regf|regfile[25][3], regfile:regf|regfile[24][3],                             ;
-;               ;                           ; regfile:regf|regfile[23][3], regfile:regf|regfile[22][3],                             ;
-;               ;                           ; regfile:regf|regfile[21][3], regfile:regf|regfile[20][3],                             ;
-;               ;                           ; regfile:regf|regfile[19][3], regfile:regf|regfile[18][3],                             ;
-;               ;                           ; regfile:regf|regfile[17][3], regfile:regf|regfile[16][3],                             ;
-;               ;                           ; regfile:regf|regfile[31][2], regfile:regf|regfile[30][2],                             ;
-;               ;                           ; regfile:regf|regfile[29][2], regfile:regf|regfile[28][2],                             ;
-;               ;                           ; regfile:regf|regfile[27][2], regfile:regf|regfile[26][2],                             ;
-;               ;                           ; regfile:regf|regfile[25][2], regfile:regf|regfile[24][2],                             ;
-;               ;                           ; regfile:regf|regfile[23][2], regfile:regf|regfile[22][2],                             ;
-;               ;                           ; regfile:regf|regfile[21][2], regfile:regf|regfile[20][2],                             ;
-;               ;                           ; regfile:regf|regfile[19][2], regfile:regf|regfile[18][2],                             ;
-;               ;                           ; regfile:regf|regfile[17][2], regfile:regf|regfile[16][2],                             ;
-;               ;                           ; regfile:regf|regfile[31][1], regfile:regf|regfile[30][1],                             ;
-;               ;                           ; regfile:regf|regfile[29][1], regfile:regf|regfile[28][1],                             ;
-;               ;                           ; regfile:regf|regfile[27][1], regfile:regf|regfile[26][1],                             ;
-;               ;                           ; regfile:regf|regfile[25][1], regfile:regf|regfile[24][1],                             ;
-;               ;                           ; regfile:regf|regfile[23][1], regfile:regf|regfile[22][1],                             ;
-;               ;                           ; regfile:regf|regfile[21][1], regfile:regf|regfile[20][1],                             ;
-;               ;                           ; regfile:regf|regfile[19][1], regfile:regf|regfile[18][1],                             ;
-;               ;                           ; regfile:regf|regfile[17][1], regfile:regf|regfile[16][1], regfile:regf|regfile[0][0], ;
-;               ;                           ; regfile:regf|regfile[0][31], regfile:regf|regfile[0][30],                             ;
-;               ;                           ; regfile:regf|regfile[0][29], regfile:regf|regfile[0][28],                             ;
-;               ;                           ; regfile:regf|regfile[0][27], regfile:regf|regfile[0][26],                             ;
-;               ;                           ; regfile:regf|regfile[0][25], regfile:regf|regfile[0][24],                             ;
-;               ;                           ; regfile:regf|regfile[0][23], regfile:regf|regfile[0][22],                             ;
-;               ;                           ; regfile:regf|regfile[0][21], regfile:regf|regfile[0][20],                             ;
-;               ;                           ; regfile:regf|regfile[0][19], regfile:regf|regfile[0][18],                             ;
-;               ;                           ; regfile:regf|regfile[0][17], regfile:regf|regfile[0][16],                             ;
-;               ;                           ; regfile:regf|regfile[0][15], regfile:regf|regfile[0][14],                             ;
-;               ;                           ; regfile:regf|regfile[0][13], regfile:regf|regfile[0][12],                             ;
-;               ;                           ; regfile:regf|regfile[0][11], regfile:regf|regfile[0][10], regfile:regf|regfile[0][9], ;
-;               ;                           ; regfile:regf|regfile[0][8], regfile:regf|regfile[0][7], regfile:regf|regfile[0][6],   ;
-;               ;                           ; regfile:regf|regfile[0][5], regfile:regf|regfile[0][4], regfile:regf|regfile[0][3],   ;
-;               ;                           ; regfile:regf|regfile[0][2], regfile:regf|regfile[0][1]                                ;
-+---------------+---------------------------+---------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                          ;
++-----------------------------+--------------------------------+---------------------------------------------------------------------------------------+
+; Register name               ; Reason for Removal             ; Registers Removed due to This Register                                                ;
++-----------------------------+--------------------------------+---------------------------------------------------------------------------------------+
+; regfile:regf|regfile[2][31] ; Stuck at GND                   ; regfile:regf|regfile[3][0], regfile:regf|regfile[3][1], regfile:regf|regfile[3][2],   ;
+;                             ; due to stuck port clock_enable ; regfile:regf|regfile[3][3], regfile:regf|regfile[3][4], regfile:regf|regfile[3][5],   ;
+;                             ;                                ; regfile:regf|regfile[3][6], regfile:regf|regfile[31][6], regfile:regf|regfile[30][6], ;
+;                             ;                                ; regfile:regf|regfile[29][6], regfile:regf|regfile[28][6],                             ;
+;                             ;                                ; regfile:regf|regfile[27][6], regfile:regf|regfile[26][6],                             ;
+;                             ;                                ; regfile:regf|regfile[25][6], regfile:regf|regfile[24][6],                             ;
+;                             ;                                ; regfile:regf|regfile[23][6], regfile:regf|regfile[22][6],                             ;
+;                             ;                                ; regfile:regf|regfile[21][6], regfile:regf|regfile[20][6],                             ;
+;                             ;                                ; regfile:regf|regfile[19][6], regfile:regf|regfile[18][6],                             ;
+;                             ;                                ; regfile:regf|regfile[17][6], regfile:regf|regfile[16][6],                             ;
+;                             ;                                ; regfile:regf|regfile[15][6], regfile:regf|regfile[14][6],                             ;
+;                             ;                                ; regfile:regf|regfile[11][6], regfile:regf|regfile[10][6], regfile:regf|regfile[7][6], ;
+;                             ;                                ; regfile:regf|regfile[6][6], regfile:regf|regfile[31][5], regfile:regf|regfile[30][5], ;
+;                             ;                                ; regfile:regf|regfile[29][5], regfile:regf|regfile[28][5],                             ;
+;                             ;                                ; regfile:regf|regfile[27][5], regfile:regf|regfile[26][5],                             ;
+;                             ;                                ; regfile:regf|regfile[25][5], regfile:regf|regfile[24][5],                             ;
+;                             ;                                ; regfile:regf|regfile[23][5], regfile:regf|regfile[22][5],                             ;
+;                             ;                                ; regfile:regf|regfile[21][5], regfile:regf|regfile[20][5],                             ;
+;                             ;                                ; regfile:regf|regfile[19][5], regfile:regf|regfile[18][5],                             ;
+;                             ;                                ; regfile:regf|regfile[17][5], regfile:regf|regfile[16][5],                             ;
+;                             ;                                ; regfile:regf|regfile[15][5], regfile:regf|regfile[14][5],                             ;
+;                             ;                                ; regfile:regf|regfile[11][5], regfile:regf|regfile[10][5], regfile:regf|regfile[7][5], ;
+;                             ;                                ; regfile:regf|regfile[6][5], regfile:regf|regfile[31][4], regfile:regf|regfile[30][4], ;
+;                             ;                                ; regfile:regf|regfile[29][4], regfile:regf|regfile[28][4],                             ;
+;                             ;                                ; regfile:regf|regfile[27][4], regfile:regf|regfile[26][4],                             ;
+;                             ;                                ; regfile:regf|regfile[25][4], regfile:regf|regfile[24][4],                             ;
+;                             ;                                ; regfile:regf|regfile[23][4], regfile:regf|regfile[22][4],                             ;
+;                             ;                                ; regfile:regf|regfile[21][4], regfile:regf|regfile[20][4],                             ;
+;                             ;                                ; regfile:regf|regfile[19][4], regfile:regf|regfile[18][4],                             ;
+;                             ;                                ; regfile:regf|regfile[17][4], regfile:regf|regfile[16][4],                             ;
+;                             ;                                ; regfile:regf|regfile[15][4], regfile:regf|regfile[14][4],                             ;
+;                             ;                                ; regfile:regf|regfile[11][4], regfile:regf|regfile[10][4], regfile:regf|regfile[7][4], ;
+;                             ;                                ; regfile:regf|regfile[6][4], regfile:regf|regfile[31][3], regfile:regf|regfile[30][3], ;
+;                             ;                                ; regfile:regf|regfile[29][3], regfile:regf|regfile[28][3],                             ;
+;                             ;                                ; regfile:regf|regfile[27][3], regfile:regf|regfile[26][3],                             ;
+;                             ;                                ; regfile:regf|regfile[25][3], regfile:regf|regfile[24][3],                             ;
+;                             ;                                ; regfile:regf|regfile[23][3], regfile:regf|regfile[22][3],                             ;
+;                             ;                                ; regfile:regf|regfile[21][3], regfile:regf|regfile[20][3],                             ;
+;                             ;                                ; regfile:regf|regfile[19][3], regfile:regf|regfile[18][3],                             ;
+;                             ;                                ; regfile:regf|regfile[17][3], regfile:regf|regfile[16][3],                             ;
+;                             ;                                ; regfile:regf|regfile[15][3], regfile:regf|regfile[14][3],                             ;
+;                             ;                                ; regfile:regf|regfile[11][3], regfile:regf|regfile[10][3], regfile:regf|regfile[7][3], ;
+;                             ;                                ; regfile:regf|regfile[6][3], regfile:regf|regfile[31][2], regfile:regf|regfile[30][2], ;
+;                             ;                                ; regfile:regf|regfile[29][2], regfile:regf|regfile[28][2],                             ;
+;                             ;                                ; regfile:regf|regfile[27][2], regfile:regf|regfile[26][2],                             ;
+;                             ;                                ; regfile:regf|regfile[25][2], regfile:regf|regfile[24][2],                             ;
+;                             ;                                ; regfile:regf|regfile[23][2], regfile:regf|regfile[22][2],                             ;
+;                             ;                                ; regfile:regf|regfile[21][2], regfile:regf|regfile[20][2],                             ;
+;                             ;                                ; regfile:regf|regfile[19][2], regfile:regf|regfile[18][2],                             ;
+;                             ;                                ; regfile:regf|regfile[17][2], regfile:regf|regfile[16][2],                             ;
+;                             ;                                ; regfile:regf|regfile[15][2], regfile:regf|regfile[14][2],                             ;
+;                             ;                                ; regfile:regf|regfile[11][2], regfile:regf|regfile[10][2], regfile:regf|regfile[7][2], ;
+;                             ;                                ; regfile:regf|regfile[6][2], regfile:regf|regfile[31][1], regfile:regf|regfile[30][1], ;
+;                             ;                                ; regfile:regf|regfile[29][1], regfile:regf|regfile[28][1],                             ;
+;                             ;                                ; regfile:regf|regfile[27][1], regfile:regf|regfile[26][1],                             ;
+;                             ;                                ; regfile:regf|regfile[25][1], regfile:regf|regfile[24][1],                             ;
+;                             ;                                ; regfile:regf|regfile[23][1], regfile:regf|regfile[22][1],                             ;
+;                             ;                                ; regfile:regf|regfile[21][1], regfile:regf|regfile[20][1],                             ;
+;                             ;                                ; regfile:regf|regfile[19][1], regfile:regf|regfile[18][1],                             ;
+;                             ;                                ; regfile:regf|regfile[17][1], regfile:regf|regfile[16][1],                             ;
+;                             ;                                ; regfile:regf|regfile[15][1], regfile:regf|regfile[14][1],                             ;
+;                             ;                                ; regfile:regf|regfile[11][1], regfile:regf|regfile[10][1], regfile:regf|regfile[7][1], ;
+;                             ;                                ; regfile:regf|regfile[6][1], regfile:regf|regfile[31][0], regfile:regf|regfile[30][0], ;
+;                             ;                                ; regfile:regf|regfile[29][0], regfile:regf|regfile[28][0],                             ;
+;                             ;                                ; regfile:regf|regfile[27][0], regfile:regf|regfile[26][0],                             ;
+;                             ;                                ; regfile:regf|regfile[25][0], regfile:regf|regfile[24][0],                             ;
+;                             ;                                ; regfile:regf|regfile[23][0], regfile:regf|regfile[22][0],                             ;
+;                             ;                                ; regfile:regf|regfile[21][0], regfile:regf|regfile[20][0],                             ;
+;                             ;                                ; regfile:regf|regfile[19][0], regfile:regf|regfile[18][0],                             ;
+;                             ;                                ; regfile:regf|regfile[17][0], regfile:regf|regfile[16][0],                             ;
+;                             ;                                ; regfile:regf|regfile[15][0], regfile:regf|regfile[14][0],                             ;
+;                             ;                                ; regfile:regf|regfile[11][0], regfile:regf|regfile[10][0], regfile:regf|regfile[7][0], ;
+;                             ;                                ; regfile:regf|regfile[6][0], regfile:regf|regfile[0][6], regfile:regf|regfile[0][5],   ;
+;                             ;                                ; regfile:regf|regfile[0][4], regfile:regf|regfile[0][3], regfile:regf|regfile[0][2],   ;
+;                             ;                                ; regfile:regf|regfile[0][1], regfile:regf|regfile[0][0]                                ;
+; regfile:regf|regfile[2][2]  ; Stuck at GND                   ; pc:Pc|PC_o[0], pc_debug:pc_de|o_pc_debug[0], regfile:regf|regfile[0][31],             ;
+;                             ; due to stuck port clock_enable ; regfile:regf|regfile[0][30], regfile:regf|regfile[0][29],                             ;
+;                             ;                                ; regfile:regf|regfile[0][27], regfile:regf|regfile[0][25],                             ;
+;                             ;                                ; regfile:regf|regfile[0][23], regfile:regf|regfile[0][21],                             ;
+;                             ;                                ; regfile:regf|regfile[0][19], regfile:regf|regfile[0][17],                             ;
+;                             ;                                ; regfile:regf|regfile[0][15], regfile:regf|regfile[0][13],                             ;
+;                             ;                                ; regfile:regf|regfile[0][11], regfile:regf|regfile[0][9], regfile:regf|regfile[0][7],  ;
+;                             ;                                ; lsu:Lsu|seven_segment[7][7], lsu:Lsu|seven_segment[6][7],                             ;
+;                             ;                                ; lsu:Lsu|seven_segment[5][7], lsu:Lsu|seven_segment[4][7],                             ;
+;                             ;                                ; lsu:Lsu|seven_segment[3][7], lsu:Lsu|seven_segment[2][7],                             ;
+;                             ;                                ; lsu:Lsu|seven_segment[1][7], lsu:Lsu|seven_segment[0][7]                              ;
+; regfile:regf|regfile[2][0]  ; Stuck at GND                   ; pc:Pc|PC_o[1], pc_debug:pc_de|o_pc_debug[1], regfile:regf|regfile[0][28],             ;
+;                             ; due to stuck port clock_enable ; regfile:regf|regfile[0][26], regfile:regf|regfile[0][24],                             ;
+;                             ;                                ; regfile:regf|regfile[0][22], regfile:regf|regfile[0][20],                             ;
+;                             ;                                ; regfile:regf|regfile[0][18], regfile:regf|regfile[0][16],                             ;
+;                             ;                                ; regfile:regf|regfile[0][14], regfile:regf|regfile[0][12],                             ;
+;                             ;                                ; regfile:regf|regfile[0][10], regfile:regf|regfile[0][8]                               ;
++-----------------------------+--------------------------------+---------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -1073,12 +1193,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2725  ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 677   ;
+; Total registers                              ; 2485  ;
+; Number of registers using Synchronous Clear  ; 56    ;
+; Number of registers using Synchronous Load   ; 56    ;
+; Number of registers using Asynchronous Clear ; 437   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 616   ;
+; Number of registers using Clock Enable       ; 2392  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1088,293 +1208,69 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[255][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[254][5] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[253][2] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[252][6] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[251][5] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[250][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[249][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[248][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[247][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[246][1] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[245][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[244][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[243][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[242][6] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[241][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[240][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[239][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[238][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[237][5] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[236][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[235][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[234][6] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[233][6] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[232][4] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[231][5] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[230][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[229][1] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[228][5] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[227][1] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[226][5] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[225][6] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[224][5] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[223][2] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[222][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[221][2] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[220][4] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[219][6] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[218][5] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[217][6] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[216][5] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[215][4] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[214][2] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[213][2] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[212][6] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[211][6] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[210][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[209][4] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[208][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[207][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[206][1] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[205][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[204][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[203][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[202][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[201][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[200][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[199][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[198][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[197][2] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[196][4] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[195][4] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[194][5] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[193][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[192][1] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[191][4] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[190][4] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[189][6] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[188][5] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[187][1] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[186][4] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[185][5] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[184][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[183][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[182][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[181][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[180][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[179][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[178][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[177][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[176][5] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[175][4] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[174][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[173][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[172][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[171][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[170][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[169][4] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[168][2] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[167][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[166][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[165][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[164][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[163][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[162][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[161][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[160][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[159][2] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[158][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[157][2] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[156][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[155][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[154][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[153][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[152][1] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[151][6] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[150][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[149][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[148][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[147][1] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[146][7] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[145][5] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[144][4] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[143][5] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[142][1] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[141][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[140][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[139][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[138][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[137][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[136][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[135][1] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[134][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[133][4] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[132][1] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[131][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[130][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[129][6] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[128][6] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[127][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[126][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[125][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[124][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[123][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[122][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[121][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[120][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[119][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[118][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[117][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[116][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[115][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[114][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[113][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[112][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[111][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[110][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[109][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[108][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[107][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[106][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[105][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[104][3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[103][2] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[102][4] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[101][1] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[100][0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[99][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[98][5]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[97][6]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[96][2]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[95][2]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[94][1]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[93][2]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[92][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[91][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[90][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[89][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[88][5]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[87][2]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[86][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[85][1]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[84][6]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[83][7]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[82][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[81][7]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[80][4]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[79][4]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[78][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[77][6]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[76][6]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[75][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[74][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[73][6]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[72][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[71][4]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[70][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[69][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[68][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[67][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[66][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[65][5]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[64][6]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[63][2]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[62][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[61][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[60][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[59][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[58][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[57][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[56][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[55][4]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[54][6]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[53][6]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[52][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[51][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[50][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[49][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[48][7]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[47][1]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[46][1]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[45][1]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[44][1]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[43][6]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[42][4]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[41][4]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[40][7]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[39][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[38][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[37][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[36][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[35][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[34][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[33][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[32][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[31][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[30][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[29][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[28][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[27][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[26][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[25][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[24][0]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[23][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[22][4]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[21][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[20][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[19][2]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[18][2]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[17][4]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[16][4]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[15][1]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[14][5]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[13][6]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[12][6]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[11][3]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[10][5]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[9][3]   ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[8][1]   ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[7][1]   ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[6][0]   ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[5][2]   ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[4][2]   ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[3][0]   ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[2][6]   ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[1][1]   ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|data_memory[0][0]   ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |single_cycle|mux_2to1:mux213|y[17]       ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; No         ; |single_cycle|ctrl_unit:ctrl|Selector5    ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 16 LEs               ; 28 LEs                 ; No         ; |single_cycle|mux_2to1:mux213|y[1]        ;
-; 17:1               ; 32 bits   ; 352 LEs       ; 352 LEs              ; 0 LEs                  ; No         ; |single_cycle|regfile:regf|o_rs2_data[14] ;
-; 33:1               ; 32 bits   ; 704 LEs       ; 352 LEs              ; 352 LEs                ; No         ; |single_cycle|regfile:regf|o_rs1_data[12] ;
-; 128:1              ; 8 bits    ; 680 LEs       ; 680 LEs              ; 0 LEs                  ; No         ; |single_cycle|lsu:Lsu|Mux30               ;
-; 128:1              ; 8 bits    ; 680 LEs       ; 680 LEs              ; 0 LEs                  ; No         ; |single_cycle|lsu:Lsu|Mux14               ;
-; 19:1               ; 8 bits    ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |single_cycle|alu:Alu|Mux21               ;
-; 20:1               ; 7 bits    ; 91 LEs        ; 56 LEs               ; 35 LEs                 ; No         ; |single_cycle|alu:Alu|Mux9                ;
-; 256:1              ; 8 bits    ; 1360 LEs      ; 1360 LEs             ; 0 LEs                  ; No         ; |single_cycle|lsu:Lsu|Mux22               ;
-; 256:1              ; 8 bits    ; 1360 LEs      ; 1360 LEs             ; 0 LEs                  ; No         ; |single_cycle|lsu:Lsu|Mux0                ;
-; 20:1               ; 4 bits    ; 52 LEs        ; 36 LEs               ; 16 LEs                 ; No         ; |single_cycle|alu:Alu|Mux26               ;
-; 21:1               ; 4 bits    ; 56 LEs        ; 40 LEs               ; 16 LEs                 ; No         ; |single_cycle|alu:Alu|Mux5                ;
-; 9:1                ; 17 bits   ; 102 LEs       ; 68 LEs               ; 34 LEs                 ; No         ; |single_cycle|mux_3to1:mux31|Mux3         ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; No         ; |single_cycle|alu:Alu|Mux28               ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[7][1] ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[6][4] ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[5][0] ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[4][4] ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[3][1] ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[2][2] ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[1][0] ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[0][1] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |single_cycle|ImmGen:immgen|Selector0     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |single_cycle|mux_2to1:mux213|y[1]        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |single_cycle|lsu:Lsu|mem_st_data[5]      ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |single_cycle|ctrl_unit:ctrl|Selector2    ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |single_cycle|lsu:Lsu|Mux50               ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 24 LEs               ; 16 LEs                 ; No         ; |single_cycle|lsu:Lsu|Mux32               ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |single_cycle|lsu:Lsu|Mux45               ;
+; 11:1               ; 32 bits   ; 224 LEs       ; 96 LEs               ; 128 LEs                ; No         ; |single_cycle|regfile:regf|o_rs1_data[11] ;
+; 11:1               ; 32 bits   ; 224 LEs       ; 96 LEs               ; 128 LEs                ; No         ; |single_cycle|regfile:regf|o_rs2_data[18] ;
+; 19:1               ; 8 bits    ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |single_cycle|alu:Alu|Mux19               ;
+; 20:1               ; 7 bits    ; 91 LEs        ; 56 LEs               ; 35 LEs                 ; No         ; |single_cycle|alu:Alu|Mux13               ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 36 LEs               ; 16 LEs                 ; No         ; |single_cycle|alu:Alu|Mux24               ;
+; 21:1               ; 4 bits    ; 56 LEs        ; 40 LEs               ; 16 LEs                 ; No         ; |single_cycle|alu:Alu|Mux7                ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; No         ; |single_cycle|alu:Alu|Mux29               ;
 ; 22:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; No         ; |single_cycle|alu:Alu|Mux2                ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; No         ; |single_cycle|mux_3to1:mux31|Mux19        ;
-; 13:1               ; 7 bits    ; 56 LEs        ; 35 LEs               ; 21 LEs                 ; No         ; |single_cycle|mux_3to1:mux31|Mux31        ;
+; 12:1               ; 7 bits    ; 56 LEs        ; 42 LEs               ; 14 LEs                 ; No         ; |single_cycle|mux_3to1:mux31|Mux19        ;
+; 13:1               ; 8 bits    ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; No         ; |single_cycle|mux_3to1:mux31|Mux4         ;
+; 14:1               ; 8 bits    ; 72 LEs        ; 56 LEs               ; 16 LEs                 ; No         ; |single_cycle|mux_3to1:mux31|Mux8         ;
+; 27:1               ; 7 bits    ; 126 LEs       ; 77 LEs               ; 49 LEs                 ; No         ; |single_cycle|mux_3to1:mux31|Mux30        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
 
 +------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: lsu:Lsu ;
-+----------------+-------+-----------------------------+
-; Parameter Name ; Value ; Type                        ;
-+----------------+-------+-----------------------------+
-; w              ; 00    ; Unsigned Binary             ;
-; hw             ; 01    ; Unsigned Binary             ;
-; b              ; 10    ; Unsigned Binary             ;
-+----------------+-------+-----------------------------+
++----------------------+-------+-----------------------+
+; Parameter Name       ; Value ; Type                  ;
++----------------------+-------+-----------------------+
+; w                    ; 00    ; Unsigned Binary       ;
+; hw                   ; 01    ; Unsigned Binary       ;
+; b                    ; 10    ; Unsigned Binary       ;
+; is_input_peripheral  ; 00    ; Unsigned Binary       ;
+; is_output_peripheral ; 01    ; Unsigned Binary       ;
+; is_data_memory       ; 10    ; Unsigned Binary       ;
++----------------------+-------+-----------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lsu:Lsu|sram:data_memory ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; depth          ; 64    ; Signed Integer                               ;
+; width          ; 32    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lsu:Lsu|sram:data_memory"                                                                                                                                                          ;
++--------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                           ;
++--------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; i_addr ; Input ; Warning  ; Input port expression (11 bits) is wider than the input port (6 bits) it drives.  The 5 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++--------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -1382,7 +1278,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:02:09     ;
+; Top            ; 00:00:13     ;
 +----------------+--------------+
 
 
@@ -1392,7 +1288,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Oct 22 21:49:19 2024
+    Info: Processing started: Sun Oct 27 01:09:05 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off single_cycle -c single_cycle
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
@@ -1407,8 +1303,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file immgen.
     Info (12023): Found entity 1: ImmGen
 Info (12021): Found 1 design units, including 1 entities, in source file insn_vld.sv
     Info (12023): Found entity 1: insn_vld
-Info (12021): Found 1 design units, including 1 entities, in source file lsu.sv
+Warning (10261): Verilog HDL Event Control warning at lsu.sv(193): Event Control contains a complex event expression
+Info (12021): Found 2 design units, including 2 entities, in source file lsu.sv
     Info (12023): Found entity 1: lsu
+    Info (12023): Found entity 2: sram
 Info (12021): Found 1 design units, including 1 entities, in source file mux_2to1.sv
     Info (12023): Found entity 1: mux_2to1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_3to1.sv
@@ -1424,14 +1322,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file regfile
 Info (12021): Found 1 design units, including 1 entities, in source file single_cycle.sv
     Info (12023): Found entity 1: single_cycle
 Info (12021): Found 1 design units, including 1 entities, in source file tb_single_cycle.sv
-    Info (12023): Found entity 1: single_cycle_tb
-Warning (10236): Verilog HDL Implicit Net warning at lsu.sv(50): created implicit net for "i"
+    Info (12023): Found entity 1: tb_single_cycle
 Info (12127): Elaborating entity "single_cycle" for the top level hierarchy
 Info (12128): Elaborating entity "mux_2to1" for hierarchy "mux_2to1:mux211"
 Info (12128): Elaborating entity "pc" for hierarchy "pc:Pc"
 Info (12128): Elaborating entity "pc_adder" for hierarchy "pc_adder:adder"
 Info (12128): Elaborating entity "I$" for hierarchy "I$:i$"
-Warning (10850): Verilog HDL warning at I$.sv(8): number of words (25) in memory file does not match the number of elements in the address range [0:8192]
+Warning (10850): Verilog HDL warning at I$.sv(8): number of words (6) in memory file does not match the number of elements in the address range [0:2048]
 Warning (10030): Net "instructions_value.data_a" at I$.sv(5) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "instructions_value.waddr_a" at I$.sv(5) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "instructions_value.we_a" at I$.sv(5) has no driver or initial value, using a default initial value '0'
@@ -1440,139 +1337,88 @@ Info (12128): Elaborating entity "ImmGen" for hierarchy "ImmGen:immgen"
 Info (12128): Elaborating entity "brc" for hierarchy "brc:Brc"
 Info (12128): Elaborating entity "alu" for hierarchy "alu:Alu"
 Info (12128): Elaborating entity "lsu" for hierarchy "lsu:Lsu"
-Warning (10036): Verilog HDL or VHDL warning at lsu.sv(50): object "i" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at lsu.sv(50): truncated value with size 2 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at lsu.sv(61): truncated value with size 8 to match size of target (7)
-Warning (10230): Verilog HDL assignment warning at lsu.sv(62): truncated value with size 8 to match size of target (7)
-Warning (10230): Verilog HDL assignment warning at lsu.sv(63): truncated value with size 8 to match size of target (7)
-Warning (10230): Verilog HDL assignment warning at lsu.sv(64): truncated value with size 8 to match size of target (7)
-Warning (10230): Verilog HDL assignment warning at lsu.sv(65): truncated value with size 8 to match size of target (7)
-Warning (10230): Verilog HDL assignment warning at lsu.sv(66): truncated value with size 8 to match size of target (7)
-Warning (10230): Verilog HDL assignment warning at lsu.sv(67): truncated value with size 8 to match size of target (7)
-Warning (10230): Verilog HDL assignment warning at lsu.sv(68): truncated value with size 8 to match size of target (7)
-Warning (10270): Verilog HDL Case Statement warning at lsu.sv(116): incomplete case statement has no default case item
-Warning (10270): Verilog HDL Case Statement warning at lsu.sv(111): incomplete case statement has no default case item
-Warning (10762): Verilog HDL Case Statement warning at lsu.sv(159): can't check case statement for completeness because the case expression has too many possible states
-Info (10041): Inferred latch for "seven_segment[1][0]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[1][1]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[1][2]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[1][3]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[1][4]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[1][5]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[1][6]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[1][7]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[2][0]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[2][1]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[2][2]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[2][3]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[2][4]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[2][5]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[2][6]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[2][7]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[3][0]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[3][1]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[3][2]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[3][3]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[3][4]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[3][5]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[3][6]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[3][7]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[4][0]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[4][1]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[4][2]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[4][3]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[4][4]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[4][5]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[4][6]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[4][7]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[5][0]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[5][1]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[5][2]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[5][3]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[5][4]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[5][5]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[5][6]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[5][7]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[6][0]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[6][1]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[6][2]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[6][3]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[6][4]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[6][5]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[6][6]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[6][7]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[7][0]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[7][1]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[7][2]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[7][3]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[7][4]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[7][5]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[7][6]" at lsu.sv(135)
-Info (10041): Inferred latch for "seven_segment[7][7]" at lsu.sv(135)
+Warning (10270): Verilog HDL Case Statement warning at lsu.sv(149): incomplete case statement has no default case item
+Warning (10270): Verilog HDL Case Statement warning at lsu.sv(144): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at lsu.sv(126): all case item expressions in this case statement are onehot
+Info (12128): Elaborating entity "sram" for hierarchy "lsu:Lsu|sram:data_memory"
 Info (12128): Elaborating entity "mux_3to1" for hierarchy "mux_3to1:mux31"
 Info (12128): Elaborating entity "pc_debug" for hierarchy "pc_debug:pc_de"
 Info (12128): Elaborating entity "insn_vld" for hierarchy "insn_vld:ins_vld"
 Info (12128): Elaborating entity "ctrl_unit" for hierarchy "ctrl_unit:ctrl"
 Warning (10270): Verilog HDL Case Statement warning at ctrl_unit.sv(37): incomplete case statement has no default case item
-Critical Warning (127005): Memory depth (16384) in the design file differs from memory depth (8193) in the Memory Initialization File "C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/db/single_cycle.ram0_I$_91f.hdl.mif" -- setting initial value for remaining addresses to 0
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "lsu:Lsu|sram:data_memory|mem" is uninferred due to asynchronous read logic
+Critical Warning (127005): Memory depth (4096) in the design file differs from memory depth (2049) in the Memory Initialization File "C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/db/single_cycle.ram0_I$_91f.hdl.mif" -- setting initial value for remaining addresses to 0
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/db/single_cycle.ram0_I$_91f.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer I$:i$|instructions_value~synth
-    Warning (19017): Found clock multiplexer I$:i$|instructions_value~synth
-    Warning (19017): Found clock multiplexer I$:i$|instructions_value~synth
-    Warning (19017): Found clock multiplexer I$:i$|instructions_value~synth
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "o_pc_debug[0]" is stuck at GND
     Warning (13410): Pin "o_pc_debug[1]" is stuck at GND
-    Warning (13410): Pin "o_io_hex1[0]" is stuck at GND
-    Warning (13410): Pin "o_io_hex1[1]" is stuck at GND
-    Warning (13410): Pin "o_io_hex1[2]" is stuck at GND
-    Warning (13410): Pin "o_io_hex1[3]" is stuck at GND
-    Warning (13410): Pin "o_io_hex1[4]" is stuck at GND
-    Warning (13410): Pin "o_io_hex1[5]" is stuck at GND
-    Warning (13410): Pin "o_io_hex1[6]" is stuck at GND
-    Warning (13410): Pin "o_io_hex2[0]" is stuck at GND
-    Warning (13410): Pin "o_io_hex2[1]" is stuck at GND
-    Warning (13410): Pin "o_io_hex2[2]" is stuck at GND
-    Warning (13410): Pin "o_io_hex2[3]" is stuck at GND
-    Warning (13410): Pin "o_io_hex2[4]" is stuck at GND
-    Warning (13410): Pin "o_io_hex2[5]" is stuck at GND
-    Warning (13410): Pin "o_io_hex2[6]" is stuck at GND
-    Warning (13410): Pin "o_io_hex3[0]" is stuck at GND
-    Warning (13410): Pin "o_io_hex3[1]" is stuck at GND
-    Warning (13410): Pin "o_io_hex3[2]" is stuck at GND
-    Warning (13410): Pin "o_io_hex3[3]" is stuck at GND
-    Warning (13410): Pin "o_io_hex3[4]" is stuck at GND
-    Warning (13410): Pin "o_io_hex3[5]" is stuck at GND
-    Warning (13410): Pin "o_io_hex3[6]" is stuck at GND
-    Warning (13410): Pin "o_io_hex4[0]" is stuck at GND
-    Warning (13410): Pin "o_io_hex4[1]" is stuck at GND
-    Warning (13410): Pin "o_io_hex4[2]" is stuck at GND
-    Warning (13410): Pin "o_io_hex4[3]" is stuck at GND
-    Warning (13410): Pin "o_io_hex4[4]" is stuck at GND
-    Warning (13410): Pin "o_io_hex4[5]" is stuck at GND
-    Warning (13410): Pin "o_io_hex4[6]" is stuck at GND
-    Warning (13410): Pin "o_io_hex5[0]" is stuck at GND
-    Warning (13410): Pin "o_io_hex5[1]" is stuck at GND
-    Warning (13410): Pin "o_io_hex5[2]" is stuck at GND
-    Warning (13410): Pin "o_io_hex5[3]" is stuck at GND
-    Warning (13410): Pin "o_io_hex5[4]" is stuck at GND
-    Warning (13410): Pin "o_io_hex5[5]" is stuck at GND
-    Warning (13410): Pin "o_io_hex5[6]" is stuck at GND
-    Warning (13410): Pin "o_io_hex6[0]" is stuck at GND
-    Warning (13410): Pin "o_io_hex6[1]" is stuck at GND
-    Warning (13410): Pin "o_io_hex6[2]" is stuck at GND
-    Warning (13410): Pin "o_io_hex6[3]" is stuck at GND
-    Warning (13410): Pin "o_io_hex6[4]" is stuck at GND
-    Warning (13410): Pin "o_io_hex6[5]" is stuck at GND
-    Warning (13410): Pin "o_io_hex6[6]" is stuck at GND
-    Warning (13410): Pin "o_io_hex7[0]" is stuck at GND
-    Warning (13410): Pin "o_io_hex7[1]" is stuck at GND
-    Warning (13410): Pin "o_io_hex7[2]" is stuck at GND
-    Warning (13410): Pin "o_io_hex7[3]" is stuck at GND
-    Warning (13410): Pin "o_io_hex7[4]" is stuck at GND
-    Warning (13410): Pin "o_io_hex7[5]" is stuck at GND
-    Warning (13410): Pin "o_io_hex7[6]" is stuck at GND
+    Warning (13410): Pin "checker2[0]" is stuck at GND
+    Warning (13410): Pin "checker2[1]" is stuck at GND
+    Warning (13410): Pin "checker2[2]" is stuck at GND
+    Warning (13410): Pin "checker2[3]" is stuck at GND
+    Warning (13410): Pin "checker2[4]" is stuck at GND
+    Warning (13410): Pin "checker2[5]" is stuck at GND
+    Warning (13410): Pin "checker2[6]" is stuck at GND
+    Warning (13410): Pin "checker2[7]" is stuck at GND
+    Warning (13410): Pin "checker2[8]" is stuck at GND
+    Warning (13410): Pin "checker2[9]" is stuck at GND
+    Warning (13410): Pin "checker2[10]" is stuck at GND
+    Warning (13410): Pin "checker2[11]" is stuck at GND
+    Warning (13410): Pin "checker2[12]" is stuck at GND
+    Warning (13410): Pin "checker2[13]" is stuck at GND
+    Warning (13410): Pin "checker2[14]" is stuck at GND
+    Warning (13410): Pin "checker2[15]" is stuck at GND
+    Warning (13410): Pin "checker2[16]" is stuck at GND
+    Warning (13410): Pin "checker2[17]" is stuck at GND
+    Warning (13410): Pin "checker2[18]" is stuck at GND
+    Warning (13410): Pin "checker2[19]" is stuck at GND
+    Warning (13410): Pin "checker2[20]" is stuck at GND
+    Warning (13410): Pin "checker2[21]" is stuck at GND
+    Warning (13410): Pin "checker2[22]" is stuck at GND
+    Warning (13410): Pin "checker2[23]" is stuck at GND
+    Warning (13410): Pin "checker2[24]" is stuck at GND
+    Warning (13410): Pin "checker2[25]" is stuck at GND
+    Warning (13410): Pin "checker2[26]" is stuck at GND
+    Warning (13410): Pin "checker2[27]" is stuck at GND
+    Warning (13410): Pin "checker2[28]" is stuck at GND
+    Warning (13410): Pin "checker2[29]" is stuck at GND
+    Warning (13410): Pin "checker2[30]" is stuck at GND
+    Warning (13410): Pin "checker2[31]" is stuck at GND
+    Warning (13410): Pin "checker3[0]" is stuck at GND
+    Warning (13410): Pin "checker3[1]" is stuck at GND
+    Warning (13410): Pin "checker3[2]" is stuck at GND
+    Warning (13410): Pin "checker3[3]" is stuck at GND
+    Warning (13410): Pin "checker3[4]" is stuck at GND
+    Warning (13410): Pin "checker3[5]" is stuck at GND
+    Warning (13410): Pin "checker3[6]" is stuck at GND
+    Warning (13410): Pin "checker3[7]" is stuck at GND
+    Warning (13410): Pin "checker3[8]" is stuck at GND
+    Warning (13410): Pin "checker3[9]" is stuck at GND
+    Warning (13410): Pin "checker3[10]" is stuck at GND
+    Warning (13410): Pin "checker3[11]" is stuck at GND
+    Warning (13410): Pin "checker3[12]" is stuck at GND
+    Warning (13410): Pin "checker3[13]" is stuck at GND
+    Warning (13410): Pin "checker3[14]" is stuck at GND
+    Warning (13410): Pin "checker3[15]" is stuck at GND
+    Warning (13410): Pin "checker3[16]" is stuck at GND
+    Warning (13410): Pin "checker3[17]" is stuck at GND
+    Warning (13410): Pin "checker3[18]" is stuck at GND
+    Warning (13410): Pin "checker3[19]" is stuck at GND
+    Warning (13410): Pin "checker3[20]" is stuck at GND
+    Warning (13410): Pin "checker3[21]" is stuck at GND
+    Warning (13410): Pin "checker3[22]" is stuck at GND
+    Warning (13410): Pin "checker3[23]" is stuck at GND
+    Warning (13410): Pin "checker3[24]" is stuck at GND
+    Warning (13410): Pin "checker3[25]" is stuck at GND
+    Warning (13410): Pin "checker3[26]" is stuck at GND
+    Warning (13410): Pin "checker3[27]" is stuck at GND
+    Warning (13410): Pin "checker3[28]" is stuck at GND
+    Warning (13410): Pin "checker3[29]" is stuck at GND
+    Warning (13410): Pin "checker3[30]" is stuck at GND
+    Warning (13410): Pin "checker3[31]" is stuck at GND
+Info (17049): 32 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/output_files/single_cycle.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1581,15 +1427,15 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "i_io_btn[1]"
     Warning (15610): No output dependent on input pin "i_io_btn[2]"
     Warning (15610): No output dependent on input pin "i_io_btn[3]"
-Info (21057): Implemented 16650 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5828 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 38 input pins
-    Info (21059): Implemented 345 output pins
-    Info (21061): Implemented 16267 logic cells
+    Info (21059): Implemented 346 output pins
+    Info (21061): Implemented 5444 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 84 warnings
-    Info: Peak virtual memory: 4717 megabytes
-    Info: Processing ended: Tue Oct 22 21:51:33 2024
-    Info: Elapsed time: 00:02:14
-    Info: Total CPU time (on all processors): 00:02:14
+    Info: Peak virtual memory: 4612 megabytes
+    Info: Processing ended: Sun Oct 27 01:09:20 2024
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:15
 
 
 +------------------------------------------+
