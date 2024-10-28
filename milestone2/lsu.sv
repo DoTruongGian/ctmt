@@ -21,9 +21,31 @@ module lsu (
     output logic [6:0]  o_io_hex7,
     output logic [31:0] o_io_lcd
     );
-
+logic [6:0] seg0;
+logic [31:0] temp_seg;
+	 always_comb begin
+        case (i_st_data[3:0])
+            4'h0: seg0 = 7'b1000000; // 0
+            4'h1: seg0 = 7'b1111001; // 1
+            4'h2: seg0 = 7'b0100100; // 2
+            4'h3: seg0 = 7'b0110000; // 3
+            4'h4: seg0 = 7'b0011001; // 4
+            4'h5: seg0 = 7'b0010010; // 5
+            4'h6: seg0 = 7'b0000010; // 6
+            4'h7: seg0 = 7'b1111000; // 7
+            4'h8: seg0 = 7'b0000000; // 8
+            4'h9: seg0 = 7'b0010000; // 9
+            4'hA: seg0 = 7'b0001000; // A
+            4'hB: seg0 = 7'b0000011; // B
+            4'hC: seg0 = 7'b1000110; // C
+            4'hD: seg0 = 7'b0100001; // D
+            4'hE: seg0 = 7'b0000110; // E
+            4'hF: seg0 = 7'b0001110; // F
+            default: seg0 = 7'b0000000; // Blank display if input is invalid
+        endcase
+    end
     parameter w = 2'b00, hw = 2'b01, b = 2'b10;
-    
+    assign temp_seg = {25'b0,seg0};
     // Address decoding
     parameter is_input_peripheral = 2'd0, is_output_peripheral = 2'd1, is_data_memory = 2'd2;
 
@@ -237,7 +259,7 @@ module lsu (
                 end
                 32'h0702: begin
                     if (data_be[0]) 
-                        seven_segment[lsu_addr[0]] <= {1'b0, i_st_data[6:0]};
+                        seven_segment[lsu_addr[0]] <= {1'b0, temp_seg[6:0]};
                     if (data_be[1]) 
                         seven_segment[lsu_addr[1]] <= {1'b0, i_st_data[14:8]};
                     if (data_be[2]) 
