@@ -20,7 +20,7 @@ r1
 31
 Z11 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/alu.sv|
 Z12 o-work work -sv -O0
-Z13 !s108 1729753375.321000
+Z13 !s108 1730387969.111000
 Z14 !s107 C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/alu.sv|
 !i10b 1
 !s85 0
@@ -42,20 +42,20 @@ r1
 31
 Z22 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/brc.sv|
 R12
-Z23 !s108 1729753375.381000
+Z23 !s108 1730387969.170000
 Z24 !s107 C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/brc.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vctrl_unit
 R1
-Z25 !s100 LR=O<W[^7Ue8bgz<Ga>fD0
-Z26 IoN>;1BfE]<;MBdcZb[IbH0
+Z25 !s100 8CQUKGYZUaIkg_[`9oV3_3
+Z26 IdCC^Eh[eAho79BQ87GcmX2
 Z27 VRQ4S]]=DZk]e_YiJK3cgP1
 Z28 !s105 ctrl_unit_sv_unit
 S1
 R6
-Z29 w1729189837
+Z29 w1729790514
 Z30 8C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/ctrl_unit.sv
 Z31 FC:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/ctrl_unit.sv
 L0 1
@@ -64,20 +64,20 @@ r1
 31
 Z32 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/ctrl_unit.sv|
 R12
-Z33 !s108 1729753375.443000
+Z33 !s108 1730387969.226000
 Z34 !s107 C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/ctrl_unit.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vI$
 R1
-Z35 !s100 G0T_[oj;L7mM4j_<0h]5m0
-Z36 I_S6gV=QQBL?I?<SUS86ad2
+Z35 !s100 MQ]5Ii4ZQea5W:5_M3XZ]1
+Z36 ImOghUaV<M3Cm:8`3oSCWD0
 Z37 VI=GFkJaQ6`Dbi9KEIi6dE1
 Z38 !s105 I$_sv_unit
 S1
 R6
-Z39 w1729101160
+Z39 w1729962289
 Z40 8C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/I$$.sv
 Z41 FC:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/I$$.sv
 L0 1
@@ -87,7 +87,7 @@ r1
 Z42 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/I$.sv|
 R12
 n@i$
-Z43 !s108 1729753375.503000
+Z43 !s108 1730387969.283000
 Z44 !s107 C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/I$.sv|
 !i10b 1
 !s85 0
@@ -110,7 +110,7 @@ r1
 Z52 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/ImmGen.sv|
 R12
 Z53 n@imm@gen
-Z54 !s108 1729753375.565000
+Z54 !s108 1730387969.341000
 Z55 !s107 C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/ImmGen.sv|
 !i10b 1
 !s85 0
@@ -132,30 +132,30 @@ r1
 31
 Z63 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/insn_vld.sv|
 R12
-Z64 !s108 1729753375.627000
+Z64 !s108 1730387969.398000
 Z65 !s107 C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/insn_vld.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vlsu
 R1
-Z66 !s100 E2BTh=JXlc3iXFVREbc7I1
-Z67 IA6MNkUzz5443;Bjh3IWzP2
-Z68 Vde^g@9;beh?DbUOEjmJ8g0
+Z66 !s100 G17]nK49_A3:5bS7CM[FS3
+Z67 IQ=X[@3P=60P2b>l?9G`JN2
+Z68 VcP6C?dSec4LVO2m7BXC353
 Z69 !s105 lsu_sv_unit
 S1
 R6
-Z70 w1729698871
+Z70 w1730386996
 Z71 8C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/lsu.sv
 Z72 FC:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/lsu.sv
 L0 1
 R10
 r1
 31
-Z73 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/lsu.sv|
+Z73 !s108 1730387969.455000
+Z74 !s107 C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/lsu.sv|
+Z75 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/lsu.sv|
 R12
-Z74 !s108 1729753375.686000
-Z75 !s107 C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/lsu.sv|
 !i10b 1
 !s85 0
 !s101 -O0
@@ -176,7 +176,7 @@ r1
 31
 Z83 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/mux_2to1.sv|
 R12
-Z84 !s108 1729753375.747000
+Z84 !s108 1730387969.520000
 Z85 !s107 C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/mux_2to1.sv|
 !i10b 1
 !s85 0
@@ -198,7 +198,7 @@ r1
 31
 Z93 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/mux_3to1.sv|
 R12
-Z94 !s108 1729753375.809000
+Z94 !s108 1730387969.576000
 Z95 !s107 C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/mux_3to1.sv|
 !i10b 1
 !s85 0
@@ -220,7 +220,7 @@ r1
 31
 Z103 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/pc.sv|
 R12
-Z104 !s108 1729753375.868000
+Z104 !s108 1730387969.634000
 Z105 !s107 C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/pc.sv|
 !i10b 1
 !s85 0
@@ -242,7 +242,7 @@ r1
 31
 Z113 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/pc_adder.sv|
 R12
-Z114 !s108 1729753375.928000
+Z114 !s108 1730387969.692000
 Z115 !s107 C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/pc_adder.sv|
 !i10b 1
 !s85 0
@@ -264,20 +264,20 @@ r1
 31
 Z123 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/pc_debug.sv|
 R12
-Z124 !s108 1729753375.987000
+Z124 !s108 1730387969.748000
 Z125 !s107 C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/pc_debug.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vregfile
 R1
-Z126 !s100 <jLX4oU2X0BS^ESmhGI7l1
-Z127 IGD9oIR>k;73QfgERjkWTO0
-Z128 V649ZJ=X:XK@h[^NDKobSB0
+Z126 !s100 3TU^PQDlM1U^fge`_lh8n3
+Z127 Id`<;XC2BHHiFJ=elb3GCL3
+Z128 V?eK?iL_77J5jmK=iZh7RL0
 Z129 !s105 regfile_sv_unit
 S1
 R6
-Z130 w1729241042
+Z130 w1729785193
 Z131 8C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/regfile.sv
 Z132 FC:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/regfile.sv
 L0 1
@@ -286,32 +286,32 @@ r1
 31
 Z133 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/regfile.sv|
 R12
-Z134 !s108 1729753376.046000
+Z134 !s108 1730387969.805000
 Z135 !s107 C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/regfile.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vsingle_cycle
 R1
-Z136 !s100 O6FSDTA:IX@;=VbioU3441
-Z137 IB2fh72H]z7kIekSHV5U;g0
-Z138 VTMi7ldld5[93NFj8lIb`;2
-Z139 !s105 single_cycle_sv_unit
+Z136 I:`88:_?W>3EOOXn8O^NzB0
+Z137 VZaAAVfMiiIgM<1kGbPTAf3
+Z138 !s105 single_cycle_sv_unit
 S1
 R6
-Z140 w1729232911
-Z141 8C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/single_cycle.sv
-Z142 FC:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/single_cycle.sv
+Z139 w1729789216
+Z140 8C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/single_cycle.sv
+Z141 FC:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/single_cycle.sv
 L0 1
 R10
 r1
 31
-Z143 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/single_cycle.sv|
+Z142 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/single_cycle.sv|
 R12
+Z143 !s100 N3RWK<UQh5On_fZBjoY^72
+Z144 !s108 1730387592.755000
+Z145 !s107 C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/single_cycle.sv|
 !i10b 1
 !s85 0
-Z144 !s108 1729753376.107000
-Z145 !s107 C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/single_cycle.sv|
 !s101 -O0
 vsingle_cycle_tb
 R1
@@ -335,25 +335,47 @@ Z155 !s107 C:\Users\Admin\Documents\SEM241\Computer_Organization_and_Design_(EE4
 !i10b 1
 !s85 0
 !s101 -O0
+vsram
+R1
+Z156 !s100 7zN]G0YhV`Uch1JA>^h]@2
+Z157 IMUa_2nRP5<m]CM:gUXGWA1
+Z158 V`OGzCaBZUB;zD[_@SUA0W3
+R69
+S1
+R6
+R70
+R71
+R72
+Z159 L0 297
+R10
+r1
+31
+R73
+R74
+R75
+R12
+!i10b 1
+!s85 0
+!s101 -O0
 vtb_single_cycle
 R1
 !i10b 1
-!s100 U9AX1DfUCZ>fblHV316Hh0
-IkAf2cF]f03Qg8lz=8i>eP1
-Z156 V9C:TT3Z<P=M0]X3nRRc=U1
+!s100 zVDL86cdU0K]lAl?2Ih0>0
+IWTRjF;XiC=e>0HCSL7jge0
+Z160 V9C:TT3Z<P=M0]X3nRRc=U1
 R148
 S1
 R6
-w1729753368
-Z157 8C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/tb_single_cycle.sv
-Z158 FC:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/tb_single_cycle.sv
+w1730387905
+8C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/tb_single_cycle.sv
+FC:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/tb_single_cycle.sv
 L0 1
 R10
 r1
 !s85 0
 31
-!s108 1729753376.167000
+!s108 1730387969.920000
 !s107 C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/tb_single_cycle.sv|
-Z159 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/tb_single_cycle.sv|
+!s90 -reportprogress|300|-work|work|-sv|C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/tb_single_cycle.sv|
 !s101 -O0
 R12

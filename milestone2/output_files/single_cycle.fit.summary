@@ -1,16 +1,16 @@
-Fitter Status : Successful - Mon Oct 28 01:17:07 2024
+Fitter Status : Successful - Fri Nov 01 02:27:46 2024
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : single_cycle
-Top-level Entity Name : top_fpga
+Top-level Entity Name : single_cycle
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 3,545 / 33,216 ( 11 % )
-    Total combinational functions : 2,470 / 33,216 ( 7 % )
-    Dedicated logic registers : 2,228 / 33,216 ( 7 % )
-Total registers : 2228
-Total pins : 77 / 475 ( 16 % )
+Total logic elements : 3,449 / 33,216 ( 10 % )
+    Total combinational functions : 2,938 / 33,216 ( 9 % )
+    Dedicated logic registers : 1,217 / 33,216 ( 4 % )
+Total registers : 1217
+Total pins : 384 / 475 ( 81 % )
 Total virtual pins : 0
-Total memory bits : 0 / 483,840 ( 0 % )
+Total memory bits : 65,536 / 483,840 ( 14 % )
 Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )

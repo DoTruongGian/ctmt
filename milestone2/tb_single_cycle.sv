@@ -70,10 +70,6 @@ module tb_single_cycle;
     // Apply reset for 20 time units
     #10 rst_n = 1;
 
-    // Test different switch and button inputs
-    #20 io_sw = 32'hF0F0F0F0;  // Set switches to a test value
-    #20 io_btn = 4'b1010;       // Set buttons to a test value
-
     // Observe the DUT behavior over time
     #1000;
 

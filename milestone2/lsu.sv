@@ -7,7 +7,7 @@ module lsu (
     input  logic [31:0] i_io_sw,
     input  logic [3:0]  i_io_btn,
     input  logic [1:0]  i_data_type,
-    input  logic 		i_unsigned,
+    input  logic 			i_unsigned,
     output logic [31:0] o_ld_data,
     output logic [31:0] o_io_ledr,
     output logic [31:0] o_io_ledg,
@@ -21,6 +21,7 @@ module lsu (
     output logic [6:0]  o_io_hex7,
     output logic [31:0] o_io_lcd
     );
+	 
 logic [6:0] seg0;
 logic [31:0] temp_seg;
 	 always_comb begin
@@ -44,8 +45,8 @@ logic [31:0] temp_seg;
             default: seg0 = 7'b0000000; // Blank display if input is invalid
         endcase
     end
+
     parameter w = 2'b00, hw = 2'b01, b = 2'b10;
-    assign temp_seg = {25'b0,seg0};
     // Address decoding
     parameter is_input_peripheral = 2'd0, is_output_peripheral = 2'd1, is_data_memory = 2'd2;
 
@@ -55,18 +56,17 @@ logic [31:0] temp_seg;
 
     /*--------Data Memory------------*/
 
-    logic [31:0] mem_ld_data, mem_st_data;
-    sram #(
-        .depth(64),
+    logic [31:0] mem_ld_data,mem_ld_data1, mem_st_data, mem_st_data1;
+ sram #(
+        .depth(2048),
         .width(32)
     ) data_memory (
-        .i_clk(~i_clk),
+        .i_clk(i_clk),
         .i_wren((map == is_data_memory)&i_lsu_wren),
         .i_addr(i_lsu_addr[12:2]),
         .i_data(mem_st_data),
         .o_data(mem_ld_data)
     );
-
     /*--------Output Peripheral------------*/
 	// LCD Control Registers
     logic [7:0] lcd_control [15:0];
@@ -136,9 +136,9 @@ logic [31:0] temp_seg;
     always_comb begin : data_memory_load
         case(i_lsu_addr[1:0]) 
             2'b00: ld_data = mem_ld_data;
-            2'b01: ld_data = {8'b0, mem_ld_data[31:8]};
-            2'b10: ld_data = {16'b0, mem_ld_data[31:16]};
-            2'b11: ld_data = {24'b0, mem_ld_data[31:24]};
+            2'b01: ld_data = {mem_ld_data1[7:0], mem_ld_data[31:8]};
+            2'b10: ld_data = {mem_ld_data1[15:0], mem_ld_data[31:16]};
+            2'b11: ld_data = {mem_ld_data1[23:0], mem_ld_data[31:24]};
         endcase
     end
 
@@ -189,6 +189,7 @@ logic [31:0] temp_seg;
     //STORE UNIT
    always_comb begin : data_memory_store_unit
         mem_st_data = mem_ld_data;
+		  mem_st_data1 = mem_ld_data1;
         case (i_lsu_addr[1:0])
             2'b00: begin
                 if (data_be[0]) mem_st_data[7:0] = i_st_data[7:0];
@@ -200,13 +201,19 @@ logic [31:0] temp_seg;
                 if (data_be[0]) mem_st_data[15:8] = i_st_data[7:0];
                 if (data_be[1]) mem_st_data[23:16] = i_st_data[15:8];
                 if (data_be[2]) mem_st_data[31:24] = i_st_data[23:16];
+					 if (data_be[3]) mem_st_data1[7:0] = i_st_data[31:24];
             end
             2'b10: begin
                 if (data_be[0]) mem_st_data[23:16] = i_st_data[7:0];
                 if (data_be[1]) mem_st_data[31:24] = i_st_data[15:8];
+					 if (data_be[2]) mem_st_data1[7:0] = i_st_data[23:16];
+					 if (data_be[3]) mem_st_data1[15:8] = i_st_data[31:24];
             end
             2'b11: begin
                 if (data_be[0]) mem_st_data[31:24] = i_st_data[7:0];
+					 if (data_be[1]) mem_st_data1[7:0] = i_st_data[15:8];
+					 if (data_be[2]) mem_st_data1[15:8] = i_st_data[23:16];
+					 if (data_be[3]) mem_st_data1[23:16] = i_st_data[31:24];
             end
         endcase
     end
@@ -259,14 +266,8 @@ logic [31:0] temp_seg;
                 end
                 32'h0702: begin
                     if (data_be[0]) 
-                        seven_segment[lsu_addr[0]] <= {1'b0, temp_seg[6:0]};
-                    if (data_be[1]) 
-                        seven_segment[lsu_addr[1]] <= {1'b0, i_st_data[14:8]};
-                    if (data_be[2]) 
-                        seven_segment[lsu_addr[2]] <= {1'b0, i_st_data[22:16]};
-                    if (data_be[3]) 
-                        seven_segment[lsu_addr[2]] <= {1'b0, i_st_data[30:24]};
-                end 
+                        seven_segment[i_lsu_addr[2:0]] <= i_st_data[7:0];
+					 end 
                 32'h0703: begin
                     if (data_be[0]) 
                         lcd_control[0] <= i_st_data[7:0];
@@ -281,21 +282,18 @@ logic [31:0] temp_seg;
         end 
     end
 
-    always_ff @( posedge i_clk or negedge i_rst_n ) begin : input_buffer_store_unit
-        if(!i_rst_n) begin
-            switches[0] <= 8'b0;
-            switches[1] <= 8'b0;
-            switches[2] <= 8'b0;
-            switches[3] <= 8'b0;
-        end else begin
+    always_comb begin 
             switches[0] <= i_io_sw[7:0];
             switches[1] <= i_io_sw[15:8];
             switches[2] <= i_io_sw[23:16];
             switches[3] <= i_io_sw[31:24];
-        end
     end
 endmodule
 
+
+
+// Quartus II Verilog Template
+// True Dual Port RAM with single clock
 module sram #(
     parameter depth = 64,
     parameter width = 32
@@ -305,29 +303,14 @@ module sram #(
     input logic [$clog2(depth)-1:0] i_addr,
     input logic [width-1:0] i_data,
     output logic [width-1:0] o_data
-) /* synthesis ramstyle = "block" */; // This is a synthesis directive to use block RAM
+);
 
     logic [width-1:0] mem [depth-1:0];
 
-    assign o_data = mem[i_addr];
-
+    always_ff @(negedge i_clk) o_data = mem[i_addr];
+	 
     always_ff @(posedge i_clk) begin
         if (i_wren)
             mem[i_addr] <= i_data;
     end
 endmodule
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

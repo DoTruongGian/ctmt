@@ -4,7 +4,10 @@ entity lsu is
     generic(
         w               : vl_logic_vector(0 to 1) := (Hi0, Hi0);
         hw              : vl_logic_vector(0 to 1) := (Hi0, Hi1);
-        b               : vl_logic_vector(0 to 1) := (Hi1, Hi0)
+        b               : vl_logic_vector(0 to 1) := (Hi1, Hi0);
+        is_input_peripheral: vl_logic_vector(0 to 1) := (Hi0, Hi0);
+        is_output_peripheral: vl_logic_vector(0 to 1) := (Hi0, Hi1);
+        is_data_memory  : vl_logic_vector(0 to 1) := (Hi1, Hi0)
     );
     port(
         i_clk           : in     vl_logic;
@@ -33,4 +36,7 @@ entity lsu is
     attribute mti_svvh_generic_type of w : constant is 1;
     attribute mti_svvh_generic_type of hw : constant is 1;
     attribute mti_svvh_generic_type of b : constant is 1;
+    attribute mti_svvh_generic_type of is_input_peripheral : constant is 1;
+    attribute mti_svvh_generic_type of is_output_peripheral : constant is 1;
+    attribute mti_svvh_generic_type of is_data_memory : constant is 1;
 end lsu;
