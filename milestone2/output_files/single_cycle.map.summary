@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri Nov 01 02:27:23 2024
+Analysis & Synthesis Status : Successful - Fri Nov 01 11:59:25 2024
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : single_cycle
 Top-level Entity Name : single_cycle
 Family : Cyclone II
-Total logic elements : 4,058
-    Total combinational functions : 2,938
-    Dedicated logic registers : 1,217
-Total registers : 1217
-Total pins : 384
+Total logic elements : 4,167
+    Total combinational functions : 3,062
+    Dedicated logic registers : 1,209
+Total registers : 1209
+Total pins : 448
 Total virtual pins : 0
 Total memory bits : 65,536
 Embedded Multiplier 9-bit elements : 0

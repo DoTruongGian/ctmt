@@ -25,9 +25,6 @@
 # Loading cycloneii_ver.cycloneii_mux21
 # Loading cycloneii_ver.cycloneii_dffe
 # Loading cycloneii_ver.cycloneii_asynch_io
-# Loading cycloneii_ver.cycloneii_clkctrl
-# Loading cycloneii_ver.cycloneii_mux41
-# Loading cycloneii_ver.cycloneii_ena_reg
 # Loading work.single_cycle_vlg_sample_tst
 # Loading work.single_cycle_vlg_check_tst
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
@@ -35,5 +32,5 @@
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
 # Simulation passed !
-# ** Note: $finish    : single_cycle.vt(6509)
+# ** Note: $finish    : single_cycle.vt(7677)
 #    Time: 1 us  Iteration: 0  Instance: /single_cycle_vlg_vec_tst/tb_out

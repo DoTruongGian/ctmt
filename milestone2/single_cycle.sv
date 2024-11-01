@@ -21,9 +21,10 @@ module single_cycle (
   output logic [31:0] checker3,
   output logic [31:0] checker5,
   output logic [31:0] checker8,
+  output logic [31:0] test,test1,
   output logic br_lesss
 );
-wire [31:0] pc_next, pc_four, alu_data, pc, instr, wb_data, o_rs1_data, o_rs2_data, imm, operand_a, operand_b, ld_data;
+wire [31:0] pc_next, pc_four, alu_data, pc, instr, wb_data, o_rs1_data, o_rs2_data, imm, operand_a, operand_b, ld_data, ld_data1;
 wire pc_sel, rd_wren, br_un, br_equal, br_less, opa_sel, opb_sel, mem_wren, insn_vld, i_unsigned;
 wire [1:0] wb_sel, i_data_type;
 wire [3:0] alu_op;
@@ -126,9 +127,13 @@ lsu Lsu (
   .i_unsigned(i_unsigned),
   .i_io_btn(i_io_btn)
 );
-
+convertseg7 cseg7 (
+  .ld_data(ld_data),
+  .i_lsu_addr(alu_data),
+  .o_ld_data(ld_data1)
+);
 mux_3to1 mux31 (
-  .a(ld_data),
+  .a(ld_data1),
   .b(alu_data),
   .c(pc_four),
   .sel(wb_sel),
@@ -165,5 +170,7 @@ ctrl_unit ctrl (
   .i_unsigned(i_unsigned),
   .i_data_type(i_data_type)
 );
+assign test = ld_data;
+assign test1 = ld_data1;
 assign br_lesss = br_less;
 endmodule

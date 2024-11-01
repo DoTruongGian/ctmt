@@ -1,0 +1,28 @@
+module convertseg7 (
+  input logic ld_data[31:0],
+  output logic o_ld_data[31:0]
+);
+
+always_comb begin
+  if (i_lsu_addr[31:4] == 7'h0000702) begin
+		case (ld_data[6:0]) begin
+		4'h0: seg0 = 7'b1000000; // 0
+      4'h1: seg0 = 7'b1111001; // 1
+      4'h2: seg0 = 7'b0100100; // 2
+      4'h3: seg0 = 7'b0110000; // 3
+      4'h4: seg0 = 7'b0011001; // 4
+      4'h5: seg0 = 7'b0010010; // 5
+      4'h6: seg0 = 7'b0000010; // 6
+      4'h7: seg0 = 7'b1111000; // 7
+      4'h8: seg0 = 7'b0000000; // 8
+      4'h9: seg0 = 7'b0010000; // 9
+      4'hA: seg0 = 7'b0001000; // A
+      4'hB: seg0 = 7'b0000011; // B
+      4'hC: seg0 = 7'b1000110; // C
+      4'hD: seg0 = 7'b0100001; // D
+      4'hE: seg0 = 7'b0000110; // E
+      4'hF: seg0 = 7'b0001110; // F
+      default: seg0 = 7'b0000000; // Blank display if input is invalid
+		endcase
+  end
+end

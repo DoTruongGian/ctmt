@@ -24,6 +24,8 @@ entity single_cycle is
         checker3        : out    vl_logic_vector(31 downto 0);
         checker5        : out    vl_logic_vector(31 downto 0);
         checker8        : out    vl_logic_vector(31 downto 0);
+        test            : out    vl_logic_vector(31 downto 0);
+        test1           : out    vl_logic_vector(31 downto 0);
         br_lesss        : out    vl_logic
     );
 end single_cycle;

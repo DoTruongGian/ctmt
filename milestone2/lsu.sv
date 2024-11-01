@@ -23,7 +23,6 @@ module lsu (
     );
 	 
 logic [6:0] seg0;
-logic [31:0] temp_seg;
 	 always_comb begin
         case (i_st_data[3:0])
             4'h0: seg0 = 7'b1000000; // 0
@@ -43,8 +42,8 @@ logic [31:0] temp_seg;
             4'hE: seg0 = 7'b0000110; // E
             4'hF: seg0 = 7'b0001110; // F
             default: seg0 = 7'b0000000; // Blank display if input is invalid
-        endcase
-    end
+			endcase
+    end 
 
     parameter w = 2'b00, hw = 2'b01, b = 2'b10;
     // Address decoding
@@ -264,10 +263,8 @@ logic [31:0] temp_seg;
                     if (data_be[3]) 
                         green_leds[3] <= i_st_data[31:24];
                 end
-                32'h0702: begin
-                    if (data_be[0]) 
-                        seven_segment[i_lsu_addr[2:0]] <= i_st_data[7:0];
-					 end 
+                32'h0702: 
+                    seven_segment[i_lsu_addr[2:0]] <= seg0; 
                 32'h0703: begin
                     if (data_be[0]) 
                         lcd_control[0] <= i_st_data[7:0];
@@ -295,7 +292,7 @@ endmodule
 // Quartus II Verilog Template
 // True Dual Port RAM with single clock
 module sram #(
-    parameter depth = 64,
+    parameter depth = 2048,
     parameter width = 32
 ) (
     input logic i_clk,
@@ -308,7 +305,6 @@ module sram #(
     logic [width-1:0] mem [depth-1:0];
 
     always_ff @(negedge i_clk) o_data = mem[i_addr];
-	 
     always_ff @(posedge i_clk) begin
         if (i_wren)
             mem[i_addr] <= i_data;

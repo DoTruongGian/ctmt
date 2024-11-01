@@ -21,6 +21,8 @@ entity single_cycle_vlg_check_tst is
         o_io_ledg       : in     vl_logic_vector(31 downto 0);
         o_io_ledr       : in     vl_logic_vector(31 downto 0);
         o_pc_debug      : in     vl_logic_vector(31 downto 0);
+        test            : in     vl_logic_vector(31 downto 0);
+        test1           : in     vl_logic_vector(31 downto 0);
         sampler_rx      : in     vl_logic
     );
 end single_cycle_vlg_check_tst;
