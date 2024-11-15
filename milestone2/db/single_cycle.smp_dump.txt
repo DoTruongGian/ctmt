@@ -1,0 +1,10 @@
+
+State Machine - |single_cycle|lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl|sram_state_q
+Name sram_state_q.StReadAck sram_state_q.StReadW sram_state_q.StRead1 sram_state_q.StRead0 sram_state_q.StWriteAck sram_state_q.StWrite sram_state_q.StIdle 
+sram_state_q.StIdle 0 0 0 0 0 0 0 
+sram_state_q.StWrite 0 0 0 0 0 1 1 
+sram_state_q.StWriteAck 0 0 0 0 1 0 1 
+sram_state_q.StRead0 0 0 0 1 0 0 1 
+sram_state_q.StRead1 0 0 1 0 0 0 1 
+sram_state_q.StReadW 0 1 0 0 0 0 1 
+sram_state_q.StReadAck 1 0 0 0 0 0 1 

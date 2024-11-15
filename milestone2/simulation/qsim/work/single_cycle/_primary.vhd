@@ -19,13 +19,13 @@ entity single_cycle is
         o_io_lcd        : out    vl_logic_vector(31 downto 0);
         i_io_sw         : in     vl_logic_vector(31 downto 0);
         i_io_btn        : in     vl_logic_vector(3 downto 0);
+        SRAM_DQ         : inout  vl_logic_vector(15 downto 0);
         checker1        : out    vl_logic_vector(31 downto 0);
-        checker2        : out    vl_logic_vector(31 downto 0);
-        checker3        : out    vl_logic_vector(31 downto 0);
-        checker5        : out    vl_logic_vector(31 downto 0);
-        checker8        : out    vl_logic_vector(31 downto 0);
-        test            : out    vl_logic_vector(31 downto 0);
-        test1           : out    vl_logic_vector(31 downto 0);
-        br_lesss        : out    vl_logic
+        SRAM_ADDR       : out    vl_logic_vector(17 downto 0);
+        SRAM_CE_N       : out    vl_logic;
+        SRAM_WE_N       : out    vl_logic;
+        SRAM_LB_N       : out    vl_logic;
+        SRAM_UB_N       : out    vl_logic;
+        SRAM_OE_N       : out    vl_logic
     );
 end single_cycle;

@@ -9,7 +9,7 @@ module ctrl_unit (
   output logic opa_sel,
   output logic opb_sel,
   output logic [3:0] alu_op,
-  output logic mem_wren,
+  output logic [1:0] mem_wren,
   output logic [1:0]i_data_type,
   output logic i_unsigned,
   output logic [1:0] wb_sel
@@ -78,6 +78,7 @@ module ctrl_unit (
     end
 
     7'b0000011: begin // Load
+      mem_wren = 2'b10;
       rd_wren = 1;
       insn_vld = 1;
       wb_sel = 2'b00;
@@ -107,7 +108,7 @@ module ctrl_unit (
     7'b0100011: begin  // Store
       insn_vld = 1;
       alu_op = 4'b0000; // ADD for address calculation
-      mem_wren = 1;
+      mem_wren = 2'b01;
       case (funct3)
         3'b000: begin
           i_data_type = 2'b10;
@@ -184,6 +185,20 @@ module ctrl_unit (
       rd_wren = 1;
       pc_sel = 1'b1;
       opa_sel = 1'b1;
+      wb_sel = 2'b10;
+    end
+
+    7'b0010111: begin
+      insn_vld = 1;
+      rd_wren = 1;
+      opa_sel = 1;
+      wb_sel = 2'b01;
+    end
+
+    7'b1100111: begin
+      insn_vld = 1;
+      rd_wren = 1;
+      pc_sel = 1;
       wb_sel = 2'b10;
     end
   endcase

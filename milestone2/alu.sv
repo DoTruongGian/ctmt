@@ -5,7 +5,7 @@ module alu (
   output logic [31:0] o_alu_data   // Result of the ALU operation
 );
 
-  logic [32:0] sub_result;
+  logic [32:0] sub_result, add_result;
   logic [31:0] shifted_data;    // Temporary variable for shifting
   logic [4:0] shift_amount;     // Store the shift amount for left/right shifts
   logic sign_bit;               // Sign bit (MSB) for arithmetic shift right
@@ -17,7 +17,7 @@ module alu (
     shifted_data = 32'b0;
     shift_amount = 5'b0;
     sign_bit = i_operand_a[31];  // Sign bit assigned based on i_operand_a
-
+    add_result = i_operand_a + i_operand_b;
     // Perform subtraction using two's complement
     sub_result = {1'b0, i_operand_a} + {1'b0, (~i_operand_b + 1)};
 
@@ -89,7 +89,9 @@ module alu (
 
         o_alu_data = shifted_data;
       end
-
+      4'b1010: begin
+        o_alu_data = {add_result[31:1],1'b0};
+      end
       4'b1111: begin
         o_alu_data = i_operand_b;
       end

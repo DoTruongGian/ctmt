@@ -16,18 +16,22 @@ module single_cycle (
   output logic [31:0] o_io_lcd,   // Output for driving the LCD register
   input logic [31:0] i_io_sw,     // Input for switches
   input logic [3:0] i_io_btn,      // Input for buttons
+  inout wire [15:0]    SRAM_DQ,
   output logic [31:0] checker1,
-  output logic [31:0] checker2,
-  output logic [31:0] checker3,
-  output logic [31:0] checker5,
-  output logic [31:0] checker8,
-  output logic [31:0] test,test1,
-  output logic br_lesss
+  output logic [17:0]   SRAM_ADDR,
+  output logic          SRAM_CE_N,
+  output logic          SRAM_WE_N,
+  output logic          SRAM_LB_N,
+  output logic          SRAM_UB_N,
+  output  logic         SRAM_OE_N
+  // ,
+  // output logic [31:0] data
 );
-wire [31:0] pc_next, pc_four, alu_data, pc, instr, wb_data, o_rs1_data, o_rs2_data, imm, operand_a, operand_b, ld_data, ld_data1;
-wire pc_sel, rd_wren, br_un, br_equal, br_less, opa_sel, opb_sel, mem_wren, insn_vld, i_unsigned;
-wire [1:0] wb_sel, i_data_type;
-wire [3:0] alu_op;
+logic [31:0] pc_next, pc_four, alu_data, pc, instr, wb_data, o_rs1_data, o_rs2_data, imm, operand_a, operand_b, ld_data;
+logic pc_sel, rd_wren, br_un, br_equal, br_less, opa_sel, opb_sel, insn_vld, i_unsigned;
+logic [1:0] mem_wren, wb_sel, i_data_type;
+logic [3:0] alu_op;
+logic       o_pc_stall;
 
 mux_2to1 mux211 (
   .a(pc_four),
@@ -39,6 +43,7 @@ mux_2to1 mux211 (
 pc Pc (
   .i_clk(i_clk),
   .i_rst_n(i_rst_n),
+  .en(~o_pc_stall),
   .PC_i(pc_next),
   .PC_o(pc)
 );
@@ -62,12 +67,8 @@ regfile regf(
   .i_rd_data(wb_data),
   .i_rd_wren(rd_wren),
   .o_rs1_data(o_rs1_data),
-  .o_rs2_data(o_rs2_data),
   .checker1(checker1),
-  .checker2(checker2),
-  .checker3(checker3),
-  .checker5(checker5),
-  .checker8(checker8)
+  .o_rs2_data(o_rs2_data)
 );
 
 ImmGen immgen (
@@ -110,6 +111,11 @@ lsu Lsu (
   .i_lsu_addr(alu_data),
   .i_st_data(o_rs2_data),
   .i_lsu_wren(mem_wren),
+  .i_io_sw(i_io_sw),
+  .i_data_type(i_data_type),
+  .i_unsigned(i_unsigned),
+  .i_io_btn(i_io_btn),
+
   .o_ld_data(ld_data),
   .o_io_ledr(o_io_ledr),
   .o_io_ledg(o_io_ledg),
@@ -122,18 +128,30 @@ lsu Lsu (
   .o_io_hex6(o_io_hex6),
   .o_io_hex7(o_io_hex7),
   .o_io_lcd(o_io_lcd),
-  .i_io_sw(i_io_sw),
-  .i_data_type(i_data_type),
-  .i_unsigned(i_unsigned),
-  .i_io_btn(i_io_btn)
+  
+  
+  .o_pc_stall(o_pc_stall),
+  .SRAM_ADDR(SRAM_ADDR),
+  .SRAM_DQ   (SRAM_DQ),
+  .SRAM_CE_N(SRAM_CE_N),
+  .SRAM_WE_N(SRAM_WE_N),
+  .SRAM_LB_N(SRAM_LB_N),
+  .SRAM_UB_N(SRAM_UB_N),
+  .SRAM_OE_N(SRAM_OE_N)
 );
-convertseg7 cseg7 (
-  .ld_data(ld_data),
-  .i_lsu_addr(alu_data),
-  .o_ld_data(ld_data1)
-);
+
+// assign data = ld_data;
+
+// dram dm(
+//   SRAM_ADDR,
+//   {SRAM_UB_N, SRAM_LB_N},
+//   SRAM_WE_N, 
+//   i_clk,
+//   SRAM_DQ
+// );
+
 mux_3to1 mux31 (
-  .a(ld_data1),
+  .a(ld_data),
   .b(alu_data),
   .c(pc_four),
   .sel(wb_sel),
@@ -154,6 +172,7 @@ insn_vld ins_vld (
   .o_insn_vld(o_insn_vld)
 );
 
+
 ctrl_unit ctrl (
   .instr(instr),
   .br_less(br_less),
@@ -170,7 +189,5 @@ ctrl_unit ctrl (
   .i_unsigned(i_unsigned),
   .i_data_type(i_data_type)
 );
-assign test = ld_data;
-assign test1 = ld_data1;
-assign br_lesss = br_less;
+
 endmodule

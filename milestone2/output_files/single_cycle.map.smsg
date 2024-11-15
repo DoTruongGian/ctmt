@@ -1,1 +1,2 @@
-Info (10281): Verilog HDL Declaration information at single_cycle.sv(27): object "pc" differs only in case from object "Pc" in the same scope
+Info (10281): Verilog HDL Declaration information at lsu.sv(52): object "i_BMASK" differs only in case from object "i_bmask" in the same scope
+Info (10281): Verilog HDL Declaration information at single_cycle.sv(30): object "pc" differs only in case from object "Pc" in the same scope

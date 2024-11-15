@@ -73,124 +73,124 @@ VCCIO3                       : A3        : power  :                   : 3.3V    
 GND*                         : A4        :        :                   :         : 3         :                
 GND*                         : A5        :        :                   :         : 3         :                
 GND*                         : A6        :        :                   :         : 3         :                
-checker8[26]                 : A7        : output : 3.3-V LVTTL       :         : 3         : N              
-checker2[18]                 : A8        : output : 3.3-V LVTTL       :         : 3         : N              
-checker1[27]                 : A9        : output : 3.3-V LVTTL       :         : 3         : N              
-checker5[24]                 : A10       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledr[4]                 : A7        : output : 3.3-V LVTTL       :         : 3         : N              
+checker1[2]                  : A8        : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledr[16]                : A9        : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledr[23]                : A10       : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : A11       : power  :                   : 3.3V    : 3         :                
 GND                          : A12       : gnd    :                   :         :           :                
 GND+                         : A13       :        :                   :         : 4         :                
-i_io_sw[27]                  : A14       : input  : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledr[15]                : A14       : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : A15       : gnd    :                   :         :           :                
 VCCIO4                       : A16       : power  :                   : 3.3V    : 4         :                
-o_io_ledg[1]                 : A17       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_hex4[2]                 : A18       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_hex7[0]                 : A19       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_ledr[19]                : A20       : output : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : A21       :        :                   :         : 4         :                
-GND*                         : A22       :        :                   :         : 4         :                
-GND*                         : A23       :        :                   :         : 4         :                
+o_io_hex0[1]                 : A17       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_hex7[3]                 : A18       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledr[0]                 : A19       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledg[5]                 : A20       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledg[10]                : A21       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledg[19]                : A22       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledg[11]                : A23       : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : A24       : power  :                   : 3.3V    : 4         :                
 GND                          : A25       : gnd    :                   :         :           :                
-checker3[12]                 : AA1       : output : 3.3-V LVTTL       :         : 1         : N              
-checker2[11]                 : AA2       : output : 3.3-V LVTTL       :         : 1         : N              
-checker8[15]                 : AA3       : output : 3.3-V LVTTL       :         : 1         : N              
-checker2[14]                 : AA4       : output : 3.3-V LVTTL       :         : 1         : N              
-checker5[31]                 : AA5       : output : 3.3-V LVTTL       :         : 1         : N              
+checker8[13]                 : AA1       : output : 3.3-V LVTTL       :         : 1         : N              
+checker1[16]                 : AA2       : output : 3.3-V LVTTL       :         : 1         : N              
+checker1[4]                  : AA3       : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : AA4       :        :                   :         : 1         :                
+GND*                         : AA5       :        :                   :         : 1         :                
 GND*                         : AA6       :        :                   :         : 1         :                
 GND*                         : AA7       :        :                   :         : 1         :                
 VCCA_PLL1                    : AA8       : power  :                   : 1.2V    :           :                
-checker2[12]                 : AA9       : output : 3.3-V LVTTL       :         : 8         : N              
-checker8[11]                 : AA10      : output : 3.3-V LVTTL       :         : 8         : N              
-checker3[14]                 : AA11      : output : 3.3-V LVTTL       :         : 8         : N              
-o_io_lcd[16]                 : AA12      : output : 3.3-V LVTTL       :         : 8         : N              
-o_io_ledr[5]                 : AA13      : output : 3.3-V LVTTL       :         : 7         : N              
-o_io_lcd[26]                 : AA14      : output : 3.3-V LVTTL       :         : 7         : N              
-o_io_lcd[22]                 : AA15      : output : 3.3-V LVTTL       :         : 7         : N              
-o_pc_debug[9]                : AA16      : output : 3.3-V LVTTL       :         : 7         : N              
-i_io_sw[13]                  : AA17      : input  : 3.3-V LVTTL       :         : 7         : N              
-i_io_sw[3]                   : AA18      : input  : 3.3-V LVTTL       :         : 7         : N              
+checker8[11]                 : AA9       : output : 3.3-V LVTTL       :         : 8         : N              
+checker2[10]                 : AA10      : output : 3.3-V LVTTL       :         : 8         : N              
+checker8[9]                  : AA11      : output : 3.3-V LVTTL       :         : 8         : N              
+checker1[15]                 : AA12      : output : 3.3-V LVTTL       :         : 8         : N              
+checker2[6]                  : AA13      : output : 3.3-V LVTTL       :         : 7         : N              
+checker8[15]                 : AA14      : output : 3.3-V LVTTL       :         : 7         : N              
+checker2[28]                 : AA15      : output : 3.3-V LVTTL       :         : 7         : N              
+checker5[20]                 : AA16      : output : 3.3-V LVTTL       :         : 7         : N              
+i_io_sw[25]                  : AA17      : input  : 3.3-V LVTTL       :         : 7         : N              
+checker2[19]                 : AA18      : output : 3.3-V LVTTL       :         : 7         : N              
 VCCA_PLL4                    : AA19      : power  :                   : 1.2V    :           :                
-o_io_lcd[25]                 : AA20      : output : 3.3-V LVTTL       :         : 7         : N              
+checker2[29]                 : AA20      : output : 3.3-V LVTTL       :         : 7         : N              
 GND_PLL4                     : AA21      : gnd    :                   :         :           :                
 VCCIO6                       : AA22      : power  :                   : 3.3V    : 6         :                
-GND*                         : AA23      :        :                   :         : 6         :                
+i_io_sw[17]                  : AA23      : input  : 3.3-V LVTTL       :         : 6         : N              
 GND*                         : AA24      :        :                   :         : 6         :                
-o_pc_debug[31]               : AA25      : output : 3.3-V LVTTL       :         : 6         : N              
-o_pc_debug[10]               : AA26      : output : 3.3-V LVTTL       :         : 6         : N              
-checker5[1]                  : AB1       : output : 3.3-V LVTTL       :         : 1         : N              
-o_io_lcd[17]                 : AB2       : output : 3.3-V LVTTL       :         : 1         : N              
+checker8[30]                 : AA25      : output : 3.3-V LVTTL       :         : 6         : N              
+i_io_sw[20]                  : AA26      : input  : 3.3-V LVTTL       :         : 6         : N              
+checker2[7]                  : AB1       : output : 3.3-V LVTTL       :         : 1         : N              
+i_io_sw[16]                  : AB2       : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : AB3       :        :                   :         : 1         :                
 GND*                         : AB4       :        :                   :         : 1         :                
 VCCIO1                       : AB5       : power  :                   : 3.3V    : 1         :                
 VCCIO8                       : AB6       : power  :                   : 3.3V    : 8         :                
 GND                          : AB7       : gnd    :                   :         :           :                
-o_io_ledr[21]                : AB8       : output : 3.3-V LVTTL       :         : 8         : N              
+checker8[4]                  : AB8       : output : 3.3-V LVTTL       :         : 8         : N              
 VCCIO8                       : AB9       : power  :                   : 3.3V    : 8         :                
-checker8[10]                 : AB10      : output : 3.3-V LVTTL       :         : 8         : N              
+checker3[10]                 : AB10      : output : 3.3-V LVTTL       :         : 8         : N              
 GND                          : AB11      : gnd    :                   :         :           :                
-checker5[12]                 : AB12      : output : 3.3-V LVTTL       :         : 8         : N              
+checker8[2]                  : AB12      : output : 3.3-V LVTTL       :         : 8         : N              
 VCCIO8                       : AB13      : power  :                   : 3.3V    : 8         :                
 VCCIO7                       : AB14      : power  :                   : 3.3V    : 7         :                
-o_io_lcd[20]                 : AB15      : output : 3.3-V LVTTL       :         : 7         : N              
+checker2[25]                 : AB15      : output : 3.3-V LVTTL       :         : 7         : N              
 GND                          : AB16      : gnd    :                   :         :           :                
 VCCIO7                       : AB17      : power  :                   : 3.3V    : 7         :                
-o_io_hex2[5]                 : AB18      : output : 3.3-V LVTTL       :         : 7         : N              
+checker5[28]                 : AB18      : output : 3.3-V LVTTL       :         : 7         : N              
 GND                          : AB19      : gnd    :                   :         :           :                
-o_io_hex1[1]                 : AB20      : output : 3.3-V LVTTL       :         : 7         : N              
+checker2[14]                 : AB20      : output : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : AB21      :        :                   :         : 7         :                
 VCCIO7                       : AB22      : power  :                   : 3.3V    : 7         :                
-GND*                         : AB23      :        :                   :         : 6         :                
-GND*                         : AB24      :        :                   :         : 6         :                
-o_io_hex0[1]                 : AB25      : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_hex1[5]                 : AB26      : output : 3.3-V LVTTL       :         : 6         : N              
-checker2[13]                 : AC1       : output : 3.3-V LVTTL       :         : 1         : N              
-checker2[3]                  : AC2       : output : 3.3-V LVTTL       :         : 1         : N              
+checker1[18]                 : AB23      : output : 3.3-V LVTTL       :         : 6         : N              
+checker2[21]                 : AB24      : output : 3.3-V LVTTL       :         : 6         : N              
+checker1[30]                 : AB25      : output : 3.3-V LVTTL       :         : 6         : N              
+checker1[28]                 : AB26      : output : 3.3-V LVTTL       :         : 6         : N              
+checker2[5]                  : AC1       : output : 3.3-V LVTTL       :         : 1         : N              
+checker3[15]                 : AC2       : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : AC3       :        :                   :         : 1         :                
 GND                          : AC4       : gnd    :                   :         :           :                
 GND*                         : AC5       :        :                   :         : 8         :                
 GND*                         : AC6       :        :                   :         : 8         :                
-checker2[10]                 : AC7       : output : 3.3-V LVTTL       :         : 8         : N              
-checker1[10]                 : AC8       : output : 3.3-V LVTTL       :         : 8         : N              
-checker8[22]                 : AC9       : output : 3.3-V LVTTL       :         : 8         : N              
-checker5[13]                 : AC10      : output : 3.3-V LVTTL       :         : 8         : N              
-checker3[6]                  : AC11      : output : 3.3-V LVTTL       :         : 8         : N              
-checker5[0]                  : AC12      : output : 3.3-V LVTTL       :         : 8         : N              
+checker8[3]                  : AC7       : output : 3.3-V LVTTL       :         : 8         : N              
+checker8[1]                  : AC8       : output : 3.3-V LVTTL       :         : 8         : N              
+checker5[7]                  : AC9       : output : 3.3-V LVTTL       :         : 8         : N              
+checker5[11]                 : AC10      : output : 3.3-V LVTTL       :         : 8         : N              
+checker1[6]                  : AC11      : output : 3.3-V LVTTL       :         : 8         : N              
+checker5[26]                 : AC12      : output : 3.3-V LVTTL       :         : 8         : N              
 GND+                         : AC13      :        :                   :         : 8         :                
-o_io_lcd[18]                 : AC14      : output : 3.3-V LVTTL       :         : 7         : N              
-o_io_ledg[26]                : AC15      : output : 3.3-V LVTTL       :         : 7         : N              
-o_io_hex3[4]                 : AC16      : output : 3.3-V LVTTL       :         : 7         : N              
-i_io_sw[24]                  : AC17      : input  : 3.3-V LVTTL       :         : 7         : N              
-i_io_sw[1]                   : AC18      : input  : 3.3-V LVTTL       :         : 7         : N              
-checker2[6]                  : AC19      : output : 3.3-V LVTTL       :         : 7         : N              
-o_io_hex1[3]                 : AC20      : output : 3.3-V LVTTL       :         : 7         : N              
-GND*                         : AC21      :        :                   :         : 7         :                
+checker3[30]                 : AC14      : output : 3.3-V LVTTL       :         : 7         : N              
+checker8[22]                 : AC15      : output : 3.3-V LVTTL       :         : 7         : N              
+checker8[19]                 : AC16      : output : 3.3-V LVTTL       :         : 7         : N              
+i_io_sw[15]                  : AC17      : input  : 3.3-V LVTTL       :         : 7         : N              
+checker2[18]                 : AC18      : output : 3.3-V LVTTL       :         : 7         : N              
+checker8[12]                 : AC19      : output : 3.3-V LVTTL       :         : 7         : N              
+checker5[15]                 : AC20      : output : 3.3-V LVTTL       :         : 7         : N              
+i_io_btn[3]                  : AC21      : input  : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : AC22      :        :                   :         : 7         :                
 GND*                         : AC23      :        :                   :         : 6         :                
 NC                           : AC24      :        :                   :         :           :                
-o_io_hex0[4]                 : AC25      : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_hex0[3]                 : AC26      : output : 3.3-V LVTTL       :         : 6         : N              
+checker5[27]                 : AC25      : output : 3.3-V LVTTL       :         : 6         : N              
+checker5[29]                 : AC26      : output : 3.3-V LVTTL       :         : 6         : N              
 VCCIO1                       : AD1       : power  :                   : 3.3V    : 1         :                
-o_io_ledg[25]                : AD2       : output : 3.3-V LVTTL       :         : 1         : N              
-o_io_lcd[23]                 : AD3       : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : AD2       :        :                   :         : 1         :                
+GND*                         : AD3       :        :                   :         : 1         :                
 GND*                         : AD4       :        :                   :         : 8         :                
 GND*                         : AD5       :        :                   :         : 8         :                
-o_io_ledg[24]                : AD6       : output : 3.3-V LVTTL       :         : 8         : N              
-o_io_ledg[23]                : AD7       : output : 3.3-V LVTTL       :         : 8         : N              
-checker8[9]                  : AD8       : output : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AD6       :        :                   :         : 8         :                
+checker1[31]                 : AD7       : output : 3.3-V LVTTL       :         : 8         : N              
+checker5[30]                 : AD8       : output : 3.3-V LVTTL       :         : 8         : N              
 GND                          : AD9       : gnd    :                   :         :           :                
-checker1[6]                  : AD10      : output : 3.3-V LVTTL       :         : 8         : N              
-o_io_ledr[29]                : AD11      : output : 3.3-V LVTTL       :         : 8         : N              
-o_io_ledr[25]                : AD12      : output : 3.3-V LVTTL       :         : 8         : N              
+checker3[13]                 : AD10      : output : 3.3-V LVTTL       :         : 8         : N              
+checker1[23]                 : AD11      : output : 3.3-V LVTTL       :         : 8         : N              
+checker8[31]                 : AD12      : output : 3.3-V LVTTL       :         : 8         : N              
 GND+                         : AD13      :        :                   :         : 8         :                
 GND                          : AD14      : gnd    :                   :         :           :                
-o_io_hex1[4]                 : AD15      : output : 3.3-V LVTTL       :         : 7         : N              
-o_io_hex3[2]                 : AD16      : output : 3.3-V LVTTL       :         : 7         : N              
-o_io_ledr[3]                 : AD17      : output : 3.3-V LVTTL       :         : 7         : N              
+checker5[22]                 : AD15      : output : 3.3-V LVTTL       :         : 7         : N              
+checker3[21]                 : AD16      : output : 3.3-V LVTTL       :         : 7         : N              
+checker3[19]                 : AD17      : output : 3.3-V LVTTL       :         : 7         : N              
 GND                          : AD18      : gnd    :                   :         :           :                
-o_io_lcd[3]                  : AD19      : output : 3.3-V LVTTL       :         : 7         : N              
+checker3[25]                 : AD19      : output : 3.3-V LVTTL       :         : 7         : N              
 VCCIO7                       : AD20      : power  :                   : 3.3V    : 7         :                
-GND*                         : AD21      :        :                   :         : 7         :                
+o_io_hex2[5]                 : AD21      : output : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : AD22      :        :                   :         : 7         :                
 GND*                         : AD23      :        :                   :         : 7         :                
 GND*                         : AD24      :        :                   :         : 6         :                
@@ -200,24 +200,24 @@ GND                          : AE1       : gnd    :                   :         
 GND*                         : AE2       :        :                   :         : 1         :                
 GND*                         : AE3       :        :                   :         : 1         :                
 GND*                         : AE4       :        :                   :         : 8         :                
-i_io_btn[1]                  : AE5       : input  : 3.3-V LVTTL       :         : 8         : N              
-checker8[7]                  : AE6       : output : 3.3-V LVTTL       :         : 8         : N              
-checker3[7]                  : AE7       : output : 3.3-V LVTTL       :         : 8         : N              
-checker8[5]                  : AE8       : output : 3.3-V LVTTL       :         : 8         : N              
-checker8[2]                  : AE9       : output : 3.3-V LVTTL       :         : 8         : N              
-checker5[14]                 : AE10      : output : 3.3-V LVTTL       :         : 8         : N              
-checker1[11]                 : AE11      : output : 3.3-V LVTTL       :         : 8         : N              
-o_io_ledr[20]                : AE12      : output : 3.3-V LVTTL       :         : 8         : N              
-o_io_ledg[31]                : AE13      : output : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AE5       :        :                   :         : 8         :                
+checker5[0]                  : AE6       : output : 3.3-V LVTTL       :         : 8         : N              
+checker2[13]                 : AE7       : output : 3.3-V LVTTL       :         : 8         : N              
+checker5[12]                 : AE8       : output : 3.3-V LVTTL       :         : 8         : N              
+checker1[8]                  : AE9       : output : 3.3-V LVTTL       :         : 8         : N              
+checker2[16]                 : AE10      : output : 3.3-V LVTTL       :         : 8         : N              
+checker2[9]                  : AE11      : output : 3.3-V LVTTL       :         : 8         : N              
+checker2[26]                 : AE12      : output : 3.3-V LVTTL       :         : 8         : N              
+checker2[4]                  : AE13      : output : 3.3-V LVTTL       :         : 8         : N              
 GND+                         : AE14      :        :                   :         : 7         :                
-o_io_lcd[11]                 : AE15      : output : 3.3-V LVTTL       :         : 7         : N              
-checker2[8]                  : AE16      : output : 3.3-V LVTTL       :         : 7         : N              
-o_io_ledg[3]                 : AE17      : output : 3.3-V LVTTL       :         : 7         : N              
-i_io_sw[12]                  : AE18      : input  : 3.3-V LVTTL       :         : 7         : N              
-o_io_ledr[2]                 : AE19      : output : 3.3-V LVTTL       :         : 7         : N              
-o_io_ledg[6]                 : AE20      : output : 3.3-V LVTTL       :         : 7         : N              
-o_io_ledg[28]                : AE21      : output : 3.3-V LVTTL       :         : 7         : N              
-i_io_sw[26]                  : AE22      : input  : 3.3-V LVTTL       :         : 7         : N              
+checker5[24]                 : AE15      : output : 3.3-V LVTTL       :         : 7         : N              
+checker1[25]                 : AE16      : output : 3.3-V LVTTL       :         : 7         : N              
+checker2[17]                 : AE17      : output : 3.3-V LVTTL       :         : 7         : N              
+checker5[21]                 : AE18      : output : 3.3-V LVTTL       :         : 7         : N              
+checker2[22]                 : AE19      : output : 3.3-V LVTTL       :         : 7         : N              
+checker5[23]                 : AE20      : output : 3.3-V LVTTL       :         : 7         : N              
+checker3[29]                 : AE21      : output : 3.3-V LVTTL       :         : 7         : N              
+checker1[24]                 : AE22      : output : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : AE23      :        :                   :         : 7         :                
 ~LVDS150p/nCEO~              : AE24      : output : 3.3-V LVTTL       :         : 6         : N              
 GND*                         : AE25      :        :                   :         : 6         :                
@@ -225,24 +225,24 @@ GND                          : AE26      : gnd    :                   :         
 GND                          : AF2       : gnd    :                   :         :           :                
 VCCIO8                       : AF3       : power  :                   : 3.3V    : 8         :                
 GND*                         : AF4       :        :                   :         : 8         :                
-o_io_ledg[18]                : AF5       : output : 3.3-V LVTTL       :         : 8         : N              
-checker1[7]                  : AF6       : output : 3.3-V LVTTL       :         : 8         : N              
-checker8[3]                  : AF7       : output : 3.3-V LVTTL       :         : 8         : N              
-checker1[5]                  : AF8       : output : 3.3-V LVTTL       :         : 8         : N              
-checker3[5]                  : AF9       : output : 3.3-V LVTTL       :         : 8         : N              
-checker5[5]                  : AF10      : output : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AF5       :        :                   :         : 8         :                
+checker2[11]                 : AF6       : output : 3.3-V LVTTL       :         : 8         : N              
+checker3[31]                 : AF7       : output : 3.3-V LVTTL       :         : 8         : N              
+checker5[9]                  : AF8       : output : 3.3-V LVTTL       :         : 8         : N              
+checker1[13]                 : AF9       : output : 3.3-V LVTTL       :         : 8         : N              
+checker2[12]                 : AF10      : output : 3.3-V LVTTL       :         : 8         : N              
 VCCIO8                       : AF11      : power  :                   : 3.3V    : 8         :                
 GND                          : AF12      : gnd    :                   :         :           :                
-o_io_lcd[28]                 : AF13      : output : 3.3-V LVTTL       :         : 8         : N              
+checker8[24]                 : AF13      : output : 3.3-V LVTTL       :         : 8         : N              
 GND+                         : AF14      :        :                   :         : 7         :                
 GND                          : AF15      : gnd    :                   :         :           :                
 VCCIO7                       : AF16      : power  :                   : 3.3V    : 7         :                
-o_io_ledg[4]                 : AF17      : output : 3.3-V LVTTL       :         : 7         : N              
-o_io_ledr[4]                 : AF18      : output : 3.3-V LVTTL       :         : 7         : N              
-i_io_sw[4]                   : AF19      : input  : 3.3-V LVTTL       :         : 7         : N              
-o_io_lcd[31]                 : AF20      : output : 3.3-V LVTTL       :         : 7         : N              
-o_io_lcd[27]                 : AF21      : output : 3.3-V LVTTL       :         : 7         : N              
-i_io_sw[28]                  : AF22      : input  : 3.3-V LVTTL       :         : 7         : N              
+checker8[17]                 : AF17      : output : 3.3-V LVTTL       :         : 7         : N              
+checker3[17]                 : AF18      : output : 3.3-V LVTTL       :         : 7         : N              
+checker1[17]                 : AF19      : output : 3.3-V LVTTL       :         : 7         : N              
+checker8[21]                 : AF20      : output : 3.3-V LVTTL       :         : 7         : N              
+checker3[26]                 : AF21      : output : 3.3-V LVTTL       :         : 7         : N              
+checker1[22]                 : AF22      : output : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : AF23      :        :                   :         : 7         :                
 VCCIO7                       : AF24      : power  :                   : 3.3V    : 7         :                
 GND                          : AF25      : gnd    :                   :         :           :                
@@ -252,244 +252,244 @@ GND*                         : B3        :        :                   :         
 GND*                         : B4        :        :                   :         : 3         :                
 GND*                         : B5        :        :                   :         : 3         :                
 GND*                         : B6        :        :                   :         : 3         :                
-checker8[28]                 : B7        : output : 3.3-V LVTTL       :         : 3         : N              
-checker5[27]                 : B8        : output : 3.3-V LVTTL       :         : 3         : N              
-checker3[29]                 : B9        : output : 3.3-V LVTTL       :         : 3         : N              
-checker5[22]                 : B10       : output : 3.3-V LVTTL       :         : 3         : N              
-checker2[22]                 : B11       : output : 3.3-V LVTTL       :         : 3         : N              
-o_io_lcd[14]                 : B12       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledr[1]                 : B7        : output : 3.3-V LVTTL       :         : 3         : N              
+o_pc_debug[4]                : B8        : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledr[17]                : B9        : output : 3.3-V LVTTL       :         : 3         : N              
+checker1[0]                  : B10       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledg[24]                : B11       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledr[21]                : B12       : output : 3.3-V LVTTL       :         : 3         : N              
 GND+                         : B13       :        :                   :         : 4         :                
-o_io_ledr[12]                : B14       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_ledg[20]                : B15       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_lcd[15]                 : B16       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_ledr[13]                : B17       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_ledg[0]                 : B18       : output : 3.3-V LVTTL       :         : 4         : N              
-checker3[20]                 : B19       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_ledr[10]                : B20       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_ledg[11]                : B21       : output : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : B22       :        :                   :         : 4         :                
-GND*                         : B23       :        :                   :         : 4         :                
-GND*                         : B24       :        :                   :         : 5         :                
-GND*                         : B25       :        :                   :         : 5         :                
+o_io_lcd[16]                 : B14       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_hex2[2]                 : B15       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledg[7]                 : B16       : output : 3.3-V LVTTL       :         : 4         : N              
+o_pc_debug[24]               : B17       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_hex5[6]                 : B18       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_hex7[1]                 : B19       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledr[3]                 : B20       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_lcd[12]                 : B21       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledg[29]                : B22       : output : 3.3-V LVTTL       :         : 4         : N              
+o_pc_debug[27]               : B23       : output : 3.3-V LVTTL       :         : 4         : N              
+o_pc_debug[29]               : B24       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex5[0]                 : B25       : output : 3.3-V LVTTL       :         : 5         : N              
 GND                          : B26       : gnd    :                   :         :           :                
 VCCIO2                       : C1        : power  :                   : 3.3V    : 2         :                
 GND*                         : C2        :        :                   :         : 2         :                
 GND*                         : C3        :        :                   :         : 2         :                
-checker3[17]                 : C4        : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : C4        :        :                   :         : 3         :                
 GND*                         : C5        :        :                   :         : 3         :                
-i_io_btn[3]                  : C6        : input  : 3.3-V LVTTL       :         : 3         : N              
-checker8[30]                 : C7        : output : 3.3-V LVTTL       :         : 3         : N              
-checker8[0]                  : C8        : output : 3.3-V LVTTL       :         : 3         : N              
-checker2[27]                 : C9        : output : 3.3-V LVTTL       :         : 3         : N              
-checker8[19]                 : C10       : output : 3.3-V LVTTL       :         : 3         : N              
-checker2[21]                 : C11       : output : 3.3-V LVTTL       :         : 3         : N              
-checker1[25]                 : C12       : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : C6        :        :                   :         : 3         :                
+o_io_ledg[9]                 : C7        : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledr[6]                 : C8        : output : 3.3-V LVTTL       :         : 3         : N              
+i_io_sw[14]                  : C9        : input  : 3.3-V LVTTL       :         : 3         : N              
+checker3[3]                  : C10       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledg[31]                : C11       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_lcd[27]                 : C12       : output : 3.3-V LVTTL       :         : 3         : N              
 GND+                         : C13       :        :                   :         : 3         :                
 GND                          : C14       : gnd    :                   :         :           :                
-o_io_ledg[13]                : C15       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_lcd[1]                  : C16       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_hex5[2]                 : C17       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_lcd[5]                  : C15       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_hex7[0]                 : C16       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledg[14]                : C17       : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : C18       : gnd    :                   :         :           :                
-checker2[20]                 : C19       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledr[11]                : C19       : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : C20       : power  :                   : 3.3V    : 4         :                
 GND*                         : C21       :        :                   :         : 4         :                
 GND*                         : C22       :        :                   :         : 4         :                
 GND*                         : C23       :        :                   :         : 4         :                
-GND*                         : C24       :        :                   :         : 5         :                
-GND*                         : C25       :        :                   :         : 5         :                
+o_pc_debug[19]               : C24       : output : 3.3-V LVTTL       :         : 5         : N              
+o_pc_debug[15]               : C25       : output : 3.3-V LVTTL       :         : 5         : N              
 VCCIO5                       : C26       : power  :                   : 3.3V    : 5         :                
-checker2[15]                 : D1        : output : 3.3-V LVTTL       :         : 2         : N              
-checker2[26]                 : D2        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : D1        :        :                   :         : 2         :                
+GND*                         : D2        :        :                   :         : 2         :                
 ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : D3        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND                          : D4        : gnd    :                   :         :           :                
-checker5[20]                 : D5        : output : 3.3-V LVTTL       :         : 3         : N              
-checker1[20]                 : D6        : output : 3.3-V LVTTL       :         : 3         : N              
-checker5[25]                 : D7        : output : 3.3-V LVTTL       :         : 3         : N              
-checker8[27]                 : D8        : output : 3.3-V LVTTL       :         : 3         : N              
-checker8[17]                 : D9        : output : 3.3-V LVTTL       :         : 3         : N              
-checker8[21]                 : D10       : output : 3.3-V LVTTL       :         : 3         : N              
-checker3[25]                 : D11       : output : 3.3-V LVTTL       :         : 3         : N              
-checker1[29]                 : D12       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledg[17]                : D5        : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledr[18]                : D6        : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledr[27]                : D7        : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_lcd[29]                 : D8        : output : 3.3-V LVTTL       :         : 3         : N              
+o_pc_debug[8]                : D9        : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_lcd[24]                 : D10       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledg[30]                : D11       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledr[22]                : D12       : output : 3.3-V LVTTL       :         : 3         : N              
 GND+                         : D13       :        :                   :         : 3         :                
-checker2[19]                 : D14       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_ledg[8]                 : D15       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_ledg[16]                : D16       : output : 3.3-V LVTTL       :         : 4         : N              
-o_pc_debug[13]               : D17       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_hex5[3]                 : D18       : output : 3.3-V LVTTL       :         : 4         : N              
-i_io_sw[7]                   : D19       : input  : 3.3-V LVTTL       :         : 4         : N              
-checker2[0]                  : D20       : output : 3.3-V LVTTL       :         : 4         : N              
-i_io_btn[0]                  : D21       : input  : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledr[19]                : D14       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_lcd[14]                 : D15       : output : 3.3-V LVTTL       :         : 4         : N              
+i_io_sw[2]                   : D16       : input  : 3.3-V LVTTL       :         : 4         : N              
+o_io_hex0[4]                 : D17       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_hex0[0]                 : D18       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_hex3[3]                 : D19       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledr[2]                 : D20       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : D21       :        :                   :         : 4         :                
 VCCIO4                       : D22       : power  :                   : 3.3V    : 4         :                
-GND*                         : D23       :        :                   :         : 5         :                
+i_io_btn[2]                  : D23       : input  : 3.3-V LVTTL       :         : 5         : N              
 GND                          : D24       : gnd    :                   :         :           :                
-GND*                         : D25       :        :                   :         : 5         :                
-GND*                         : D26       :        :                   :         : 5         :                
-checker5[26]                 : E1        : output : 3.3-V LVTTL       :         : 2         : N              
-checker8[29]                 : E2        : output : 3.3-V LVTTL       :         : 2         : N              
+o_io_hex4[1]                 : D25       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex4[4]                 : D26       : output : 3.3-V LVTTL       :         : 5         : N              
+o_pc_debug[25]               : E1        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : E2        :        :                   :         : 2         :                
 ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : E3        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND_PLL3                     : E4        : gnd    :                   :         :           :                
-i_io_btn[2]                  : E5        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : E5        :        :                   :         : 2         :                
 VCCIO3                       : E6        : power  :                   : 3.3V    : 3         :                
 GND                          : E7        : gnd    :                   :         :           :                
-br_lesss                     : E8        : output : 3.3-V LVTTL       :         : 3         : N              
+o_pc_debug[17]               : E8        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : E9        : power  :                   : 3.3V    : 3         :                
-checker3[18]                 : E10       : output : 3.3-V LVTTL       :         : 3         : N              
+o_pc_debug[11]               : E10       : output : 3.3-V LVTTL       :         : 3         : N              
 GND                          : E11       : gnd    :                   :         :           :                
-checker1[28]                 : E12       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledr[29]                : E12       : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : E13       : power  :                   : 3.3V    : 3         :                
 VCCIO4                       : E14       : power  :                   : 3.3V    : 4         :                
-o_io_lcd[9]                  : E15       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_hex4[6]                 : E15       : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : E16       : gnd    :                   :         :           :                
 VCCIO4                       : E17       : power  :                   : 3.3V    : 4         :                
-i_io_sw[15]                  : E18       : input  : 3.3-V LVTTL       :         : 4         : N              
+i_io_sw[6]                   : E18       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND                          : E19       : gnd    :                   :         :           :                
-o_io_ledg[27]                : E20       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_hex0[5]                 : E20       : output : 3.3-V LVTTL       :         : 4         : N              
 GND_PLL2                     : E21       : gnd    :                   :         :           :                
 GND*                         : E22       :        :                   :         : 5         :                
 GND*                         : E23       :        :                   :         : 5         :                
-GND*                         : E24       :        :                   :         : 5         :                
-GND*                         : E25       :        :                   :         : 5         :                
-GND*                         : E26       :        :                   :         : 5         :                
-checker8[23]                 : F1        : output : 3.3-V LVTTL       :         : 2         : N              
-checker3[23]                 : F2        : output : 3.3-V LVTTL       :         : 2         : N              
-checker3[16]                 : F3        : output : 3.3-V LVTTL       :         : 2         : N              
-checker3[30]                 : F4        : output : 3.3-V LVTTL       :         : 2         : N              
+o_pc_debug[26]               : E24       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex4[2]                 : E25       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex4[0]                 : E26       : output : 3.3-V LVTTL       :         : 5         : N              
+o_pc_debug[12]               : F1        : output : 3.3-V LVTTL       :         : 2         : N              
+o_pc_debug[28]               : F2        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : F3        :        :                   :         : 2         :                
+GND*                         : F4        :        :                   :         : 2         :                
 VCCIO2                       : F5        : power  :                   : 3.3V    : 2         :                
 GND*                         : F6        :        :                   :         : 2         :                
-checker1[0]                  : F7        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : F7        :        :                   :         : 2         :                
 GNDA_PLL3                    : F8        : gnd    :                   :         :           :                
-checker8[1]                  : F9        : output : 3.3-V LVTTL       :         : 3         : N              
-checker8[24]                 : F10       : output : 3.3-V LVTTL       :         : 3         : N              
-checker2[16]                 : F11       : output : 3.3-V LVTTL       :         : 3         : N              
-checker1[16]                 : F12       : output : 3.3-V LVTTL       :         : 3         : N              
-o_io_ledr[15]                : F13       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_ledg[19]                : F14       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_hex4[0]                 : F15       : output : 3.3-V LVTTL       :         : 4         : N              
-i_io_sw[0]                   : F16       : input  : 3.3-V LVTTL       :         : 4         : N              
-o_io_hex4[5]                 : F17       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_hex5[6]                 : F18       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_lcd[21]                 : F9        : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledr[9]                 : F10       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledg[26]                : F11       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledr[13]                : F12       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_lcd[13]                 : F13       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_hex2[1]                 : F14       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_lcd[9]                  : F15       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_hex6[4]                 : F16       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_hex1[2]                 : F17       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledg[6]                 : F18       : output : 3.3-V LVTTL       :         : 4         : N              
 GNDA_PLL2                    : F19       : gnd    :                   :         :           :                
 GND*                         : F20       :        :                   :         : 5         :                
 GND*                         : F21       :        :                   :         : 5         :                
 VCCIO5                       : F22       : power  :                   : 3.3V    : 5         :                
-o_pc_debug[12]               : F23       : output : 3.3-V LVTTL       :         : 5         : N              
-o_pc_debug[5]                : F24       : output : 3.3-V LVTTL       :         : 5         : N              
-o_pc_debug[16]               : F25       : output : 3.3-V LVTTL       :         : 5         : N              
-o_pc_debug[28]               : F26       : output : 3.3-V LVTTL       :         : 5         : N              
-checker2[23]                 : G1        : output : 3.3-V LVTTL       :         : 2         : N              
-checker5[18]                 : G2        : output : 3.3-V LVTTL       :         : 2         : N              
-checker1[21]                 : G3        : output : 3.3-V LVTTL       :         : 2         : N              
-i_io_sw[16]                  : G4        : input  : 3.3-V LVTTL       :         : 2         : N              
+o_io_ledg[23]                : F23       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_lcd[6]                  : F24       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_ledg[2]                 : F25       : output : 3.3-V LVTTL       :         : 5         : N              
+o_pc_debug[5]                : F26       : output : 3.3-V LVTTL       :         : 5         : N              
+o_pc_debug[10]               : G1        : output : 3.3-V LVTTL       :         : 2         : N              
+o_pc_debug[20]               : G2        : output : 3.3-V LVTTL       :         : 2         : N              
+o_pc_debug[22]               : G3        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : G4        :        :                   :         : 2         :                
 GND*                         : G5        :        :                   :         : 2         :                
 GND*                         : G6        :        :                   :         : 2         :                
 GND_PLL3                     : G7        : gnd    :                   :         :           :                
 VCCA_PLL3                    : G8        : power  :                   : 1.2V    :           :                
-checker1[19]                 : G9        : output : 3.3-V LVTTL       :         : 3         : N              
-checker8[18]                 : G10       : output : 3.3-V LVTTL       :         : 3         : N              
-checker5[16]                 : G11       : output : 3.3-V LVTTL       :         : 3         : N              
-checker2[25]                 : G12       : output : 3.3-V LVTTL       :         : 3         : N              
-o_io_ledg[14]                : G13       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_ledr[9]                 : G14       : output : 3.3-V LVTTL       :         : 4         : N              
-o_pc_debug[17]               : G15       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_hex6[1]                 : G16       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_hex4[6]                 : G17       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_hex6[5]                 : G18       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_lcd[18]                 : G9        : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledr[7]                 : G10       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledg[27]                : G11       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledg[28]                : G12       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_hex3[2]                 : G13       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_lcd[19]                 : G14       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_hex1[3]                 : G15       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_hex6[5]                 : G16       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_hex5[3]                 : G17       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledg[3]                 : G18       : output : 3.3-V LVTTL       :         : 4         : N              
 VCCA_PLL2                    : G19       : power  :                   : 1.2V    :           :                
 GND_PLL2                     : G20       : gnd    :                   :         :           :                
-GND*                         : G21       :        :                   :         : 5         :                
+i_io_btn[0]                  : G21       : input  : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : G22       :        :                   :         : 5         :                
-o_pc_debug[18]               : G23       : output : 3.3-V LVTTL       :         : 5         : N              
-o_pc_debug[20]               : G24       : output : 3.3-V LVTTL       :         : 5         : N              
-o_pc_debug[2]                : G25       : output : 3.3-V LVTTL       :         : 5         : N              
-o_pc_debug[21]               : G26       : output : 3.3-V LVTTL       :         : 5         : N              
-checker5[29]                 : H1        : output : 3.3-V LVTTL       :         : 2         : N              
-checker5[19]                 : H2        : output : 3.3-V LVTTL       :         : 2         : N              
-checker3[19]                 : H3        : output : 3.3-V LVTTL       :         : 2         : N              
-o_pc_debug[7]                : H4        : output : 3.3-V LVTTL       :         : 2         : N              
+o_io_hex6[6]                 : G23       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex5[1]                 : G24       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex4[5]                 : G25       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex5[2]                 : G26       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_ledr[31]                : H1        : output : 3.3-V LVTTL       :         : 2         : N              
+o_io_lcd[30]                 : H2        : output : 3.3-V LVTTL       :         : 2         : N              
+o_pc_debug[18]               : H3        : output : 3.3-V LVTTL       :         : 2         : N              
+o_pc_debug[1]                : H4        : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : H5        : gnd    :                   :         :           :                
-i_io_sw[21]                  : H6        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : H6        :        :                   :         : 2         :                
 VCCD_PLL3                    : H7        : power  :                   : 1.2V    :           :                
-checker3[28]                 : H8        : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledg[21]                : H8        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : H9        : power  :                   : 3.3V    : 3         :                
-checker3[26]                 : H10       : output : 3.3-V LVTTL       :         : 3         : N              
-checker2[31]                 : H11       : output : 3.3-V LVTTL       :         : 3         : N              
-checker3[21]                 : H12       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledg[13]                : H10       : output : 3.3-V LVTTL       :         : 3         : N              
+checker3[8]                  : H11       : output : 3.3-V LVTTL       :         : 3         : N              
+checker3[1]                  : H12       : output : 3.3-V LVTTL       :         : 3         : N              
 GND                          : H13       : gnd    :                   :         :           :                
 GND                          : H14       : gnd    :                   :         :           :                
-o_io_lcd[2]                  : H15       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_hex6[2]                 : H16       : output : 3.3-V LVTTL       :         : 4         : N              
-i_io_sw[6]                   : H17       : input  : 3.3-V LVTTL       :         : 4         : N              
+o_pc_debug[23]               : H15       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledg[0]                 : H16       : output : 3.3-V LVTTL       :         : 4         : N              
+i_io_sw[0]                   : H17       : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : H18       : power  :                   : 3.3V    : 4         :                
-o_io_ledg[10]                : H19       : output : 3.3-V LVTTL       :         : 5         : N              
+o_pc_debug[7]                : H19       : output : 3.3-V LVTTL       :         : 5         : N              
 VCCD_PLL2                    : H20       : power  :                   : 1.2V    :           :                
 GND*                         : H21       :        :                   :         : 5         :                
 GND                          : H22       : gnd    :                   :         :           :                
-o_pc_debug[27]               : H23       : output : 3.3-V LVTTL       :         : 5         : N              
-o_pc_debug[29]               : H24       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_hex6[0]                 : H25       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_hex4[1]                 : H26       : output : 3.3-V LVTTL       :         : 5         : N              
-checker2[17]                 : J1        : output : 3.3-V LVTTL       :         : 2         : N              
-o_io_lcd[30]                 : J2        : output : 3.3-V LVTTL       :         : 2         : N              
-i_io_sw[20]                  : J3        : input  : 3.3-V LVTTL       :         : 2         : N              
-checker5[21]                 : J4        : output : 3.3-V LVTTL       :         : 2         : N              
-o_pc_debug[8]                : J5        : output : 3.3-V LVTTL       :         : 2         : N              
-i_io_sw[19]                  : J6        : input  : 3.3-V LVTTL       :         : 2         : N              
-i_io_sw[18]                  : J7        : input  : 3.3-V LVTTL       :         : 2         : N              
-i_io_sw[22]                  : J8        : input  : 3.3-V LVTTL       :         : 2         : N              
-checker2[29]                 : J9        : output : 3.3-V LVTTL       :         : 3         : N              
-checker3[24]                 : J10       : output : 3.3-V LVTTL       :         : 3         : N              
-checker2[24]                 : J11       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_hex6[3]                 : H23       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex6[2]                 : H24       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_lcd[7]                  : H25       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_lcd[4]                  : H26       : output : 3.3-V LVTTL       :         : 5         : N              
+o_pc_debug[31]               : J1        : output : 3.3-V LVTTL       :         : 2         : N              
+o_io_lcd[22]                 : J2        : output : 3.3-V LVTTL       :         : 2         : N              
+o_pc_debug[13]               : J3        : output : 3.3-V LVTTL       :         : 2         : N              
+o_io_lcd[31]                 : J4        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : J5        :        :                   :         : 2         :                
+o_pc_debug[21]               : J6        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : J7        :        :                   :         : 2         :                
+GND*                         : J8        :        :                   :         : 2         :                
+o_io_ledg[22]                : J9        : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_lcd[23]                 : J10       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledr[8]                 : J11       : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : J12       : power  :                   : 3.3V    : 3         :                
-checker1[24]                 : J13       : output : 3.3-V LVTTL       :         : 3         : N              
-checker2[28]                 : J14       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_ledr[30]                : J13       : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_lcd[25]                 : J14       : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO4                       : J15       : power  :                   : 3.3V    : 4         :                
-o_io_ledg[15]                : J16       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_hex7[1]                 : J17       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_ledr[11]                : J18       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledr[10]                : J16       : output : 3.3-V LVTTL       :         : 4         : N              
+i_io_sw[5]                   : J17       : input  : 3.3-V LVTTL       :         : 4         : N              
+o_io_ledg[15]                : J18       : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO5                       : J19       : power  :                   : 3.3V    : 5         :                
-o_pc_debug[11]               : J20       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_ledr[26]                : J21       : output : 3.3-V LVTTL       :         : 5         : N              
-GND*                         : J22       :        :                   :         : 5         :                
-o_pc_debug[15]               : J23       : output : 3.3-V LVTTL       :         : 5         : N              
-o_pc_debug[3]                : J24       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_ledr[7]                 : J25       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_ledr[27]                : J26       : output : 3.3-V LVTTL       :         : 5         : N              
-checker3[27]                 : K1        : output : 3.3-V LVTTL       :         : 2         : N              
-checker1[22]                 : K2        : output : 3.3-V LVTTL       :         : 2         : N              
-checker3[0]                  : K3        : output : 3.3-V LVTTL       :         : 2         : N              
-checker5[23]                 : K4        : output : 3.3-V LVTTL       :         : 2         : N              
-i_io_sw[23]                  : K5        : input  : 3.3-V LVTTL       :         : 2         : N              
-o_pc_debug[6]                : K6        : output : 3.3-V LVTTL       :         : 2         : N              
-checker8[31]                 : K7        : output : 3.3-V LVTTL       :         : 2         : N              
-checker8[25]                 : K8        : output : 3.3-V LVTTL       :         : 2         : N              
-o_io_ledr[30]                : K9        : output : 3.3-V LVTTL       :         : 3         : N              
+o_io_hex1[0]                 : J20       : output : 3.3-V LVTTL       :         : 5         : N              
+i_io_sw[1]                   : J21       : input  : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex7[2]                 : J22       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_lcd[1]                  : J23       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_lcd[0]                  : J24       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex6[0]                 : J25       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex7[5]                 : J26       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_lcd[17]                 : K1        : output : 3.3-V LVTTL       :         : 2         : N              
+o_io_ledr[24]                : K2        : output : 3.3-V LVTTL       :         : 2         : N              
+o_pc_debug[16]               : K3        : output : 3.3-V LVTTL       :         : 2         : N              
+o_pc_debug[14]               : K4        : output : 3.3-V LVTTL       :         : 2         : N              
+o_insn_vld                   : K5        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : K6        :        :                   :         : 2         :                
+o_pc_debug[30]               : K7        : output : 3.3-V LVTTL       :         : 2         : N              
+o_io_lcd[26]                 : K8        : output : 3.3-V LVTTL       :         : 2         : N              
+o_io_ledg[25]                : K9        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCINT                       : K10       : power  :                   : 1.2V    :           :                
 VCCINT                       : K11       : power  :                   : 1.2V    :           :                
 VCCINT                       : K12       : power  :                   : 1.2V    :           :                
 VCCINT                       : K13       : power  :                   : 1.2V    :           :                
 VCCINT                       : K14       : power  :                   : 1.2V    :           :                
 VCCINT                       : K15       : power  :                   : 1.2V    :           :                
-o_insn_vld                   : K16       : output : 3.3-V LVTTL       :         : 4         : N              
-o_io_ledr[14]                : K17       : output : 3.3-V LVTTL       :         : 4         : N              
-o_pc_debug[0]                : K18       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_hex6[6]                 : K19       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex7[4]                 : K16       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_lcd[15]                 : K17       : output : 3.3-V LVTTL       :         : 4         : N              
+o_io_lcd[3]                  : K18       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_lcd[10]                 : K19       : output : 3.3-V LVTTL       :         : 5         : N              
 GND                          : K20       : gnd    :                   :         :           :                
-o_io_ledr[0]                 : K21       : output : 3.3-V LVTTL       :         : 5         : N              
-o_pc_debug[26]               : K22       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_hex5[5]                 : K23       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_hex5[4]                 : K24       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_hex7[6]                 : K25       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_ledr[8]                 : K26       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_ledg[1]                 : K21       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex4[3]                 : K22       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_ledg[4]                 : K23       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_lcd[11]                 : K24       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_lcd[8]                  : K25       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_ledr[12]                : K26       : output : 3.3-V LVTTL       :         : 5         : N              
 VCCIO2                       : L1        : power  :                   : 3.3V    : 2         :                
-checker1[23]                 : L2        : output : 3.3-V LVTTL       :         : 2         : N              
-checker5[10]                 : L3        : output : 3.3-V LVTTL       :         : 2         : N              
-checker2[30]                 : L4        : output : 3.3-V LVTTL       :         : 2         : N              
+o_pc_debug[6]                : L2        : output : 3.3-V LVTTL       :         : 2         : N              
+o_io_ledr[20]                : L3        : output : 3.3-V LVTTL       :         : 2         : N              
+o_io_ledg[18]                : L4        : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : L5        : gnd    :                   :         :           :                
-checker5[17]                 : L6        : output : 3.3-V LVTTL       :         : 2         : N              
-checker5[9]                  : L7        : output : 3.3-V LVTTL       :         : 2         : N              
+o_pc_debug[9]                : L6        : output : 3.3-V LVTTL       :         : 2         : N              
+o_io_ledg[16]                : L7        : output : 3.3-V LVTTL       :         : 2         : N              
 TMS                          : L8        : input  :                   :         : 2         :                
-checker1[17]                 : L9        : output : 3.3-V LVTTL       :         : 2         : N              
-checker5[28]                 : L10       : output : 3.3-V LVTTL       :         : 2         : N              
+o_io_ledr[5]                 : L9        : output : 3.3-V LVTTL       :         : 2         : N              
+o_io_hex6[1]                 : L10       : output : 3.3-V LVTTL       :         : 2         : N              
 VCCINT                       : L11       : power  :                   : 1.2V    :           :                
 GND                          : L12       : gnd    :                   :         :           :                
 GND                          : L13       : gnd    :                   :         :           :                
@@ -498,19 +498,19 @@ GND                          : L15       : gnd    :                   :         
 VCCINT                       : L16       : power  :                   : 1.2V    :           :                
 VCCINT                       : L17       : power  :                   : 1.2V    :           :                
 VCCINT                       : L18       : power  :                   : 1.2V    :           :                
-o_io_hex5[0]                 : L19       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_lcd[6]                  : L20       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_lcd[12]                 : L21       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex1[6]                 : L19       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex7[6]                 : L20       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex5[5]                 : L21       : output : 3.3-V LVTTL       :         : 5         : N              
 GND                          : L22       : gnd    :                   :         :           :                
-o_io_ledr[22]                : L23       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_lcd[29]                 : L24       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_hex2[0]                 : L25       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex1[1]                 : L23       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex1[4]                 : L24       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex0[3]                 : L25       : output : 3.3-V LVTTL       :         : 5         : N              
 VCCIO5                       : L26       : power  :                   : 3.3V    : 5         :                
 GND                          : M1        : gnd    :                   :         :           :                
-checker1[26]                 : M2        : output : 3.3-V LVTTL       :         : 2         : N              
-i_io_sw[17]                  : M3        : input  : 3.3-V LVTTL       :         : 2         : N              
-checker5[30]                 : M4        : output : 3.3-V LVTTL       :         : 2         : N              
-o_io_ledg[30]                : M5        : output : 3.3-V LVTTL       :         : 2         : N              
+o_pc_debug[0]                : M2        : output : 3.3-V LVTTL       :         : 2         : N              
+o_io_hex0[2]                 : M3        : output : 3.3-V LVTTL       :         : 2         : N              
+o_io_hex1[5]                 : M4        : output : 3.3-V LVTTL       :         : 2         : N              
+o_io_hex0[6]                 : M5        : output : 3.3-V LVTTL       :         : 2         : N              
 TCK                          : M6        : input  :                   :         : 2         :                
 TDO                          : M7        : output :                   :         : 2         :                
 TDI                          : M8        : input  :                   :         : 2         :                
@@ -524,13 +524,13 @@ GND                          : M15       : gnd    :                   :         
 VCCINT                       : M16       : power  :                   : 1.2V    :           :                
 VCCINT                       : M17       : power  :                   : 1.2V    :           :                
 VCCIO5                       : M18       : power  :                   : 3.3V    : 5         :                
-o_io_hex4[3]                 : M19       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_hex0[0]                 : M20       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_ledg[12]                : M21       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_hex5[1]                 : M22       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_ledg[5]                 : M23       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_lcd[7]                  : M24       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_lcd[10]                 : M25       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_ledr[14]                : M19       : output : 3.3-V LVTTL       :         : 5         : N              
+i_io_sw[4]                   : M20       : input  : 3.3-V LVTTL       :         : 5         : N              
+i_io_sw[7]                   : M21       : input  : 3.3-V LVTTL       :         : 5         : N              
+o_io_ledg[12]                : M22       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_lcd[2]                  : M23       : output : 3.3-V LVTTL       :         : 5         : N              
+i_io_sw[13]                  : M24       : input  : 3.3-V LVTTL       :         : 5         : N              
+i_io_sw[19]                  : M25       : input  : 3.3-V LVTTL       :         : 5         : N              
 GND                          : M26       : gnd    :                   :         :           :                
 GND+                         : N1        :        :                   :         : 2         :                
 GND+                         : N2        :        :                   :         : 2         :                
@@ -540,7 +540,7 @@ VCCIO2                       : N5        : power  :                   : 3.3V    
 DCLK                         : N6        :        :                   :         : 2         :                
 nCONFIG                      : N7        :        :                   :         : 2         :                
 GND                          : N8        : gnd    :                   :         :           :                
-checker1[30]                 : N9        : output : 3.3-V LVTTL       :         : 2         : N              
+o_pc_debug[3]                : N9        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCINT                       : N10       : power  :                   : 1.2V    :           :                
 GND                          : N11       : gnd    :                   :         :           :                
 GND                          : N12       : gnd    :                   :         :           :                
@@ -549,24 +549,24 @@ GND                          : N14       : gnd    :                   :         
 GND                          : N15       : gnd    :                   :         :           :                
 GND                          : N16       : gnd    :                   :         :           :                
 VCCINT                       : N17       : power  :                   : 1.2V    :           :                
-o_pc_debug[19]               : N18       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_ledg[8]                 : N18       : output : 3.3-V LVTTL       :         : 5         : N              
 GND                          : N19       : gnd    :                   :         :           :                
-o_io_ledr[1]                 : N20       : output : 3.3-V LVTTL       :         : 5         : N              
+i_io_sw[31]                  : N20       : input  : 3.3-V LVTTL       :         : 5         : N              
 NC                           : N21       :        :                   :         :           :                
 VCCIO5                       : N22       : power  :                   : 3.3V    : 5         :                
-o_io_lcd[13]                 : N23       : output : 3.3-V LVTTL       :         : 5         : N              
-o_io_hex7[5]                 : N24       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_hex2[3]                 : N23       : output : 3.3-V LVTTL       :         : 5         : N              
+i_io_sw[24]                  : N24       : input  : 3.3-V LVTTL       :         : 5         : N              
 GND+                         : N25       :        :                   :         : 5         :                
 GND+                         : N26       :        :                   :         : 5         :                
 i_rst_n                      : P1        : input  : 3.3-V LVTTL       :         : 1         : N              
 i_clk                        : P2        : input  : 3.3-V LVTTL       :         : 1         : N              
 checker2[1]                  : P3        : output : 3.3-V LVTTL       :         : 1         : N              
-o_io_ledg[9]                 : P4        : output : 3.3-V LVTTL       :         : 1         : N              
+checker5[3]                  : P4        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : P5        : power  :                   : 3.3V    : 1         :                
-checker1[3]                  : P6        : output : 3.3-V LVTTL       :         : 1         : N              
-checker8[4]                  : P7        : output : 3.3-V LVTTL       :         : 1         : N              
+o_io_ledr[26]                : P6        : output : 3.3-V LVTTL       :         : 1         : N              
+o_io_ledr[25]                : P7        : output : 3.3-V LVTTL       :         : 1         : N              
 GND                          : P8        : gnd    :                   :         :           :                
-checker1[18]                 : P9        : output : 3.3-V LVTTL       :         : 2         : N              
+o_pc_debug[2]                : P9        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCINT                       : P10       : power  :                   : 1.2V    :           :                
 GND                          : P11       : gnd    :                   :         :           :                
 GND                          : P12       : gnd    :                   :         :           :                
@@ -574,24 +574,24 @@ GND                          : P13       : gnd    :                   :         
 GND                          : P14       : gnd    :                   :         :           :                
 GND                          : P15       : gnd    :                   :         :           :                
 GND                          : P16       : gnd    :                   :         :           :                
-o_io_hex7[3]                 : P17       : output : 3.3-V LVTTL       :         : 6         : N              
-o_pc_debug[25]               : P18       : output : 3.3-V LVTTL       :         : 5         : N              
+o_io_ledr[28]                : P17       : output : 3.3-V LVTTL       :         : 6         : N              
+o_io_hex5[4]                 : P18       : output : 3.3-V LVTTL       :         : 5         : N              
 GND                          : P19       : gnd    :                   :         :           :                
 MSEL0                        : P20       :        :                   :         : 6         :                
 MSEL1                        : P21       :        :                   :         : 6         :                
 VCCIO6                       : P22       : power  :                   : 3.3V    : 6         :                
-o_io_hex4[4]                 : P23       : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_ledr[16]                : P24       : output : 3.3-V LVTTL       :         : 6         : N              
+o_io_lcd[28]                 : P23       : output : 3.3-V LVTTL       :         : 6         : N              
+o_io_hex3[0]                 : P24       : output : 3.3-V LVTTL       :         : 6         : N              
 GND+                         : P25       :        :                   :         : 6         :                
 GND+                         : P26       :        :                   :         : 6         :                
 GND                          : R1        : gnd    :                   :         :           :                
-checker8[6]                  : R2        : output : 3.3-V LVTTL       :         : 1         : N              
-checker8[14]                 : R3        : output : 3.3-V LVTTL       :         : 1         : N              
-checker1[13]                 : R4        : output : 3.3-V LVTTL       :         : 1         : N              
-checker3[10]                 : R5        : output : 3.3-V LVTTL       :         : 1         : N              
-checker2[9]                  : R6        : output : 3.3-V LVTTL       :         : 1         : N              
-checker5[15]                 : R7        : output : 3.3-V LVTTL       :         : 1         : N              
-checker3[4]                  : R8        : output : 3.3-V LVTTL       :         : 1         : N              
+checker5[8]                  : R2        : output : 3.3-V LVTTL       :         : 1         : N              
+checker3[9]                  : R3        : output : 3.3-V LVTTL       :         : 1         : N              
+checker1[12]                 : R4        : output : 3.3-V LVTTL       :         : 1         : N              
+checker2[2]                  : R5        : output : 3.3-V LVTTL       :         : 1         : N              
+checker8[10]                 : R6        : output : 3.3-V LVTTL       :         : 1         : N              
+i_io_sw[11]                  : R7        : input  : 3.3-V LVTTL       :         : 1         : N              
+checker5[14]                 : R8        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : R9        : power  :                   : 3.3V    : 1         :                
 VCCINT                       : R10       : power  :                   : 1.2V    :           :                
 VCCINT                       : R11       : power  :                   : 1.2V    :           :                
@@ -600,143 +600,143 @@ GND                          : R13       : gnd    :                   :         
 GND                          : R14       : gnd    :                   :         :           :                
 GND                          : R15       : gnd    :                   :         :           :                
 VCCINT                       : R16       : power  :                   : 1.2V    :           :                
-o_pc_debug[14]               : R17       : output : 3.3-V LVTTL       :         : 6         : N              
+o_io_hex3[5]                 : R17       : output : 3.3-V LVTTL       :         : 6         : N              
 VCCIO6                       : R18       : power  :                   : 3.3V    : 6         :                
-o_pc_debug[4]                : R19       : output : 3.3-V LVTTL       :         : 6         : N              
-o_pc_debug[24]               : R20       : output : 3.3-V LVTTL       :         : 6         : N              
+i_io_sw[21]                  : R19       : input  : 3.3-V LVTTL       :         : 6         : N              
+i_io_sw[29]                  : R20       : input  : 3.3-V LVTTL       :         : 6         : N              
 GND                          : R21       : gnd    :                   :         :           :                
 nSTATUS                      : R22       :        :                   :         : 6         :                
 CONF_DONE                    : R23       :        :                   :         : 6         :                
-o_io_ledr[6]                 : R24       : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_lcd[0]                  : R25       : output : 3.3-V LVTTL       :         : 6         : N              
+i_io_sw[12]                  : R24       : input  : 3.3-V LVTTL       :         : 6         : N              
+i_io_sw[28]                  : R25       : input  : 3.3-V LVTTL       :         : 6         : N              
 GND                          : R26       : gnd    :                   :         :           :                
 VCCIO1                       : T1        : power  :                   : 3.3V    : 1         :                
-checker2[2]                  : T2        : output : 3.3-V LVTTL       :         : 1         : N              
-checker8[12]                 : T3        : output : 3.3-V LVTTL       :         : 1         : N              
-o_pc_debug[1]                : T4        : output : 3.3-V LVTTL       :         : 1         : N              
+checker5[31]                 : T2        : output : 3.3-V LVTTL       :         : 1         : N              
+checker1[9]                  : T3        : output : 3.3-V LVTTL       :         : 1         : N              
+i_io_sw[8]                   : T4        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND                          : T5        : gnd    :                   :         :           :                
-checker5[3]                  : T6        : output : 3.3-V LVTTL       :         : 1         : N              
-checker5[8]                  : T7        : output : 3.3-V LVTTL       :         : 1         : N              
-checker1[2]                  : T8        : output : 3.3-V LVTTL       :         : 1         : N              
-checker3[13]                 : T9        : output : 3.3-V LVTTL       :         : 1         : N              
-checker3[15]                 : T10       : output : 3.3-V LVTTL       :         : 1         : N              
+checker1[7]                  : T6        : output : 3.3-V LVTTL       :         : 1         : N              
+checker2[15]                 : T7        : output : 3.3-V LVTTL       :         : 1         : N              
+checker3[7]                  : T8        : output : 3.3-V LVTTL       :         : 1         : N              
+checker1[3]                  : T9        : output : 3.3-V LVTTL       :         : 1         : N              
+o_io_ledg[20]                : T10       : output : 3.3-V LVTTL       :         : 1         : N              
 VCCINT                       : T11       : power  :                   : 1.2V    :           :                
 GND                          : T12       : gnd    :                   :         :           :                
 GND                          : T13       : gnd    :                   :         :           :                
 GND                          : T14       : gnd    :                   :         :           :                
 GND                          : T15       : gnd    :                   :         :           :                
 VCCINT                       : T16       : power  :                   : 1.2V    :           :                
-o_io_hex3[6]                 : T17       : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_lcd[4]                  : T18       : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_hex7[4]                 : T19       : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_hex3[0]                 : T20       : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_lcd[5]                  : T21       : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_hex7[2]                 : T22       : output : 3.3-V LVTTL       :         : 6         : N              
-i_io_sw[2]                   : T23       : input  : 3.3-V LVTTL       :         : 6         : N              
-o_pc_debug[23]               : T24       : output : 3.3-V LVTTL       :         : 6         : N              
-i_io_sw[5]                   : T25       : input  : 3.3-V LVTTL       :         : 6         : N              
+checker2[30]                 : T17       : output : 3.3-V LVTTL       :         : 6         : N              
+o_io_lcd[20]                 : T18       : output : 3.3-V LVTTL       :         : 6         : N              
+checker8[20]                 : T19       : output : 3.3-V LVTTL       :         : 6         : N              
+i_io_sw[3]                   : T20       : input  : 3.3-V LVTTL       :         : 6         : N              
+i_io_sw[22]                  : T21       : input  : 3.3-V LVTTL       :         : 6         : N              
+i_io_sw[30]                  : T22       : input  : 3.3-V LVTTL       :         : 6         : N              
+i_io_sw[26]                  : T23       : input  : 3.3-V LVTTL       :         : 6         : N              
+o_io_hex3[6]                 : T24       : output : 3.3-V LVTTL       :         : 6         : N              
+o_io_hex3[1]                 : T25       : output : 3.3-V LVTTL       :         : 6         : N              
 VCCIO6                       : T26       : power  :                   : 3.3V    : 6         :                
-checker1[9]                  : U1        : output : 3.3-V LVTTL       :         : 1         : N              
-checker1[8]                  : U2        : output : 3.3-V LVTTL       :         : 1         : N              
-checker1[15]                 : U3        : output : 3.3-V LVTTL       :         : 1         : N              
-checker3[3]                  : U4        : output : 3.3-V LVTTL       :         : 1         : N              
-checker1[14]                 : U5        : output : 3.3-V LVTTL       :         : 1         : N              
-o_io_ledr[17]                : U6        : output : 3.3-V LVTTL       :         : 1         : N              
-checker8[13]                 : U7        : output : 3.3-V LVTTL       :         : 1         : N              
+checker1[5]                  : U1        : output : 3.3-V LVTTL       :         : 1         : N              
+checker5[4]                  : U2        : output : 3.3-V LVTTL       :         : 1         : N              
+checker3[16]                 : U3        : output : 3.3-V LVTTL       :         : 1         : N              
+checker8[16]                 : U4        : output : 3.3-V LVTTL       :         : 1         : N              
+checker5[16]                 : U5        : output : 3.3-V LVTTL       :         : 1         : N              
+checker1[10]                 : U6        : output : 3.3-V LVTTL       :         : 1         : N              
+checker5[2]                  : U7        : output : 3.3-V LVTTL       :         : 1         : N              
 GND                          : U8        : gnd    :                   :         :           :                
-checker3[1]                  : U9        : output : 3.3-V LVTTL       :         : 1         : N              
-checker3[8]                  : U10       : output : 3.3-V LVTTL       :         : 1         : N              
+checker5[5]                  : U9        : output : 3.3-V LVTTL       :         : 1         : N              
+checker5[1]                  : U10       : output : 3.3-V LVTTL       :         : 1         : N              
 VCCINT                       : U11       : power  :                   : 1.2V    :           :                
-checker3[22]                 : U12       : output : 3.3-V LVTTL       :         : 8         : N              
+checker2[27]                 : U12       : output : 3.3-V LVTTL       :         : 8         : N              
 VCCINT                       : U13       : power  :                   : 1.2V    :           :                
 VCCINT                       : U14       : power  :                   : 1.2V    :           :                
 VCCINT                       : U15       : power  :                   : 1.2V    :           :                
 VCCINT                       : U16       : power  :                   : 1.2V    :           :                
-o_io_ledg[17]                : U17       : output : 3.3-V LVTTL       :         : 7         : N              
-o_io_ledg[22]                : U18       : output : 3.3-V LVTTL       :         : 7         : N              
+o_io_hex2[6]                 : U17       : output : 3.3-V LVTTL       :         : 7         : N              
+checker8[14]                 : U18       : output : 3.3-V LVTTL       :         : 7         : N              
 GND                          : U19       : gnd    :                   :         :           :                
-o_io_hex6[4]                 : U20       : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_hex3[3]                 : U21       : output : 3.3-V LVTTL       :         : 6         : N              
-i_io_sw[29]                  : U22       : input  : 3.3-V LVTTL       :         : 6         : N              
-i_io_sw[14]                  : U23       : input  : 3.3-V LVTTL       :         : 6         : N              
-o_io_lcd[8]                  : U24       : output : 3.3-V LVTTL       :         : 6         : N              
-i_io_sw[10]                  : U25       : input  : 3.3-V LVTTL       :         : 6         : N              
-i_io_sw[8]                   : U26       : input  : 3.3-V LVTTL       :         : 6         : N              
-checker8[8]                  : V1        : output : 3.3-V LVTTL       :         : 1         : N              
-checker3[11]                 : V2        : output : 3.3-V LVTTL       :         : 1         : N              
-checker5[4]                  : V3        : output : 3.3-V LVTTL       :         : 1         : N              
-checker5[2]                  : V4        : output : 3.3-V LVTTL       :         : 1         : N              
-checker3[2]                  : V5        : output : 3.3-V LVTTL       :         : 1         : N              
-checker2[7]                  : V6        : output : 3.3-V LVTTL       :         : 1         : N              
-checker5[11]                 : V7        : output : 3.3-V LVTTL       :         : 1         : N              
+o_io_hex2[0]                 : U20       : output : 3.3-V LVTTL       :         : 6         : N              
+checker3[23]                 : U21       : output : 3.3-V LVTTL       :         : 6         : N              
+checker1[20]                 : U22       : output : 3.3-V LVTTL       :         : 6         : N              
+checker5[17]                 : U23       : output : 3.3-V LVTTL       :         : 6         : N              
+checker5[19]                 : U24       : output : 3.3-V LVTTL       :         : 6         : N              
+checker5[18]                 : U25       : output : 3.3-V LVTTL       :         : 6         : N              
+checker1[21]                 : U26       : output : 3.3-V LVTTL       :         : 6         : N              
+checker5[13]                 : V1        : output : 3.3-V LVTTL       :         : 1         : N              
+checker8[5]                  : V2        : output : 3.3-V LVTTL       :         : 1         : N              
+checker2[8]                  : V3        : output : 3.3-V LVTTL       :         : 1         : N              
+checker3[24]                 : V4        : output : 3.3-V LVTTL       :         : 1         : N              
+checker8[23]                 : V5        : output : 3.3-V LVTTL       :         : 1         : N              
+checker3[14]                 : V6        : output : 3.3-V LVTTL       :         : 1         : N              
+i_io_sw[10]                  : V7        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : V8        : power  :                   : 3.3V    : 1         :                
-o_io_ledr[24]                : V9        : output : 3.3-V LVTTL       :         : 8         : N              
-o_io_lcd[21]                 : V10       : output : 3.3-V LVTTL       :         : 8         : N              
-checker2[5]                  : V11       : output : 3.3-V LVTTL       :         : 8         : N              
+checker1[14]                 : V9        : output : 3.3-V LVTTL       :         : 8         : N              
+checker3[6]                  : V10       : output : 3.3-V LVTTL       :         : 8         : N              
+checker3[11]                 : V11       : output : 3.3-V LVTTL       :         : 8         : N              
 VCCIO8                       : V12       : power  :                   : 3.3V    : 8         :                
-checker1[31]                 : V13       : output : 3.3-V LVTTL       :         : 8         : N              
-o_io_ledr[23]                : V14       : output : 3.3-V LVTTL       :         : 8         : N              
+checker1[11]                 : V13       : output : 3.3-V LVTTL       :         : 8         : N              
+checker3[12]                 : V14       : output : 3.3-V LVTTL       :         : 8         : N              
 VCCIO7                       : V15       : power  :                   : 3.3V    : 7         :                
 VCCINT                       : V16       : power  :                   : 1.2V    :           :                
-o_io_hex2[6]                 : V17       : output : 3.3-V LVTTL       :         : 7         : N              
-o_io_hex1[0]                 : V18       : output : 3.3-V LVTTL       :         : 7         : N              
+checker3[18]                 : V17       : output : 3.3-V LVTTL       :         : 7         : N              
+checker1[26]                 : V18       : output : 3.3-V LVTTL       :         : 7         : N              
 VCCIO6                       : V19       : power  :                   : 3.3V    : 6         :                
 GND*                         : V20       :        :                   :         : 6         :                
-GND*                         : V21       :        :                   :         : 6         :                
-o_io_hex3[1]                 : V22       : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_hex2[1]                 : V23       : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_hex3[5]                 : V24       : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_hex1[6]                 : V25       : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_hex1[2]                 : V26       : output : 3.3-V LVTTL       :         : 6         : N              
-checker5[7]                  : W1        : output : 3.3-V LVTTL       :         : 1         : N              
-checker3[31]                 : W2        : output : 3.3-V LVTTL       :         : 1         : N              
+i_io_btn[1]                  : V21       : input  : 3.3-V LVTTL       :         : 6         : N              
+i_io_sw[18]                  : V22       : input  : 3.3-V LVTTL       :         : 6         : N              
+checker8[28]                 : V23       : output : 3.3-V LVTTL       :         : 6         : N              
+checker2[20]                 : V24       : output : 3.3-V LVTTL       :         : 6         : N              
+checker3[22]                 : V25       : output : 3.3-V LVTTL       :         : 6         : N              
+checker2[24]                 : V26       : output : 3.3-V LVTTL       :         : 6         : N              
+checker8[6]                  : W1        : output : 3.3-V LVTTL       :         : 1         : N              
+checker2[3]                  : W2        : output : 3.3-V LVTTL       :         : 1         : N              
 checker1[1]                  : W3        : output : 3.3-V LVTTL       :         : 1         : N              
-checker3[9]                  : W4        : output : 3.3-V LVTTL       :         : 1         : N              
+checker3[5]                  : W4        : output : 3.3-V LVTTL       :         : 1         : N              
 GND                          : W5        : gnd    :                   :         :           :                
-o_io_lcd[19]                 : W6        : output : 3.3-V LVTTL       :         : 1         : N              
+i_io_sw[9]                   : W6        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND_PLL1                     : W7        : gnd    :                   :         :           :                
-o_io_ledr[28]                : W8        : output : 3.3-V LVTTL       :         : 8         : N              
+checker8[0]                  : W8        : output : 3.3-V LVTTL       :         : 8         : N              
 VCCIO8                       : W9        : power  :                   : 3.3V    : 8         :                
-o_io_ledg[21]                : W10       : output : 3.3-V LVTTL       :         : 8         : N              
-checker8[20]                 : W11       : output : 3.3-V LVTTL       :         : 8         : N              
-checker5[6]                  : W12       : output : 3.3-V LVTTL       :         : 8         : N              
+checker3[0]                  : W10       : output : 3.3-V LVTTL       :         : 8         : N              
+checker3[4]                  : W11       : output : 3.3-V LVTTL       :         : 8         : N              
+checker2[31]                 : W12       : output : 3.3-V LVTTL       :         : 8         : N              
 GND                          : W13       : gnd    :                   :         :           :                
 GND                          : W14       : gnd    :                   :         :           :                
-i_io_sw[11]                  : W15       : input  : 3.3-V LVTTL       :         : 7         : N              
-i_io_sw[9]                   : W16       : input  : 3.3-V LVTTL       :         : 7         : N              
-o_io_hex0[2]                 : W17       : output : 3.3-V LVTTL       :         : 7         : N              
+o_io_hex2[4]                 : W15       : output : 3.3-V LVTTL       :         : 7         : N              
+checker8[29]                 : W16       : output : 3.3-V LVTTL       :         : 7         : N              
+checker3[20]                 : W17       : output : 3.3-V LVTTL       :         : 7         : N              
 VCCIO7                       : W18       : power  :                   : 3.3V    : 7         :                
-o_pc_debug[22]               : W19       : output : 3.3-V LVTTL       :         : 7         : N              
+checker3[27]                 : W19       : output : 3.3-V LVTTL       :         : 7         : N              
 GND_PLL4                     : W20       : gnd    :                   :         :           :                
 GND*                         : W21       :        :                   :         : 6         :                
 GND                          : W22       : gnd    :                   :         :           :                
-i_io_sw[31]                  : W23       : input  : 3.3-V LVTTL       :         : 6         : N              
-i_io_sw[30]                  : W24       : input  : 3.3-V LVTTL       :         : 6         : N              
-o_io_hex2[3]                 : W25       : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_hex0[6]                 : W26       : output : 3.3-V LVTTL       :         : 6         : N              
-checker8[16]                 : Y1        : output : 3.3-V LVTTL       :         : 1         : N              
+checker8[18]                 : W23       : output : 3.3-V LVTTL       :         : 6         : N              
+checker1[19]                 : W24       : output : 3.3-V LVTTL       :         : 6         : N              
+checker8[25]                 : W25       : output : 3.3-V LVTTL       :         : 6         : N              
+checker8[27]                 : W26       : output : 3.3-V LVTTL       :         : 6         : N              
+checker3[2]                  : Y1        : output : 3.3-V LVTTL       :         : 1         : N              
 NC                           : Y2        :        :                   :         :           :                
-checker1[4]                  : Y3        : output : 3.3-V LVTTL       :         : 1         : N              
-checker2[4]                  : Y4        : output : 3.3-V LVTTL       :         : 1         : N              
-o_io_lcd[24]                 : Y5        : output : 3.3-V LVTTL       :         : 1         : N              
+checker8[8]                  : Y3        : output : 3.3-V LVTTL       :         : 1         : N              
+checker5[6]                  : Y4        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : Y5        :        :                   :         : 1         :                
 GND_PLL1                     : Y6        : gnd    :                   :         :           :                
 VCCD_PLL1                    : Y7        : power  :                   : 1.2V    :           :                
 GNDA_PLL1                    : Y8        : gnd    :                   :         :           :                
 GND                          : Y9        : gnd    :                   :         :           :                
-o_io_ledr[31]                : Y10       : output : 3.3-V LVTTL       :         : 8         : N              
-checker1[12]                 : Y11       : output : 3.3-V LVTTL       :         : 8         : N              
-o_io_ledr[18]                : Y12       : output : 3.3-V LVTTL       :         : 8         : N              
-o_pc_debug[30]               : Y13       : output : 3.3-V LVTTL       :         : 7         : N              
-i_io_sw[25]                  : Y14       : input  : 3.3-V LVTTL       :         : 7         : N              
-o_io_ledg[7]                 : Y15       : output : 3.3-V LVTTL       :         : 7         : N              
-o_io_hex2[4]                 : Y16       : output : 3.3-V LVTTL       :         : 7         : N              
+checker8[7]                  : Y10       : output : 3.3-V LVTTL       :         : 8         : N              
+checker5[10]                 : Y11       : output : 3.3-V LVTTL       :         : 8         : N              
+checker1[27]                 : Y12       : output : 3.3-V LVTTL       :         : 8         : N              
+checker2[23]                 : Y13       : output : 3.3-V LVTTL       :         : 7         : N              
+checker5[25]                 : Y14       : output : 3.3-V LVTTL       :         : 7         : N              
+checker2[0]                  : Y15       : output : 3.3-V LVTTL       :         : 7         : N              
+i_io_sw[27]                  : Y16       : input  : 3.3-V LVTTL       :         : 7         : N              
 GND                          : Y17       : gnd    :                   :         :           :                
-o_io_ledg[29]                : Y18       : output : 3.3-V LVTTL       :         : 7         : N              
+checker3[28]                 : Y18       : output : 3.3-V LVTTL       :         : 7         : N              
 GNDA_PLL4                    : Y19       : gnd    :                   :         :           :                
 VCCD_PLL4                    : Y20       : power  :                   : 1.2V    :           :                
 GND*                         : Y21       :        :                   :         : 6         :                
 GND*                         : Y22       :        :                   :         : 6         :                
-o_io_hex2[2]                 : Y23       : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_ledg[2]                 : Y24       : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_hex0[5]                 : Y25       : output : 3.3-V LVTTL       :         : 6         : N              
-o_io_hex6[3]                 : Y26       : output : 3.3-V LVTTL       :         : 6         : N              
+checker1[29]                 : Y23       : output : 3.3-V LVTTL       :         : 6         : N              
+i_io_sw[23]                  : Y24       : input  : 3.3-V LVTTL       :         : 6         : N              
+o_io_hex3[4]                 : Y25       : output : 3.3-V LVTTL       :         : 6         : N              
+checker8[26]                 : Y26       : output : 3.3-V LVTTL       :         : 6         : N              
