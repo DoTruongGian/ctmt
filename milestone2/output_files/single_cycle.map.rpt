@@ -1,5 +1,5 @@
 Analysis & Synthesis report for single_cycle
-Sat Nov 16 18:59:48 2024
+Sat Nov 16 23:10:47 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -48,7 +48,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 16 18:59:47 2024           ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 16 23:10:47 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; single_cycle                                    ;
 ; Top-level Entity Name              ; single_cycle                                    ;
@@ -516,7 +516,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:54     ;
+; Top            ; 00:02:10     ;
 +----------------+--------------+
 
 
@@ -526,7 +526,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Nov 16 18:57:50 2024
+    Info: Processing started: Sat Nov 16 23:08:32 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off single_cycle -c single_cycle
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
@@ -636,10 +636,10 @@ Info (21057): Implemented 12129 device resources after synthesis - the final res
     Info (21059): Implemented 185 output pins
     Info (21061): Implemented 11906 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 57 warnings
-    Info: Peak virtual memory: 4651 megabytes
-    Info: Processing ended: Sat Nov 16 18:59:48 2024
-    Info: Elapsed time: 00:01:58
-    Info: Total CPU time (on all processors): 00:01:49
+    Info: Peak virtual memory: 4641 megabytes
+    Info: Processing ended: Sat Nov 16 23:10:47 2024
+    Info: Elapsed time: 00:02:15
+    Info: Total CPU time (on all processors): 00:01:52
 
 
 +------------------------------------------+
