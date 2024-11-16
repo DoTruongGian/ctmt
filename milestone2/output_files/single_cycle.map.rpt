@@ -1,5 +1,5 @@
 Analysis & Synthesis report for single_cycle
-Sat Nov 16 00:14:49 2024
+Sat Nov 16 18:59:48 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,17 +13,16 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |single_cycle|lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl|sram_state_q
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: lsu:Lsu
- 14. Port Connectivity Checks: "lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl"
- 15. Port Connectivity Checks: "regfile:regf"
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
- 18. Analysis & Synthesis Suppressed Messages
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: lsu:Lsu
+ 13. Port Connectivity Checks: "regfile:regf"
+ 14. Port Connectivity Checks: "pc:Pc"
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -49,16 +48,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 16 00:14:49 2024           ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 16 18:59:47 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; single_cycle                                    ;
 ; Top-level Entity Name              ; single_cycle                                    ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 4,490                                           ;
-;     Total combinational functions  ; 3,402                                           ;
-;     Dedicated logic registers      ; 1,304                                           ;
-; Total registers                    ; 1304                                            ;
-; Total pins                         ; 294                                             ;
+; Total logic elements               ; 11,819                                          ;
+;     Total combinational functions  ; 10,763                                          ;
+;     Dedicated logic registers      ; 2,241                                           ;
+; Total registers                    ; 2241                                            ;
+; Total pins                         ; 223                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -157,167 +156,139 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 12     ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                        ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
-; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/alu.sv          ;         ;
-; brc.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/brc.sv          ;         ;
-; ctrl_unit.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/ctrl_unit.sv    ;         ;
-; I$.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/I$.sv           ;         ;
-; ImmGen.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/ImmGen.sv       ;         ;
-; insn_vld.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/insn_vld.sv     ;         ;
-; instruction.txt                  ; yes             ; User File                    ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/instruction.txt ;         ;
-; lsu.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/lsu.sv          ;         ;
-; mux_2to1.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/mux_2to1.sv     ;         ;
-; mux_3to1.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/mux_3to1.sv     ;         ;
-; pc.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/pc.sv           ;         ;
-; pc_adder.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/pc_adder.sv     ;         ;
-; pc_debug.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/pc_debug.sv     ;         ;
-; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/regfile.sv      ;         ;
-; single_cycle.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/single_cycle.sv ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                           ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------+---------+
+; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/nguye/Desktop/ctmt/milestone2/alu.sv          ;         ;
+; brc.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/nguye/Desktop/ctmt/milestone2/brc.sv          ;         ;
+; ctrl_unit.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/nguye/Desktop/ctmt/milestone2/ctrl_unit.sv    ;         ;
+; I$.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/nguye/Desktop/ctmt/milestone2/I$.sv           ;         ;
+; ImmGen.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/nguye/Desktop/ctmt/milestone2/ImmGen.sv       ;         ;
+; insn_vld.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/nguye/Desktop/ctmt/milestone2/insn_vld.sv     ;         ;
+; instruction.txt                  ; yes             ; User File                    ; C:/Users/nguye/Desktop/ctmt/milestone2/instruction.txt ;         ;
+; lsu.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/nguye/Desktop/ctmt/milestone2/lsu.sv          ;         ;
+; mux_2to1.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/nguye/Desktop/ctmt/milestone2/mux_2to1.sv     ;         ;
+; mux_3to1.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/nguye/Desktop/ctmt/milestone2/mux_3to1.sv     ;         ;
+; pc.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/nguye/Desktop/ctmt/milestone2/pc.sv           ;         ;
+; pc_adder.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/nguye/Desktop/ctmt/milestone2/pc_adder.sv     ;         ;
+; pc_debug.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/nguye/Desktop/ctmt/milestone2/pc_debug.sv     ;         ;
+; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/nguye/Desktop/ctmt/milestone2/regfile.sv      ;         ;
+; single_cycle.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/nguye/Desktop/ctmt/milestone2/single_cycle.sv ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+---------------------------------------------+---------+
-; Resource                                    ; Usage   ;
-+---------------------------------------------+---------+
-; Estimated Total logic elements              ; 4,490   ;
-;                                             ;         ;
-; Total combinational functions               ; 3402    ;
-; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 2848    ;
-;     -- 3 input functions                    ; 420     ;
-;     -- <=2 input functions                  ; 134     ;
-;                                             ;         ;
-; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 3216    ;
-;     -- arithmetic mode                      ; 186     ;
-;                                             ;         ;
-; Total registers                             ; 1304    ;
-;     -- Dedicated logic registers            ; 1304    ;
-;     -- I/O registers                        ; 0       ;
-;                                             ;         ;
-; I/O pins                                    ; 294     ;
-; Embedded Multiplier 9-bit elements          ; 0       ;
-; Maximum fan-out node                        ; i_rst_n ;
-; Maximum fan-out                             ; 1306    ;
-; Total fan-out                               ; 18362   ;
-; Average fan-out                             ; 3.67    ;
-+---------------------------------------------+---------+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 11,819 ;
+;                                             ;        ;
+; Total combinational functions               ; 10763  ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 8203   ;
+;     -- 3 input functions                    ; 2125   ;
+;     -- <=2 input functions                  ; 435    ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 10542  ;
+;     -- arithmetic mode                      ; 221    ;
+;                                             ;        ;
+; Total registers                             ; 2241   ;
+;     -- Dedicated logic registers            ; 2241   ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 223    ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+; Maximum fan-out node                        ; i_clk  ;
+; Maximum fan-out                             ; 2241   ;
+; Total fan-out                               ; 47129  ;
+; Average fan-out                             ; 3.56   ;
++---------------------------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                    ;
-+-------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                 ; Library Name ;
-+-------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+--------------+
-; |single_cycle                                         ; 3402 (0)          ; 1304 (0)     ; 0           ; 0            ; 0       ; 0         ; 294  ; 0            ; |single_cycle                                                       ; work         ;
-;    |I$:i$|                                            ; 320 (320)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|I$:i$                                                 ; work         ;
-;    |ImmGen:immgen|                                    ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|ImmGen:immgen                                         ; work         ;
-;    |alu:Alu|                                          ; 742 (742)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|alu:Alu                                               ; work         ;
-;    |brc:Brc|                                          ; 88 (88)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|brc:Brc                                               ; work         ;
-;    |ctrl_unit:ctrl|                                   ; 50 (50)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|ctrl_unit:ctrl                                        ; work         ;
-;    |insn_vld:ins_vld|                                 ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|insn_vld:ins_vld                                      ; work         ;
-;    |lsu:Lsu|                                          ; 430 (327)         ; 247 (160)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|lsu:Lsu                                               ; work         ;
-;       |sram_IS61WV25616_controller_32b_3lr:sram_ctrl| ; 103 (103)         ; 87 (87)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl ; work         ;
-;    |mux_2to1:mux211|                                  ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|mux_2to1:mux211                                       ; work         ;
-;    |mux_2to1:mux212|                                  ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|mux_2to1:mux212                                       ; work         ;
-;    |mux_2to1:mux213|                                  ; 96 (96)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|mux_2to1:mux213                                       ; work         ;
-;    |mux_3to1:mux31|                                   ; 154 (154)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|mux_3to1:mux31                                        ; work         ;
-;    |pc:Pc|                                            ; 22 (22)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|pc:Pc                                                 ; work         ;
-;    |pc_adder:adder|                                   ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|pc_adder:adder                                        ; work         ;
-;    |pc_debug:pc_de|                                   ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|pc_debug:pc_de                                        ; work         ;
-;    |regfile:regf|                                     ; 1422 (1422)       ; 992 (992)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|regfile:regf                                          ; work         ;
-+-------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
+; |single_cycle              ; 10763 (0)         ; 2241 (0)     ; 0           ; 0            ; 0       ; 0         ; 223  ; 0            ; |single_cycle                  ; work         ;
+;    |I$:i$|                 ; 594 (594)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|I$:i$            ; work         ;
+;    |ImmGen:immgen|         ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|ImmGen:immgen    ; work         ;
+;    |alu:Alu|               ; 687 (687)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|alu:Alu          ; work         ;
+;    |brc:Brc|               ; 89 (89)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|brc:Brc          ; work         ;
+;    |ctrl_unit:ctrl|        ; 52 (52)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|ctrl_unit:ctrl   ; work         ;
+;    |insn_vld:ins_vld|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|insn_vld:ins_vld ; work         ;
+;    |lsu:Lsu|               ; 5349 (5349)       ; 1184 (1184)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|lsu:Lsu          ; work         ;
+;    |mux_2to1:mux211|       ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|mux_2to1:mux211  ; work         ;
+;    |mux_2to1:mux212|       ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|mux_2to1:mux212  ; work         ;
+;    |mux_2to1:mux213|       ; 90 (90)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|mux_2to1:mux213  ; work         ;
+;    |mux_3to1:mux31|        ; 2370 (2370)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|mux_3to1:mux31   ; work         ;
+;    |pc:Pc|                 ; 21 (21)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|pc:Pc            ; work         ;
+;    |pc_adder:adder|        ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|pc_adder:adder   ; work         ;
+;    |pc_debug:pc_de|        ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|pc_debug:pc_de   ; work         ;
+;    |regfile:regf|          ; 1423 (1423)       ; 992 (992)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |single_cycle|regfile:regf     ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |single_cycle|lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl|sram_state_q                                                                                             ;
-+-------------------------+------------------------+----------------------+----------------------+----------------------+-------------------------+----------------------+---------------------+
-; Name                    ; sram_state_q.StReadAck ; sram_state_q.StReadW ; sram_state_q.StRead1 ; sram_state_q.StRead0 ; sram_state_q.StWriteAck ; sram_state_q.StWrite ; sram_state_q.StIdle ;
-+-------------------------+------------------------+----------------------+----------------------+----------------------+-------------------------+----------------------+---------------------+
-; sram_state_q.StIdle     ; 0                      ; 0                    ; 0                    ; 0                    ; 0                       ; 0                    ; 0                   ;
-; sram_state_q.StWrite    ; 0                      ; 0                    ; 0                    ; 0                    ; 0                       ; 1                    ; 1                   ;
-; sram_state_q.StWriteAck ; 0                      ; 0                    ; 0                    ; 0                    ; 1                       ; 0                    ; 1                   ;
-; sram_state_q.StRead0    ; 0                      ; 0                    ; 0                    ; 1                    ; 0                       ; 0                    ; 1                   ;
-; sram_state_q.StRead1    ; 0                      ; 0                    ; 1                    ; 0                    ; 0                       ; 0                    ; 1                   ;
-; sram_state_q.StReadW    ; 0                      ; 1                    ; 0                    ; 0                    ; 0                       ; 0                    ; 1                   ;
-; sram_state_q.StReadAck  ; 1                      ; 0                    ; 0                    ; 0                    ; 0                       ; 0                    ; 1                   ;
-+-------------------------+------------------------+----------------------+----------------------+----------------------+-------------------------+----------------------+---------------------+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++----------------------------------------+---------------------------------------------+
+; Register name                          ; Reason for Removal                          ;
++----------------------------------------+---------------------------------------------+
+; regfile:regf|regfile[0][0]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][31]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][1]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][2]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][3]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][4]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][5]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][6]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][7]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][8]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][9]             ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][10]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][11]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][12]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][13]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][14]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][15]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][16]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][17]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][18]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][19]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][20]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][21]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][22]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][23]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][24]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][25]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][26]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][27]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][28]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][29]            ; Stuck at GND due to stuck port clock_enable ;
+; regfile:regf|regfile[0][30]            ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 32 ;                                             ;
++----------------------------------------+---------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                         ;
-+------------------------------------------------------------------------------+---------------------------------------------+
-; Register name                                                                ; Reason for Removal                          ;
-+------------------------------------------------------------------------------+---------------------------------------------+
-; regfile:regf|regfile[0][31]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][0]                                                   ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][1]                                                   ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][2]                                                   ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][3]                                                   ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][4]                                                   ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][5]                                                   ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][6]                                                   ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][7]                                                   ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][8]                                                   ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][9]                                                   ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][10]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][11]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][12]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][13]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][14]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][15]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][16]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][17]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][18]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][19]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][20]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][21]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][22]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][23]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][24]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][25]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][26]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][27]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][28]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][29]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:regf|regfile[0][30]                                                  ; Stuck at GND due to stuck port clock_enable ;
-; lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl|addr_q[11,12,14,15,17] ; Stuck at GND due to stuck port data_in      ;
-; lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl|sram_state_q~2         ; Lost fanout                                 ;
-; lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl|sram_state_q~3         ; Lost fanout                                 ;
-; lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl|sram_state_q~4         ; Lost fanout                                 ;
-; lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl|addr_q[16]             ; Stuck at GND due to stuck port data_in      ;
-; Total Number of Removed Registers = 41                                       ;                                             ;
-+------------------------------------------------------------------------------+---------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                      ;
-+-----------------------------+--------------------------------+-------------------------------------------------------------------+
-; Register name               ; Reason for Removal             ; Registers Removed due to This Register                            ;
-+-----------------------------+--------------------------------+-------------------------------------------------------------------+
-; regfile:regf|regfile[0][31] ; Stuck at GND                   ; regfile:regf|regfile[0][16], regfile:regf|regfile[0][17],         ;
-;                             ; due to stuck port clock_enable ; regfile:regf|regfile[0][18], regfile:regf|regfile[0][19],         ;
-;                             ;                                ; regfile:regf|regfile[0][20], regfile:regf|regfile[0][21],         ;
-;                             ;                                ; regfile:regf|regfile[0][22], regfile:regf|regfile[0][23],         ;
-;                             ;                                ; regfile:regf|regfile[0][24], regfile:regf|regfile[0][25],         ;
-;                             ;                                ; regfile:regf|regfile[0][26], regfile:regf|regfile[0][27],         ;
-;                             ;                                ; regfile:regf|regfile[0][30],                                      ;
-;                             ;                                ; lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl|addr_q[17], ;
-;                             ;                                ; lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl|addr_q[16]  ;
-+-----------------------------+--------------------------------+-------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                              ;
++-----------------------------+--------------------------------+-----------------------------------------------------------+
+; Register name               ; Reason for Removal             ; Registers Removed due to This Register                    ;
++-----------------------------+--------------------------------+-----------------------------------------------------------+
+; regfile:regf|regfile[0][31] ; Stuck at GND                   ; regfile:regf|regfile[0][16], regfile:regf|regfile[0][24], ;
+;                             ; due to stuck port clock_enable ; regfile:regf|regfile[0][25], regfile:regf|regfile[0][26], ;
+;                             ;                                ; regfile:regf|regfile[0][27], regfile:regf|regfile[0][30]  ;
++-----------------------------+--------------------------------+-----------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -325,55 +296,181 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1304  ;
-; Number of registers using Synchronous Clear  ; 51    ;
-; Number of registers using Synchronous Load   ; 37    ;
+; Total registers                              ; 2241  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 21    ;
 ; Number of registers using Asynchronous Clear ; 1217  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1231  ;
+; Number of registers using Clock Enable       ; 1154  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl|rdata_q[1]   ;
-; 5:1                ; 17 bits   ; 51 LEs        ; 17 LEs               ; 34 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl|addr_q[14]   ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |single_cycle|lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl|bmask_q[1]   ;
-; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[3][1]                                        ;
-; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|green_leds[2][0]                                           ;
-; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|red_leds[1][7]                                             ;
-; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|green_leds[0][2]                                           ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[7][3]                                        ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[6][4]                                        ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[5][6]                                        ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[4][6]                                        ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl|wdata_q[5]   ;
-; 4:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |single_cycle|mux_3to1:mux31|Mux6                                                ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |single_cycle|ctrl_unit:ctrl|Selector1                                           ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |single_cycle|mux_2to1:mux213|y[8]                                               ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |single_cycle|lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl|wdata_d      ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |single_cycle|mux_2to1:mux213|y[22]                                              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |single_cycle|lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl|sram_state_q ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |single_cycle|lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl|Selector51   ;
-; 64:1               ; 2 bits    ; 84 LEs        ; 4 LEs                ; 80 LEs                 ; No         ; |single_cycle|ctrl_unit:ctrl|Selector6                                           ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |single_cycle|mux_2to1:mux213|y[28]                                              ;
-; 33:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; No         ; |single_cycle|regfile:regf|o_rs1_data[13]                                        ;
-; 33:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; No         ; |single_cycle|regfile:regf|o_rs2_data[3]                                         ;
-; 20:1               ; 7 bits    ; 91 LEs        ; 56 LEs               ; 35 LEs                 ; No         ; |single_cycle|alu:Alu|Mux12                                                      ;
-; 19:1               ; 8 bits    ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |single_cycle|alu:Alu|Mux23                                                      ;
-; 21:1               ; 4 bits    ; 56 LEs        ; 36 LEs               ; 20 LEs                 ; No         ; |single_cycle|alu:Alu|Mux7                                                       ;
-; 20:1               ; 4 bits    ; 52 LEs        ; 36 LEs               ; 16 LEs                 ; No         ; |single_cycle|alu:Alu|Mux27                                                      ;
-; 11:1               ; 4 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |single_cycle|mux_2to1:mux213|y[3]                                               ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |single_cycle|mux_2to1:mux213|y[19]                                              ;
-; 22:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; No         ; |single_cycle|alu:Alu|Mux2                                                       ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; No         ; |single_cycle|alu:Alu|Mux29                                                      ;
-; 16:1               ; 8 bits    ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |single_cycle|lsu:Lsu|Selector32                                                 ;
-; 20:1               ; 7 bits    ; 91 LEs        ; 84 LEs               ; 7 LEs                  ; No         ; |single_cycle|mux_3to1:mux31|Mux23                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[7][0] ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[6][0] ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[5][7] ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[4][4] ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[3][7] ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[2][6] ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[1][4] ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|seven_segment[0][3] ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[127][7]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[126][5]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[125][7]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[124][5]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[123][4]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[122][3]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[121][4]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[120][0]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[119][1]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[118][1]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[117][1]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[116][7]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[115][7]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[114][5]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[113][1]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[112][5]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[111][5]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[110][2]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[109][6]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[108][5]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[107][1]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[106][3]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[105][4]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[104][0]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[103][7]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[102][3]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[101][3]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[100][3]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[99][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[98][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[97][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[96][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[95][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[94][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[93][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[92][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[91][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[90][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[89][7]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[88][4]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[87][4]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[86][7]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[85][4]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[84][4]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[83][7]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[82][7]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[81][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[80][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[79][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[78][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[77][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[76][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[75][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[74][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[73][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[72][2]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[71][0]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[70][1]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[69][4]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[68][4]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[67][0]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[66][2]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[65][4]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[64][4]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[63][0]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[62][2]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[61][2]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[60][5]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[59][1]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[58][2]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[57][2]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[56][6]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[55][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[54][0]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[53][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[52][2]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[51][0]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[50][0]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[49][5]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[48][5]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[47][1]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[46][0]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[45][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[44][0]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[43][0]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[42][0]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[41][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[40][4]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[39][6]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[38][1]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[37][7]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[36][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[35][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[34][2]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[33][7]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[32][7]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[31][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[30][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[29][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[28][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[27][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[26][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[25][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[24][0]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[23][1]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[22][1]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[21][1]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[20][4]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[19][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[18][5]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[17][4]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[16][1]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[15][7]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[14][0]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[13][2]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[12][2]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[11][6]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[10][3]         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[9][7]          ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[8][1]          ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[7][1]          ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[6][6]          ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[5][3]          ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[4][6]          ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[3][4]          ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[2][4]          ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[1][4]          ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |single_cycle|lsu:Lsu|sram[0][2]          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |single_cycle|ImmGen:immgen|Selector24    ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |single_cycle|mux_2to1:mux213|y[6]        ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; No         ; |single_cycle|lsu:Lsu|Mux62               ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; No         ; |single_cycle|lsu:Lsu|Mux42               ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |single_cycle|mux_2to1:mux213|y[24]       ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 24 LEs               ; 56 LEs                 ; No         ; |single_cycle|lsu:Lsu|Mux48               ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 24 LEs               ; 56 LEs                 ; No         ; |single_cycle|lsu:Lsu|Mux32               ;
+; 64:1               ; 2 bits    ; 84 LEs        ; 4 LEs                ; 80 LEs                 ; No         ; |single_cycle|ctrl_unit:ctrl|Selector6    ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |single_cycle|mux_2to1:mux213|y[27]       ;
+; 33:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; No         ; |single_cycle|regfile:regf|o_rs1_data[12] ;
+; 33:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; No         ; |single_cycle|regfile:regf|o_rs2_data[4]  ;
+; 20:1               ; 7 bits    ; 91 LEs        ; 56 LEs               ; 35 LEs                 ; No         ; |single_cycle|alu:Alu|Mux8                ;
+; 19:1               ; 8 bits    ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |single_cycle|alu:Alu|Mux16               ;
+; 21:1               ; 4 bits    ; 56 LEs        ; 36 LEs               ; 20 LEs                 ; No         ; |single_cycle|alu:Alu|Mux4                ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 36 LEs               ; 16 LEs                 ; No         ; |single_cycle|alu:Alu|Mux25               ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |single_cycle|mux_2to1:mux213|y[2]        ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; No         ; |single_cycle|mux_2to1:mux213|y[15]       ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; No         ; |single_cycle|alu:Alu|Mux2                ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; No         ; |single_cycle|alu:Alu|Mux29               ;
+; 97:1               ; 7 bits    ; 448 LEs       ; 364 LEs              ; 84 LEs                 ; No         ; |single_cycle|mux_3to1:mux31|Mux26        ;
+; 100:1              ; 8 bits    ; 528 LEs       ; 424 LEs              ; 104 LEs                ; No         ; |single_cycle|mux_3to1:mux31|Mux15        ;
+; 191:1              ; 7 bits    ; 889 LEs       ; 721 LEs              ; 168 LEs                ; No         ; |single_cycle|mux_3to1:mux31|Mux18        ;
+; 192:1              ; 8 bits    ; 1024 LEs      ; 832 LEs              ; 192 LEs                ; No         ; |single_cycle|mux_3to1:mux31|Mux2         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -391,20 +488,12 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl"                               ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; o_ACK ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "regfile:regf"                                                                                                ;
 +----------+--------+----------+----------------------------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                                                  ;
 +----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; checker1 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 ; checker2 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 ; checker3 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 ; checker5 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
@@ -412,12 +501,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pc:Pc"                                                                                                                                                                              ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; en     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; en[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:18     ;
+; Top            ; 00:01:54     ;
 +----------------+--------------+
 
 
@@ -427,7 +526,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Nov 16 00:14:29 2024
+    Info: Processing started: Sat Nov 16 18:57:50 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off single_cycle -c single_cycle
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
@@ -442,9 +541,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file immgen.
     Info (12023): Found entity 1: ImmGen
 Info (12021): Found 1 design units, including 1 entities, in source file insn_vld.sv
     Info (12023): Found entity 1: insn_vld
-Info (12021): Found 2 design units, including 2 entities, in source file lsu.sv
+Info (12021): Found 1 design units, including 1 entities, in source file lsu.sv
     Info (12023): Found entity 1: lsu
-    Info (12023): Found entity 2: sram_IS61WV25616_controller_32b_3lr
 Info (12021): Found 1 design units, including 1 entities, in source file mux_2to1.sv
     Info (12023): Found entity 1: mux_2to1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_3to1.sv
@@ -459,12 +557,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file regfile
     Info (12023): Found entity 1: regfile
 Info (12021): Found 1 design units, including 1 entities, in source file single_cycle.sv
     Info (12023): Found entity 1: single_cycle
+Warning (10236): Verilog HDL Implicit Net warning at lsu.sv(109): created implicit net for "p"
+Warning (10236): Verilog HDL Implicit Net warning at single_cycle.sv(46): created implicit net for "t"
+Warning (10236): Verilog HDL Implicit Net warning at single_cycle.sv(47): created implicit net for "l"
 Info (12127): Elaborating entity "single_cycle" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at single_cycle.sv(46): object "t" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at single_cycle.sv(47): object "l" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at single_cycle.sv(46): truncated value with size 2 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at single_cycle.sv(47): truncated value with size 32 to match size of target (1)
 Info (12128): Elaborating entity "mux_2to1" for hierarchy "mux_2to1:mux211"
 Info (12128): Elaborating entity "pc" for hierarchy "pc:Pc"
 Info (12128): Elaborating entity "pc_adder" for hierarchy "pc_adder:adder"
 Info (12128): Elaborating entity "I$" for hierarchy "I$:i$"
-Warning (10850): Verilog HDL warning at I$.sv(8): number of words (137) in memory file does not match the number of elements in the address range [0:2048]
+Warning (10850): Verilog HDL warning at I$.sv(8): number of words (199) in memory file does not match the number of elements in the address range [0:2048]
 Warning (10030): Net "instructions_value.data_a" at I$.sv(5) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "instructions_value.waddr_a" at I$.sv(5) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "instructions_value.we_a" at I$.sv(5) has no driver or initial value, using a default initial value '0'
@@ -473,41 +578,29 @@ Info (12128): Elaborating entity "ImmGen" for hierarchy "ImmGen:immgen"
 Info (12128): Elaborating entity "brc" for hierarchy "brc:Brc"
 Info (12128): Elaborating entity "alu" for hierarchy "alu:Alu"
 Info (12128): Elaborating entity "lsu" for hierarchy "lsu:Lsu"
-Warning (10270): Verilog HDL Case Statement warning at lsu.sv(160): incomplete case statement has no default case item
-Info (10264): Verilog HDL Case Statement information at lsu.sv(160): all case item expressions in this case statement are onehot
-Warning (10030): Net "buttons[1]" at lsu.sv(70) has no driver or initial value, using a default initial value '0'
-Info (12128): Elaborating entity "sram_IS61WV25616_controller_32b_3lr" for hierarchy "lsu:Lsu|sram_IS61WV25616_controller_32b_3lr:sram_ctrl"
-Info (10264): Verilog HDL Case Statement information at lsu.sv(425): all case item expressions in this case statement are onehot
+Warning (10036): Verilog HDL or VHDL warning at lsu.sv(109): object "p" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at lsu.sv(109): truncated value with size 4 to match size of target (1)
+Warning (10270): Verilog HDL Case Statement warning at lsu.sv(167): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at lsu.sv(167): all case item expressions in this case statement are onehot
+Warning (10030): Net "lcd_control[15..4]" at lsu.sv(62) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "green_leds[15..4]" at lsu.sv(66) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "red_leds[15..4]" at lsu.sv(68) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "switches[15..4]" at lsu.sv(75) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "buttons[15..1]" at lsu.sv(76) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "mux_3to1" for hierarchy "mux_3to1:mux31"
 Info (12128): Elaborating entity "pc_debug" for hierarchy "pc_debug:pc_de"
 Info (12128): Elaborating entity "insn_vld" for hierarchy "insn_vld:ins_vld"
 Info (12128): Elaborating entity "ctrl_unit" for hierarchy "ctrl_unit:ctrl"
 Warning (10270): Verilog HDL Case Statement warning at ctrl_unit.sv(37): incomplete case statement has no default case item
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[8]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[9]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[10]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[11]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[12]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[13]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[14]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[15]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[16]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[17]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[18]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[19]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[20]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[21]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[22]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[23]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[24]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[25]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[26]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[27]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[28]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[29]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[30]" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[31]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[0]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[2]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[3]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[4]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[5]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[6]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|o_ld_data[7]" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[8]" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[9]" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[10]" feeding internal logic into a wire
@@ -516,69 +609,42 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[13]" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[14]" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[15]" feeding internal logic into a wire
-Critical Warning (127005): Memory depth (4096) in the design file differs from memory depth (2049) in the Memory Initialization File "C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/db/single_cycle.ram0_I$_91f.hdl.mif" -- setting initial value for remaining addresses to 0
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/db/single_cycle.ram0_I$_91f.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "lsu:Lsu|o_ld_data[0]" to the node "mux_3to1:mux31|Mux31" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "lsu:Lsu|o_ld_data[1]" to the node "mux_3to1:mux31|Mux30" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "lsu:Lsu|o_ld_data[2]" to the node "mux_3to1:mux31|Mux29" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "lsu:Lsu|o_ld_data[3]" to the node "mux_3to1:mux31|Mux28" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "lsu:Lsu|o_ld_data[4]" to the node "mux_3to1:mux31|Mux27" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "lsu:Lsu|o_ld_data[5]" to the node "mux_3to1:mux31|Mux26" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "lsu:Lsu|o_ld_data[6]" to the node "mux_3to1:mux31|Mux25" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "lsu:Lsu|o_ld_data[7]" to the node "mux_3to1:mux31|Mux24" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "lsu:Lsu|ld_data[7]" to the node "mux_3to1:mux31|Mux23" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "lsu:Lsu|ld_data[0]" to the node "lsu:Lsu|o_ld_data[0]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "lsu:Lsu|ld_data[1]" to the node "lsu:Lsu|o_ld_data[1]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "lsu:Lsu|ld_data[2]" to the node "lsu:Lsu|o_ld_data[2]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "lsu:Lsu|ld_data[3]" to the node "lsu:Lsu|o_ld_data[3]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "lsu:Lsu|ld_data[4]" to the node "lsu:Lsu|o_ld_data[4]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "lsu:Lsu|ld_data[5]" to the node "lsu:Lsu|o_ld_data[5]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "lsu:Lsu|ld_data[6]" to the node "lsu:Lsu|o_ld_data[6]" into an OR gate
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SRAM_ADDR[11]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[12]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[14]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[15]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[16]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[17]" is stuck at GND
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/output_files/single_cycle.map.smsg
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[16]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[17]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[18]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[19]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[20]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[21]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[22]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[23]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[24]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[25]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[26]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[27]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[28]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[29]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[30]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "lsu:Lsu|ld_data[31]" feeding internal logic into a wire
+Critical Warning (127005): Memory depth (4096) in the design file differs from memory depth (2049) in the Memory Initialization File "C:/Users/nguye/Desktop/ctmt/milestone2/db/single_cycle.ram0_I$_91f.hdl.mif" -- setting initial value for remaining addresses to 0
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/nguye/Desktop/ctmt/milestone2/db/single_cycle.ram0_I$_91f.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file C:/Users/nguye/Desktop/ctmt/milestone2/output_files/single_cycle.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 16 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "i_io_sw[16]"
-    Warning (15610): No output dependent on input pin "i_io_sw[17]"
-    Warning (15610): No output dependent on input pin "i_io_sw[18]"
-    Warning (15610): No output dependent on input pin "i_io_sw[19]"
-    Warning (15610): No output dependent on input pin "i_io_sw[20]"
-    Warning (15610): No output dependent on input pin "i_io_sw[21]"
-    Warning (15610): No output dependent on input pin "i_io_sw[22]"
-    Warning (15610): No output dependent on input pin "i_io_sw[23]"
-    Warning (15610): No output dependent on input pin "i_io_sw[24]"
-    Warning (15610): No output dependent on input pin "i_io_sw[25]"
-    Warning (15610): No output dependent on input pin "i_io_sw[26]"
-    Warning (15610): No output dependent on input pin "i_io_sw[27]"
-    Warning (15610): No output dependent on input pin "i_io_sw[28]"
-    Warning (15610): No output dependent on input pin "i_io_sw[29]"
-    Warning (15610): No output dependent on input pin "i_io_sw[30]"
-    Warning (15610): No output dependent on input pin "i_io_sw[31]"
-Info (21057): Implemented 4872 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 12129 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 38 input pins
-    Info (21059): Implemented 240 output pins
-    Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 4578 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 85 warnings
-    Info: Peak virtual memory: 4628 megabytes
-    Info: Processing ended: Sat Nov 16 00:14:49 2024
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:20
+    Info (21059): Implemented 185 output pins
+    Info (21061): Implemented 11906 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 57 warnings
+    Info: Peak virtual memory: 4651 megabytes
+    Info: Processing ended: Sat Nov 16 18:59:48 2024
+    Info: Elapsed time: 00:01:58
+    Info: Total CPU time (on all processors): 00:01:49
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/output_files/single_cycle.map.smsg.
+The suppressed messages can be found in C:/Users/nguye/Desktop/ctmt/milestone2/output_files/single_cycle.map.smsg.
 
 

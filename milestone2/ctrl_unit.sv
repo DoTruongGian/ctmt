@@ -24,7 +24,7 @@ module ctrl_unit (
 
   always_comb begin
   i_unsigned = 1'b0;
-  i_data_type = 2'b00;
+  i_data_type = 2'b11;
   rd_wren = 0;
   insn_vld = 0;
   br_un = 0;
@@ -90,6 +90,9 @@ module ctrl_unit (
         3'b001: begin
           i_data_type = 2'b01;
         end
+        3'b010: begin
+          i_data_type = 2'b00;
+        end
         3'b100: begin
           i_data_type = 2'b10;
           i_unsigned = 1'b1;
@@ -115,6 +118,9 @@ module ctrl_unit (
         end
         3'b001: begin
           i_data_type = 2'b01;
+        end
+        3'b010: begin
+          i_data_type = 2'b00;
         end
         default: begin
           i_data_type = 2'b00;

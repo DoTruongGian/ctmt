@@ -18,14 +18,6 @@ entity single_cycle is
         o_io_hex7       : out    vl_logic_vector(6 downto 0);
         o_io_lcd        : out    vl_logic_vector(31 downto 0);
         i_io_sw         : in     vl_logic_vector(31 downto 0);
-        i_io_btn        : in     vl_logic_vector(3 downto 0);
-        SRAM_DQ         : inout  vl_logic_vector(15 downto 0);
-        checker1        : out    vl_logic_vector(31 downto 0);
-        SRAM_ADDR       : out    vl_logic_vector(17 downto 0);
-        SRAM_CE_N       : out    vl_logic;
-        SRAM_WE_N       : out    vl_logic;
-        SRAM_LB_N       : out    vl_logic;
-        SRAM_UB_N       : out    vl_logic;
-        SRAM_OE_N       : out    vl_logic
+        i_io_btn        : in     vl_logic_vector(3 downto 0)
     );
 end single_cycle;
