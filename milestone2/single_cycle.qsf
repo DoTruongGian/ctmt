@@ -70,7 +70,6 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/nguye/Desktop/ctmt/milestone2/Waveform.vwf"
 set_location_assignment PIN_N2 -to i_clk
 set_location_assignment PIN_G26 -to i_io_btn[0]
 set_location_assignment PIN_V2 -to i_rst_n
@@ -166,3 +165,4 @@ set_location_assignment PIN_AF13 -to o_io_ledr[14]
 set_location_assignment PIN_AE13 -to o_io_ledr[15]
 set_location_assignment PIN_AE12 -to o_io_ledr[16]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone2/Waveform.vwf"

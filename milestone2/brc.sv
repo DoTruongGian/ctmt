@@ -18,7 +18,7 @@ module brc (
   // Combinational logic to determine less-than condition
   always_comb begin
     // Perform subtraction using two's complement
-    sub_result = {1'b0, i_rs1_data} + {1'b0, (~i_rs2_data + 1)};
+    sub_result = {1'b0, i_rs1_data} + ({1'b0, ~i_rs2_data} + 1);
 
     if (i_br_un) begin
       // Unsigned comparison: check the carry out (sub_result[32] == 0)

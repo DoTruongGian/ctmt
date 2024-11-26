@@ -19,7 +19,7 @@ module alu (
     sign_bit = i_operand_a[31];  // Sign bit assigned based on i_operand_a
     add_result = i_operand_a + i_operand_b;
     // Perform subtraction using two's complement
-    sub_result = {1'b0, i_operand_a} + {1'b0, (~i_operand_b + 1)};
+    sub_result = {1'b0, i_operand_a} + ({1'b0, ~i_operand_b} + 1);
 
     // Main ALU operation selection
     case (i_alu_op)
