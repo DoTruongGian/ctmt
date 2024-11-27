@@ -11,7 +11,7 @@ module regfile (
   output logic [31:0] checker1,
   output logic [31:0] checker2,
   output logic [31:0] checker3,
-  output logic [31:0] checker5,
+  output logic [31:0] checker4,
   output logic [31:0] checker8
 );
 
@@ -24,7 +24,7 @@ module regfile (
   assign checker1 = regfile[1];
   assign checker2 = regfile[2];
   assign checker3 = regfile[3];
-  assign checker5 = regfile[5];
+  assign checker4 = regfile[4];
   assign checker8 = regfile[8];
 
   // Synchronous write logic

@@ -2,7 +2,9 @@ library verilog;
 use verilog.vl_types.all;
 entity pipeline_vlg_check_tst is
     port(
-        checker8        : in     vl_logic_vector(31 downto 0);
+        checker2        : in     vl_logic_vector(31 downto 0);
+        checker3        : in     vl_logic_vector(31 downto 0);
+        checker4        : in     vl_logic_vector(31 downto 0);
         o_insn_vld      : in     vl_logic;
         o_io_hex0       : in     vl_logic_vector(6 downto 0);
         o_io_hex1       : in     vl_logic_vector(6 downto 0);

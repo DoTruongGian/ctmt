@@ -1,5 +1,5 @@
 EDA Netlist Writer report for pipeline
-Tue Nov 26 10:25:16 2024
+Wed Nov 27 13:57:12 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Nov 26 10:25:16 2024 ;
+; EDA Netlist Writer Status ; Successful - Wed Nov 27 13:57:12 2024 ;
 ; Revision Name             ; pipeline                              ;
 ; Top-level Entity Name     ; pipeline                              ;
 ; Family                    ; Cyclone II                            ;
@@ -80,13 +80,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Nov 26 10:25:15 2024
+    Info: Processing started: Wed Nov 27 13:57:11 2024
 Info: Command: quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog pipeline -c pipeline
 Info (119006): Selected device EP2C35F672C6 for design "pipeline"
 Info (204019): Generated file pipeline.vo in folder "C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone3/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4538 megabytes
-    Info: Processing ended: Tue Nov 26 10:25:16 2024
+    Info: Processing ended: Wed Nov 27 13:57:12 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

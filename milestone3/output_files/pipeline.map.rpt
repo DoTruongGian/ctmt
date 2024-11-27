@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pipeline
-Tue Nov 26 10:23:47 2024
+Wed Nov 27 13:57:00 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -21,21 +21,22 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  13. Registers Packed Into Inferred Megafunctions
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
  15. Source assignments for I$:i$|altsyncram:instructions_value_rtl_0|altsyncram_h361:auto_generated
- 16. Source assignments for second_register:secondDff|altshift_taps:wb_selE_rtl_0|shift_taps_0gm:auto_generated|altsyncram_n461:altsyncram4
+ 16. Source assignments for second_register:secondDff|altshift_taps:wb_selE_rtl_0|shift_taps_qfm:auto_generated|altsyncram_b461:altsyncram4
  17. Parameter Settings for User Entity Instance: lsu:Lsu
  18. Parameter Settings for Inferred Entity Instance: I$:i$|altsyncram:instructions_value_rtl_0
  19. Parameter Settings for Inferred Entity Instance: second_register:secondDff|altshift_taps:wb_selE_rtl_0
  20. altsyncram Parameter Settings by Entity Instance
  21. altshift_taps Parameter Settings by Entity Instance
- 22. Port Connectivity Checks: "fourth_register:fourthDff"
- 23. Port Connectivity Checks: "lsu:Lsu"
- 24. Port Connectivity Checks: "third_register:thirdDff"
- 25. Port Connectivity Checks: "second_register:secondDff"
- 26. Port Connectivity Checks: "regfile:regf"
- 27. Port Connectivity Checks: "first_register:firstDff"
- 28. Port Connectivity Checks: "pc:Pc"
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
+ 22. Port Connectivity Checks: "hazard_unit:hazard"
+ 23. Port Connectivity Checks: "fourth_register:fourthDff"
+ 24. Port Connectivity Checks: "lsu:Lsu"
+ 25. Port Connectivity Checks: "third_register:thirdDff"
+ 26. Port Connectivity Checks: "second_register:secondDff"
+ 27. Port Connectivity Checks: "regfile:regf"
+ 28. Port Connectivity Checks: "first_register:firstDff"
+ 29. Port Connectivity Checks: "pc:Pc"
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
 
 
 
@@ -61,18 +62,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 26 10:23:47 2024           ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 27 13:57:00 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; pipeline                                        ;
 ; Top-level Entity Name              ; pipeline                                        ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 3,896                                           ;
-;     Total combinational functions  ; 2,649                                           ;
-;     Dedicated logic registers      ; 1,517                                           ;
-; Total registers                    ; 1517                                            ;
-; Total pins                         ; 255                                             ;
+; Total logic elements               ; 3,920                                           ;
+;     Total combinational functions  ; 2,661                                           ;
+;     Dedicated logic registers      ; 1,545                                           ;
+; Total registers                    ; 1545                                            ;
+; Total pins                         ; 319                                             ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 65,682                                          ;
+; Total memory bits                  ; 65,664                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -179,6 +180,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                                        ; Library ;
 +----------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
+; hazard_unit.sv                   ; yes             ; User SystemVerilog HDL File                           ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone3/hazard_unit.sv                  ;         ;
 ; instruction.txt                  ; yes             ; User File                                             ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone3/instruction.txt                 ;         ;
 ; third_register.sv                ; yes             ; User SystemVerilog HDL File                           ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone3/third_register.sv               ;         ;
 ; second_register.sv               ; yes             ; User SystemVerilog HDL File                           ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone3/second_register.sv              ;         ;
@@ -213,8 +215,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; lpm_counter.inc                  ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc                                                                   ;         ;
 ; lpm_compare.inc                  ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc                                                                   ;         ;
 ; lpm_constant.inc                 ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc                                                                  ;         ;
-; db/shift_taps_0gm.tdf            ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone3/db/shift_taps_0gm.tdf           ;         ;
-; db/altsyncram_n461.tdf           ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone3/db/altsyncram_n461.tdf          ;         ;
+; db/shift_taps_qfm.tdf            ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone3/db/shift_taps_qfm.tdf           ;         ;
+; db/altsyncram_b461.tdf           ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone3/db/altsyncram_b461.tdf          ;         ;
 ; db/add_sub_gvd.tdf               ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone3/db/add_sub_gvd.tdf              ;         ;
 ; db/cntr_kkf.tdf                  ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone3/db/cntr_kkf.tdf                 ;         ;
 ; db/cmpr_6cc.tdf                  ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Admin/Documents/SEM241/Computer_Organization_and_Design_(EE4423)/milestone/ctmt/milestone3/db/cmpr_6cc.tdf                 ;         ;
@@ -227,29 +229,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 3,896 ;
+; Estimated Total logic elements              ; 3,920 ;
 ;                                             ;       ;
-; Total combinational functions               ; 2649  ;
+; Total combinational functions               ; 2661  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 2028  ;
-;     -- 3 input functions                    ; 479   ;
-;     -- <=2 input functions                  ; 142   ;
+;     -- 4 input functions                    ; 2122  ;
+;     -- 3 input functions                    ; 372   ;
+;     -- <=2 input functions                  ; 167   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 2460  ;
-;     -- arithmetic mode                      ; 189   ;
+;     -- normal mode                          ; 2503  ;
+;     -- arithmetic mode                      ; 158   ;
 ;                                             ;       ;
-; Total registers                             ; 1517  ;
-;     -- Dedicated logic registers            ; 1517  ;
+; Total registers                             ; 1545  ;
+;     -- Dedicated logic registers            ; 1545  ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 255   ;
-; Total memory bits                           ; 65682 ;
+; I/O pins                                    ; 319   ;
+; Total memory bits                           ; 65664 ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; i_clk ;
-; Maximum fan-out                             ; 1587  ;
-; Total fan-out                               ; 16457 ;
-; Average fan-out                             ; 3.66  ;
+; Maximum fan-out                             ; 1609  ;
+; Total fan-out                               ; 16668 ;
+; Average fan-out                             ; 3.63  ;
 +---------------------------------------------+-------+
 
 
@@ -258,33 +260,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                       ; Library Name ;
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+--------------+
-; |pipeline                                   ; 2649 (0)          ; 1517 (0)     ; 65682       ; 0            ; 0       ; 0         ; 255  ; 0            ; |pipeline                                                                                                                 ; work         ;
+; |pipeline                                   ; 2661 (0)          ; 1545 (0)     ; 65664       ; 0            ; 0       ; 0         ; 319  ; 0            ; |pipeline                                                                                                                 ; work         ;
 ;    |I$:i$|                                  ; 20 (20)           ; 1 (1)        ; 65568       ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|I$:i$                                                                                                           ; work         ;
 ;       |altsyncram:instructions_value_rtl_0| ; 0 (0)             ; 0 (0)        ; 65568       ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|I$:i$|altsyncram:instructions_value_rtl_0                                                                       ; work         ;
 ;          |altsyncram_h361:auto_generated|   ; 0 (0)             ; 0 (0)        ; 65568       ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|I$:i$|altsyncram:instructions_value_rtl_0|altsyncram_h361:auto_generated                                        ; work         ;
-;    |ImmGen:immgen|                          ; 86 (86)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|ImmGen:immgen                                                                                                   ; work         ;
-;    |alu:Alu|                                ; 663 (663)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|alu:Alu                                                                                                         ; work         ;
-;    |brc:Brc|                                ; 89 (89)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|brc:Brc                                                                                                         ; work         ;
-;    |ctrl_unit:ctrl|                         ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|ctrl_unit:ctrl                                                                                                  ; work         ;
+;    |ImmGen:immgen|                          ; 85 (85)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|ImmGen:immgen                                                                                                   ; work         ;
+;    |alu:Alu|                                ; 623 (623)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|alu:Alu                                                                                                         ; work         ;
+;    |brc:Brc|                                ; 87 (87)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|brc:Brc                                                                                                         ; work         ;
+;    |ctrl_unit:ctrl|                         ; 45 (45)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|ctrl_unit:ctrl                                                                                                  ; work         ;
 ;    |first_register:firstDff|                ; 0 (0)             ; 62 (62)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|first_register:firstDff                                                                                         ; work         ;
-;    |fourth_register:fourthDff|              ; 0 (0)             ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|fourth_register:fourthDff                                                                                       ; work         ;
+;    |fourth_register:fourthDff|              ; 0 (0)             ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|fourth_register:fourthDff                                                                                       ; work         ;
+;    |hazard_unit:hazard|                     ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|hazard_unit:hazard                                                                                              ; work         ;
 ;    |insn_vld:ins_vld|                       ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|insn_vld:ins_vld                                                                                                ; work         ;
 ;    |lsu:Lsu|                                ; 158 (158)         ; 152 (152)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|lsu:Lsu                                                                                                         ; work         ;
-;    |mux_2to1:muxOperandasel|                ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|mux_2to1:muxOperandasel                                                                                         ; work         ;
-;    |mux_2to1:muxOperandbsel|                ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|mux_2to1:muxOperandbsel                                                                                         ; work         ;
+;    |mux_2to1:muxOperandasel|                ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|mux_2to1:muxOperandasel                                                                                         ; work         ;
+;    |mux_2to1:muxOperandbsel|                ; 71 (71)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|mux_2to1:muxOperandbsel                                                                                         ; work         ;
 ;    |mux_2to1:muxPCsel|                      ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|mux_2to1:muxPCsel                                                                                               ; work         ;
 ;    |mux_3to1:muxWBsel|                      ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|mux_3to1:muxWBsel                                                                                               ; work         ;
 ;    |pc:Pc|                                  ; 21 (21)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|pc:Pc                                                                                                           ; work         ;
 ;    |pc_adder:adder|                         ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|pc_adder:adder                                                                                                  ; work         ;
 ;    |pc_debug:pc_de|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|pc_debug:pc_de                                                                                                  ; work         ;
-;    |regfile:regf|                           ; 1419 (1419)       ; 992 (992)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|regfile:regf                                                                                                    ; work         ;
-;    |second_register:secondDff|              ; 12 (3)            ; 143 (137)    ; 114         ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|second_register:secondDff                                                                                       ; work         ;
-;       |altshift_taps:wb_selE_rtl_0|         ; 9 (0)             ; 6 (0)        ; 114         ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|second_register:secondDff|altshift_taps:wb_selE_rtl_0                                                           ; work         ;
-;          |shift_taps_0gm:auto_generated|    ; 9 (2)             ; 6 (3)        ; 114         ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|second_register:secondDff|altshift_taps:wb_selE_rtl_0|shift_taps_0gm:auto_generated                             ; work         ;
-;             |altsyncram_n461:altsyncram4|   ; 0 (0)             ; 0 (0)        ; 114         ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|second_register:secondDff|altshift_taps:wb_selE_rtl_0|shift_taps_0gm:auto_generated|altsyncram_n461:altsyncram4 ; work         ;
-;             |cntr_74h:cntr5|                ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|second_register:secondDff|altshift_taps:wb_selE_rtl_0|shift_taps_0gm:auto_generated|cntr_74h:cntr5              ; work         ;
-;             |cntr_kkf:cntr1|                ; 5 (5)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|second_register:secondDff|altshift_taps:wb_selE_rtl_0|shift_taps_0gm:auto_generated|cntr_kkf:cntr1              ; work         ;
-;    |third_register:thirdDff|                ; 0 (0)             ; 68 (68)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|third_register:thirdDff                                                                                         ; work         ;
+;    |regfile:regf|                           ; 1387 (1387)       ; 992 (992)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|regfile:regf                                                                                                    ; work         ;
+;    |second_register:secondDff|              ; 12 (3)            ; 159 (153)    ; 96          ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|second_register:secondDff                                                                                       ; work         ;
+;       |altshift_taps:wb_selE_rtl_0|         ; 9 (0)             ; 6 (0)        ; 96          ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|second_register:secondDff|altshift_taps:wb_selE_rtl_0                                                           ; work         ;
+;          |shift_taps_qfm:auto_generated|    ; 9 (2)             ; 6 (3)        ; 96          ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|second_register:secondDff|altshift_taps:wb_selE_rtl_0|shift_taps_qfm:auto_generated                             ; work         ;
+;             |altsyncram_b461:altsyncram4|   ; 0 (0)             ; 0 (0)        ; 96          ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|second_register:secondDff|altshift_taps:wb_selE_rtl_0|shift_taps_qfm:auto_generated|altsyncram_b461:altsyncram4 ; work         ;
+;             |cntr_74h:cntr5|                ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|second_register:secondDff|altshift_taps:wb_selE_rtl_0|shift_taps_qfm:auto_generated|cntr_74h:cntr5              ; work         ;
+;             |cntr_kkf:cntr1|                ; 5 (5)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|second_register:secondDff|altshift_taps:wb_selE_rtl_0|shift_taps_qfm:auto_generated|cntr_kkf:cntr1              ; work         ;
+;    |third_register:thirdDff|                ; 0 (0)             ; 74 (74)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|third_register:thirdDff                                                                                         ; work         ;
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -295,54 +298,69 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                                                       ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                             ;
 +----------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+---------------------------------+
 ; I$:i$|altsyncram:instructions_value_rtl_0|altsyncram_h361:auto_generated|ALTSYNCRAM                                        ; AUTO ; ROM              ; 2049         ; 32           ; --           ; --           ; 65568 ; db/pipeline.ram0_I$_91f.hdl.mif ;
-; second_register:secondDff|altshift_taps:wb_selE_rtl_0|shift_taps_0gm:auto_generated|altsyncram_n461:altsyncram4|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 3            ; 38           ; 3            ; 38           ; 114   ; None                            ;
+; second_register:secondDff|altshift_taps:wb_selE_rtl_0|shift_taps_qfm:auto_generated|altsyncram_b461:altsyncram4|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 3            ; 32           ; 3            ; 32           ; 96    ; None                            ;
 +----------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+---------------------------------+
 
 
-+---------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                          ;
-+-------------------------------------------+-------------------------------------------------+
-; Register name                             ; Reason for Removal                              ;
-+-------------------------------------------+-------------------------------------------------+
-; fourth_register:fourthDff|ld_dataW[0..31] ; Stuck at GND due to stuck port data_in          ;
-; first_register:firstDff|PCD[0]            ; Merged with first_register:firstDff|PCPlus4D[0] ;
-; first_register:firstDff|PCPlus4D[1]       ; Merged with first_register:firstDff|PCD[1]      ;
-; second_register:secondDff|PCPlus4E[1]     ; Merged with second_register:secondDff|PCE[1]    ;
-; second_register:secondDff|PCPlus4E[0]     ; Merged with second_register:secondDff|PCE[0]    ;
-; regfile:regf|regfile[0][31]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][0]                ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][1]                ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][2]                ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][3]                ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][4]                ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][5]                ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][6]                ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][7]                ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][8]                ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][9]                ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][10]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][11]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][12]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][13]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][14]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][15]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][16]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][17]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][18]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][19]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][20]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][21]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][22]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][23]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][24]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][25]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][26]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][27]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][28]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][29]               ; Stuck at GND due to stuck port clock_enable     ;
-; regfile:regf|regfile[0][30]               ; Stuck at GND due to stuck port clock_enable     ;
-; Total Number of Removed Registers = 68    ;                                                 ;
-+-------------------------------------------+-------------------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                           ;
++-------------------------------------------+--------------------------------------------------+
+; Register name                             ; Reason for Removal                               ;
++-------------------------------------------+--------------------------------------------------+
+; fourth_register:fourthDff|ld_dataW[0..31] ; Stuck at GND due to stuck port data_in           ;
+; second_register:secondDff|rd_addrE[4]     ; Merged with second_register:secondDff|instrE[11] ;
+; second_register:secondDff|rd_addrE[3]     ; Merged with second_register:secondDff|instrE[10] ;
+; second_register:secondDff|rd_addrE[2]     ; Merged with second_register:secondDff|instrE[9]  ;
+; second_register:secondDff|rd_addrE[1]     ; Merged with second_register:secondDff|instrE[8]  ;
+; second_register:secondDff|rd_addrE[0]     ; Merged with second_register:secondDff|instrE[7]  ;
+; first_register:firstDff|PCD[0]            ; Merged with first_register:firstDff|PCPlus4D[0]  ;
+; first_register:firstDff|PCPlus4D[1]       ; Merged with first_register:firstDff|PCD[1]       ;
+; third_register:thirdDff|rd_addrM[4]       ; Merged with third_register:thirdDff|instrM[11]   ;
+; third_register:thirdDff|rd_addrM[3]       ; Merged with third_register:thirdDff|instrM[10]   ;
+; third_register:thirdDff|rd_addrM[2]       ; Merged with third_register:thirdDff|instrM[9]    ;
+; third_register:thirdDff|rd_addrM[1]       ; Merged with third_register:thirdDff|instrM[8]    ;
+; third_register:thirdDff|rd_addrM[0]       ; Merged with third_register:thirdDff|instrM[7]    ;
+; second_register:secondDff|PCPlus4E[1]     ; Merged with second_register:secondDff|PCE[1]     ;
+; second_register:secondDff|PCPlus4E[0]     ; Merged with second_register:secondDff|PCE[0]     ;
+; fourth_register:fourthDff|rd_addrW[4]     ; Merged with fourth_register:fourthDff|instrW[11] ;
+; fourth_register:fourthDff|rd_addrW[3]     ; Merged with fourth_register:fourthDff|instrW[10] ;
+; fourth_register:fourthDff|rd_addrW[2]     ; Merged with fourth_register:fourthDff|instrW[9]  ;
+; fourth_register:fourthDff|rd_addrW[1]     ; Merged with fourth_register:fourthDff|instrW[8]  ;
+; fourth_register:fourthDff|rd_addrW[0]     ; Merged with fourth_register:fourthDff|instrW[7]  ;
+; regfile:regf|regfile[0][0]                ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][1]                ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][2]                ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][3]                ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][4]                ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][5]                ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][6]                ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][7]                ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][8]                ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][9]                ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][10]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][11]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][12]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][13]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][14]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][15]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][16]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][17]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][18]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][19]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][20]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][21]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][22]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][23]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][24]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][25]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][26]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][27]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][28]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][29]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][30]               ; Stuck at GND due to stuck port clock_enable      ;
+; regfile:regf|regfile[0][31]               ; Stuck at GND due to stuck port clock_enable      ;
+; Total Number of Removed Registers = 83    ;                                                  ;
++-------------------------------------------+--------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------+
@@ -422,10 +440,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1517  ;
+; Total registers                              ; 1545  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 22    ;
-; Number of registers using Asynchronous Clear ; 1513  ;
+; Number of registers using Asynchronous Clear ; 1541  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 1147  ;
 ; Number of registers using Preset             ; 0     ;
@@ -437,7 +455,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                         ; Fan out ;
 +-------------------------------------------------------------------------------------------+---------+
-; second_register:secondDff|altshift_taps:wb_selE_rtl_0|shift_taps_0gm:auto_generated|dffe6 ; 38      ;
+; second_register:secondDff|altshift_taps:wb_selE_rtl_0|shift_taps_qfm:auto_generated|dffe6 ; 32      ;
 ; Total number of inverted registers = 1                                                    ;         ;
 +-------------------------------------------------------------------------------------------+---------+
 
@@ -451,12 +469,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; fourth_register:fourthDff|wb_selW[0,1]    ; second_register:secondDff|wb_selE_rtl_0 ; SHIFT_TAPS ;
 ; third_register:thirdDff|wb_selM[0,1]      ; second_register:secondDff|wb_selE_rtl_0 ; SHIFT_TAPS ;
 ; second_register:secondDff|wb_selE[0,1]    ; second_register:secondDff|wb_selE_rtl_0 ; SHIFT_TAPS ;
-; fourth_register:fourthDff|rd_wrenW        ; second_register:secondDff|wb_selE_rtl_0 ; SHIFT_TAPS ;
-; third_register:thirdDff|rd_wrenM          ; second_register:secondDff|wb_selE_rtl_0 ; SHIFT_TAPS ;
-; second_register:secondDff|rd_wrenE        ; second_register:secondDff|wb_selE_rtl_0 ; SHIFT_TAPS ;
-; fourth_register:fourthDff|rd_addrW[0..4]  ; second_register:secondDff|wb_selE_rtl_0 ; SHIFT_TAPS ;
-; third_register:thirdDff|rd_addrM[0..4]    ; second_register:secondDff|wb_selE_rtl_0 ; SHIFT_TAPS ;
-; second_register:secondDff|rd_addrE[0..4]  ; second_register:secondDff|wb_selE_rtl_0 ; SHIFT_TAPS ;
 ; fourth_register:fourthDff|PCPlus4W[2..31] ; second_register:secondDff|wb_selE_rtl_0 ; SHIFT_TAPS ;
 ; third_register:thirdDff|PCPlus4M[2..31]   ; second_register:secondDff|wb_selE_rtl_0 ; SHIFT_TAPS ;
 ; second_register:secondDff|PCPlus4E[2..31] ; second_register:secondDff|wb_selE_rtl_0 ; SHIFT_TAPS ;
@@ -470,27 +482,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 ; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |pipeline|second_register:secondDff|immE[20] ;
 ; 7:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |pipeline|second_register:secondDff|immE[30] ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |pipeline|lsu:Lsu|seven_segment[7][4]        ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |pipeline|lsu:Lsu|seven_segment[7][0]        ;
 ; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |pipeline|lsu:Lsu|seven_segment[6][4]        ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |pipeline|lsu:Lsu|seven_segment[5][4]        ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |pipeline|lsu:Lsu|seven_segment[4][2]        ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |pipeline|lsu:Lsu|seven_segment[3][6]        ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |pipeline|lsu:Lsu|seven_segment[2][1]        ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |pipeline|lsu:Lsu|seven_segment[1][3]        ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |pipeline|lsu:Lsu|seven_segment[0][6]        ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |pipeline|lsu:Lsu|seven_segment[5][2]        ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |pipeline|lsu:Lsu|seven_segment[4][3]        ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |pipeline|lsu:Lsu|seven_segment[3][5]        ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |pipeline|lsu:Lsu|seven_segment[2][4]        ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |pipeline|lsu:Lsu|seven_segment[1][6]        ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |pipeline|lsu:Lsu|seven_segment[0][0]        ;
 ; 11:1               ; 4 bits    ; 28 LEs        ; 8 LEs                ; 20 LEs                 ; Yes        ; |pipeline|second_register:secondDff|immE[4]  ;
-; 9:1                ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |pipeline|second_register:secondDff|immE[19] ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |pipeline|second_register:secondDff|immE[15] ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |pipeline|ImmGen:immgen|Selector24           ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |pipeline|ImmGen:immgen|Selector24           ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |pipeline|mux_3to1:muxWBsel|Mux6             ;
-; 33:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; No         ; |pipeline|regfile:regf|o_rs1_data[15]        ;
-; 33:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; No         ; |pipeline|regfile:regf|o_rs2_data[19]        ;
-; 20:1               ; 7 bits    ; 91 LEs        ; 56 LEs               ; 35 LEs                 ; No         ; |pipeline|alu:Alu|Mux14                      ;
-; 19:1               ; 8 bits    ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |pipeline|alu:Alu|Mux21                      ;
-; 21:1               ; 4 bits    ; 56 LEs        ; 36 LEs               ; 20 LEs                 ; No         ; |pipeline|alu:Alu|Mux5                       ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |pipeline|mux_3to1:muxWBsel|Mux29            ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |pipeline|mux_2to1:muxOperandasel|y[25]      ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |pipeline|mux_2to1:muxOperandbsel|y[10]      ;
+; 33:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; No         ; |pipeline|regfile:regf|o_rs1_data[23]        ;
+; 33:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; No         ; |pipeline|regfile:regf|o_rs2_data[6]         ;
+; 20:1               ; 7 bits    ; 91 LEs        ; 56 LEs               ; 35 LEs                 ; No         ; |pipeline|alu:Alu|Mux8                       ;
+; 19:1               ; 8 bits    ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |pipeline|alu:Alu|Mux22                      ;
+; 21:1               ; 4 bits    ; 56 LEs        ; 36 LEs               ; 20 LEs                 ; No         ; |pipeline|alu:Alu|Mux4                       ;
 ; 20:1               ; 4 bits    ; 52 LEs        ; 36 LEs               ; 16 LEs                 ; No         ; |pipeline|alu:Alu|Mux27                      ;
-; 22:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; No         ; |pipeline|alu:Alu|Mux3                       ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; No         ; |pipeline|alu:Alu|Mux29                      ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; No         ; |pipeline|alu:Alu|Mux2                       ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; No         ; |pipeline|alu:Alu|Mux28                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
@@ -504,7 +518,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for second_register:secondDff|altshift_taps:wb_selE_rtl_0|shift_taps_0gm:auto_generated|altsyncram_n461:altsyncram4 ;
+; Source assignments for second_register:secondDff|altshift_taps:wb_selE_rtl_0|shift_taps_qfm:auto_generated|altsyncram_b461:altsyncram4 ;
 +---------------------------------+--------------------+------+--------------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                                       ;
 +---------------------------------+--------------------+------+--------------------------------------------------------------------------+
@@ -596,9 +610,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WIDTH_BYTEENA  ; 1              ; Untyped                                                              ;
 ; NUMBER_OF_TAPS ; 1              ; Untyped                                                              ;
 ; TAP_DISTANCE   ; 3              ; Untyped                                                              ;
-; WIDTH          ; 38             ; Untyped                                                              ;
+; WIDTH          ; 32             ; Untyped                                                              ;
 ; POWER_UP_STATE ; CLEARED        ; Untyped                                                              ;
-; CBXI_PARAMETER ; shift_taps_0gm ; Untyped                                                              ;
+; CBXI_PARAMETER ; shift_taps_qfm ; Untyped                                                              ;
 +----------------+----------------+----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -632,19 +646,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Entity Instance            ; second_register:secondDff|altshift_taps:wb_selE_rtl_0 ;
 ;     -- NUMBER_OF_TAPS      ; 1                                                     ;
 ;     -- TAP_DISTANCE        ; 3                                                     ;
-;     -- WIDTH               ; 38                                                    ;
+;     -- WIDTH               ; 32                                                    ;
 +----------------------------+-------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "fourth_register:fourthDff"                                                                                 ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                                                  ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; StallW ; Input  ; Info     ; Explicitly unconnected                                                                                   ;
-; FlushW ; Input  ; Info     ; Explicitly unconnected                                                                                   ;
-; instrW ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------+
+; Port Connectivity Checks: "hazard_unit:hazard"         ;
++-----------+--------+----------+------------------------+
+; Port      ; Type   ; Severity ; Details                ;
++-----------+--------+----------+------------------------+
+; rd_wren_D ; Input  ; Info     ; Explicitly unconnected ;
+; StallF    ; Output ; Info     ; Explicitly unconnected ;
+; StallD    ; Output ; Info     ; Explicitly unconnected ;
+; FlushD    ; Output ; Info     ; Explicitly unconnected ;
+; StallE    ; Output ; Info     ; Explicitly unconnected ;
+; FlushE    ; Output ; Info     ; Explicitly unconnected ;
+; StallM    ; Output ; Info     ; Explicitly unconnected ;
+; FlushM    ; Output ; Info     ; Explicitly unconnected ;
+; StallW    ; Output ; Info     ; Explicitly unconnected ;
+; FlushW    ; Output ; Info     ; Explicitly unconnected ;
++-----------+--------+----------+------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "fourth_register:fourthDff" ;
++--------+-------+----------+---------------------------+
+; Port   ; Type  ; Severity ; Details                   ;
++--------+-------+----------+---------------------------+
+; StallW ; Input ; Info     ; Explicitly unconnected    ;
+; FlushW ; Input ; Info     ; Explicitly unconnected    ;
++--------+-------+----------+---------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -686,9 +717,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port     ; Type   ; Severity ; Details                                                                                                  ;
 +----------+--------+----------+----------------------------------------------------------------------------------------------------------+
 ; checker1 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; checker2 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; checker3 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; checker5 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; checker8 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 +----------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
@@ -709,6 +738,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; en     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
 ; en[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; StallF ; Input ; Info     ; Explicitly unconnected                                                                                                                                                             ;
 +--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -727,9 +757,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Nov 26 10:23:41 2024
+    Info: Processing started: Wed Nov 27 13:56:55 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipeline -c pipeline
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file hazard_unit.sv
+    Info (12023): Found entity 1: hazard_unit
 Info (12021): Found 1 design units, including 1 entities, in source file third_register.sv
     Info (12023): Found entity 1: third_register
 Info (12021): Found 1 design units, including 1 entities, in source file second_register.sv
@@ -766,16 +798,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file brc.sv
     Info (12023): Found entity 1: brc
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
     Info (12023): Found entity 1: alu
-Warning (10236): Verilog HDL Implicit Net warning at pipeline.sv(201): created implicit net for "i_data_type"
-Warning (10236): Verilog HDL Implicit Net warning at pipeline.sv(202): created implicit net for "i_unsigned"
-Warning (10236): Verilog HDL Implicit Net warning at pipeline.sv(204): created implicit net for "ld_data"
+Warning (10236): Verilog HDL Implicit Net warning at pipeline.sv(221): created implicit net for "i_data_type"
+Warning (10236): Verilog HDL Implicit Net warning at pipeline.sv(222): created implicit net for "i_unsigned"
+Warning (10236): Verilog HDL Implicit Net warning at pipeline.sv(224): created implicit net for "ld_data"
 Warning (10236): Verilog HDL Implicit Net warning at lsu.sv(109): created implicit net for "p"
 Info (12127): Elaborating entity "pipeline" for the top level hierarchy
 Info (12128): Elaborating entity "mux_2to1" for hierarchy "mux_2to1:muxPCsel"
 Info (12128): Elaborating entity "pc" for hierarchy "pc:Pc"
 Info (12128): Elaborating entity "pc_adder" for hierarchy "pc_adder:adder"
 Info (12128): Elaborating entity "I$" for hierarchy "I$:i$"
-Warning (10850): Verilog HDL warning at I$.sv(8): number of words (4) in memory file does not match the number of elements in the address range [0:2048]
+Warning (10850): Verilog HDL warning at I$.sv(8): number of words (3) in memory file does not match the number of elements in the address range [0:2048]
 Warning (10030): Net "instructions_value.data_a" at I$.sv(5) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "instructions_value.waddr_a" at I$.sv(5) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "instructions_value.we_a" at I$.sv(5) has no driver or initial value, using a default initial value '0'
@@ -786,6 +818,7 @@ Info (12128): Elaborating entity "brc" for hierarchy "brc:Brc"
 Info (12128): Elaborating entity "ctrl_unit" for hierarchy "ctrl_unit:ctrl"
 Warning (10270): Verilog HDL Case Statement warning at ctrl_unit.sv(37): incomplete case statement has no default case item
 Info (12128): Elaborating entity "second_register" for hierarchy "second_register:secondDff"
+Info (12128): Elaborating entity "mux_3to1" for hierarchy "mux_3to1:data1forwardsel"
 Info (12128): Elaborating entity "alu" for hierarchy "alu:Alu"
 Info (12128): Elaborating entity "third_register" for hierarchy "third_register:thirdDff"
 Info (12128): Elaborating entity "lsu" for hierarchy "lsu:Lsu"
@@ -799,9 +832,12 @@ Warning (10030): Net "red_leds[15..4]" at lsu.sv(68) has no driver or initial va
 Warning (10030): Net "switches[15..4]" at lsu.sv(75) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "buttons[15..1]" at lsu.sv(76) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "fourth_register" for hierarchy "fourth_register:fourthDff"
-Info (12128): Elaborating entity "mux_3to1" for hierarchy "mux_3to1:muxWBsel"
 Info (12128): Elaborating entity "pc_debug" for hierarchy "pc_debug:pc_de"
 Info (12128): Elaborating entity "insn_vld" for hierarchy "insn_vld:ins_vld"
+Info (12128): Elaborating entity "hazard_unit" for hierarchy "hazard_unit:hazard"
+Warning (10036): Verilog HDL or VHDL warning at hazard_unit.sv(22): object "rs1_addr_D" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at hazard_unit.sv(22): object "rs2_addr_D" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at hazard_unit.sv(22): object "rd_addr_E" assigned a value but never read
 Info (19000): Inferred 2 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "I$:i$|instructions_value_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to ROM
@@ -817,7 +853,7 @@ Info (19000): Inferred 2 megafunctions from design logic
     Info (276034): Inferred altshift_taps megafunction from the following design logic: "second_register:secondDff|wb_selE_rtl_0"
         Info (286033): Parameter NUMBER_OF_TAPS set to 1
         Info (286033): Parameter TAP_DISTANCE set to 3
-        Info (286033): Parameter WIDTH set to 38
+        Info (286033): Parameter WIDTH set to 32
 Info (12130): Elaborated megafunction instantiation "I$:i$|altsyncram:instructions_value_rtl_0"
 Info (12133): Instantiated megafunction "I$:i$|altsyncram:instructions_value_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "ROM"
@@ -836,11 +872,11 @@ Info (12130): Elaborated megafunction instantiation "second_register:secondDff|a
 Info (12133): Instantiated megafunction "second_register:secondDff|altshift_taps:wb_selE_rtl_0" with the following parameter:
     Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
     Info (12134): Parameter "TAP_DISTANCE" = "3"
-    Info (12134): Parameter "WIDTH" = "38"
-Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_0gm.tdf
-    Info (12023): Found entity 1: shift_taps_0gm
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_n461.tdf
-    Info (12023): Found entity 1: altsyncram_n461
+    Info (12134): Parameter "WIDTH" = "32"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_qfm.tdf
+    Info (12023): Found entity 1: shift_taps_qfm
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_b461.tdf
+    Info (12023): Found entity 1: altsyncram_b461
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_gvd.tdf
     Info (12023): Found entity 1: add_sub_gvd
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_kkf.tdf
@@ -849,7 +885,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_6cc
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_74h.tdf
     Info (12023): Found entity 1: cntr_74h
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -891,15 +927,15 @@ Warning (21074): Design contains 36 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "i_io_btn[1]"
     Warning (15610): No output dependent on input pin "i_io_btn[2]"
     Warning (15610): No output dependent on input pin "i_io_btn[3]"
-Info (21057): Implemented 4378 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4476 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 38 input pins
-    Info (21059): Implemented 217 output pins
-    Info (21061): Implemented 4053 logic cells
-    Info (21064): Implemented 70 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 56 warnings
-    Info: Peak virtual memory: 4631 megabytes
-    Info: Processing ended: Tue Nov 26 10:23:47 2024
-    Info: Elapsed time: 00:00:06
+    Info (21059): Implemented 281 output pins
+    Info (21061): Implemented 4093 logic cells
+    Info (21064): Implemented 64 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 59 warnings
+    Info: Peak virtual memory: 4619 megabytes
+    Info: Processing ended: Wed Nov 27 13:57:00 2024
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 
 

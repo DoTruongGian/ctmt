@@ -4,54 +4,54 @@ K3
 cModel Technology
 Z0 dC:\Users\Admin\Documents\SEM241\Computer_Organization_and_Design_(EE4423)\milestone\ctmt\milestone3\simulation\qsim
 vpipeline
-Z1 IK3a3AQVmVaB8PREFbZY]F2
-Z2 V2U02l=W_L;PeVKHb:PHIi1
-Z3 dC:\Users\Admin\Documents\SEM241\Computer_Organization_and_Design_(EE4423)\milestone\ctmt\milestone3\simulation\qsim
-Z4 w1732591516
-Z5 8pipeline.vo
-Z6 Fpipeline.vo
+Z1 !s100 ZE<blz7QkI212CDo?Defe1
+Z2 I4<7=c5fIcP4:c97;m55fP3
+Z3 VdI2@n@i]N>mX:@BaDS7:41
+Z4 dC:\Users\Admin\Documents\SEM241\Computer_Organization_and_Design_(EE4423)\milestone\ctmt\milestone3\simulation\qsim
+Z5 w1732690632
+Z6 8pipeline.vo
+Z7 Fpipeline.vo
 L0 31
-Z7 OV;L;10.1d;51
+Z8 OV;L;10.1d;51
 r1
 31
-Z8 !s90 -work|work|pipeline.vo|
-Z9 o-work work -O0
+Z9 !s90 -work|work|pipeline.vo|
+Z10 o-work work -O0
 !i10b 1
-Z10 !s100 8^UI8a0_gT:eeRoIVI6P^2
 !s85 0
-Z11 !s108 1732591517.120000
+Z11 !s108 1732690632.972000
 Z12 !s107 pipeline.vo|
 !s101 -O0
 vpipeline_vlg_check_tst
 !i10b 1
-Z13 !s100 EVfA020RR]l5=3IN4U]j?2
-Z14 IAUeUgEoXKT8@C]>oLIoUc0
-Z15 VPcTnjE9VB;a_I[UTP5;Rb1
-R3
-Z16 w1732591515
+Z13 !s100 mIoE><CV^anJ<kHIgVC>50
+Z14 Ij[Yb48d07S2STXDn1;TbL3
+Z15 ViYTJO71WPVYF?<:3=L3Ri3
+R4
+Z16 w1732690631
 Z17 8pipeline.vt
 Z18 Fpipeline.vt
 L0 63
-R7
+R8
 r1
 !s85 0
 31
-Z19 !s108 1732591517.436000
+Z19 !s108 1732690633.300000
 Z20 !s107 pipeline.vt|
 Z21 !s90 -work|work|pipeline.vt|
 !s101 -O0
-R9
+R10
 vpipeline_vlg_sample_tst
 !i10b 1
 Z22 !s100 CLY<7P=<lA][gBc9h2;;W1
 Z23 IcO]F`2VBFTGD`R4`>B7CT3
 Z24 VHSNc1[Y=1cY[^HWl4NiX=2
-R3
+R4
 R16
 R17
 R18
 L0 29
-R7
+R8
 r1
 !s85 0
 31
@@ -59,18 +59,18 @@ R19
 R20
 R21
 !s101 -O0
-R9
+R10
 vpipeline_vlg_vec_tst
 !i10b 1
-!s100 kUHTc=IajZ`I?[4e>AG[N1
-I9DHOMm4ka47>aAikiE<;Z3
-Z25 VkZJCkaa`MdZNLFZQNJgKL3
-R3
+Z25 !s100 ajO<FPlEoLDmbB_0KcEm=1
+Z26 I:hdHIU1UmMNf9MGWFch9j3
+Z27 VkZJCkaa`MdZNLFZQNJgKL3
+R4
 R16
 R17
 R18
-Z26 L0 4150
-R7
+Z28 L0 5318
+R8
 r1
 !s85 0
 31
@@ -78,4 +78,4 @@ R19
 R20
 R21
 !s101 -O0
-R9
+R10

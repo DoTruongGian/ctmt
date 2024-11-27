@@ -2,6 +2,6 @@
 <LOG_ROOT>
 	<PROJECT NAME="pipeline">
 		<CBX_INST_ENTRY INSTANCE_NAME="|pipeline|I$:i$|altsyncram:instructions_value_rtl_0" CBX_FILE_NAME="altsyncram_h361.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|pipeline|second_register:secondDff|altshift_taps:wb_selE_rtl_0" CBX_FILE_NAME="shift_taps_0gm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pipeline|second_register:secondDff|altshift_taps:wb_selE_rtl_0" CBX_FILE_NAME="shift_taps_qfm.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
