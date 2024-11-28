@@ -6,6 +6,7 @@ entity pipeline is
         i_rst_n         : in     vl_logic;
         i_io_sw         : in     vl_logic_vector(31 downto 0);
         i_io_btn        : in     vl_logic_vector(3 downto 0);
+        checker1        : out    vl_logic_vector(31 downto 0);
         checker2        : out    vl_logic_vector(31 downto 0);
         checker3        : out    vl_logic_vector(31 downto 0);
         checker4        : out    vl_logic_vector(31 downto 0);

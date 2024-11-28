@@ -5,6 +5,7 @@ entity pipeline_vlg_check_tst is
         ForwardAE_check : in     vl_logic_vector(1 downto 0);
         ForwardBE_check : in     vl_logic_vector(1 downto 0);
         alu_data_M_check: in     vl_logic_vector(31 downto 0);
+        checker1        : in     vl_logic_vector(31 downto 0);
         checker2        : in     vl_logic_vector(31 downto 0);
         checker3        : in     vl_logic_vector(31 downto 0);
         checker4        : in     vl_logic_vector(31 downto 0);

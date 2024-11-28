@@ -3,7 +3,7 @@ module pipeline (
   input logic i_rst_n,       // Global low active reset
   input logic [31:0] i_io_sw,     // Input for switches
   input logic [3:0] i_io_btn,      // Input for buttons
-  output logic [31:0] checker2, checker3, checker4, alu_data_M_check, rs2_data_HM_check, rs1_data_HE_check, rs2_data_HE_check,
+  output logic [31:0] checker1, checker2, checker3, checker4, alu_data_M_check, rs2_data_HM_check, rs1_data_HE_check, rs2_data_HE_check,
   output logic ldStall_check,
   output logic [1:0] ForwardAE_check, ForwardBE_check,
   output logic [31:0] o_pc_debug,  // Debug program counter
@@ -20,10 +20,10 @@ module pipeline (
   output logic [6:0] o_io_hex7,   // Output for driving 7-segment LED display 7
   output logic [31:0] o_io_lcd   // Output for driving the LCD register
 );
-logic [31:0] PCPlus4_F, alu_data_E, PCnext_F, PC_F, instr_F, instr_D, PC_D, PCPlus4_D, wb_data_W, rs1_data_D, rs2_data_D, imm_D, PC_E, PCPlus4_E, instr_E, rs1_data_E, rs2_data_E, imm_E, operand_a_E, operand_b_E, instr_M, alu_data_M, rs2_data_M, PCPlus4_M, ld_data_M, instr_W, alu_data_W, ld_data_W, PCPlus4_W, rs1_data_HE, rs2_data_HE, rs2_data_HM;
+logic [31:0] PCPlus4_F, alu_data_E, PCnext_F, PC_F, instr_F, instr_D, PC_D, PCPlus4_D, wb_data_W, rs1_data_D, rs2_data_D, imm_D, PC_E, PCPlus4_E, instr_E, rs1_data_E, rs2_data_E, imm_E, operand_a_E, operand_b_E, instr_M, alu_data_M, rs2_data_M, PCPlus4_M, ld_data_M, instr_W, alu_data_W, ld_data_W, PCPlus4_W, rs1_data_HE, rs2_data_HE, rs2_data_HM, rs1_data_Dbr, rs2_data_Dbr;
 logic [4:0] rd_addr_W, rd_addr_E, rd_addr_M;
 logic [3:0] alu_op_D, alu_op_E;
-logic [1:0] mem_wren_D, data_type_D, wb_sel_D, mem_wren_E, wb_sel_E, data_type_E, mem_wren_M, wb_sel_M, data_type_M, wb_sel_W, ForwardAE, ForwardBE;
+logic [1:0] mem_wren_D, data_type_D, wb_sel_D, mem_wren_E, wb_sel_E, data_type_E, mem_wren_M, wb_sel_M, data_type_M, wb_sel_W, ForwardAE, ForwardBE, ForwardaE, ForwardbE;
 logic pc_sel_E, rd_wren_W, br_un_D, br_less_D, br_equal_D, rd_wren_D, ins_vld_D, pc_sel_D, opa_sel_D, opb_sel_D, unsigned_D, rd_wren_E, opa_sel_E, opb_sel_E, unsigned_E, rd_wren_M, unsigned_M, StallF, StallD, FlushD, StallE, FlushE, StallM, FlushM, StallW, FlushW;
 mux_2to1 muxPCsel (
   .a(PCPlus4_F),
@@ -75,9 +75,25 @@ regfile regf(
   .i_rd_wren(rd_wren_W),
   .o_rs1_data(rs1_data_D),
   .o_rs2_data(rs2_data_D),
+  .checker1(checker1),
   .checker2(checker2),
   .checker3(checker3),
   .checker4(checker4)
+);
+mux_3to1 brseldata1 (
+  .a(rs1_data_D),
+  .b(alu_data_M),
+  .c(alu_data_E),
+  .sel(ForwardaE),
+  .y(rs1_data_Dbr)
+);
+
+mux_3to1 brseldata2 (
+  .a(rs1_data_D),
+  .b(alu_data_M),
+  .c(alu_data_E),
+  .sel(ForwardbE),
+  .y(rs2_data_Dbr)
 );
 
 ImmGen immgen (
@@ -86,8 +102,8 @@ ImmGen immgen (
 );
 
 brc Brc (
-  .i_rs1_data(rs1_data_D),
-  .i_rs2_data(rs2_data_D),
+  .i_rs1_data(rs1_data_Dbr),
+  .i_rs2_data(rs2_data_Dbr),
   .i_br_un(br_un_D),
   .o_br_less(br_less_D),
   .o_br_equal(br_equal_D)
@@ -290,6 +306,8 @@ hazard_unit hazard (
   .rd_wren_E(rd_wren_E),
   .rd_wren_M(rd_wren_M),
   .rd_wren_W(rd_wren_W),
+  .opa_sel_D(opa_sel_D),
+  .pc_sel_D(pc_sel_D),
   .opa_sel_E(opa_sel_E),
   .pc_sel_E(pc_sel_E),
   .StallF(StallF),
@@ -303,6 +321,8 @@ hazard_unit hazard (
   .FlushW(FlushW),
   .ForwardAE(ForwardAE),
   .ForwardBE(ForwardBE),
+  .ForwardaE(ForwardaE),
+  .ForwardbE(ForwardbE),
   .ldStall_check(ldStall_check)
 );
 assign ForwardAE_check = ForwardAE;
