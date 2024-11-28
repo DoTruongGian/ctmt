@@ -3,7 +3,9 @@ module pipeline (
   input logic i_rst_n,       // Global low active reset
   input logic [31:0] i_io_sw,     // Input for switches
   input logic [3:0] i_io_btn,      // Input for buttons
-  output logic [31:0] checker2, checker3, checker4,
+  output logic [31:0] checker2, checker3, checker4, alu_data_M_check, rs2_data_HM_check, rs1_data_HE_check, rs2_data_HE_check,
+  output logic ldStall_check,
+  output logic [1:0] ForwardAE_check, ForwardBE_check,
   output logic [31:0] o_pc_debug,  // Debug program counter
   output logic o_insn_vld,        // Instruction valid
   output logic [31:0] o_io_ledr,  // Output for driving red LEDs
@@ -18,11 +20,11 @@ module pipeline (
   output logic [6:0] o_io_hex7,   // Output for driving 7-segment LED display 7
   output logic [31:0] o_io_lcd   // Output for driving the LCD register
 );
-logic [31:0] PCPlus4_F, alu_data_E, PCnext_F, PC_F, instr_F, instr_D, PC_D, PCPlus4_D, wb_data_W, rs1_data_D, rs2_data_D, imm_D, PC_E, PCPlus4_E, instr_E, rs1_data_E, rs2_data_E, imm_E, operand_a_E, operand_b_E, instr_M, alu_data_M, rs2_data_M, PCPlus4_M, ld_data_M, instr_W, alu_data_W, ld_data_W, PCPlus4_W, rs1_data_HE, rs2_data_HE;
+logic [31:0] PCPlus4_F, alu_data_E, PCnext_F, PC_F, instr_F, instr_D, PC_D, PCPlus4_D, wb_data_W, rs1_data_D, rs2_data_D, imm_D, PC_E, PCPlus4_E, instr_E, rs1_data_E, rs2_data_E, imm_E, operand_a_E, operand_b_E, instr_M, alu_data_M, rs2_data_M, PCPlus4_M, ld_data_M, instr_W, alu_data_W, ld_data_W, PCPlus4_W, rs1_data_HE, rs2_data_HE, rs2_data_HM;
 logic [4:0] rd_addr_W, rd_addr_E, rd_addr_M;
 logic [3:0] alu_op_D, alu_op_E;
 logic [1:0] mem_wren_D, data_type_D, wb_sel_D, mem_wren_E, wb_sel_E, data_type_E, mem_wren_M, wb_sel_M, data_type_M, wb_sel_W, ForwardAE, ForwardBE;
-logic pc_sel_E, rd_wren_W, br_un_D, br_less_D, br_equal_D, rd_wren_D, ins_vld_D, pc_sel_D, opa_sel_D, opb_sel_D, unsigned_D, rd_wren_E, opa_sel_E, opb_sel_E, unsigned_E, rd_wren_M, unsigned_M;
+logic pc_sel_E, rd_wren_W, br_un_D, br_less_D, br_equal_D, rd_wren_D, ins_vld_D, pc_sel_D, opa_sel_D, opb_sel_D, unsigned_D, rd_wren_E, opa_sel_E, opb_sel_E, unsigned_E, rd_wren_M, unsigned_M, StallF, StallD, FlushD, StallE, FlushE, StallM, FlushM, StallW, FlushW;
 mux_2to1 muxPCsel (
   .a(PCPlus4_F),
   .b(alu_data_E),
@@ -35,7 +37,7 @@ pc Pc (
   .i_clk(i_clk),
   .i_rst_n(i_rst_n),
   .en(1),
-  .StallF(),
+  .StallF(StallF),
   .PC_i(PCnext_F),
   .PC_o(PC_F)
 );
@@ -53,8 +55,8 @@ I$ i$ (
 first_register firstDff (
   .i_clk(i_clk),
   .i_rst_n(i_rst_n),
-  .StallD(),
-  .FlushD(),
+  .StallD(StallD),
+  .FlushD(FlushD),
   .instrF(instr_F),
   .PCF(PC_F),
   .PCPlus4F(PCPlus4_F),
@@ -111,8 +113,8 @@ ctrl_unit ctrl (
 second_register secondDff (
   .i_clk(i_clk),
   .i_rst_n(i_rst_n),
-  .StallE(),
-  .FlushE(),
+  .StallE(StallE),
+  .FlushE(FlushE),
   .PCD(PC_D),
   .PCPlus4D(PCPlus4_D),
   .instrD(instr_D),
@@ -187,11 +189,11 @@ alu Alu (
 third_register thirdDff (
   .i_clk(i_clk),
   .i_rst_n(i_rst_n),
-  .StallM(),
-  .FlushM(),
+  .StallM(StallM),
+  .FlushM(FlushM),
   .instrE(instr_E),
   .alu_dataE(alu_data_E),
-  .rs2_dataE(rs2_data_E),
+  .rs2_dataHE(rs2_data_HE),
   .rd_addrE(rd_addr_E),
   .PCPlus4E(PCPlus4_E),
   .rd_wrenE(rd_wren_E),
@@ -201,7 +203,7 @@ third_register thirdDff (
   .i_data_typeE(data_type_E),
   .instrM(instr_M),
   .alu_dataM(alu_data_M),
-  .rs2_dataM(rs2_data_M),
+  .rs2_dataHM(rs2_data_HM),
   .rd_addrM(rd_addr_M),
   .PCPlus4M(PCPlus4_M),
   .rd_wrenM(rd_wren_M),
@@ -215,13 +217,13 @@ lsu Lsu (
   .i_clk(i_clk),
   .i_rst_n(i_rst_n),
   .i_lsu_addr(alu_data_M),
-  .i_st_data(rs2_data_M),
+  .i_st_data(rs2_data_HM),
   .i_lsu_wren(mem_wren_M),
   .i_io_sw(i_io_sw),
-  .i_data_type(i_data_type),
-  .i_unsigned(i_unsigned),
+  .i_data_type(data_type_M),
+  .i_unsigned(unsigned_M),
   .i_io_btn(i_io_btn),
-  .o_ld_data(ld_data),
+  .o_ld_data(ld_data_M),
   .o_io_ledr(o_io_ledr),
   .o_io_ledg(o_io_ledg),
   .o_io_hex0(o_io_hex0),
@@ -238,8 +240,8 @@ lsu Lsu (
 fourth_register fourthDff (
   .i_clk(i_clk),
   .i_rst_n(i_rst_n),
-  .StallW(),
-  .FlushW(),
+  .StallW(StallW),
+  .FlushW(FlushW),
   .instrM(instr_M),
   .alu_dataM(alu_data_M),
   .ld_dataM(ld_data_M),
@@ -283,21 +285,30 @@ hazard_unit hazard (
   .instr_E(instr_E),
   .instr_M(instr_M),
   .instr_W(instr_W),
+  .wb_sel_E(wb_sel_E),
   .rd_wren_D(),
   .rd_wren_E(rd_wren_E),
   .rd_wren_M(rd_wren_M),
   .rd_wren_W(rd_wren_W),
-  .StallF(),
-  .StallD(),
-  .FlushD(),
-  .StallE(),
-  .FlushE(),
-  .StallM(),
-  .FlushM(),
-  .StallW(),
-  .FlushW(),
+  .opa_sel_E(opa_sel_E),
+  .pc_sel_E(pc_sel_E),
+  .StallF(StallF),
+  .StallD(StallD),
+  .FlushD(FlushD),
+  .StallE(StallE),
+  .FlushE(FlushE),
+  .StallM(StallM),
+  .FlushM(FlushM),
+  .StallW(StallW),
+  .FlushW(FlushW),
   .ForwardAE(ForwardAE),
-  .ForwardBE(ForwardBE)
+  .ForwardBE(ForwardBE),
+  .ldStall_check(ldStall_check)
 );
-
+assign ForwardAE_check = ForwardAE;
+assign ForwardBE_check = ForwardBE;
+assign alu_data_M_check = alu_data_M;
+assign rs2_data_HM_check = rs2_data_HM;
+assign rs1_data_HE_check = rs1_data_HE;
+assign rs2_data_HE_check = rs2_data_HE;
 endmodule

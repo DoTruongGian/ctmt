@@ -4,10 +4,9 @@ entity single_cycle is
     port(
         i_clk           : in     vl_logic;
         i_rst_n         : in     vl_logic;
-        checker1        : out    vl_logic_vector(31 downto 0);
+        checker4        : out    vl_logic_vector(31 downto 0);
         checker2        : out    vl_logic_vector(31 downto 0);
         checker3        : out    vl_logic_vector(31 downto 0);
-        alu_data_check  : out    vl_logic_vector(32 downto 0);
         o_pc_debug      : out    vl_logic_vector(31 downto 0);
         o_insn_vld      : out    vl_logic;
         o_io_ledr       : out    vl_logic_vector(31 downto 0);

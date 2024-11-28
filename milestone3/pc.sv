@@ -10,7 +10,7 @@ module pc (
       PC_o <= 0;
     end else if (StallF) begin
 
-    end else if (en) begin
+    end else begin
       PC_o <= PC_i;
     end
   end

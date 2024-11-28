@@ -7,7 +7,7 @@ module lsu (
     input  logic [31:0] i_io_sw,
     input  logic [3:0]  i_io_btn,
     input  logic [1:0]  i_data_type,
-    input  logic 		    i_unsigned,
+    input  logic 		   i_unsigned,
 
     output logic [31:0] o_ld_data,
     output logic [31:0] o_io_ledr,

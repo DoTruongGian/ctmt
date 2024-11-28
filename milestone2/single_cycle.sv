@@ -1,8 +1,7 @@
 module single_cycle (
   input logic i_clk,         // Global clock, active on the rising edge
   input logic i_rst_n,       // Global low active reset
-  output logic [31:0] checker1, checker2, checker3,
-  output logic [32:0] alu_data_check,
+  output logic [31:0] checker4, checker2, checker3,
   output logic [31:0] o_pc_debug,  // Debug program counter
   output logic o_insn_vld,        // Instruction valid
   output logic [31:0] o_io_ledr,  // Output for driving red LEDs
@@ -82,7 +81,7 @@ regfile regf(
   .i_rd_wren(rd_wren),
   .o_rs1_data(o_rs1_data),
   .o_rs2_data(o_rs2_data),
-  .checker1(checker1),
+  .checker4(checker4),
   .checker2(checker2),
   .checker3(checker3)
 );
@@ -118,8 +117,7 @@ alu Alu (
  .i_operand_a(operand_a),
  .i_operand_b(operand_b),
  .i_alu_op(alu_op),
- .o_alu_data(alu_data),
- .alu_data_check(alu_data_check)
+ .o_alu_data(alu_data)
 );
 
 lsu Lsu (

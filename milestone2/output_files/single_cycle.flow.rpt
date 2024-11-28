@@ -1,5 +1,5 @@
 Flow report for single_cycle
-Tue Nov 26 21:40:00 2024
+Thu Nov 28 13:54:18 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 26 21:40:00 2024           ;
+; Flow Status                        ; Successful - Thu Nov 28 13:54:18 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; single_cycle                                    ;
 ; Top-level Entity Name              ; single_cycle                                    ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 564                                             ;
-;     Total combinational functions  ; 470                                             ;
-;     Dedicated logic registers      ; 157                                             ;
-; Total registers                    ; 157                                             ;
-; Total pins                         ; 352                                             ;
+; Total logic elements               ; 7,917                                           ;
+;     Total combinational functions  ; 7,727                                           ;
+;     Dedicated logic registers      ; 1,373                                           ;
+; Total registers                    ; 1373                                            ;
+; Total pins                         ; 319                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/26/2024 21:36:35 ;
+; Start date & time ; 11/28/2024 13:51:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; single_cycle        ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 18691166747277.173263179409328 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 18691166747277.173277669115988 ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                             ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                    ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)      ; <None>        ; --          ; --             ;
@@ -93,12 +93,12 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:44     ; 1.0                     ; 4595 MB             ; 00:00:44                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4531 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4553 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4553 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4549 MB             ; 00:00:00                           ;
-; Total                ; 00:00:46     ; --                      ; --                  ; 00:00:44                           ;
+; Analysis & Synthesis ; 00:01:07     ; 1.0                     ; 4596 MB             ; 00:01:07                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4555 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4546 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4550 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4546 MB             ; 00:00:01                           ;
+; Total                ; 00:01:11     ; --                      ; --                  ; 00:01:10                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

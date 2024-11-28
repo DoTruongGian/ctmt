@@ -5,7 +5,7 @@ module third_register (
     input logic FlushM,
     input logic [31:0] instrE,
     input logic [31:0] alu_dataE,
-    input logic [31:0] rs2_dataE,
+    input logic [31:0] rs2_dataHE,
     input logic [4:0] rd_addrE,
     input logic [31:0] PCPlus4E,
     input logic rd_wrenE,
@@ -15,7 +15,7 @@ module third_register (
     input logic [1:0] i_data_typeE,
     output logic [31:0] instrM,
     output logic [31:0] alu_dataM,
-    output logic [31:0] rs2_dataM,
+    output logic [31:0] rs2_dataHM,
     output logic [4:0] rd_addrM,
     output logic [31:0] PCPlus4M,
     output logic rd_wrenM,
@@ -29,7 +29,7 @@ module third_register (
         if (!i_rst_n) begin
             instrM <= 32'd0;
             alu_dataM <= 32'd0;
-            rs2_dataM <= 32'd0;
+            rs2_dataHM <= 32'd0;
             rd_addrM <= 5'd0;
             PCPlus4M <= 32'd0;
             rd_wrenM <= 1'b0;
@@ -42,7 +42,7 @@ module third_register (
         end else if (FlushM) begin
             instrM <= 32'd0;
             alu_dataM <= 32'd0;
-            rs2_dataM <= 32'd0;
+            rs2_dataHM <= 32'd0;
             rd_addrM <= 5'd0;
             PCPlus4M <= 32'd0;
             rd_wrenM <= 1'b0;
@@ -53,7 +53,7 @@ module third_register (
         end else begin
             instrM <= instrE;
             alu_dataM <= alu_dataE;
-            rs2_dataM <= rs2_dataE;
+            rs2_dataHM <= rs2_dataHE;
             rd_addrM <= rd_addrE;
             PCPlus4M <= PCPlus4E;
             rd_wrenM <= rd_wrenE;
