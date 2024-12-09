@@ -10,13 +10,7 @@ entity pipeline is
         checker2        : out    vl_logic_vector(31 downto 0);
         checker3        : out    vl_logic_vector(31 downto 0);
         checker4        : out    vl_logic_vector(31 downto 0);
-        alu_data_M_check: out    vl_logic_vector(31 downto 0);
-        rs2_data_HM_check: out    vl_logic_vector(31 downto 0);
-        rs1_data_HE_check: out    vl_logic_vector(31 downto 0);
-        rs2_data_HE_check: out    vl_logic_vector(31 downto 0);
-        ldStall_check   : out    vl_logic;
-        ForwardAE_check : out    vl_logic_vector(1 downto 0);
-        ForwardBE_check : out    vl_logic_vector(1 downto 0);
+        checker10       : out    vl_logic_vector(31 downto 0);
         o_pc_debug      : out    vl_logic_vector(31 downto 0);
         o_insn_vld      : out    vl_logic;
         o_io_ledr       : out    vl_logic_vector(31 downto 0);

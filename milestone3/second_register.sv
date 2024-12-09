@@ -3,6 +3,7 @@ module second_register (
     input logic i_rst_n,
     input logic StallE,
     input logic FlushE,
+    input logic br_un_D,
     input logic [31:0] PCD,
     input logic [31:0] PCPlus4D,
     input logic [31:0] instrD,
@@ -34,6 +35,7 @@ module second_register (
     output logic [1:0] mem_wrenE,
     output logic [1:0] wb_selE,
     output logic i_unsignedE,
+    output logic br_un_E,
     output logic [1:0] i_data_typeE
 );
 
@@ -55,6 +57,7 @@ module second_register (
             wb_selE <= 2'd0;
             i_unsignedE <= 1'b0;
             i_data_typeE <= 2'b0;
+            br_un_E <= 0;
         end else if (StallE) begin
             // Retain values during stall
         end else if (FlushE) begin
@@ -74,6 +77,7 @@ module second_register (
             wb_selE <= 2'd0;
             i_unsignedE <= 1'b0;
             i_data_typeE <= 2'b0;
+            br_un_E <= 0;
         end else begin
             PCE <= PCD;
             PCPlus4E <= PCPlus4D;
@@ -91,6 +95,7 @@ module second_register (
             wb_selE <= wb_selD;
             i_unsignedE <= i_unsignedD;
             i_data_typeE <= i_data_typeD;
+            br_un_E <= br_un_D;
         end
     end
 

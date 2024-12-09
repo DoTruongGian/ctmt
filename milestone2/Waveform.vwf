@@ -3773,7 +3773,7 @@ TRANSITION_LIST("i_io_sw[31]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3782,7 +3782,7 @@ TRANSITION_LIST("i_io_sw[30]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3791,7 +3791,7 @@ TRANSITION_LIST("i_io_sw[29]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3800,7 +3800,7 @@ TRANSITION_LIST("i_io_sw[28]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3809,7 +3809,7 @@ TRANSITION_LIST("i_io_sw[27]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3818,7 +3818,7 @@ TRANSITION_LIST("i_io_sw[26]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3827,7 +3827,7 @@ TRANSITION_LIST("i_io_sw[25]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3836,7 +3836,7 @@ TRANSITION_LIST("i_io_sw[24]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3845,7 +3845,7 @@ TRANSITION_LIST("i_io_sw[23]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3854,7 +3854,7 @@ TRANSITION_LIST("i_io_sw[22]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3863,7 +3863,7 @@ TRANSITION_LIST("i_io_sw[21]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3872,7 +3872,7 @@ TRANSITION_LIST("i_io_sw[20]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3881,7 +3881,7 @@ TRANSITION_LIST("i_io_sw[19]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3890,7 +3890,7 @@ TRANSITION_LIST("i_io_sw[18]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3899,7 +3899,7 @@ TRANSITION_LIST("i_io_sw[17]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3908,7 +3908,7 @@ TRANSITION_LIST("i_io_sw[16]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3917,7 +3917,7 @@ TRANSITION_LIST("i_io_sw[15]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3926,7 +3926,7 @@ TRANSITION_LIST("i_io_sw[14]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3935,7 +3935,7 @@ TRANSITION_LIST("i_io_sw[13]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3944,7 +3944,7 @@ TRANSITION_LIST("i_io_sw[12]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3953,7 +3953,7 @@ TRANSITION_LIST("i_io_sw[11]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3962,7 +3962,7 @@ TRANSITION_LIST("i_io_sw[10]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3971,7 +3971,7 @@ TRANSITION_LIST("i_io_sw[9]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3980,7 +3980,7 @@ TRANSITION_LIST("i_io_sw[8]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3989,7 +3989,7 @@ TRANSITION_LIST("i_io_sw[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -3998,7 +3998,7 @@ TRANSITION_LIST("i_io_sw[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -4007,7 +4007,7 @@ TRANSITION_LIST("i_io_sw[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -4016,7 +4016,7 @@ TRANSITION_LIST("i_io_sw[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -4025,7 +4025,7 @@ TRANSITION_LIST("i_io_sw[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -4034,7 +4034,7 @@ TRANSITION_LIST("i_io_sw[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -4043,7 +4043,7 @@ TRANSITION_LIST("i_io_sw[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -4052,7 +4052,7 @@ TRANSITION_LIST("i_io_sw[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -6880,12 +6880,10 @@ TRANSITION_LIST("i_clk")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 16;
-			LEVEL 0 FOR 30.0;
-			LEVEL 1 FOR 30.0;
+			REPEAT = 1000;
+			LEVEL 0 FOR 0.5;
+			LEVEL 1 FOR 0.5;
 		}
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 10.0;
 	}
 }
 

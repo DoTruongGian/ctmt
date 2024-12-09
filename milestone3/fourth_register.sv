@@ -7,6 +7,7 @@ module fourth_register (
     input logic [31:0] alu_dataM,
     input logic [31:0] ld_dataM,
     input logic [4:0] rd_addrM,
+    input logic [31:0] PCM,
     input logic [31:0] PCPlus4M,
     input logic rd_wrenM,
     input logic [1:0] wb_selM,
@@ -14,6 +15,7 @@ module fourth_register (
     output logic [31:0] alu_dataW,
     output logic [31:0] ld_dataW,
     output logic [4:0] rd_addrW,
+    output logic [31:0] PCW,
     output logic [31:0] PCPlus4W,
     output logic rd_wrenW,
     output logic [1:0] wb_selW
@@ -28,6 +30,7 @@ module fourth_register (
             PCPlus4W <= 32'd0;
             rd_wrenW <= 1'b0;
             wb_selW <= 2'd0;
+            PCW <= 0;
         end else if (StallW) begin
             // Retain values during stall
         end else if (FlushW) begin
@@ -38,6 +41,7 @@ module fourth_register (
             PCPlus4W <= 32'd0;
             rd_wrenW <= 1'b0;
             wb_selW <= 2'd0;
+            PCW <= 0;
         end else begin
             instrW <= instrM;
             alu_dataW <= alu_dataM;
@@ -46,6 +50,7 @@ module fourth_register (
             PCPlus4W <= PCPlus4M;
             rd_wrenW <= rd_wrenM;
             wb_selW <= wb_selM;
+            PCW <= PCM;
         end
     end
 

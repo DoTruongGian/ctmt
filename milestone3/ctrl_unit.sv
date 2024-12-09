@@ -1,7 +1,5 @@
 module ctrl_unit (
   input logic [31:0] instr,
-  input logic br_less,
-  input logic br_equal,
   output logic rd_wren,
   output logic insn_vld,
   output logic br_un,
@@ -131,59 +129,7 @@ module ctrl_unit (
 
     7'b1100011: begin // Branch
       insn_vld = 1;
-      case (funct3)
-        3'b000: begin
-          if (br_equal) begin
-            opa_sel = 1'b1;
-            pc_sel = 1'b1;
-          end else begin
-            pc_sel = 1'b0;
-          end
-        end
-        3'b001: begin
-          if (br_equal) begin
-            pc_sel = 1'b0;
-          end else begin
-            opa_sel = 1'b1;
-            pc_sel = 1'b1;
-          end
-        end
-        3'b100: begin
-          if (br_less) begin
-            opa_sel = 1'b1;
-            pc_sel = 1'b1;
-          end else begin
-            pc_sel = 1'b0;
-          end
-        end
-        3'b101: begin
-          if (br_equal || (!br_equal && !br_less)) begin
-            opa_sel = 1'b1;
-            pc_sel = 1'b1;
-          end else begin
-            pc_sel = 1'b0;
-          end
-        end
-        3'b110: begin
-          br_un = 1'b1;
-          if (br_less) begin
-            opa_sel = 1'b1;
-            pc_sel = 1'b1;
-          end else begin
-            pc_sel = 1'b0;
-          end
-        end
-        3'b111: begin
-          br_un = 1'b1;
-          if (br_equal || (!br_equal && !br_less)) begin
-            opa_sel = 1'b1;
-            pc_sel = 1'b1;
-          end else begin
-            pc_sel = 1'b0;
-          end
-        end
-        default: alu_op = 4'b0000;
-      endcase
+      alu_op = 4'b0000;
     end
 
     7'b1101111: begin

@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/28/2024 13:54:16"
+// Generated on "12/09/2024 20:57:35"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    single_cycle
 // 
@@ -5368,16 +5368,11 @@ single_cycle i1 (
 );
 
 // i_clk
-initial
+always
 begin
-	repeat(16)
-	begin
-		i_clk = 1'b0;
-		i_clk = #30000 1'b1;
-		# 30000;
-	end
 	i_clk = 1'b0;
-	i_clk = #30000 1'b1;
+	i_clk = #500 1'b1;
+	#500;
 end 
 // i_io_btn[ 3 ]
 initial
@@ -5402,162 +5397,162 @@ end
 // i_io_sw[ 31 ]
 initial
 begin
-	i_io_sw[31] = 1'b1;
+	i_io_sw[31] = 1'b0;
 end 
 // i_io_sw[ 30 ]
 initial
 begin
-	i_io_sw[30] = 1'b1;
+	i_io_sw[30] = 1'b0;
 end 
 // i_io_sw[ 29 ]
 initial
 begin
-	i_io_sw[29] = 1'b1;
+	i_io_sw[29] = 1'b0;
 end 
 // i_io_sw[ 28 ]
 initial
 begin
-	i_io_sw[28] = 1'b1;
+	i_io_sw[28] = 1'b0;
 end 
 // i_io_sw[ 27 ]
 initial
 begin
-	i_io_sw[27] = 1'b1;
+	i_io_sw[27] = 1'b0;
 end 
 // i_io_sw[ 26 ]
 initial
 begin
-	i_io_sw[26] = 1'b1;
+	i_io_sw[26] = 1'b0;
 end 
 // i_io_sw[ 25 ]
 initial
 begin
-	i_io_sw[25] = 1'b1;
+	i_io_sw[25] = 1'b0;
 end 
 // i_io_sw[ 24 ]
 initial
 begin
-	i_io_sw[24] = 1'b1;
+	i_io_sw[24] = 1'b0;
 end 
 // i_io_sw[ 23 ]
 initial
 begin
-	i_io_sw[23] = 1'b1;
+	i_io_sw[23] = 1'b0;
 end 
 // i_io_sw[ 22 ]
 initial
 begin
-	i_io_sw[22] = 1'b1;
+	i_io_sw[22] = 1'b0;
 end 
 // i_io_sw[ 21 ]
 initial
 begin
-	i_io_sw[21] = 1'b1;
+	i_io_sw[21] = 1'b0;
 end 
 // i_io_sw[ 20 ]
 initial
 begin
-	i_io_sw[20] = 1'b1;
+	i_io_sw[20] = 1'b0;
 end 
 // i_io_sw[ 19 ]
 initial
 begin
-	i_io_sw[19] = 1'b1;
+	i_io_sw[19] = 1'b0;
 end 
 // i_io_sw[ 18 ]
 initial
 begin
-	i_io_sw[18] = 1'b1;
+	i_io_sw[18] = 1'b0;
 end 
 // i_io_sw[ 17 ]
 initial
 begin
-	i_io_sw[17] = 1'b1;
+	i_io_sw[17] = 1'b0;
 end 
 // i_io_sw[ 16 ]
 initial
 begin
-	i_io_sw[16] = 1'b1;
+	i_io_sw[16] = 1'b0;
 end 
 // i_io_sw[ 15 ]
 initial
 begin
-	i_io_sw[15] = 1'b1;
+	i_io_sw[15] = 1'b0;
 end 
 // i_io_sw[ 14 ]
 initial
 begin
-	i_io_sw[14] = 1'b1;
+	i_io_sw[14] = 1'b0;
 end 
 // i_io_sw[ 13 ]
 initial
 begin
-	i_io_sw[13] = 1'b1;
+	i_io_sw[13] = 1'b0;
 end 
 // i_io_sw[ 12 ]
 initial
 begin
-	i_io_sw[12] = 1'b1;
+	i_io_sw[12] = 1'b0;
 end 
 // i_io_sw[ 11 ]
 initial
 begin
-	i_io_sw[11] = 1'b1;
+	i_io_sw[11] = 1'b0;
 end 
 // i_io_sw[ 10 ]
 initial
 begin
-	i_io_sw[10] = 1'b1;
+	i_io_sw[10] = 1'b0;
 end 
 // i_io_sw[ 9 ]
 initial
 begin
-	i_io_sw[9] = 1'b1;
+	i_io_sw[9] = 1'b0;
 end 
 // i_io_sw[ 8 ]
 initial
 begin
-	i_io_sw[8] = 1'b1;
+	i_io_sw[8] = 1'b0;
 end 
 // i_io_sw[ 7 ]
 initial
 begin
-	i_io_sw[7] = 1'b1;
+	i_io_sw[7] = 1'b0;
 end 
 // i_io_sw[ 6 ]
 initial
 begin
-	i_io_sw[6] = 1'b1;
+	i_io_sw[6] = 1'b0;
 end 
 // i_io_sw[ 5 ]
 initial
 begin
-	i_io_sw[5] = 1'b1;
+	i_io_sw[5] = 1'b0;
 end 
 // i_io_sw[ 4 ]
 initial
 begin
-	i_io_sw[4] = 1'b1;
+	i_io_sw[4] = 1'b0;
 end 
 // i_io_sw[ 3 ]
 initial
 begin
-	i_io_sw[3] = 1'b1;
+	i_io_sw[3] = 1'b0;
 end 
 // i_io_sw[ 2 ]
 initial
 begin
-	i_io_sw[2] = 1'b1;
+	i_io_sw[2] = 1'b0;
 end 
 // i_io_sw[ 1 ]
 initial
 begin
-	i_io_sw[1] = 1'b1;
+	i_io_sw[1] = 1'b0;
 end 
 // i_io_sw[ 0 ]
 initial
 begin
-	i_io_sw[0] = 1'b1;
+	i_io_sw[0] = 1'b0;
 end 
 
 // i_rst_n

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="pipeline">
-		<CBX_INST_ENTRY INSTANCE_NAME="|pipeline|second_register:secondDff|altshift_taps:wb_selE_rtl_0" CBX_FILE_NAME="shift_taps_qfm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pipeline|second_register:secondDff|altshift_taps:wb_selE_rtl_0" CBX_FILE_NAME="shift_taps_pfm.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

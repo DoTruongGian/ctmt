@@ -12,7 +12,7 @@ module regfile (
   output logic [31:0] checker2,
   output logic [31:0] checker3,
   output logic [31:0] checker4,
-  output logic [31:0] checker8
+  output logic [31:0] checker10
 );
 
   // 32 32-bit registers, with register 0 hard-wired to 0
@@ -25,7 +25,7 @@ module regfile (
   assign checker2 = regfile[2];
   assign checker3 = regfile[3];
   assign checker4 = regfile[4];
-  assign checker8 = regfile[8];
+  assign checker10 = regfile[10];
 
   // Synchronous write logic
   always_ff @(negedge i_clk or negedge i_rst_n) begin

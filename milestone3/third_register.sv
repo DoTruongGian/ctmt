@@ -7,6 +7,7 @@ module third_register (
     input logic [31:0] alu_dataE,
     input logic [31:0] rs2_dataHE,
     input logic [4:0] rd_addrE,
+    input logic [31:0] PCE,
     input logic [31:0] PCPlus4E,
     input logic rd_wrenE,
     input logic [1:0] mem_wrenE,
@@ -17,6 +18,7 @@ module third_register (
     output logic [31:0] alu_dataM,
     output logic [31:0] rs2_dataHM,
     output logic [4:0] rd_addrM,
+    output logic [31:0] PCM,
     output logic [31:0] PCPlus4M,
     output logic rd_wrenM,
     output logic [1:0] mem_wrenM,
@@ -37,6 +39,7 @@ module third_register (
             wb_selM <= 2'd0;
             i_unsignedM <= 1'b0;
             i_data_typeM <= 2'b0;
+            PCM <= 0;
         end else if (StallM) begin
             // Retain values during stall
         end else if (FlushM) begin
@@ -50,6 +53,7 @@ module third_register (
             wb_selM <= 2'd0;
             i_unsignedM <= 1'b0;
             i_data_typeM <= 2'b0;
+            PCM <= 0;
         end else begin
             instrM <= instrE;
             alu_dataM <= alu_dataE;
@@ -61,6 +65,7 @@ module third_register (
             wb_selM <= wb_selE;
             i_unsignedM <= i_unsignedE;
             i_data_typeM <= i_data_typeE;
+            PCM <= PCE;
         end
     end
 
